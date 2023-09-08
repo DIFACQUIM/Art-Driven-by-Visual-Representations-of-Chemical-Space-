@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA25g0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERAAAAAAAAAREAAAAAAAABEQAAAAAAAAERAAAAAAAAARERERAAAAABEREREAAAAAEREREQAAAAAREAAAAAAAABEQAAAAAAAAEREREQAAAAARERERAAAAABEREREAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAPH/AADx/wAA8f8AAPH/AADwDwAA8A8AAPAPAADx/wAA8f8AAPAPAADwDwAA8A8AAP//AAD//wAA" />
+    <title></title>
+    <script src="https://unpkg.com/lore-engine@1.1.10/dist/lore.min.js"></script>
+    <script src="https://unpkg.com/smiles-drawer@1.2.0/dist/smiles-drawer.min.js"></script>
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" 
+      integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40=" 
+      crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        user-select: none;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      #lore {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      #title {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        opacity: 0.0;
+        transition: opacity 0.5s ease-in;
+        
+          padding-bottom: 20px;
+        
+          font-size: 1.0em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #x-axis {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        opacity: 0.0;
+        transition: opacity 0.5s ease-in;
+        
+          padding-top: 20px;
+        
+          font-size: 0.7em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #y-axis {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        transition: opacity 0.5s ease-in;
+        
+          padding-bottom: 20px;
+        
+          font-size: 0.7em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+          transform: rotate(-90deg);
+        
+      }
+
+      #tip {
+        position: absolute;
+        z-index: 9999;
+        padding: 5px;
+        font-family: 'Open Sans';
+        background-color: rgba(255, 255, 255, 1.0);
+        border-radius: 2px;
+        border-left: 5px solid #000;
+        pointer-events: none;
+        opacity: 0.0;
+        transition: opacity 0.1s ease-out;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1.0));
+      }
+
+      #tip.show {
+        opacity: 1.0;
+        transition: opacity 0.1s ease-out;
+      }
+
+      #tip-text {
+        position: relative;
+        max-width: 250px;
+        font-size: 0.8em;
+        font-weight: bold;
+        white-space: normal;
+        line-break: normal;
+      }
+
+      #hover-indicator {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      #hover-indicator.show {
+        display: block !important
+      }
+
+      .selected-indicator {
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
+      }
+
+      .selected-indicator .crosshair-x {
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        height: 2px;
+        width: 100%;
+        margin: auto;
+        
+          background-color: #fff;
+        
+      }
+
+      .selected-indicator .crosshair-y {
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: 2px;
+        height: 100%;
+        margin: auto;
+        
+          background-color: #fff;
+        
+      }
+
+      #legend {
+        position: absolute;
+        z-index: 9998;
+        
+          bottom: 10px;
+        
+          right: 10px;
+        
+          padding: 10px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #legend .container {
+        display: flex;
+        flex: auto;
+        align-items: flex-start;
+        
+        flex-direction: column;
+        
+      }
+
+      #legend .legend-section {
+        width: 100%;
+      }
+
+      #legend .legend-section:not(:first-child) {
+        
+      }
+
+      #legend h2 {
+        font-size: 1em;
+        font-weight: 600;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        max-width: 250px;
+        white-space: normal;
+      }
+
+      #legend h3 {
+        font-size: 0.8em;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        max-width: 250px;
+        white-space: normal;
+      }
+
+      #legend select {
+        width: 100%;
+        margin-bottom: 5px;
+        background: transparent;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 0.75em;
+      }
+
+      #legend select option {
+        background: #000;
+      }
+
+      #legend .legend-element, #legend .legend-element-range {
+        position: relative;
+        display: flex;
+        flex: auto;
+        align-items: flex-start;
+        padding-bottom: 2px;
+        padding-top: 2px;
+      }
+
+      #legend .legend-element {
+        align-items: flex-start;
+      }
+
+      #legend .legend-element-range {
+        flex-direction: column;
+      }
+
+      #legend .color-box {
+        
+          width: 15px;
+        
+          height: 15px;
+        
+          border: solid 0px;
+        
+      }
+
+      #legend .color-stripe {
+        
+          width: 15px;
+        
+          height: 1px;
+        
+          border: solid 0px;
+        
+      }
+
+      #legend .legend-label {
+        height: 15px;
+        font-size: 0.7em;
+        padding-left: 5px;
+      }
+
+      #legend .legend-label.max {
+        position: absolute;
+        top: 0px;
+        margin-left: 15px;
+      }
+
+      #legend .legend-label.min {
+        position: absolute;
+        bottom: 2px;
+        margin-left: 15px;
+      }
+
+      #selected {
+        position: absolute;
+        display: none;
+        z-index: 9998;
+        width: 250px;
+        
+          bottom: 10px;
+        
+          left: 10px;
+        
+          padding: 0px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #selected #selected-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 5px 10px;
+        border-bottom: 1px solid #262626;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+
+      #selected #selected-controls * {
+        display: inline-block;
+      }
+
+      #selected #selected-controls #selected-title {
+        flex-grow: 1;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #aaa;
+      }
+
+      #selected #selected-controls a {
+        margin: 0px 2px;
+        font-size: 1.5em;
+        color: #fff;
+        opacity: 0.75;
+        transition: 0.2s;
+      }
+
+      #selected #selected-controls a:hover {
+        opacity: 1.0;
+      }
+
+      #selected #selected-controls a#selected-remove {
+        position: absolute;
+        right: 10px;
+        top: 42px;
+        color: #e74c3c;
+      }
+
+      #selected #selected-container {
+        padding: 10px;
+        font-size: 0.8em;
+      }
+
+      #selected #selected-container img {
+        margin-left: -10px;
+      }
+
+      #selected #selected-container .label {
+        font-weight: bold;
+        color: #aaa;
+        font-size: 0.7em;
+      }
+
+      #selected #selected-container .label:not(:first-child) {
+        margin-top: 2px;
+      }
+
+      #selected #selected-container .content {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #selected #selected-container .content a {
+        text-decoration: none;
+        color: #3498db;
+      }
+
+      #controls {
+        position: absolute;
+        z-index: 9998;
+        
+          top: 10px;
+        
+          right: 10px;
+        
+          padding: 2px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #controls a {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 1.2em;
+        color: #fff;
+        opacity: 0.75;
+        transition: 0.2s;
+      }
+
+      #controls a:hover {
+        opacity: 1.0;
+      }
+
+      #controls #more-controls {
+        display: inline-block;
+      }
+
+      #impress {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        left: 10px;
+        font-size: 0.7em;
+        color: #eee;
+      }
+
+      #impress a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      #smiles-canvas {
+        position: absolute;
+        z-index: 9999;
+        left: -999px;
+        top: -999px;
+        width: 250px;
+        height: 250px;
+      }
+
+
+
+      #overlay-structure-container {
+        position: absolute;
+        z-index: 9999;
+        top: 50px;
+        left: 275px;
+        right: 100px;
+        bottom: 10px;
+        opacity: .5;
+        pointer-events: none;
+      }
+
+      #overlay-structure {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+
+
+
+
+      .show {
+        opacity: 1.0 !important;
+      }
+
+      .hide {
+        display: none !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #selected {
+          position: absolute;
+          display: none;
+          z-index: 9998;
+          width: 125px;
+          opacity: 0.8;
+          background-filter: blur(10px);
+        }
+
+        #selected img {
+          width: 125px;
+        }
+
+        #tip {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="smiles-canvas" data-bind="smilesCanvas"></canvas>
+    
+    
+    
+    
+
+    <div id="overlay-structure-container" data-binding-id="overlayStructureContainer" class="">
+      <canvas id="overlay-structure" data-binding-id="overlayStructure" width="450" height="687">
+
+      </canvas></div>
+    </div>
+
+    <div id="tip" data-bind="tip">
+      <div id="tip-text" data-bind="tipText"></div>
+    </div>
+    <div id="selected" data-bind="selected">
+      <div id="selected-controls" data-bind="selectedControls">
+        <a id="selected-toggle" data-bind="selectedToggle" href="#">
+          <i class="fas fa-toggle-on"></i>
+        </a>
+        <span>&nbsp;&nbsp;</span>
+        <span id="selected-title" data-bind="selectedTitle"></span>
+        <span>&nbsp;&nbsp;</span>
+        <span id="selected-current" data-bind="selectedCurrent" data-bind="selectedCurrent">0</span><span> / </span><span id="selected-total" data-bind="selectedTotal">0</span>
+        <span>&nbsp;&nbsp;</span>
+        <a id="selected-prev" data-bind="selectedPrev" href="#">
+          <i class="fas fa-angle-left"></i>
+        </a>
+        <span>&nbsp;</span>
+        <a id="selected-next" data-bind="selectedNext" href="#">
+          <i class="fas fa-angle-right"></i>
+        </a>
+        <a id="selected-remove" data-bind="selectedRemove" href="#">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <div id="selected-container" data-bind="selectedContainer">
+      </div>
+    </div>
+    <div id="controls" data-bind="controls">
+      <div id="more-controls" data-bind="moreControls" class="hide">
+        <a id="search" data-bind="search" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+        <a id="download" data-bind="download" href="#">
+          <i class="fas fa-download"></i>
+        </a>
+        <a id="export" data-bind="export" href="#">
+          <i class="fas fa-camera"></i>
+        </a>
+        <a id="largepreview" data-bind="largepreview" href="#">
+          <i class="fas fa-expand"></i>
+        </a>
+      </div>
+      <a id="show-controls" data-bind="showControls" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+    </div>
+    <div id="hover-indicator" data-bind="hoverIndicator"></div>
+    <canvas id="lore"></canvas>
+
+    
+    <script>
+      const data = {
+ESOL_Basic: {
+x: [569.136,209.271,273.331,228.531,183.038,262.092,275.251,269.021,322.778,228.144,302.029,367.62,316.992,311.774,307.598,306.635,473.672,476.768,492.663,120.395,465.971,375.529,310.181,369.937,106.345,496.403,257.719,75.241,384.841,362.036,381.785,367.806,364.191,9.751,648.082,649.249,675.752,646.141,412.994,83.301,90.069,409.481,78.472,90.637,82.622,225.546,316.127,509.099,221.054,214.999,208.248,523.968,258.647,402.232,243.614,236.025,89.647,174.444,750.0,308.841,312.966,516.56,135.488,299.323,226.206,646.826,146.033,175.425,265.535,414.958,417.488,272.336,137.227,414.549,240.135,117.432,111.067,442.949,297.418,609.341,32.35,439.654,420.55,567.672,564.037,366.891,311.481,105.732,713.076,320.862,308.927,297.683,213.667,220.412,283.349,311.297,286.686,285.211,281.016,270.19,492.922,297.48,319.59,247.332,181.16,178.44,317.228,324.76,291.374,505.504,409.683,368.784,141.069,263.648,175.723,321.179,166.539,96.571,315.023,303.046,310.292,462.972,668.967,643.618,672.932,637.733,586.154,98.747,46.555,346.938,556.401,91.068,577.737,518.165,468.734,269.207,127.771,271.395,320.802,504.083,460.458,262.734,322.96,498.626,461.669,98.865,154.4,463.305,320.552,651.654,271.594,271.825,298.359,521.078,656.255,298.135,110.773,459.344,273.765,272.53,108.615,182.649,458.666,371.401,233.704,371.538,354.234,281.265,170.341,594.895,48.48,449.404,61.495,294.575,159.316,185.31,597.136,104.335,108.435,156.508,436.075,209.476,205.567,518.188,570.799,620.8,596.582,314.477,270.105,361.353,309.743,103.622,168.412,387.911,275.36,302.747,219.867,205.657,190.0,398.475,133.488,420.947,175.208,398.886,518.223,643.042,627.698,109.944,180.111,143.162,392.293,525.563,509.66,113.527,275.557,322.242,75.11,131.73,398.41,336.111,387.709,544.431,630.614,129.381,139.492,350.861,105.875,392.879,536.862,379.49,292.241,365.118,334.797,331.905,397.815,561.09,647.3,531.02,630.628,144.815,103.647,119.815,356.025,271.21,184.805,418.028,357.119,397.717,116.641,277.833,343.943,110.028,389.772,457.327,365.7,178.856,631.238,193.306,375.477,360.599,109.721,404.56,453.505,291.715,370.742,181.774,459.034,250.142,118.82,426.375,229.305,392.165,487.886,409.651,362.277,89.794,228.677,396.371,252.476,296.77,370.353,372.553,367.182,391.045,560.295,394.95,537.387,321.021,409.332,221.202,375.018,630.582,162.115,531.669,528.958,478.222,380.563,375.894,172.707,363.119,527.208,474.115,572.224,394.015,386.152,552.986,168.729,94.21,342.37,424.669,438.424,581.961,570.717,259.458,292.844,586.449,577.689,629.179,591.663,582.313,748.733,587.157,562.843,478.733,590.999,150.471,150.576,130.164,140.812,135.052,0.0,460.998,717.506,722.465,632.607,593.301,670.856,696.698,744.549,732.974,555.085,699.519,709.733,726.067,722.233,715.237,703.813,711.032,557.117,713.615,616.509,35.577,515.186,23.523,468.732,450.583,481.699,13.227,510.758,512.832,4.913,322.299,304.601,521.512,318.44,598.373,134.328,480.689,481.787,34.237,39.442,423.133,725.156,511.216,414.298,507.268,478.925,517.844,562.507,48.291,565.747,636.531,266.769,571.531,574.537,650.519,670.57,661.867,505.762,60.202,593.119,694.877,603.788,102.322,523.377,701.198,693.197,211.702,215.292,596.768,509.432,152.038,129.634],
+y: [519.229,463.15,27.511,469.224,540.969,605.016,30.649,448.801,750.0,262.929,687.28,483.1,18.858,30.705,47.257,43.757,108.908,40.119,40.494,185.032,377.562,485.886,480.651,474.613,184.088,39.741,358.322,479.872,499.412,477.441,494.597,470.5,474.306,207.822,359.27,364.501,527.349,350.198,34.496,331.051,322.029,208.94,333.428,325.835,336.498,267.462,726.132,613.666,274.95,284.425,294.864,574.39,579.291,208.529,563.082,472.898,478.142,478.96,316.419,700.274,714.274,610.298,610.946,667.288,46.545,339.891,483.849,544.997,602.037,44.898,57.141,16.63,480.63,29.271,565.25,479.429,472.133,58.227,670.133,465.425,216.435,59.944,70.636,482.113,480.282,237.797,703.211,466.204,236.846,745.301,684.51,611.836,464.809,467.0,615.822,612.132,634.278,655.273,657.791,598.143,485.981,615.306,614.958,560.2,546.203,541.605,605.894,616.251,651.895,488.53,30.24,488.387,482.148,448.152,488.496,602.427,23.64,145.325,458.59,424.745,475.796,381.257,319.987,337.783,326.83,334.787,330.01,312.716,223.213,268.697,474.568,483.617,470.267,593.408,107.424,360.762,621.169,357.485,10.282,612.817,105.123,357.636,5.337,486.207,47.241,150.188,22.303,388.629,447.999,568.783,0.0,85.146,421.63,482.3,572.03,469.598,184.121,387.899,70.645,79.834,301.562,281.902,49.654,234.897,540.572,239.589,271.809,359.079,463.295,260.052,219.81,102.501,226.02,419.517,24.312,278.417,250.503,154.731,305.42,282.645,99.538,42.029,40.311,478.592,507.322,536.885,522.801,28.034,5.372,451.412,468.381,158.855,27.362,94.973,61.665,469.207,520.239,499.192,517.937,122.048,280.212,96.203,536.382,178.433,421.651,562.565,569.71,170.178,31.102,172.053,94.159,486.745,486.949,202.405,57.989,444.883,231.064,276.813,93.79,63.682,180.75,487.52,566.83,179.62,176.039,457.631,237.988,150.971,402.541,79.465,360.783,357.9,59.703,55.471,174.445,471.894,562.975,453.721,576.974,176.867,241.655,289.877,67.545,340.925,291.212,178.01,453.88,182.016,184.129,44.925,461.125,220.043,148.534,396.093,352.946,291.602,554.731,36.077,78.809,356.482,238.775,92.551,398.72,365.22,360.489,288.046,400.653,324.462,258.153,384.271,309.537,310.004,408.95,177.99,362.307,234.97,49.23,372.159,47.176,361.19,355.707,279.487,363.552,306.358,477.093,312.796,511.966,381.128,302.734,57.625,316.519,582.512,555.82,534.75,537.932,261.017,211.723,245.187,470.178,275.481,555.558,260.789,367.84,208.208,208.768,317.587,458.773,479.92,266.658,295.963,289.52,469.216,308.448,447.47,356.328,286.65,465.409,329.016,273.62,309.794,321.264,290.704,312.569,253.399,349.015,578.706,573.716,616.073,591.688,606.426,201.189,277.282,311.788,317.092,331.673,269.669,323.143,306.598,317.476,314.444,384.598,311.481,268.274,241.541,245.535,251.865,286.095,264.622,315.77,242.41,344.343,214.213,624.855,209.76,269.584,283.331,249.244,205.523,644.536,636.194,202.468,738.256,684.037,592.602,736.819,245.14,594.116,20.638,15.52,479.066,479.235,178.534,321.257,39.201,209.159,40.648,29.23,40.685,298.435,479.466,302.326,533.353,0.935,514.886,518.679,530.674,527.886,528.942,617.535,479.696,467.723,300.496,466.314,462.421,40.515,315.495,296.3,67.856,64.062,465.255,649.478,582.622,595.3],
+z: [375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0],
+labels: ['C(=CC1OCCO1)c1ccccc1','C12=C3C4C1=C1C2C3C14','C=C(C)C1CC=C(CO)CC1','C=C(C)C1CC=C(COC(C)=O)CC1','C=C(C)C1CCC(C=O)CC1','C=C(C)C1CCC2=CCCC(C)C2(C)C1','C=C(C)CCCC(C)CCO','C=C(C)CCCC(C)CCOC(C)=O','C=C(C)c1ccc(C)cc1','C=CC(=C)CCC=C(C)C','C=CC(C)(C)O','C=CC(CCCCC)OC(=O)CCC','C=CC(O)CC','C=CC(O)CCCC','C=CC(O)CCCCCC','C=CC(O)CCCCCCC','C=CCC(C)C(=O)O','C=CCCC(=O)O','C=CCCCCCCCC(=O)O','C=CCCCCCCCC(C)=O','C=CCCCCCCCCC(=O)OC','C=CCCCCCCCCC(=O)OCC','C=CCCCCCCCCC(=O)OCC(C)C','C=CCCCCCCCCC(=O)OCCCC','C=CCCCCCCCCC=O','C=CCCCCCCCCCC(=O)O','C=CCOC(=O)C(CC)CC','C=CCOC(=O)C=Cc1ccccc1','C=CCOC(=O)CCCC1CCCCC1','C=CCOC(=O)CCCCC','C=CCOC(=O)CCCCCC1CCCCC1','C=CCOC(=O)CCCCCCC','C=CCOC(=O)CCCCCCCC','C=CCSSSC','C=CCc1ccc(O)c(OC)c1','C=CCc1ccc(OC)c(OC)c1','C=CCc1ccc2c(c1)OCO2','C=Cc1ccc(O)c(OC)c1','CC(=CC(C)C)C(=O)O','CC(=O)C(=O)C(C)C','CC(=O)C(=O)CC(C)C','CC(=O)C(=O)O','CC(=O)C(C)=O','CC(=O)C(O)CC(C)C','CC(=O)C=CC(C)C','CC(=O)C=CC=C(C)CCC=C(C)C','CC(=O)C=Cc1ccccc1','CC(=O)C=Cc1ccco1','CC(=O)CCC=C(C)CCC=C(C)C','CC(=O)CCC=C(C)CCC=C(C)CCC=C(C)C','CC(=O)CCCC(C)CCCC(C)CCCC(C)C','CC(=O)Cc1ccco1','CC(=O)OC(C)(C)C1CCC(C)C2=C(C1)C(C)CC2','CC(=O)OC(C)C(C)=O','CC(=O)OC1CCC(C(C)(C)C)CC1','CC(=O)OCC(C)C1CC=C(C)CC1','CC(=O)OCC=Cc1ccccc1','CC(=O)OCCCc1ccccc1','CC(=O)c1c(C)c([N+](=O)[O-])c(C(C)(C)C)c([N+](=O)[O-])c1C','CC(=O)c1ccc(C(C)C)cc1','CC(=O)c1ccc(C)cc1','CC(=O)c1ccc(C)o1','CC(=O)c1ccccn1','CC(C)(O)Cc1ccccc1','CC(C)(S)CCO','CC(C)(c1c(Cl)c(Cl)c(O)c(Cl)c1Cl)c1c(Cl)c(Cl)c(O)c(Cl)c1Cl','CC(C)=C(C)C(=O)OCc1ccccc1','CC(C)=C1C=CC(C=O)CC1','CC(C)=C1CCC(C)C2=C(C1)C(C)CC2','CC(C)=CCC(=O)O','CC(C)=CCCC(C)CC(=O)O','CC(C)=CCCC(C)CCO','CC(C)=CCOC(=O)C(C)C','CC(C)C(=O)O','CC(C)C(=O)OC1CC2CCC1(C)C2(C)C','CC(C)C(=O)OCC=Cc1ccccc1','CC(C)C(=O)OCc1ccccc1','CC(C)CC(=O)O','CC(C)CC(O)Cc1ccccc1','CC(C)CC1OCC(CO)O1','CC(C)CC=O','CC(C)CCC(=O)O','CC(C)CCCC(=O)O','CC(C)CCOC(=O)CCCc1ccco1','CC(C)CCOC(=O)CCc1ccco1','CC(C)OC(=O)CCCCC(=O)OC(C)C','CC(C)c1ccc(C=O)cc1','CC(C)c1ccc(CO)cc1','CC(C)c1ccc(O)cc1','CC(C=O)=Cc1ccccc1','CC(O)C(C)SC(C)C(C)S','CC1(C(=O)O)CCC2(C)CCC3(C)C(=C2C1)CC(=O)C1C2(C)CCC(OC4OC(C(=O)O)C(O)C(O)C4OC4OC(C(=O)O)C(O)C(O)C4O)C(C)(C)C2CCC13C','CC1(C)C2CC=C(C=O)C1C2','CC1(C)C2CC=C(COC=O)C1C2','CC1(C)CC2C(C1)C1(C)CCCC2(C)C1O','CC1(C)CCCC2(C)OC(=O)C=C12','CC12CCCC(O)(C1)C1CC(C)(C)C1CC2','CC1=C(C=CC(C)O)C(C)(C)CC(=O)C1','CC1=C(C=O)C(C)(C)CC=C1','CC1=C2CCC(C)C2CC(C(C)(C)O)CC1','CC1=CC(=O)CC1','CC1=CC2(O)OC3(CC2=C(C)C)C(C)CCC13','CC1=CC2OC(=O)C(C)C2CC1','CC1=CCC(C(C)(C)OC(=O)C(C)C)CC1','CC1=CCC(C(C)C)=CC1','CC1=CCC(C(C)C=O)CC1','CC1=CCCC(C)(C)C12CCC(C)O2','CC1=Cc2oc(O)c(C)c2CC1','CC1CC(O)CC(C)(C)C1','CC1CCCCCCCCCCCCC(=O)C1','CC=C(C)C(=O)O','CC=C(C)C(=O)OC(CC)CCCCC','CC=C(C)C(=O)OCC(C)C','CC=C(C)C(=O)OCCCC','CC=C(C)C(=O)OCCc1ccccc1','CC=C(C)C1CCC(C)(C)O1','CC=C(C)CO','CC=CC(=O)CC','CC=CC(=O)OCCCCCC','CC=CC(C)C(=O)OCCCCCC','CC=CC=CCOC(=O)CCC','CC=CCCCCCCCC(=O)OC','CC=Cc1cc(OC)c(O)c(OC)c1','CC=Cc1ccc(O)c(OC)c1','CC=Cc1ccc(OC(C)=O)c(OC)c1','CC=Cc1ccc(OC)c(OC)c1','CC=Cc1ccc(OCC)c(O)c1','CCC(=O)C(C)=O','CCC(=O)CSC','CCC(=O)OCC(COC(=O)CC)OC(=O)CC','CCC(=O)OCC1CCCO1','CCC(=O)OCC=Cc1ccccc1','CCC(=O)OCc1ccco1','CCC(=O)c1cccs1','CCC(C)C(=O)O','CCC(C)C(=O)OC(C)C','CCC(C)C1N=C(C)C(C)S1','CCC(C)COC(=O)CC(C)C','CCC(C)O','CCC(C=O)=Cc1ccco1','CCC(CC)C(=O)O','CCC(CC)COC(C)=O','CCC(O)CC','CCC=CC=C1CCC(=O)C1C','CCC=CC=CC=CCC(=O)O','CCC=CC=CCC=O','CCC=CC=CCO','CCC=CCC(=O)OC','CCC=CCC(=O)OCCCCCC','CCC=CCC1CCCC(=O)O1','CCC=CCC=CCC(=O)NCC','CCC=CCC=CCCO','CCC=CCCC(OCC)OCC','CCC=CCCC1(C)CCC(=O)O1','CCC=CCCC1CCCC(=O)O1','CCC=CCCC=CCOC(C)=O','CCC=CCCC=O','CCC=CCCCC(=O)OC','CCC=CCCCO','CCC=CCCO','CCCC(=O)C(C)=O','CCCC(=O)CCC','CCCC(=O)O','CCCC(=O)OC(=O)CCC','CCCC(=O)OC(C)(C)C1CC=C(C)CC1','CCCC(=O)OC(C)C(C)=O','CCCC(=O)OCC(COC(=O)CCC)OC(=O)CCC','CCCC(=O)OCCC(C)C','CCCC(=O)OCc1ccccc1','CCCC(=O)Oc1c(C)oc(C)c1O','CCCC(=O)SC','CCCC(C)C(=O)O','CCCC(CC=O)SC','CCCC=CC(OCC)OCC','CCCC=CC=CCO','CCCC=CCC(C)=O','CCCC=Cc1oc(O)c(C)c1C','CCCC=O','CCCCC(=O)C(C)=O','CCCCC(=O)CC','CCCCC(C)C(=O)O','CCCCC(CC)CO','CCCCC(CO)C(C)=O','CCCCC1(CCCC)CCC(=O)O1','CCCCC1CCC(=O)O1','CCCCC1CCCC(=O)O1','CCCCC1CCCCC(=O)O1','CCCCC=CC(C)O','CCCCC=CC=CCC(=O)NCC(C)C','CCCCC=CC=CCC(=O)OCC','CCCCC=CC=CCC(=O)OCCC','CCCCC=CC=CCC=O','CCCCC=CC=CCO','CCCCC=CCC(=O)O','CCCCC=CCCO','CCCCC=CCOC(C)=O','CCCCCC(=Cc1ccccc1)COC(=O)CC(C)C','CCCCCC(=Cc1ccccc1)COC(C)=O','CCCCCC(=Cc1ccccc1)COC=O','CCCCCC(=O)CC(=O)O','CCCCCC(C)=O','CCCCCC(C)C(=O)O','CCCCCC(C=O)=Cc1ccccc1','CCCCCC(O)CCCC(=O)OCC(O)CO','CCCCCC1C(=O)CCC1CC(=O)OC','CCCCCC1C=CCC(=O)O1','CCCCCC1CCCC(=O)O1','CCCCCC=CC=CC=CCC=O','CCCCCC=CC=CCO','CCCCCC=CC=O','CCCCCC=CCC(=O)O','CCCCCC=CCC1CCC(=O)O1','CCCCCC=CCC1CCCC1=O','CCCCCC=CCCC=O','CCCCCC=CCCCO','CCCCCC=CCCCOC(C)=O','CCCCCC=O','CCCCCCC(=O)CC','CCCCCCC(=O)O','CCCCCCC(C)O','CCCCCCC(O)CCOC(C)=O','CCCCCCC1CCC(=O)O1','CCCCCCC1CCCC(=O)O1','CCCCCCC=CC=CCC=O','CCCCCCC=CC=O','CCCCCCC=CCC(=O)OCCCC','CCCCCCC=O','CCCCCCCC(=O)CC(=O)O','CCCCCCCC(=O)CCc1ccc(O)c(OC)c1','CCCCCCCC(=O)O','CCCCCCCC(=O)OCCC(C)C','CCCCCCCC(=O)OCCCC','CCCCCCCC(C)O','CCCCCCCC(O)CC','CCCCCCCC(O)CCCC(=O)OCC(O)CO','CCCCCCCC1(C)OCC(C)O1','CCCCCCCC1C=CCC(=O)O1','CCCCCCCC1CC(C)OC1=O','CCCCCCCC1CCCC(=O)O1','CCCCCCCC=CC=O','CCCCCCCC=O','CCCCCCCCC(=O)C(C)=O','CCCCCCCCC(=O)O','CCCCCCCCC(=O)OCCC(C)C','CCCCCCCCC(C)=O','CCCCCCCCC=CCCCCCCCC(=O)OC(CO)CO','CCCCCCCCC=CCCCCCCCC(=O)OCC','CCCCCCCCC=CCCCCCCCC(=O)OCC(O)C1OCC(O)C1O','CCCCCCCCC=CCCCCCCCC=O','CCCCCCCCC=CCCCCCCCCO','CCCCCCCCC=CCCCCCCCCOC(C)=O','CCCCCCCCC=O','CCCCCCCCCC(=O)CC(=O)O','CCCCCCCCCC(=O)OC','CCCCCCCCCC(=O)OCC','CCCCCCCCCC(C)=O','CCCCCCCCCC1CCCC(=O)O1','CCCCCCCCCC=CCO','CCCCCCCCCCC(=O)O','CCCCCCCCCCC(=O)OCC','CCCCCCCCCCC=O','CCCCCCCCCCCC(=O)O','CCCCCCCCCCCC(=O)OC','CCCCCCCCCCCC(=O)OCCC(C)C','CCCCCCCCCCCC(=O)OCCCC','CCCCCCCCCCCC(C)=O','CCCCCCCCCCCCCC(=O)OC','CCCCCCCCCCCCCC(=O)OC(C)C','CCCCCCCCCCCCCC=O','CCCCCCCCCCCCCCCC(=O)OC','CCCCCCCCCCCCCCCC(=O)OC(C)C','CCCCCCCCCCCCCCCC(=O)OCC','CCCCCCCCCCCCCCCCCC(=O)OC','CCCCCCCCCCCCCCCCCC(=O)OCC(O)CO','CCCCCCCCCCCCCCCCCC(=O)OCCCC','CCCCCCCCCCCCCCCCCC=O','CCCCCCCCCCO','CCCCCCCCCCOC(=O)CC','CCCCCCCCCO','CCCCCCCCOC(=O)C(C)C','CCCCCCCCOC(=O)CCC','CCCCCCCCOC(=O)CCCCC(=O)OCCCCCCCC','CCCCCCCCOC(=O)CCCCCC','CCCCCCCCOC(=O)CCCCCCC','CCCCCCCCOC(=O)c1ccco1','CCCCCCCOC(=O)CCCCCCC','CCCCCCCc1ccco1','CCCCCCOC(=O)C(C)CC','CCCCCCOC(=O)CC(C)S','CCCCCCS','CCCCCOC(=O)CCCCC','CCCCCc1cccc(=O)o1','CCCCCc1ccccn1','CCCCCc1ccco1','CCCCCc1cccs1','CCCCN=C=S','CCCCOC(=O)C(C)O','CCCCOC(=O)C(C)OC(=O)CCC','CCCCOC(=O)C=Cc1ccccc1','CCCCOC(=O)CCCCCCCCC(=O)OCCCC','CCCCc1ccco1','CCCSC','CCCc1ccc(O)c(OC)c1','CCOC(=O)C(C)=O','CCOC(=O)C(C)O','CCOC(=O)C(Cc1ccccc1)C(C)=O','CCOC(=O)C1CCCCC1','CCOC(=O)C=Cc1ccccc1','CCOC(=O)CC(C)=O','CCOC(=O)CC(C)S','CCOC(=O)CSC','CCOC(=O)SCc1ccco1','CCOC(=O)c1ccccc1O','CCOC(C=C(C)CCC=C(C)C)OCC','CCOC(CC(C)C)OCC','CCOCc1ccc(O)c(OC)c1','CCOCc1ccco1','CCOc1cc(C(C)C)ccc1C','CCOc1cc(C2OCC(C)O2)ccc1O','CCOc1cc(C=O)ccc1O','CCOc1cc(C=O)ccc1OC(=O)C(C)C','CCOc1cc(COC)ccc1O','CCOc1ccc(C=O)cc1','CCSC','CCc1ccc(O)c(OC)c1','CCc1cccnc1','CCc1cnccn1','CCc1nc(C)c(C)o1','CCc1ncc(C)nc1CC','CCc1nccnc1C(C)=O','CN(C)C','COC(=O)CCCSC','COC(=O)c1ccc(O)c(OC)c1','COc1cc(C(=O)O)ccc1O','COc1cc(C(C)C)ccc1C','COc1cc(C2OCC(C)O2)ccc1O','COc1cc(C=CC(C)=O)ccc1O','COc1cc(C=O)ccc1O','COc1cc(C=O)ccc1OC(=O)C(C)C','COc1cc(C=O)ccc1OC(C)=O','COc1cc(CCC(C)=O)ccc1O','COc1cc(CO)ccc1O','COc1ccc(C(C)=O)cc1','COc1ccc(C=C(C)C=O)cc1','COc1ccc(C=CC=O)cc1','COc1ccc(C=O)cc1','COc1ccc(C=O)cc1OC','COc1ccc(CC(C)=O)cc1','COc1ccc(COC(C)=O)cc1','COc1ccccc1','COc1ccccc1OC','CSC(=O)CC(C)C','CSC(=O)c1ccco1','CSC(C)=O','CSCCC=O','CSCCCOC(C)=O','CSCSC','CSSC','CSc1ccccc1','CSc1ccoc1C','C[S+](C)[O-]','Cc1ccc(-c2ccccc2)cc1','Cc1ccc(C(C)(C)O)cc1','Cc1ccc(C(C)CC=O)o1','Cc1ccc(C=CC=O)cc1','Cc1ccc(O)o1','Cc1nccnc1C','NC(=O)CCC(N)C(=O)O','NS(=O)(=O)O','O=C(C=Cc1ccccc1)OCCCc1ccccc1','O=C(Cc1ccccc1)OCC=Cc1ccccc1','O=C(O)C(=O)CO','O=C(O)C(O)c1ccccc1','O=C(O)C1CCCCC1','O=C(O)C=CC(=O)O','O=C(O)CC1CCCCC1','O=C(O)CCC(=O)O','O=C(O)CCc1ccccc1','O=C(O)COc1ccccc1','O=C(OCc1ccccc1)c1ccccc1','O=C(OCc1ccccc1)c1ccccc1O','O=C1CCC2CCCCC2O1','O=C1CCCCCN1','O=C1CCCO1','O=C1CCSC1','O=C1CCc2ccccc2O1','O=C1OCc2ccccc21','O=C1Oc2ccccc2C2CC12','O=CC=Cc1ccco1','O=COCc1ccccc1','O=Cc1ccc(CO)o1','O=Cc1ccccc1O','OCC1CCCO1','OCC=Cc1ccccc1','OCCCc1ccccc1','Oc1ccc(CC2NCCc3cc(O)c(O)cc32)cc1','Oc1cccc(O)c1','SC1CCCC1','SCCCCCCS','SCc1ccco1','Sc1ccc2ccccc2c1','c1ccncc1','c1cnc2c(n1)CCCC2'],
+colors: [
+{
+r: [204,204,255,204,204,255,204,204,204,204,255,255,255,251,255,251,255,255,255,255,255,255,255,255,255,255,255,204,255,255,255,255,255,255,204,251,204,204,255,255,255,255,255,255,255,204,255,204,255,255,255,204,251,255,255,204,204,204,255,204,204,204,255,255,204,255,204,251,204,255,255,255,255,255,204,204,255,255,255,255,255,255,255,255,255,255,251,204,204,204,255,204,204,255,204,204,204,204,204,204,255,255,204,255,255,204,204,204,204,255,204,204,204,204,255,204,255,204,255,204,255,255,204,204,204,204,204,255,255,255,255,204,251,255,255,255,204,255,255,204,255,255,255,251,255,255,255,255,255,255,204,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,204,255,255,255,251,255,204,204,251,255,255,255,255,204,255,255,251,255,255,204,255,255,255,255,255,255,255,255,204,255,255,204,255,255,255,255,255,255,255,255,255,255,255,255,255,255,251,255,204,255,204,255,255,255,255,255,255,255,255,204,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,204,204,255,255,255,255,255,255,251,255,255,204,255,204,255,204,251,255,204,255,204,255,255,251,204,204,255,255,251,204,204,251,255,255,204,204,251,204,251,255,255,251,255,255,255,204,255,204,255,255,255,255,255,204,255,255,204,204,255,255,204,251,255,255,255,255,255,255,255,251,251,204,251,255,204,204,255,204,251,255,255,255,204,204,255,255,255,255,255,255,255,255,255,255,204,204,255,255,251,204,204,204,204,255,204,255,204,204,255,255,251,255,255,255,255,255],
+g: [0,0,229,0,0,229,0,0,0,0,229,229,229,198,229,198,229,229,229,229,229,229,229,229,229,229,229,0,229,229,229,229,229,229,0,198,0,0,229,229,229,229,229,229,229,0,229,0,229,229,229,0,198,229,229,0,0,0,229,0,0,0,229,229,0,229,0,198,0,229,229,229,229,229,0,0,229,229,229,229,229,229,229,229,229,229,198,0,0,0,229,0,0,229,0,0,0,0,0,0,229,229,0,229,229,0,0,0,0,229,0,0,0,0,229,0,229,0,229,0,229,229,0,0,0,0,0,229,229,229,229,0,198,229,229,229,0,229,229,0,229,229,229,198,229,229,229,229,229,229,0,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,0,229,229,229,198,229,0,0,198,229,229,229,229,0,229,229,198,229,229,0,229,229,229,229,229,229,229,229,0,229,229,0,229,229,229,229,229,229,229,229,229,229,229,229,229,229,198,229,0,229,0,229,229,229,229,229,229,229,229,0,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,229,0,0,229,229,229,229,229,229,198,229,229,0,229,0,229,0,198,229,0,229,0,229,229,198,0,0,229,229,198,0,0,198,229,229,0,0,198,0,198,229,229,198,229,229,229,0,229,0,229,229,229,229,229,0,229,229,0,0,229,229,0,198,229,229,229,229,229,229,229,198,198,0,198,229,0,0,229,0,198,229,229,229,0,0,229,229,229,229,229,229,229,229,229,229,0,0,229,229,198,0,0,0,0,229,0,229,0,0,229,229,198,229,229,229,229,229],
+b: [0,0,153,0,0,153,0,0,0,0,153,153,153,194,153,194,153,153,153,153,153,153,153,153,153,153,153,0,153,153,153,153,153,153,0,194,0,0,153,153,153,153,153,153,153,0,153,0,153,153,153,0,194,153,153,0,0,0,153,0,0,0,153,153,0,153,0,194,0,153,153,153,153,153,0,0,153,153,153,153,153,153,153,153,153,153,194,0,0,0,153,0,0,153,0,0,0,0,0,0,153,153,0,153,153,0,0,0,0,153,0,0,0,0,153,0,153,0,153,0,153,153,0,0,0,0,0,153,153,153,153,0,194,153,153,153,0,153,153,0,153,153,153,194,153,153,153,153,153,153,0,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,0,153,153,153,194,153,0,0,194,153,153,153,153,0,153,153,194,153,153,0,153,153,153,153,153,153,153,153,0,153,153,0,153,153,153,153,153,153,153,153,153,153,153,153,153,153,194,153,0,153,0,153,153,153,153,153,153,153,153,0,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,153,0,0,153,153,153,153,153,153,194,153,153,0,153,0,153,0,194,153,0,153,0,153,153,194,0,0,153,153,194,0,0,194,153,153,0,0,194,0,194,153,153,194,153,153,153,0,153,0,153,153,153,153,153,0,153,153,0,0,153,153,0,194,153,153,153,153,153,153,153,194,194,0,194,153,0,0,153,0,194,153,153,153,0,0,153,153,153,153,153,153,153,153,153,153,0,0,153,153,194,0,0,0,0,153,0,153,0,0,153,153,194,153,153,153,153,153],
+},
+]},
+};
+
+    </script>
+    
+    <script>
+
+      //status on whether to show or not the background canvas
+      let FullMolinBkg = false;
+
+      let smilesDrawer = new SmilesDrawer.Drawer({
+        width: 250 / window.devicePixelRatio,
+        height: 250 / window.devicePixelRatio,
+        experimental: true
+      });
+
+      class Faerun {
+        constructor() {
+          this.body = document.getElementsByTagName('body')[0];
+
+          this.selectedItems = [];
+          this.selectedIndicators = [];
+          this.selectedCurrent = [];
+          this.scatterMeta = [{"categorical": [false], "fog_intensity": 0.0, "has_legend": true, "interactive": true, "is_range": [false], "label_index": [0], "legend": [[[[0.984313725490196, 0.7764705882352941, 0.7607843137254902, 1.0], "fatty-spicy"], [[1.0, 0.8980392156862745, 0.6, 1.0], "fatty"], [[0.8, 0.0, 0.0, 1.0], "spicy"]]], "legend_title": ["Data set"], "mapping": {"c": "c", "cs": "cs", "knn": "knn", "labels": "labels", "s": "s", "x": "x", "y": "y", "z": "z"}, "max_c": [3.0], "max_legend_label": ["3.00"], "max_point_size": 100.0, "min_c": [1.0], "min_legend_label": ["1.00"], "name": "ESOL_Basic", "ondblclick": [null], "point_scale": 12, "selected_labels": [null], "series_title": [null], "shader": "sphere", "title_index": [0]}];
+          this.treeMeta = [];
+          this.seriesState = {};
+          this.el = {};
+
+          this.currentPoint = null;
+
+          this.lore = null;
+          this.clearColorHex = '#111111';
+          this.clearColor = null;
+          this.view = 'front';
+          this.antiAliasing = true;
+          this.alphaBlending = false;
+
+          this.treeHelpers = [];
+          this.pointHelpers = [];
+          this.octreeHelpers = [];
+          this.coordinatesHelper = null;
+
+          this.ohIndexToPhName = [];
+          this.ohIndexToPhIndex = [];
+          this.phIndexMap = {};
+          this.ohIndexMap = {};
+
+          this.min = [Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE];
+          this.max = [-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE];
+          this.maxRadius = -Number.MAX_VALUE;
+
+          this.coords = {
+            show: false,
+            grid: false,
+            ticks: true,
+            tickCount: 10,
+            tickLength: 2.0,
+            color: '#888888',
+            box: false,
+            offset: 5.0
+          };
+
+          this.legend = {
+            show: true,
+            title: 'Legend'
+          };
+
+          this.el = Faerun.bindElements();
+
+          this.scatterMeta.forEach(s => {
+            this.seriesState[s.name] = 0;
+          });
+
+          this.clearColor = Lore.Core.Color.fromHex(this.clearColorHex);
+          this.alphaBlending = (this.view === 'free' ? false : true) || this.alphaBlending;
+
+          this.initLore();
+          this.initTreeHelpers();
+          this.initPointHelpers();
+          this.initCoords();
+          this.initAxes();
+          this.initView();
+          this.initEvents();
+          this.renderLegend();
+        }
+
+        initLore() {
+          this.lore = Lore.init('lore', {
+            antialiasing: this.antiAliasing,
+            clearColor: this.clearColorHex,
+            alphaBlending: this.alphaBlending,
+            preserveDrawingBuffer: true
+          });
+        }
+
+        initTreeHelpers() {
+          this.treeMeta.forEach(t => {
+            let th = new Lore.Helpers.TreeHelper(this.lore, t.name, 'tree');
+            th.setXYZHexS(data[t.name].x, data[t.name].y, data[t.name].z, t.color);
+            th.setFog([this.clearColor.components[0], this.clearColor.components[1], 
+                       this.clearColor.components[2], this.clearColor.components[3]],
+                      t.fog_intensity);
+            this.treeHelpers.push(th);
+          });
+        }
+
+        initPointHelpers() {
+          this.scatterMeta.forEach(s => {           
+            let ph = new Lore.Helpers.PointHelper(
+              this.lore, s.name, s.shader, { maxPointSize: s.max_point_size }
+            );
+
+            ph.setXYZRGBS(data[s.name].x, data[s.name].y, data[s.name].z, 
+                          data[s.name]['colors'][0].r, data[s.name]['colors'][0].g, 
+                          data[s.name]['colors'][0].b, data[s.name]['s'] ? data[s.name]['s'][0] : 1.0);
+
+            ph.setPointScale(s.point_scale);
+            ph.setFog([this.clearColor.components[0], this.clearColor.components[1],
+                       this.clearColor.components[2], this.clearColor.components[3]],
+                      s.fog_intensity)
+
+            this.phIndexMap[s.name] = this.pointHelpers.length;
+            this.pointHelpers.push(ph);
+
+            this.min[0] = Faerun.getMin(data[s.name].x, this.min[0]);
+            this.min[1] = Faerun.getMin(data[s.name].y, this.min[1]);
+            this.min[2] = Faerun.getMin(data[s.name].z, this.min[2]);
+            this.max[0] = Faerun.getMax(data[s.name].x, this.max[0]);
+            this.max[1] = Faerun.getMax(data[s.name].y, this.max[1]);
+            this.max[2] = Faerun.getMax(data[s.name].z, this.max[2]);
+            this.maxRadius = ph.getMaxRadius();
+    
+            if (s.interactive && data[s.name].labels) {
+              this.octreeHelpers.push(
+                new Lore.Helpers.OctreeHelper(this.lore, 'Octree_' + s.name, 'tree', ph)
+              );
+
+              this.ohIndexMap[s.name] = this.octreeHelpers.length - 1;
+              this.ohIndexToPhName.push(s.name);
+              this.ohIndexToPhIndex.push(this.phIndexMap[s.name]);
+            }
+          });
+        }
+
+        initCoords() {
+          if (!this.coords.show) return;
+
+          let min = [0, 0, 0];
+          let max = [0, 0, 0];
+
+          for (var i = 0; i < 3; i++) {
+            min[i] = this.min[i] - this.coords.offset;
+            max[i] = this.max[i] + this.coords.offset;
+          }
+
+          this.coordinatesHelper = new Lore.Helpers.CoordinatesHelper(this.lore, 'Coordinates', 'coordinates', {
+            position: new Lore.Math.Vector3f(min[0], min[1], min[2]),
+            axis: {
+              x: {
+                length: max[0] - min[0],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              y: {
+                length: max[1] - min[1],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              z: {
+                length: max[2] - min[2],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              }
+            },
+            ticks: {
+              enabled: this.coords.ticks,
+              x: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              },
+              y: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              },
+              z: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              }
+            },
+            box: {
+              enabled: this.coords.box,
+              x: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              y: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              z: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              }
+            }
+          });
+        }
+
+        initAxes() {
+          // Wait for DOM to get ready
+          setTimeout(() => {
+            this.updateTitle(true);
+            this.updateXAxis(true);
+            this.updateYAxis(true);
+          }, 500);
+        }
+
+        initView() {
+          let center = new Lore.Math.Vector3f(
+              (this.max[0] + this.min[0]) / 2.0, 
+              (this.max[1] + this.min[1]) / 2.0, 
+              (this.max[2] + this.min[2]) / 2.0
+            );
+          this.lore.controls.setLookAt(center);
+          this.lore.controls.setRadius(this.maxRadius + 100);
+          this.lore.controls.setView(0.9, -0.5)
+          this.lore.controls.setViewByName(this.view);
+        }
+
+        initEvents() {
+          this.lore.controls.addEventListener('updated', () => {
+            // Update the position / content of the annotations every time
+            // the view changes
+            this.updateTitle();
+            this.updateYAxis();
+            this.updateXAxis();
+            this.updateSelectedIndicators();
+          });
+
+          Lore.Helpers.OctreeHelper.joinHoveredChanged(this.octreeHelpers, e => {
+            let phName = this.ohIndexToPhName[e.source];
+            if (e.e && data[phName].labels) {
+              let fullLabel = data[phName].labels[e.e.index];
+              let labelIndex = this.scatterMeta[this.ohIndexToPhIndex[e.source]]
+                                  .label_index[this.seriesState[phName]];
+              let titleIndex = this.scatterMeta[this.ohIndexToPhIndex[e.source]]
+                                  .title_index[this.seriesState[phName]];
+
+              let rgbColor = this.pointHelpers[e.source].getColor(e.e.index);
+              let hexColor = Lore.Core.Color.rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2]);
+
+              this.currentPoint = {
+                index: e.e.index,
+                fullLabel: fullLabel.split('__'),
+                source: phName,
+                label: fullLabel.split('__')[labelIndex],
+                color: hexColor,
+                labelIndex: labelIndex,
+                titleIndex: titleIndex
+              }
+              
+              if (FullMolinBkg == true) {
+
+                document.getElementById("overlay-structure-container").style.visibility = "visible";
+
+                var overlayStruc_Width = document.getElementById("overlay-structure-container").offsetWidth
+                var overlayStruc_Height = document.getElementById("overlay-structure-container").offsetHeight
+
+                if (overlayStruc_Width > overlayStruc_Height) {overlayStruc_Width = overlayStruc_Height}
+
+                smilesDrawer = new SmilesDrawer.Drawer({
+                  width: overlayStruc_Width / window.devicePixelRatio,
+                  height: overlayStruc_Width / window.devicePixelRatio,
+                  bondThickness: 1.4,
+                  experimental: true
+                });
+
+                this.setTipContent();
+
+
+                smilesDrawer = new SmilesDrawer.Drawer({
+                  width: 250 / window.devicePixelRatio,
+                  height: 250 / window.devicePixelRatio,
+                  bondThickness: 1.4,
+                  experimental: true
+                });
+              } else {
+
+                document.getElementById("overlay-structure-container").style.visibility = "hidden";
+                this.setTipContent__();
+
+                this.el.tip.classList.add('show');
+
+                let pointSize = this.pointHelpers[e.source].getPointSize() / window.devicePixelRatio;
+                let x = e.e.screenPosition[0];
+                let y = e.e.screenPosition[1];
+
+                this.el.hoverIndicator.style.width = pointSize + 'px';
+                this.el.hoverIndicator.style.height = pointSize + 'px';
+                this.el.hoverIndicator.style.left = (x - pointSize / 2.0 - 1) + 'px';
+                this.el.hoverIndicator.style.top = (y - pointSize / 2.0 - 1) + 'px';
+
+                this.el.hoverIndicator.classList.add('show');
+                }
+
+            } else {
+              this.currentPoint = null;
+              this.el.tip.classList.remove('show');
+              this.el.hoverIndicator.classList.remove('show');
+            }
+          });
+
+          Lore.Helpers.OctreeHelper.joinSelectedChanged(this.octreeHelpers, items => {
+            this.selectedItems = items;
+            this.updateSelected();
+          });
+
+          Lore.Helpers.OctreeHelper.joinReselected(this.octreeHelpers, item => {
+            this.updateSelected(
+              this.getSelectedIndex(item[0].source, item[0].item.e.index)
+            );
+          });
+
+          // Event listeners
+          this.el.selectedPrev.addEventListener('click', e => {
+            e.preventDefault();
+            this.updateSelected(this.selectedCurrent - 1);
+            return false;
+          });
+
+          this.el.selectedNext.addEventListener('click', e => {
+            e.preventDefault();
+            this.updateSelected(this.selectedCurrent + 1);
+            return false;
+          });
+
+          this.el.selectedRemove.addEventListener('click', e => {
+            e.preventDefault();
+            let item = this.selectedItems[this.selectedCurrent]
+            this.octreeHelpers[item.source].removeSelected(item.index);
+            return false;
+          });
+
+          document.addEventListener('dblclick', e => {
+            if (this.currentPoint) {
+              var index = this.currentPoint.index;
+              var labels = this.currentPoint.label.split('__');
+              var source = this.currentPoint.source;
+              eval(this.scatterMeta[this.phIndexMap[source]].ondblclick[this.seriesState[source]]);
+            }
+          });
+
+          document.addEventListener('mousemove', e => {
+            if (FullMolinBkg == false) {
+
+              document.getElementById("tip").style.visibility = "visible";
+
+              let x = e.clientX;
+              let y = e.clientY;
+
+              if (x > window.innerWidth - this.el.tip.offsetWidth - 20) {
+                x -= this.el.tip.offsetWidth;
+              } else {
+                x += 10;
+              }
+
+              if (y > window.innerHeight - this.el.tip.offsetHeight - 20) {
+                y -= this.el.tip.offsetHeight;
+              } else {
+                y += 10;
+              }
+
+              if (this.el.tip) {
+                this.el.tip.style.top = y + 'px';
+                this.el.tip.style.left = x + 'px';
+              }
+            } else {
+              
+              document.getElementById("tip").style.visibility = "hidden";
+
+            }
+          });
+
+          this.el.selectedToggle.addEventListener('click', e => {
+            this.el.selectedContainer.classList.toggle('hide');
+            if (this.el.selectedContainer.classList.contains('hide'))
+              this.el.selectedToggle.innerHTML = '<i class="fas fa-toggle-off"></i>';
+            else
+              this.el.selectedToggle.innerHTML = '<i class="fas fa-toggle-on"></i>';
+            
+            e.preventDefault();
+            return false;
+          });
+
+          this.el.showControls.addEventListener('click', e => {
+            this.el.moreControls.classList.toggle('hide');
+            e.preventDefault();
+            return false;
+          });
+
+          this.el.search.addEventListener('click', e => {
+            let searchTerm = prompt('Please enter a search term:', '');
+            const results = this.search(searchTerm);
+
+            for (const [name, indices] of Object.entries(results)) {
+              if (!name in this.ohIndexMap) return;
+              indices.forEach(index => {
+                this.octreeHelpers[this.ohIndexMap[name]].addSelected(index);
+              });
+            }
+            
+            e.preventDefault();
+            return false;
+          });
+
+          window.addEventListener('keydown', e => {
+            if ((e.keyCode == 114) || (e.ctrlKey && e.keyCode == 70)) {
+              this.search();
+              e.preventDefault();
+              return false;
+            }
+          });
+
+          this.el.export.addEventListener('click', e => {
+            e.preventDefault();
+
+            let canvas = document.getElementById('lore');
+            let zoom = this.lore.controls.getZoom();
+
+            canvas.style.width = (canvas.width * 2) + 'px';
+            canvas.style.height = (canvas.height * 2) + 'px';
+            this.lore.controls.setZoom(zoom * 2);
+
+            setTimeout(() => {
+              let blob = this.lore.canvas.toBlob(blob => {
+                let a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.setAttribute('download', 'export.png');
+                a.click();
+                
+                setTimeout(() => {
+                  canvas.style.width = '100%';
+                  canvas.style.height = '100%';
+                  lore.controls.setZoom(zoom);
+                }, 2000);
+              });
+            }, 2000);
+          });
+
+          this.el.download.addEventListener('click', e => {
+            e.preventDefault();
+
+            let text = ''
+            this.selectedItems.forEach(item => {
+              let phIndex = this.ohIndexToPhIndex[item.source];
+              let meta = this.scatterMeta[phIndex];
+              let phName = this.ohIndexToPhName[item.source];
+              let seriesState = this.seriesState[phName];
+
+              let fullLabel = data[phName].labels[item.item.index].split('__');
+
+              let labelIndex = meta.label_index[seriesState];
+              let titleIndex = meta.title_index[seriesState];
+              let selectedLabels = meta.selected_labels[seriesState];
+
+              fullLabel.forEach((l, i) => {
+                text += l + ';'
+              });
+              text = text.slice(0, -1); 
+              text += '\n';
+            });
+
+            var a = document.createElement('a');
+            a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            a.setAttribute('download', 'faerun_list.csv');
+
+            a.style.display = 'none';
+            document.body.appendChild(a);
+
+            a.click();
+
+            document.body.removeChild(a);
+
+            return false;
+          });
+
+          this.el.largepreview.addEventListener('click', e => {
+            
+            //Switch display mode:
+            if (FullMolinBkg == false) {
+              FullMolinBkg = true;
+            } else {
+              FullMolinBkg = false;
+              //HIDE BIG CANVAS IN BACKGROUND:
+              document.getElementById("overlay-structure-container").style.visibility = "hidden";
+            }
+          });
+        }
+
+        setTipContent__() {
+          SmilesDrawer.parse(this.currentPoint.label, tree => {
+            smilesDrawer.draw(tree, 'smiles-canvas', 'light', false);
+            let tipImage = Faerun.createElement('img');
+            tipImage.src = this.el.smilesCanvas.toDataURL();
+            this.el.tipText.innerHTML = '';
+            if (this.currentPoint.titleIndex !== this.currentPoint.labelIndex)
+              this.el.tipText.innerHTML = `${this.currentPoint.fullLabel[this.currentPoint.titleIndex]}<br />`;
+            this.el.tipText.appendChild(tipImage);
+            this.el.tip.style.borderColor = this.currentPoint.color;
+          }, err => { console.log(err); });
+        }
+
+        setTipContent() {
+          SmilesDrawer.parse(this.currentPoint.label, tree => {
+            smilesDrawer.draw(tree, 'overlay-structure', 'dark', false);
+            document.getElementById("tip").style.visibility = "hidden";
+            //let tipImage = Faerun.createElement('img');
+            //tipImage.src = this.el.smilesCanvas.toDataURL();
+            //this.el.tipText.innerHTML = '';
+            //if (this.currentPoint.titleIndex !== this.currentPoint.labelIndex)
+            //  this.el.tipText.innerHTML = `${this.currentPoint.fullLabel[this.currentPoint.titleIndex]}<br />`;
+           // this.el.tipText.appendChild(tipImage);
+            //this.el.tip.style.borderColor = this.currentPoint.color;
+          }, err => { console.log(err); });
+        }
+
+        setSelectedContent(fullLabel, labelIndex, selectedLabels, img) {
+          this.el.selectedContainer.innerHTML = '';
+          if (img)
+            this.el.selectedContainer.appendChild(img);
+
+          fullLabel.forEach((l, i) => {
+            if (i === labelIndex) return;
+            if (selectedLabels && selectedLabels[i]) {
+              this.el.selectedContainer.appendChild(
+                Faerun.createElement('div', { classes: 'label', content: selectedLabels[i] })
+              );
+            }
+            this.el.selectedContainer.appendChild(
+              Faerun.createElement('div', { classes: 'content', content: l })
+            );
+          });
+
+          // Update the indicator
+          this.updateSelectedIndicators();
+        }
+
+        renderLegend() {
+          if (!this.legend.show) return;
+
+          
+          let legend = document.getElementById('legend');
+          
+          if (legend) this.body.removeChild(legend);
+
+          legend = Faerun.createElement('div', { id: 'legend' });
+          this.body.appendChild(legend)
+          
+          if (this.legend.title && this.legend.title !== '')
+            legend.appendChild(Faerun.createElement('h2', { content: 'Legend' }));
+          
+          let container = Faerun.createElement('div', { classes: 'container' });
+          legend.appendChild(container);
+
+          this.scatterMeta.forEach(s => {
+            let index = this.seriesState[s.name];
+            if (s.has_legend) {
+              let legendSection = []
+              if (!s.is_range[index]) {
+                s.legend[index].forEach(v => {
+                  legendSection.push(Faerun.createElement('div', { classes: 'legend-element' }, [
+                    Faerun.createColorBox(v[0]),
+                    Faerun.createElement('div', { classes: 'legend-label', content: v[1] }),
+                  ]))
+                })
+              } else {
+                legendSection.push(Faerun.createElement('div', { classes: 'legend-element-range' }, [
+                  ...Faerun.createColorScale(s.legend[index]),
+                  Faerun.createElement('div', { 
+                    classes: 'legend-label max', 
+                    content: s.max_legend_label[index] 
+                  }),
+                  Faerun.createElement('div', {
+                    classes: 'legend-label min',
+                    content: s.min_legend_label[index] 
+                  })
+                ]))
+              }
+
+              let series = [];
+              for (var i = 0; i < s.series_title.length; i++) {
+                series.push(
+                  Faerun.createElement('option', { 
+                    value: i, 
+                    content: s.series_title[i], 
+                    selected: i === index
+                  })
+                );
+              }
+
+
+              let sectionHeader = Faerun.createElement(
+                'h3', { content: s.legend_title[index] }
+              );
+              sectionHeader.addEventListener('click', e => {
+                this.toggleLegendSection(s.name);
+              });
+
+              let seriesSelector = Faerun.createElement(
+                'select', 
+                { 
+                  id: `select-${s.name}`, 
+                  classes: 'series-selector',
+                  'data-name': s.name,
+                  hidden: s.series_title.length < 2,
+                }, 
+                [ ...series ]
+              );
+              seriesSelector.addEventListener('change', e => {
+                let value = document.getElementById(`select-${s.name}`).value;
+                this.changeSeries(value, s.name);
+              });
+
+
+              container.appendChild(
+                Faerun.createElement(
+                  'div', { id: `legend-${s.name}`, 
+                  classes: 'legend-section', 
+                  'data-name': `${s.name}` },
+                  [ sectionHeader, seriesSelector, ...legendSection ]
+                )
+              );
+            }
+          });
+        }
+
+        toggleLegendSection(name) {
+          let section = document.getElementById('legend-' + name);
+          let geometry = this.pointHelpers[this.phIndexMap[name]].geometry;
+          let isVisible = geometry.isVisible;
+
+          if (isVisible) {
+            geometry.hide();
+            section.style.opacity = 0.5;
+          } else {
+            geometry.show();
+            section.style.opacity = 1.0;
+          }
+        }
+
+        getSelectedIndex(source, index) {
+          let selectedIndex = null;
+          this.selectedItems.forEach((item, i) => {
+            if (item.source == source && item.item.index == index) {
+              selectedIndex = i;
+              return;
+            }
+          });
+          return selectedIndex;
+        }
+
+        updateSelected(current = -1) {
+          let n = this.selectedItems.length
+          // Hide the container if no items are selected
+          if (n === 0) {
+            this.el.selected.style.display = 'none';
+            return;
+          } else {
+            this.el.selected.style.display = 'block';
+          }
+
+          if (current < 0) current = n - 1;
+          if (current >= n) current = 0;
+          this.selectedCurrent = current;
+
+          let item = this.selectedItems[current];
+
+          let phIndex = this.ohIndexToPhIndex[item.source];
+          let meta = this.scatterMeta[phIndex];
+          let phName = this.ohIndexToPhName[item.source];
+          let seriesState = this.seriesState[phName];
+
+          let fullLabel = data[phName].labels[item.item.index].split('__');
+
+          let labelIndex = meta.label_index[seriesState];
+          let titleIndex = meta.title_index[seriesState];
+          let selectedLabels = meta.selected_labels[seriesState];
+
+          SmilesDrawer.parse(fullLabel[labelIndex], tree => {
+            smilesDrawer.draw(tree, 'smiles-canvas', 'dark', false);
+            let img = Faerun.createElement('img');
+            img.src = this.el.smilesCanvas.toDataURL();
+            
+            this.el.selectedCurrent.innerHTML = current + 1;
+            this.el.selectedTotal.innerHTML = n;
+            this.el.selectedTitle.innerHTML = fullLabel[titleIndex];
+
+            this.setSelectedContent(fullLabel, labelIndex, selectedLabels, img);
+          }, err => { console.log(err); });
+
+          // Remove all indicators
+          this.selectedIndicators.forEach(indicator => {
+            indicator.element.parentElement.removeChild(indicator.element);
+          });
+          this.selectedIndicators.length = 0;
+
+          // Add the indicator for this object
+          let indicatorElement = Faerun.createElement(
+            'div', 
+            { classes: 'selected-indicator' },
+            [
+              Faerun.createElement('div', { classes: 'crosshair-x' }),
+              Faerun.createElement('div', { classes: 'crosshair-y' })
+            ]
+          );
+
+          this.body.appendChild(indicatorElement);
+          this.selectedIndicators.push({
+            element: indicatorElement,
+            index: item.item.index,
+            ohIndex: item.source,
+            phIndex: phIndex
+          });
+          this.updateSelectedIndicators();
+        }
+
+        updateSelectedIndicators() {
+          this.selectedIndicators.forEach(indicator => {
+            let pointSize = this.pointHelpers[indicator.phIndex].getPointSize();
+            let screenPosition = this.octreeHelpers[indicator.ohIndex]
+                                     .getScreenPosition(indicator.index);
+            
+            // Make the crosshairs larger than the point
+            pointSize = Faerun.getMax([pointSize / window.devicePixelRatio, 10 / window.devicePixelRatio]);
+            pointSize *= 1.25;
+            let halfPointSize = pointSize / 2.0;
+            indicator.element.style.left = (screenPosition[0] - halfPointSize) + 'px';
+            indicator.element.style.top = (screenPosition[1] - halfPointSize) + 'px';
+            indicator.element.style.width = pointSize + 'px';
+            indicator.element.style.height = pointSize + 'px';
+          });
+        }
+
+        updateTitle(first = false) {
+          if (this.el.title === undefined) return;
+
+          let bb = this.el.title.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            (this.min[0] + this.min[0]) / 2.0, this.min[1], 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.title.style.left = (screenPosition[0] - (bb.width / 2.0)) + 'px';
+          this.el.title.style.top = (screenPosition[1] - bb.height) + 'px';
+
+          if (first) this.el.title.classList.add('show');
+        }
+
+        updateXAxis(first = false) {
+          if (this.el.xAxis === undefined) return;
+          
+          let bb = this.el.xAxis.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            (this.min[0] + this.min[0]) / 2.0, this.min[1], 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.xAxis.style.left = (screenPosition[0] - (bb.width / 2.0)) + 'px';
+          this.el.xAxis.style.top = (screenPosition[1]) + 'px';
+
+          if (first) this.el.xAxis.classList.add('show');
+        }
+
+        updateYAxis(first = false) {
+          if (this.el.yAxis === undefined) return;
+            
+          let bb = this.el.yAxis.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            this.min[0], (this.min[1] + this.min[1]) / 2.0, 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+          
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.yAxis.style.left = (screenPosition[0] - bb.height) + 'px';
+          this.el.yAxis.style.top = (screenPosition[1] - bb.width / 2.0) + 'px';
+
+          if (first) this.el.yAxis.classList.add('show');
+        }
+
+        changeSeries(value, name) {
+          value = parseInt(value);
+          this.seriesState[name] = value;
+          this.renderLegend();
+
+          this.pointHelpers[this.phIndexMap[name]].setRGBFromArrays(
+            data[name]['colors'][value].r, 
+            data[name]['colors'][value].g, 
+            data[name]['colors'][value].b
+          );
+
+          if (data[name]['s']) {
+            if (data[name]['s'][value]) {
+              this.pointHelpers[this.phIndexMap[name]].setSize(
+                data[name]['s'][value]
+              );
+            } else {
+              this.pointHelpers[this.phIndexMap[name]].setSize(1.0);
+            }
+          }
+        }
+
+        search(term) {
+          let results = {}
+          let re = new RegExp(term, 'i');
+
+          Object.keys(data).forEach(name => {
+            if (!('labels' in data[name])) return;
+            results[name] = []
+            data[name]['labels'].forEach((label, i) => {
+              if (re.test(label))
+                results[name].push(i)
+            });
+          });
+
+          return results;
+        }
+
+        static createColorBox(value) {
+          return Faerun.createElement(
+            'div', 
+            { 
+              classes: 'color-box', 
+              style: `background-color: rgba(${value[0] * 255}, ${value[1] * 255 }, ${value[2] * 255 }, ${value[3] });
+                      border-color: rgba(${value[0] * 255 }, ${value[1] * 255 }, ${value[2] * 255 }, ${value[3] })`
+            }
+          );
+        }
+
+        static createColorScale(values) {
+          let scale = [];
+
+          values.forEach(value => {
+            scale.push(
+              Faerun.createElement(
+                'div', 
+                { 
+                  classes: 'color-stripe', 
+                  style: `background-color: rgba(${value[0][0] * 255}, ${value[0][1] * 255}, ${value[0][2] * 255}, ${value[0][3]});
+                          border-color: rgba(${value[0][0] * 255}, ${value[0][1] * 255}, ${value[0][2] * 255}, ${value[0][3]})`,
+                  alt: value[1]
+                }
+              ),
+            )
+          });
+
+          return scale;
+        }
+        
+        static createElement(tag, values = {}, children = []) {
+          let element = document.createElement(tag);
+
+          for (const key of Object.keys(values)) {
+            if (key === 'classes')
+              element.classList.add(...values[key].split(' '));
+            else if (key === 'content')
+              element.innerHTML = values[key];
+            else if (key === 'hidden') {
+              if (values[key])
+                element.setAttribute('hidden', true);
+            }
+            else if (key === 'selected') {
+              if (values[key])
+                element.setAttribute('selected', true);
+            }
+            else
+              element.setAttribute(key, values[key]);
+          }
+
+          if (children) {
+            if (Array.isArray(children)) {
+              children.forEach(child => {
+                element.appendChild(child);
+              })
+            } else {
+              element.appendChild(children);
+            }
+          }
+
+          return element;
+        }
+
+        static bindElements() {
+          let result = {};
+          document.querySelectorAll('[data-bind]').forEach(e => {
+            result[e.getAttribute('data-bind')] = e;
+          });
+          return result;
+        }
+
+        static getMin(arr, other = Number.MAX_VALUE) {
+          let m = Number.MAX_VALUE;
+          for (var i = 0; i < arr.length; i++)
+              if (arr[i] < m) m = arr[i];
+          
+          if (m < other) return m;
+          return other;
+        }
+
+        static getMax(arr, other = -Number.MAX_VALUE) {
+          let m = -Number.MAX_VALUE;
+          for (var i = 0; i < arr.length; i++)
+              if (arr[i] > m) m = arr[i];
+          
+          if (m > other) return m;
+          return other;
+        }
+      }
+
+      let f = new Faerun();
+    </script>
+  </body>
+</html>

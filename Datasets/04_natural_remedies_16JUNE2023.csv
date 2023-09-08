@@ -1,0 +1,763 @@
+COMPOUND_ID,NAME_FOOD_DB,NEW_SMILES,FLAVOR_ID,NAME_FLAVOR,FLAVOR_GROUP
+373,Prenyl acetate,CC(=O)OCC=C(C)C,44.0,sweet,balsamic
+477,"1-(3,4-Dimethoxyphenyl)ethanone",COc1ccc(C(C)=O)cc1OC,44.0,sweet,balsamic
+718,"3-Acetyl-2,5-dimethylfuran",CC(=O)c1cc(C)oc1C,44.0,sweet,balsamic
+728,Diethyl malonate,CCOC(=O)CC(=O)OCC,44.0,sweet,balsamic
+753,Ethanol,CCO,44.0,sweet,balsamic
+774,Tiglic acid,CC=C(C)C(=O)O,44.0,sweet,balsamic
+776,5-Methyl-2(3H)-furanone,Cc1ccc(O)o1,44.0,sweet,balsamic
+807,3-Methylbenzaldehyde,Cc1cccc(C=O)c1,44.0,sweet,balsamic
+809,(4-Methylphenyl)acetaldehyde,Cc1ccc(CC=O)cc1,44.0,sweet,balsamic
+810,3-(4-Methylphenyl)-2-propenal,Cc1ccc(C=CC=O)cc1,41.0,cinnamon,balsamic
+822,"4-Hydroxy-3,5-dimethoxybenzaldehyde",COc1cc(C=O)cc(OC)c1O,44.0,sweet,balsamic
+826,2-(4-Methylphenyl)-2-propanol,Cc1ccc(C(C)(C)O)cc1,44.0,sweet,balsamic
+838,Vanillin,COc1cc(C=O)ccc1O,45.0,vanilla,balsamic
+839,Vanillin acetate,COc1cc(C=O)ccc1OC(C)=O,44.0,sweet,balsamic
+840,Vanilloside,COc1cc(C=O)ccc1OC1OC(CO)C(O)C(O)C1O,45.0,vanilla,balsamic
+841,Ethyl vanillin,CCOc1cc(C=O)ccc1O,44.0,sweet,balsamic
+846,Vanillic acid,COc1cc(C(=O)O)ccc1O,44.0,sweet,balsamic
+855,"1,4-Dimethoxybenzene",COc1ccc(OC)cc1,44.0,sweet,balsamic
+865,"2,6-Dimethoxy-4-methylphenol",COc1cc(C)cc(OC)c1O,39.0,caramel,balsamic
+872,4-Methoxybenzaldehyde,COc1ccc(C=O)cc1,44.0,sweet,balsamic
+878,Wine lactone,CC1=CC2OC(=O)C(C)C2CC1,44.0,sweet,balsamic
+887,Cinnamyl alcohol,OCC=Cc1ccccc1,44.0,sweet,balsamic
+889,Cinnamyl acetate,CC(=O)OCC=Cc1ccccc1,44.0,sweet,balsamic
+897,Methyl anthranilate,COC(=O)c1ccccc1N,42.0,honey,balsamic
+914,2-Thiophenethiol,Sc1cccs1,39.0,caramel,balsamic
+930,3-Ethylpyridine,CCc1cccnc1,39.0,caramel,balsamic
+952,Methyl 2-furoate,COC(=O)c1ccco1,44.0,sweet,balsamic
+963,Herniarin,COc1ccc2ccc(=O)oc2c1,44.0,sweet,balsamic
+966,Ethyl (±)-2-methyl-4-pentenoate,C=CCC(C)C(=O)OCC,44.0,sweet,balsamic
+969,Allyl nonanoate,C=CCOC(=O)CCCCCCCC,44.0,sweet,balsamic
+1022,Ethyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OCC,37.0,balsam,balsamic
+1028,Ethyl salicylate,CCOC(=O)c1ccccc1O,44.0,sweet,balsamic
+1029,Benzyl salicylate,O=C(OCc1ccccc1)c1ccccc1O,37.0,balsam,balsamic
+1136,D-Xylose,O=C(C(O)CO)C(O)CO,44.0,sweet,balsamic
+1267,Hexyl acetate,CCCCCCOC(C)=O,44.0,sweet,balsamic
+1291,Nopol,CC1(C)C2CC=C(CCO)C1C2,44.0,sweet,balsamic
+1326,Ethyl isovalerate,CCOC(=O)CC(C)C,44.0,sweet,balsamic
+1327,Isopentyl isopentanoate,CC(C)CCOC(=O)CC(C)C,44.0,sweet,balsamic
+1358,Butyl propionate,CCCCOC(=O)CC,44.0,sweet,balsamic
+1363,Isopropyl propionate,CCC(=O)OC(C)C,44.0,sweet,balsamic
+1366,Ethyl propionate,CCOC(=O)CC,44.0,sweet,balsamic
+1367,Propyl propionate,CCCOC(=O)CC,44.0,sweet,balsamic
+1368,Methyl 3-phenylpropanoate,COC(=O)CCc1ccccc1,42.0,honey,balsamic
+1369,"1,1-Dimethoxyethane",COC(C)OC,44.0,sweet,balsamic
+1371,Benzyl propionate,CCC(=O)OCc1ccccc1,44.0,sweet,balsamic
+1462,cis-beta-Ocimene,C=CC(C)=CCC=C(C)C,44.0,sweet,balsamic
+1929,3-Methyl-3-butenol,C=C(C)CCO,44.0,sweet,balsamic
+2076,Limonene aldehyde,CC1=CCC(C(C)CC=O)CC1,44.0,sweet,balsamic
+2253,3-Aminopropanoic acid,NCCC(=O)O,44.0,sweet,balsamic
+2291,Linalyl butyrate,C=CC(C)(CCC=C(C)C)OC(=O)CCC,44.0,sweet,balsamic
+2292,Linalyl isovalerate,C=CC(C)(CCC=C(C)C)OC(=O)CC(C)C,44.0,sweet,balsamic
+2294,Linalyl caprylate,C=CC(C)(CCC=C(C)C)OC(=O)CCCCCCC,44.0,sweet,balsamic
+2413,"2,5-Dimethylphenol",Cc1ccc(C)c(O)c1,44.0,sweet,balsamic
+2712,Maltol,Cc1occc(=O)c1O,39.0,caramel,balsamic
+2728,Isoeugenol,CC=Cc1ccc(O)c(OC)c1,44.0,sweet,balsamic
+2793,Anethole,CC=Cc1ccc(OC)cc1,36.0,anise,balsamic
+2870,1-(4-Methoxyphenyl)-1-penten-3-one,CCC(=O)C=Cc1ccc(OC)cc1,44.0,sweet,balsamic
+2897,Tridecanal,CCCCCCCCCCCCC=O,44.0,sweet,balsamic
+2917,Undecanal,CCCCCCCCCCC=O,44.0,sweet,balsamic
+2937,"(3Z,6Z)-3,6-Nonadien-1-ol",CCC=CCC=CCCO,44.0,sweet,balsamic
+2987,Ethyl decanoate,CCCCCCCCCC(=O)OCC,44.0,sweet,balsamic
+3014,2-Dodecenal,CCCCCCCCCC=CC=O,44.0,sweet,balsamic
+3194,Tetrahydro-2-furanmethanol,OCC1CCCO1,39.0,caramel,balsamic
+3196,Tetrahydrofurfuryl acetate,CC(=O)OCC1CCCO1,44.0,sweet,balsamic
+3198,Dihydro-2-methyl-3(2H)-furanone,CC1OCCC1=O,44.0,sweet,balsamic
+3217,"3,5,5-Trimethyl-2-cyclohexen-1-one",CC1=CC(=O)CC(C)(C)C1,44.0,sweet,balsamic
+3221,"2,5-Dihydro-2,4,5-trimethyloxazole",CC1=NC(C)OC1C,39.0,caramel,balsamic
+3230,Methyl pentanoate,CCCCC(=O)OC,44.0,sweet,balsamic
+3232,1-Phenyl-1-pentanone,CCCCC(=O)c1ccccc1,37.0,balsam,balsamic
+3241,Ethyl acetate,CCOC(C)=O,36.0,anise,balsamic
+3245,2-Ethylbutanal,CCC(C=O)CC,44.0,sweet,balsamic
+3246,2-Ethylbutanoic acid,CCC(CC)C(=O)O,39.0,caramel,balsamic
+3256,2-Ethyl-1-hexanol,CCCCC(CC)CO,44.0,sweet,balsamic
+3269,Isopropyl acetate,CC(=O)OC(C)C,44.0,sweet,balsamic
+3276,2-Methylpropyl acetate,CC(=O)OCC(C)C,44.0,sweet,balsamic
+3277,2-Methylpropyl formate,CC(C)COC=O,44.0,sweet,balsamic
+3279,Ethyl 2-methylpropanoate,CCOC(=O)C(C)C,44.0,sweet,balsamic
+3281,Phenylmethyl 2-methylpropanoate,CC(C)C(=O)OCc1ccccc1,44.0,sweet,balsamic
+3286,3-Methylbutanal,CC(C)CC=O,40.0,chocolate,balsamic
+3297,4-Oxopentanoic acid,CC(=O)CCC(=O)O,44.0,sweet,balsamic
+3306,Methyl nonanoate,CCCCCCCCC(=O)OC,44.0,sweet,balsamic
+3309,2-Nonanone,CCCCCCCC(C)=O,44.0,sweet,balsamic
+3310,3-Nonanone,CCCCCCC(=O)CC,44.0,sweet,balsamic
+3338,Methyl caprylate,CCCCCCCC(=O)OC,44.0,sweet,balsamic
+3361,"3-Hydroxy-4,5-dimethyl-2(5H)-furanone",Cc1oc(O)c(O)c1C,39.0,caramel,balsamic
+3364,Ethyl 3-oxohexanoate,CCCC(=O)CC(=O)OCC,44.0,sweet,balsamic
+3365,"5-Acetyl-3,4-dihydro-2H-pyrrole",CC(=O)C1=NCCC1,44.0,sweet,balsamic
+3368,Benzyl acetate,CC(=O)OCc1ccccc1,44.0,sweet,balsamic
+3371,2-Pentyl-3-phenyl-2-propenal,CCCCCC(C=O)=Cc1ccccc1,44.0,sweet,balsamic
+3375,4-(Methylthio)-2-butanone,CSCCC(C)=O,44.0,sweet,balsamic
+3379,Butanal,CCCC=O,40.0,chocolate,balsamic
+3383,2-Butanol,CCC(C)O,44.0,sweet,balsamic
+3393,gamma-Butyrolactone,O=C1CCCO1,39.0,caramel,balsamic
+3401,(Z)-9-Cycloheptadecen-1-one,O=C1CCCCCCCC=CCCCCCCC1,44.0,sweet,balsamic
+3417,Cyclohexyl formate,O=COC1CCCCC1,44.0,sweet,balsamic
+3418,Cyclohexyl acetate,CC(=O)OC1CCCCC1,44.0,sweet,balsamic
+3478,Cyclohexaneacetic acid,O=C(O)CC1CCCCC1,42.0,honey,balsamic
+3481,Ethyl 3-cyclohexylpropionate,CCOC(=O)CCC1CCCCC1,44.0,sweet,balsamic
+3905,alpha-Cedrene,CC1=CCC23CC1C(C)(C)C2CCC3C,44.0,sweet,balsamic
+3995,alpha-Terpinyl acetate,CC(=O)OC(C)(C)C1CC=C(C)CC1,44.0,sweet,balsamic
+4430,5-Methyl-2-ethyl-pyrazine,CCc1cnc(C)cn1,44.0,sweet,balsamic
+4804,trans-Caryophyllene oxide,C=C1CCC2OC2(C)CCC2C1CC2(C)C,44.0,sweet,balsamic
+5380,N-Heptane,CCCCCCC,44.0,sweet,balsamic
+5388,p-Menthene,CC1=CCC(C(C)C)CC1,36.0,anise,balsamic
+5806,Longifolene,C=C1C2CCC3C2C(C)(C)CCCC13C,44.0,sweet,balsamic
+6368,alpha-Elemol,C=CC1(C)CCC(C(C)(C)O)CC1C(=C)C,44.0,sweet,balsamic
+8053,Methyl heptanoate,CCCCCCC(=O)OC,44.0,sweet,balsamic
+8054,1-Heptanol,CCCCCCCO,44.0,sweet,balsamic
+8056,2-Heptanone,CCCCCC(C)=O,41.0,cinnamon,balsamic
+8060,4-Heptanone,CCCC(=O)CCC,44.0,sweet,balsamic
+8071,"2,3-Hexanedione",CCCC(=O)C(C)=O,44.0,sweet,balsamic
+8072,"3,4-Hexanedione",CCC(=O)C(=O)CC,39.0,caramel,balsamic
+8073,1-Hexanol,CCCCCCO,44.0,sweet,balsamic
+8078,5-Methyl-delta-valerolactone,CC1CCCC(=O)O1,44.0,sweet,balsamic
+8099,1-Hydroxy-2-butanone,CCC(=O)CO,44.0,sweet,balsamic
+8104,2-Hydroxy-3-methyl-2-cyclopenten-1-one,CC1CCC(=O)C1=O,39.0,caramel,balsamic
+8108,5-Butyl-delta-valerolactone,CCCCC1CCCC(=O)O1,44.0,sweet,balsamic
+8126,Methyl acetate,COC(C)=O,44.0,sweet,balsamic
+8133,Isopentyl acetate,CC(=O)OCCC(C)C,44.0,sweet,balsamic
+8135,3-Methyl-2-butenal,CC(C)=CC=O,44.0,sweet,balsamic
+8152,3-Methyl-2-cyclohexen-1-one,CC1=CC(=O)CCC1,39.0,caramel,balsamic
+8157,3-Methyl-2-cyclopenten-1-one,CC1=CC(=O)CC1,44.0,sweet,balsamic
+8162,5-Methyl-3-hexen-2-one,CC(=O)C=CC(C)C,44.0,sweet,balsamic
+8173,"4-Methyl-2,3-pentanedione",CC(=O)C(=O)C(C)C,44.0,sweet,balsamic
+8179,"4-Methyl-3-penten-2-one, 9CI",CC(=O)C=C(C)C,44.0,sweet,balsamic
+8182,2-Methyl-3-phenyl-2-propenal,CC(C=O)=Cc1ccccc1,44.0,sweet,balsamic
+8187,4-Methyl-1-phenyl-2-pentanone,CC(C)CC(=O)Cc1ccccc1,44.0,sweet,balsamic
+8189,2-Methyl-1-phenyl-2-propanyl acetate,CC(=O)OC(C)(C)Cc1ccccc1,44.0,sweet,balsamic
+8209,"6-Methyl-3,5-heptadien-2-one",CC(=O)C=CC=C(C)C,41.0,cinnamon,balsamic
+8224,"5-Methyl-2,3-hexanedione",CC(=O)C(=O)CC(C)C,44.0,sweet,balsamic
+8230,"2,3-Pentanedione",CCC(=O)C(C)=O,44.0,sweet,balsamic
+8231,1-Pentanol,CCCCCO,44.0,sweet,balsamic
+8237,Ethyl 4-pentenoate,C=CCCC(=O)OCC,39.0,caramel,balsamic
+8246,Phenoxyacetic acid,O=C(O)COc1ccccc1,44.0,sweet,balsamic
+8247,Allyl phenoxyacetate,C=CCOC(=O)COc1ccccc1,42.0,honey,balsamic
+8254,4-Phenyl-3-buten-2-ol,CC(O)C=Cc1ccccc1,44.0,sweet,balsamic
+8256,Benzylideneacetone,CC(=O)C=Cc1ccccc1,36.0,anise,balsamic
+8257,Ethyl 4-phenylbutanoate,CCOC(=O)CCCc1ccccc1,44.0,sweet,balsamic
+8258,2-Phenyl-2-butenal,CC=C(C=O)c1ccccc1,44.0,sweet,balsamic
+8264,1-Phenyl-2-pentanol,CCCC(O)Cc1ccccc1,44.0,sweet,balsamic
+8268,1-Phenyl-1-propanol,CCC(O)c1ccccc1,44.0,sweet,balsamic
+8272,3-Phenylpropanoic acid,O=C(O)CCc1ccccc1,44.0,sweet,balsamic
+8288,Pentyl propanoate,CCCCCOC(=O)CC,44.0,sweet,balsamic
+8295,Ethyl pyruvate,CCOC(=O)C(C)=O,44.0,sweet,balsamic
+8297,"1,1-Diethoxyethane",CCOC(C)OCC,42.0,honey,balsamic
+8342,4-Propyl-gamma-butyrolactone,CCCC1CCC(=O)O1,44.0,sweet,balsamic
+8348,"2,4-Heptadienal",CC=CC=CCC=O,41.0,cinnamon,balsamic
+8367,2-Ethylbutyl acetate,CCC(CC)COC(C)=O,44.0,sweet,balsamic
+8380,3-(Methylthio)-1-propanol,CSCCCO,44.0,sweet,balsamic
+8394,4-Hexyl-gamma-butyrolactone,CCCCCCC1CCC(=O)O1,44.0,sweet,balsamic
+8398,3-Methyl-1-phenyl-3-pentanol,CCC(C)(O)CCc1ccccc1,44.0,sweet,balsamic
+8404,Ethyl maltol,CCc1occc(=O)c1O,44.0,sweet,balsamic
+8409,"7-Hydroxy-3,7-dimethyloctanal",CC(CC=O)CCCC(C)(C)O,44.0,sweet,balsamic
+8435,Propyl benzoate,CCCOC(=O)c1ccccc1,37.0,balsam,balsamic
+8536,"3-(5,6,6-Trimethylbicyclo[2.2.1]hept-1-yl)cyclohexanol",CC1C2CC(CC2C2CCCC(O)C2)C1(C)C,44.0,sweet,balsamic
+8540,5-Methyl-2-phenyl-2-hexenal,CC(C)CC=C(C=O)c1ccccc1,44.0,sweet,balsamic
+8544,Norfuraneol,Cc1occ(O)c1O,39.0,caramel,balsamic
+8546,2-Acetylpyrazine,CC(=O)c1cnccn1,40.0,chocolate,balsamic
+8549,Methyleugenol,C=CCc1ccc(OC)c(OC)c1,36.0,anise,balsamic
+8711,4-Hydroxy-3-methoxybenzenemethanol,COc1cc(CO)ccc1O,36.0,anise,balsamic
+8723,4-Ethylbenzaldehyde,CCc1ccc(C=O)cc1,44.0,sweet,balsamic
+8731,Guaicyl acetate,COc1ccccc1OC(C)=O,44.0,sweet,balsamic
+8740,Benzoic acid,O=C(O)c1ccccc1,37.0,balsam,balsamic
+8741,Isopropyl benzoate,CC(C)OC(=O)c1ccccc1,44.0,sweet,balsamic
+8742,Butyl benzoate,CCCCOC(=O)c1ccccc1,37.0,balsam,balsamic
+8746,Benzyl alcohol,OCc1ccccc1,44.0,sweet,balsamic
+8747,Butyl 3-methylbutanoate,CCCCOC(=O)CC(C)C,44.0,sweet,balsamic
+8749,Hexyl 3-methylbutanoate,CCCCCCOC(=O)CC(C)C,44.0,sweet,balsamic
+8752,Propyl 3-methylbutanoate,CCCOC(=O)CC(C)C,44.0,sweet,balsamic
+8759,alpha-Terpinyl butanoate,CCCC(=O)OC(C)(C)C1CC=C(C)CC1,37.0,balsam,balsamic
+8764,Eugenyl benzoate,C=CCc1ccc(OC(=O)c2ccccc2)c(OC)c1,37.0,balsam,balsamic
+8782,3-Phenyl-2-propenal,O=CC=Cc1ccccc1,41.0,cinnamon,balsamic
+8788,1-Methoxy-2-methylbenzene,COc1ccccc1C,44.0,sweet,balsamic
+8793,Dibenzyl disulfide,c1ccc(CSSCc2ccccc2)cc1,39.0,caramel,balsamic
+8794,Dibenzyl ether,c1ccc(COCc2ccccc2)cc1,40.0,chocolate,balsamic
+8860,2-Methoxy-4-propylphenol,CCCc1ccc(O)c(OC)c1,36.0,anise,balsamic
+8863,2-Methoxy-4-methylphenol,COc1cc(C)ccc1O,45.0,vanilla,balsamic
+8865,"3,4-Dimethoxybenzaldehyde",COc1ccc(C=O)cc1OC,39.0,caramel,balsamic
+8866,"1,2-Dimethoxybenzene",COc1ccccc1OC,44.0,sweet,balsamic
+8867,"2',4'-Dimethylacetophenone",CC(=O)c1ccc(C)cc1C,44.0,sweet,balsamic
+8869,"2,4-Dimethylbenzaldehyde",Cc1ccc(C=O)c(C)c1,45.0,vanilla,balsamic
+8879,"2,6-Dimethylphenol",Cc1cccc(C)c1O,44.0,sweet,balsamic
+9067,alpha-Campholene acetate,CC(=O)OCCC1CC=C(C)C1(C)C,44.0,sweet,balsamic
+9191,cis-4-Octenol,CCCC=CCCCO,44.0,sweet,balsamic
+9194,Citronellyl anthranilate,CC(C)=CCCC(C)CCOC(=O)c1ccccc1N,44.0,sweet,balsamic
+9288,"4,5-Dihydro-2,5-dimethyl-4-oxo-3-furanyl butyrate",CCCC(=O)Oc1c(C)oc(C)c1O,44.0,sweet,balsamic
+9392,Ethyl 2-hexenoate,CCC=CCC(=O)OCC,44.0,sweet,balsamic
+9394,(+/-)-Ethyl 2-hydroxy-2-methylbutyrate,CCOC(=O)C(C)(O)CC,39.0,caramel,balsamic
+9397,Ethyl 3-mercaptobutyrate,CCOC(=O)CC(C)S,44.0,sweet,balsamic
+9484,Geranyl tiglate,CC=C(C)C(=O)OCC=C(C)CCC=C(C)C,44.0,sweet,balsamic
+9553,Hept-trans-2-en-1-yl acetate,CCCCC=CCOC(C)=O,44.0,sweet,balsamic
+9554,Hept-2-en-1-yl isovalerate,CCCCC=CCC(C(=O)O)C(C)C,44.0,sweet,balsamic
+9559,"2,4-Hexadien-1-ol",CC=CC=CCO,44.0,sweet,balsamic
+9566,Hexanal hexyl isoamyl acetal,CCCCCCOC(CCCCC)OCCC(C)C,44.0,sweet,balsamic
+9571,3-Hexenyl 2-methylbutyrate,CCC=CCCOC(=O)C(C)CC,44.0,sweet,balsamic
+9611,2-(2-Hydroxyphenyl) cyclopropanecarboxylic acid delta lactone,O=C1Oc2ccccc2C2CC12,45.0,vanilla,balsamic
+9637,Isoborneol,CC1(C)C2CCC1(C)C(O)C2,37.0,balsam,balsamic
+9638,Isobornyl isobutyrate,CC(C)C(=O)OC1CC2CCC1(C)C2(C)C,37.0,balsam,balsamic
+9643,(+/-)-Isobutyl 3-methylthiobutyrate,CSC(C)CC(=O)OCC(C)C,44.0,sweet,balsamic
+9788,Menthyl valerate,CCCCC(=O)OC1CC(C)CCC1C(C)C,44.0,sweet,balsamic
+9819,"Methylbenzyl acetate (mixed o-, m-, p-)",CC(=O)OC(C)c1ccccc1,44.0,sweet,balsamic
+9847,3-Methyl-2(3-methylbut-2-en-1-yl)furan,CC(C)=CCc1occc1C,39.0,caramel,balsamic
+9849,Methyl 3-(methylthio)butanoate,COC(=O)CC(C)SC,44.0,sweet,balsamic
+10078,Phthalide,O=C1OCc2ccccc21,44.0,sweet,balsamic
+10079,Phytyl acetate,CC(=O)OCC=C(C)CCCC(C)CCCC(C)CCCC(C)C,37.0,balsam,balsamic
+10158,Pseudoionone,CC(=O)C=CC=C(C)CCC=C(C)C,44.0,sweet,balsamic
+10231,Santalol (alpha and beta),CC(=CCCC1(C)C2CC3C(C2)C31C)CO,44.0,sweet,balsamic
+10233,Santalyl phenylacetate,C=C1C2CCC(C2)C1(C)CCC=C(C)COC(=O)Cc1ccccc1,42.0,honey,balsamic
+10418,"4-(2,6,6-Trimethylcyclohex-1-enyl)but-2-en-4-one",CC=CC(=O)C1=C(C)CCCC1(C)C,42.0,honey,balsamic
+10442,Valeraldehyde dibutyl acetal,CCCCOC(CCCC)OCCCC,44.0,sweet,balsamic
+10451,"Vanillin 3-(L-menthoxy)propane-1,2-diol acetal",COc1cc(C2OCC(COC3CC(C)CCC3C(C)C)O2)ccc1O,45.0,vanilla,balsamic
+10502,2'-Hydroxyacetophenone,CC(=O)c1ccccc1O,44.0,sweet,balsamic
+10504,4'-Methoxyacetophenone,COc1ccc(C(C)=O)cc1,39.0,caramel,balsamic
+10505,4'-Hydroxyacetophenone,CC(=O)c1ccc(O)cc1,44.0,sweet,balsamic
+10506,4-Hydroxybenzaldehyde,O=Cc1ccc(O)cc1,44.0,sweet,balsamic
+10513,Propylparaben,CCCOC(=O)c1ccc(O)cc1,44.0,sweet,balsamic
+10529,Zingerone,COc1cc(CCC(C)=O)ccc1O,44.0,sweet,balsamic
+10530,Dehydrozingerone,COc1cc(C=CC(C)=O)ccc1O,44.0,sweet,balsamic
+10531,2'-Hydroxy-5'-methylacetophenone,CC(=O)c1cc(C)ccc1O,44.0,sweet,balsamic
+10542,4-Vinylphenol,C=Cc1ccc(O)cc1,44.0,sweet,balsamic
+10551,4'-Methylacetophenone,CC(=O)c1ccc(C)cc1,44.0,sweet,balsamic
+10553,4-Methylbiphenyl,Cc1ccc(-c2ccccc2)cc1,36.0,anise,balsamic
+10554,3-(4-Methoxyphenyl)-2-propenal,COc1ccc(C=CC=O)cc1,44.0,sweet,balsamic
+10555,"3,4-Methylenedioxybenzaldehyde",O=Cc1ccc2c(c1)OCO2,44.0,sweet,balsamic
+10557,Piperonyl acetate,CC(=O)OCc1ccc2c(c1)OCO2,44.0,sweet,balsamic
+10561,Methyl phenylacetate,COC(=O)Cc1ccccc1,44.0,sweet,balsamic
+10562,Ethyl phenylacetate,CCOC(=O)Cc1ccccc1,44.0,sweet,balsamic
+10563,1-Phenylethanol,CC(O)c1ccccc1,44.0,sweet,balsamic
+10572,1-Methoxy-4-propylbenzene,CCCc1ccc(OC)cc1,44.0,sweet,balsamic
+10589,4-Methoxybenzoic acid,COc1ccc(C(=O)O)cc1,44.0,sweet,balsamic
+10590,Methyl 4-methoxybenzoate,COC(=O)c1ccc(OC)cc1,36.0,anise,balsamic
+10856,Hexyl formate,CCCCCCOC=O,44.0,sweet,balsamic
+10875,1-(4-Methoxyphenyl)-2-propanone,COc1ccc(CC(C)=O)cc1,44.0,sweet,balsamic
+10900,2-Furanmethanethiol,SCc1ccco1,40.0,chocolate,balsamic
+10903,3-(2-Furanyl)-2-propenal,O=CC=Cc1ccco1,45.0,vanilla,balsamic
+10906,Ethyl 2-furanpropionate,CCOC(=O)CCc1ccco1,44.0,sweet,balsamic
+10952,2-Acetylthiazole,CC(=O)c1nccs1,40.0,chocolate,balsamic
+10955,Furaneol acetate,CC(=O)Oc1c(C)oc(C)c1O,39.0,caramel,balsamic
+10960,"2,3-Dimethylpyrazine",Cc1nccnc1C,39.0,caramel,balsamic
+10993,5-Methyl-2-furancarboxaldehyde,Cc1ccc(C=O)o1,39.0,caramel,balsamic
+11059,Tiglic alcohol glucoside,CC=C(C)COC1OC(CO)C(O)C(O)C1O,44.0,sweet,balsamic
+11101,(R)-Higenamine,Oc1ccc(CC2NCCc3cc(O)c(O)cc32)cc1,44.0,sweet,balsamic
+11114,Methylpyrazine,Cc1cnccn1,40.0,chocolate,balsamic
+11130,2-Acetylfuran,CC(=O)c1ccco1,44.0,sweet,balsamic
+11131,4-(2-Furanyl)-3-buten-2-one,CC(=O)C=Cc1ccco1,44.0,sweet,balsamic
+11134,3-Acetylpyridine,CC(=O)c1cccnc1,44.0,sweet,balsamic
+11163,Trimethylthiazole,Cc1nc(C)c(C)s1,40.0,chocolate,balsamic
+11165,Methoxypyrazine,COc1cnccn1,44.0,sweet,balsamic
+11168,2-Propanoylthiophene,CCC(=O)c1cccs1,39.0,caramel,balsamic
+11218,6-Decanolide,CCCCC1CCCCC(=O)O1,44.0,sweet,balsamic
+11275,Phenylmethyl benzeneacetate,O=C(Cc1ccccc1)OCc1ccccc1,42.0,honey,balsamic
+11404,Citronellyl formate,CC(C)=CCCC(C)CCOC=O,42.0,honey,balsamic
+11413,3-Methylbutyl benzoate,CC(C)CCOC(=O)c1ccccc1,44.0,sweet,balsamic
+11415,2-(4-Methylphenyl)propanal,Cc1ccc(C(C)C=O)cc1,44.0,sweet,balsamic
+11420,3-Phenylpropyl acetate,CC(=O)OCCCc1ccccc1,44.0,sweet,balsamic
+11523,Geranyl benzoate,CC(C)=CCCC(C)=CCOC(=O)c1ccccc1,44.0,sweet,balsamic
+11614,3-Octen-2-one,CCCC=CCC(C)=O,44.0,sweet,balsamic
+11669,Ethyl anthranilate,CCOC(=O)c1ccccc1N,44.0,sweet,balsamic
+11675,Safrole,C=CCc1ccc2c(c1)OCO2,44.0,sweet,balsamic
+11685,4-(4-Methoxyphenyl)-2-butanone,COc1ccc(CCC(C)=O)cc1,44.0,sweet,balsamic
+11711,Hexyl butyrate,CCCCCCOC(=O)CCC,44.0,sweet,balsamic
+11811,Acetoin acetate,CC(=O)OC(C)C(C)=O,44.0,sweet,balsamic
+11838,3-Phenylpropanal,O=CCCc1ccccc1,40.0,chocolate,balsamic
+11846,4-(4-Hydroxyphenyl)-2-butanone,CC(=O)CCc1ccc(O)cc1,44.0,sweet,balsamic
+11847,Undecylenic acid,C=CCCCCCCCCC(=O)O,44.0,sweet,balsamic
+11863,Homofureanol,CCc1oc(C)c(O)c1O,39.0,caramel,balsamic
+11880,Ethyl 2-methylbutyrate,CCOC(=O)C(C)CC,44.0,sweet,balsamic
+11901,4-Methoxybenzyl acetate,COc1ccc(COC(C)=O)cc1,45.0,vanilla,balsamic
+11908,Ethyl N-methylanthranilate,CCOC(=O)c1ccccc1NC,44.0,sweet,balsamic
+11916,2-Methoxybenzaldehyde,COc1ccccc1C=O,44.0,sweet,balsamic
+11933,"2,3-Butanedione",CC(=O)C(C)=O,44.0,sweet,balsamic
+11950,Ethyl dodecanoate,CCCCCCCCCCCC(=O)OCC,44.0,sweet,balsamic
+11995,"2,6-Di-tert-butyl-4-methylphenol",Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1,45.0,vanilla,balsamic
+12003,Cinnamyl cinnamate,O=C(C=Cc1ccccc1)OCC=Cc1ccccc1,41.0,cinnamon,balsamic
+12004,Methyl cinnamate,COC(=O)C=Cc1ccccc1,41.0,cinnamon,balsamic
+12005,Ethyl cinnamate,CCOC(=O)C=Cc1ccccc1,42.0,honey,balsamic
+12011,Indole,c1ccc2[nH]ccc2c1,42.0,honey,balsamic
+12014,Dimethyl succinate,COC(=O)CCC(=O)OC,44.0,sweet,balsamic
+12015,Diethyl succinate,CCOC(=O)CCC(=O)OCC,40.0,chocolate,balsamic
+12041,"2,2,6-Trimethylcyclohexanone",CC1CCCC(C)(C)C1=O,42.0,honey,balsamic
+12044,1-Hydroxy-2-propanone,CC(=O)CO,44.0,sweet,balsamic
+12055,Cinnamic acid,O=C(O)C=Cc1ccccc1,41.0,cinnamon,balsamic
+12057,3-Phenyl-2-propenenitrile,N#CC=Cc1ccccc1,41.0,cinnamon,balsamic
+12058,Acetovanillone,COc1cc(C(C)=O)ccc1O,45.0,vanilla,balsamic
+12087,Methyl butyrate,CCCC(=O)OC,44.0,sweet,balsamic
+12093,Methoxybenzene,COc1ccccc1,36.0,anise,balsamic
+12109,Acetophenone,CC(=O)c1ccccc1,44.0,sweet,balsamic
+12155,2-Phenylethanol,OCCc1ccccc1,42.0,honey,balsamic
+12156,2-Phenylethyl acetate,CC(=O)OCCc1ccccc1,42.0,honey,balsamic
+12174,Eugenol,C=CCc1ccc(O)c(OC)c1,42.0,honey,balsamic
+12191,3-Phenyl-1-propanol,OCCCc1ccccc1,41.0,cinnamon,balsamic
+12200,Ethyl benzoate,CCOC(=O)c1ccccc1,36.0,anise,balsamic
+12201,Methyl benzoate,COC(=O)c1ccccc1,44.0,sweet,balsamic
+12204,4-Ethoxybenzaldehyde,CCOc1ccc(C=O)cc1,44.0,sweet,balsamic
+12241,Phenylacetaldehyde,O=CCc1ccccc1,42.0,honey,balsamic
+12299,Isosafrole,CC=Cc1ccc2c(c1)OCO2,44.0,sweet,balsamic
+12354,1-Decanol,CCCCCCCCCCO,44.0,sweet,balsamic
+12395,1-Methoxy-4-(2-propenyl)benzene,C=CCc1ccc(OC)cc1,36.0,anise,balsamic
+12396,Aceteugenol,C=CCc1ccc(OC(C)=O)c(OC)c1,44.0,sweet,balsamic
+12408,Nonyl octanoate,CCCCCCCCCOC(=O)CCCCCCC,44.0,sweet,balsamic
+12411,Octyl propanoate,CCCCCCCCOC(=O)CC,44.0,sweet,balsamic
+12418,Octyl 3-methylbutanoate,CCCCCCCCOC(=O)CC(C)C,42.0,honey,balsamic
+12438,Ethyl tetradecanoate,CCCCCCCCCCCCCC(=O)OCC,44.0,sweet,balsamic
+12447,Acetyl tributyl citrate,CCCCOC(=O)CC(CC(=O)OCCCC)(OC(C)=O)C(=O)OCCCC,44.0,sweet,balsamic
+12450,2-Methylpropyl butanoate,CCCC(=O)OCC(C)C,44.0,sweet,balsamic
+12451,Pentyl butanoate,CCCCCOC(=O)CCC,44.0,sweet,balsamic
+12453,3-Methylbutyl propanoate,CCC(=O)OCCC(C)C,44.0,sweet,balsamic
+12454,Propyl hexanoate,CCCCCC(=O)OCCC,44.0,sweet,balsamic
+12455,2-Methylbutyl acetate,CCC(C)COC(C)=O,44.0,sweet,balsamic
+12457,Toluene,Cc1ccccc1,44.0,sweet,balsamic
+12458,Methyl N-methylanthranilate,CNc1ccccc1C(=O)OC,44.0,sweet,balsamic
+12459,2-Hydroxybenzaldehyde,O=Cc1ccccc1O,41.0,cinnamon,balsamic
+12476,3-Methylcyclopentadecanone,CC1CCCCCCCCCCCCC(=O)C1,44.0,sweet,balsamic
+12544,Mesifurane,COc1c(C)oc(C)c1O,39.0,caramel,balsamic
+12553,1-Propanethiol,CCCS,44.0,sweet,balsamic
+12554,2-Methylpropyl propanoate,CCC(=O)OCC(C)C,44.0,sweet,balsamic
+12556,4-Hydroxybenzyl alcohol,OCc1ccc(O)cc1,44.0,sweet,balsamic
+12557,4-Methoxybenzyl alcohol,COc1ccc(CO)cc1,39.0,caramel,balsamic
+12560,Isoquinoline,c1ccc2cnccc2c1,44.0,sweet,balsamic
+12561,2-Furanmethanol,OCc1ccco1,44.0,sweet,balsamic
+12562,Furfuryl acetate,CC(=O)OCc1ccco1,44.0,sweet,balsamic
+12647,Piperidine,C1CCNCC1,44.0,sweet,balsamic
+12720,5-Hydroxymethyl-2-furancarboxaldehyde,O=Cc1ccc(CO)o1,39.0,caramel,balsamic
+12721,2-Methylfuran,Cc1ccco1,40.0,chocolate,balsamic
+12758,1-(4-Methylphenyl)ethanol,Cc1ccc(C(C)O)cc1,44.0,sweet,balsamic
+12771,Decanal,CCCCCCCCCC=O,44.0,sweet,balsamic
+12847,Benzyl benzoate,O=C(OCc1ccccc1)c1ccccc1,44.0,sweet,balsamic
+12863,"5,6-Dihydro-6-pentyl-2H-pyran-2-one",CCCCCC1C=CCC(=O)O1,44.0,sweet,balsamic
+12869,Propyl heptanoate,CCCCCCC(=O)OCCC,44.0,sweet,balsamic
+12872,Heptyl butanoate,CCCCCCCOC(=O)CCC,44.0,sweet,balsamic
+12882,2-Phenylpropyl butyrate,CCCC(=O)OCC(C)c1ccccc1,44.0,sweet,balsamic
+12884,3-Phenylpropyl formate,O=COCCCc1ccccc1,44.0,sweet,balsamic
+12885,3-Phenylpropyl 2-methylpropanoate,CC(C)C(=O)OCCCc1ccccc1,44.0,sweet,balsamic
+13071,3-Acetoxy-3-methyl-1-phenylbutane,CC(=O)OC(C)(C)CCc1ccccc1,44.0,sweet,balsamic
+13233,(+)-alpha-Carene,CC1=CCC2C(C1)C2(C)C,44.0,sweet,balsamic
+13256,Menthanol,CC1CCC(C(C)(C)O)CC1,44.0,sweet,balsamic
+13458,"3-Methyl-2,4-nonanedione",CCCCCC(=O)C(C)C(C)=O,39.0,caramel,balsamic
+13525,Fenchol,CC12CCC(C1)C(C)(C)C2O,44.0,sweet,balsamic
+13578,Neral,CC(C)=CCCC(C)=CC=O,44.0,sweet,balsamic
+13588,"5,6-Epoxy-7-megastigmen-9-one",CC(=O)C=CC12OC1(C)CCCC2(C)C,44.0,sweet,balsamic
+13596,4-Methoxybenzyl propanoate,CCC(=O)OCc1ccc(OC)cc1,45.0,vanilla,balsamic
+13597,4-Methoxybenzyl butanoate,CCCC(=O)OCc1ccc(OC)cc1,44.0,sweet,balsamic
+13598,4-Methoxybenzyl phenylacetate,COc1ccc(COC(=O)Cc2ccccc2)cc1,36.0,anise,balsamic
+13599,4-Methoxybenzyl formate,COc1ccc(COC=O)cc1,45.0,vanilla,balsamic
+13615,3-Methylbutyl phenylacetate,CC(C)CCOC(=O)Cc1ccccc1,44.0,sweet,balsamic
+13616,Phenethyl phenylacetate,O=C(Cc1ccccc1)OCCc1ccccc1,44.0,sweet,balsamic
+13617,2-Methylpropyl phenylacetate,CC(C)COC(=O)Cc1ccccc1,44.0,sweet,balsamic
+13621,2-Phenylethyl propanoate,CCC(=O)OCCc1ccccc1,42.0,honey,balsamic
+13622,2-Phenylethyl butanoate,CCCC(=O)OCCc1ccccc1,44.0,sweet,balsamic
+13625,2-Phenylethyl 3-methylbutanoate,CC(C)CC(=O)OCCc1ccccc1,44.0,sweet,balsamic
+13626,2-Phenylethyl 3-phenyl-2-propenoate,O=C(C=Cc1ccccc1)OCCc1ccccc1,37.0,balsam,balsamic
+13699,Isobutyl anthranilate,CC(C)COC(=O)c1ccccc1N,44.0,sweet,balsamic
+13703,2-(2-Methylpropoxy)naphthalene,CC(C)COc1ccc2ccccc2c1,44.0,sweet,balsamic
+13762,(±)-Myrtenol,CC1(C)C2CC=C(CO)C1C2,37.0,balsam,balsamic
+13764,(-)-Myrtenyl acetate,CC(=O)OCC1=CCC2CC1C2(C)C,44.0,sweet,balsamic
+13795,Geraniol,CC(C)=CCCC(C)=CCO,44.0,sweet,balsamic
+13899,Methyl hexanoate,CCCCCC(=O)OC,44.0,sweet,balsamic
+13906,"1-Phenyl-1,2-propanedione",CC(=O)C(=O)c1ccccc1,42.0,honey,balsamic
+13913,Myrtenal,CC1(C)C2CC=C(C=O)C1C2,44.0,sweet,balsamic
+14103,4-Butyl-gamma-butyrolactone,CCCCC1CCC(=O)O1,44.0,sweet,balsamic
+14356,beta-Sinensal,C=CC(=C)CCC=C(C)CCC=C(C)C=O,44.0,sweet,balsamic
+14408,Valencene,C=C(C)C1CCC2=CCCC(C)C2(C)C1,44.0,sweet,balsamic
+14419,alpha-Terpineol,CC1=CCC(C(C)(C)O)CC1,36.0,anise,balsamic
+14466,"(±)-trans,trans-delta-Damascone",CC=CC(=O)C1C(C)C=CCC1(C)C,44.0,sweet,balsamic
+14475,"(2E,7R,11R)-2-Phyten-1-ol",CC(=CCO)CCCC(C)CCCC(C)CCCC(C)C,37.0,balsam,balsamic
+14519,"(2E,6E)-Farnesol",CC(C)=CCCC(C)=CCCC(C)=CCO,36.0,anise,balsamic
+14589,(S)-p-Menth-1-en-4-ol,CC1=CCC(O)(C(C)C)CC1,40.0,chocolate,balsamic
+14619,"1,8-Cineole",CC12CCC(CC1)C(C)(C)O2,44.0,sweet,balsamic
+14657,Myristicin,C=CCc1cc(OC)c2c(c1)OCO2,37.0,balsam,balsamic
+14664,Benzaldehyde,O=Cc1ccccc1,44.0,sweet,balsamic
+14705,beta-Farnesene,C=CC(=C)CCC=C(C)CCC=C(C)C,44.0,sweet,balsamic
+14721,Pyrrole,c1cc[nH]c1,44.0,sweet,balsamic
+14816,alpha-Guaiene,C=C(C)C1CCC(C)C2=C(C1)C(C)CC2,44.0,sweet,balsamic
+14852,Artemisia ketone,C=CC(C)(C)C(=O)C=C(C)C,42.0,honey,balsamic
+14887,Safranal,CC1=C(C=O)C(C)(C)CC=C1,44.0,sweet,balsamic
+14943,Linalool,C=CC(C)(O)CCC=C(C)C,44.0,sweet,balsamic
+14985,"3-[[5-Methyl-2-(1-methylethyl)cyclohexyl]oxy]-1,2-propanediol",CC1CCC(C(C)C)C(OCC(O)CO)C1,45.0,vanilla,balsamic
+15003,3-Mercapto-3-methyl-1-butanol,CC(C)(S)CCO,44.0,sweet,balsamic
+15033,3-Ethyl-2-hydroxy-4-methyl-2-cyclopenten-1-one,CCC1C(=O)C(=O)CC1C,44.0,sweet,balsamic
+15035,2-(3-Phenylpropyl)tetrahydrofuran,c1ccc(CCCC2CCCO2)cc1,44.0,sweet,balsamic
+15045,Tetrahydrofurfuryl butyrate,CCCC(=O)OCC1CCCO1,44.0,sweet,balsamic
+15046,Tetrahydrofurfuryl cinnamate,O=C(C=Cc1ccccc1)OCC1CCCO1,44.0,sweet,balsamic
+15059,"2-Methoxy-4-(4-methyl-1,3-dioxolan-2-yl)phenol",COc1cc(C2OCC(C)O2)ccc1O,44.0,sweet,balsamic
+15064,"2-Ethoxy-4-(4-methyl-1,3-dioxolan-2-yl)phenol",CCOc1cc(C2OCC(C)O2)ccc1O,44.0,sweet,balsamic
+15067,alpha-Amylcinnamyl formate,CCCCCC(=Cc1ccccc1)COC=O,44.0,sweet,balsamic
+15068,alpha-Amylcinnamyl acetate,CCCCCC(=Cc1ccccc1)COC(C)=O,40.0,chocolate,balsamic
+15070,Propyl 2-methylpropanoate,CCCOC(=O)C(C)C,44.0,sweet,balsamic
+15072,Hexyl crotonate,CC=CC(=O)OCCCCCC,44.0,sweet,balsamic
+15074,cis-3-Hexenyl lactate,CCC=CCCOC(=O)C(C)O,44.0,sweet,balsamic
+15078,Pentyl octanoate,CCCCCCCC(=O)OCCCCC,44.0,sweet,balsamic
+15083,Cyclohexyl propionate,CCC(=O)OC1CCCCC1,44.0,sweet,balsamic
+15089,2-Methylpropyl hexanoate,CCCCCC(=O)OCC(C)C,44.0,sweet,balsamic
+15090,Pentyl hexanoate,CCCCCOC(=O)CCCCC,44.0,sweet,balsamic
+15092,Methyl DL-Leucate,COC(=O)C(O)CC(C)C,44.0,sweet,balsamic
+15101,Methyl 4-tert-butylphenylacetate,COC(=O)Cc1ccc(C(C)(C)C)cc1,42.0,honey,balsamic
+15267,Methyl 4-phenylbutanoate,COC(=O)CCCc1ccccc1,44.0,sweet,balsamic
+15269,3-Phenylpropyl cinnamate,O=C(C=Cc1ccccc1)OCCCc1ccccc1,44.0,sweet,balsamic
+15270,3-Phenylpropyl propanoate,CCC(=O)OCCCc1ccccc1,37.0,balsam,balsamic
+15272,3-Phenylpropyl hexanoate,CCCCCC(=O)OCCCc1ccccc1,44.0,sweet,balsamic
+15278,2-Methylpropyl 3-oxobutanoate,CC(=O)CC(=O)OCC(C)C,44.0,sweet,balsamic
+15279,3-Methylbutyl 3-oxobutanoate,CC(=O)CC(=O)OCCC(C)C,44.0,sweet,balsamic
+15484,"3,5,8-Megastigmatrien-7-one",CC=CC(=O)C1=C(C)C=CCC1(C)C,42.0,honey,balsamic
+15499,Tetramethylpyrazine,Cc1nc(C)c(C)nc1C,40.0,chocolate,balsamic
+15514,"2,4-Decadienal",CCCCC=CC=CCC=O,44.0,sweet,balsamic
+15517,Pear ester,CCCCC=CC=CCC(=O)OCC,44.0,sweet,balsamic
+15547,"3,4-Dihydro-2H-1-benzopyran-2-one",O=C1CCc2ccccc2O1,44.0,sweet,balsamic
+15740,beta-Caryophyllene,C=C1CCC=C(C)CCC2C1CC2(C)C,44.0,sweet,balsamic
+15772,beta-Ionol,CC1=C(C=CC(C)O)C(C)(C)CCC1,44.0,sweet,balsamic
+15780,Sclareol,C=CC(C)(O)CCC1C(C)(O)CCC2C(C)(C)CCCC21C,44.0,sweet,balsamic
+15786,Ambronide,CC1(C)CCCC2(C)C1CCC1(C)OCCC12,44.0,sweet,balsamic
+15872,2-Propenyl phenylacetate,C=CCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+15873,Butyl anthranilate,CCCCOC(=O)c1ccccc1N,44.0,sweet,balsamic
+15874,2-Propenyl 2-furancarboxylate,C=CCOC(=O)c1ccco1,39.0,caramel,balsamic
+15973,Terpinolene,CC1=CCC(=C(C)C)CC1,44.0,sweet,balsamic
+16003,"(±)-p-Mentha-1,8-dien-10-yl acetate",C=C(COC(C)=O)C1CC=C(C)CC1,44.0,sweet,balsamic
+16010,"2-Hydroxy-2,6,6-trimethylcyclohexanone",CC1(C)CCCC(C)(O)C1=O,44.0,sweet,balsamic
+16013,"3,4-Dimethyl-1,2-cyclopentanedione",CC1CC(=O)C(=O)C1C,39.0,caramel,balsamic
+16014,"3,5-Dimethyl-1,2-cyclopentanedione",CC1CC(C)C(=O)C1=O,44.0,sweet,balsamic
+16116,5-Pentyl-delta-valerolactone,CCCCCC1CCCC(=O)O1,44.0,sweet,balsamic
+16136,(1-Methylethenyl)pyrazine,C=C(C)c1cnccn1,40.0,chocolate,balsamic
+16137,1-Benzyloxy-1-(2-methoxyethoxy)ethane,COCCOC(C)OCc1ccccc1,44.0,sweet,balsamic
+16144,"2-(Phenylethenyl)-1,3-dioxolane",C(=CC1OCCO1)c1ccccc1,41.0,cinnamon,balsamic
+16147,3-(4-Methoxyphenyl)-2-methyl-2-propenal,COc1ccc(C=C(C)C=O)cc1,41.0,cinnamon,balsamic
+16162,"4-Methyl-2-phenyl-1,3-dioxolane",CC1COC(c2ccccc2)O1,44.0,sweet,balsamic
+16166,3-(Hydroxymethyl)-2-octanone,CCCCCC(CO)C(C)=O,44.0,sweet,balsamic
+16179,"2-Ethyl-2,5-dihydro-4,5-dimethylthiazole",CCC1N=C(C)C(C)S1,40.0,chocolate,balsamic
+16200,Rhodinyl phenylacetate,C=C(C)CCCC(C)CCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+16207,"Ethyl 2-methyl-3,4-pentadienoate",C=C=CC(C)C(=O)OCC,44.0,sweet,balsamic
+16225,Menthyl isovalerate,CC(C)CC(=O)OC1CC(C)CCC1C(C)C,44.0,sweet,balsamic
+16230,Linalyl phenylacetate,C=CC(C)(CCC=C(C)C)OC(=O)Cc1ccccc1,44.0,sweet,balsamic
+16239,Methyl citronellate,COC(=O)CC(C)CCC=C(C)C,44.0,sweet,balsamic
+16241,Citronellyl butyrate,CCCC(=O)OCCC(C)CCC=C(C)C,44.0,sweet,balsamic
+16242,Citronellyl isobutyrate,CC(C)=CCCC(C)CCOC(=O)C(C)C,44.0,sweet,balsamic
+16243,Citronellyl pentanoate,CCCCC(=O)OCCC(C)CCC=C(C)C,42.0,honey,balsamic
+16244,Citronellyl alpha-toluate,CC(C)=CCCC(C)CCOC(=O)Cc1ccccc1,44.0,sweet,balsamic
+16296,"2,6-Dimethoxy-4-(1-propenyl)phenol",CC=Cc1cc(OC)c(O)c(OC)c1,44.0,sweet,balsamic
+16299,Maltol propionate,CCC(=O)Oc1c(C)occc1=O,44.0,sweet,balsamic
+16301,Octahydro-2H-1-benzopyran-2-one,O=C1CCC2CCCCC2O1,44.0,sweet,balsamic
+16302,Isoeugenol formate,CC=Cc1ccc(OC=O)c(OC)c1,44.0,sweet,balsamic
+16303,Isoeugenol phenylacetate,CC=Cc1ccc(OC(=O)Cc2ccccc2)c(OC)c1,41.0,cinnamon,balsamic
+16307,4-Methyl-2-phenyl-2-pentenal,CC(C)C=C(C=O)c1ccccc1,44.0,sweet,balsamic
+16312,Citral propylene glycol acetal,CC(C)=CCCC(C)=CC1OCC(C)O1,44.0,sweet,balsamic
+16338,Decyl butanoate,CCCCCCCCCCOC(=O)CCC,44.0,sweet,balsamic
+16449,4-Acetoxy-2-hexyltetrahydrofuran,CCCCCCC1CC(OC(C)=O)CO1,44.0,sweet,balsamic
+16572,Ethyl methyl-p-tolylglycidate,CCOC(=O)C1OC1(C)c1ccc(C)cc1,44.0,sweet,balsamic
+16575,S-2-Propenyl propanethioate,C=CCSC(=O)CC,44.0,sweet,balsamic
+16744,1-Methyl-1-phenylethyl isobutyrate,CC(C)C(=O)OC(C)(C)c1ccccc1,44.0,sweet,balsamic
+16745,Isopropyl tiglate,CC=C(C)C(=O)OC(C)C,44.0,sweet,balsamic
+16749,Phenethyl tiglate,CC=C(C)C(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16750,Isobutyl angelate,CC=C(C)C(=O)OCC(C)C,44.0,sweet,balsamic
+16753,3-Hydroxynonyl acetate,CCCCCCC(O)CCOC(C)=O,44.0,sweet,balsamic
+16763,2-Methyl-4-phenyl-2-butyl 2-methylpropanoate,CC(C)C(=O)OC(C)(C)CCc1ccccc1,44.0,sweet,balsamic
+16764,4-(Ethoxymethyl)-2-methoxyphenol,CCOCc1ccc(O)c(OC)c1,44.0,sweet,balsamic
+16765,4-(Butoxymethyl)-2-methoxyphenol,CCCCOCc1ccc(O)c(OC)c1,45.0,vanilla,balsamic
+16813,Guaicyl phenylacetate,COc1ccccc1OC(=O)Cc1ccccc1,37.0,balsam,balsamic
+16815,Vanillin isobutyrate,COc1cc(C=O)ccc1OC(=O)C(C)C,44.0,sweet,balsamic
+16816,Ethylvanillin glucoside,CCOc1cc(C=O)ccc1OC1OC(CO)C(O)C(O)C1O,45.0,vanilla,balsamic
+16817,Ethyl vanillin isobutyrate,CCOc1cc(C=O)ccc1OC(=O)C(C)C,44.0,sweet,balsamic
+16829,cis-3-Hexenyl anthranilate,CCC=CCCOC(=O)c1ccccc1N,44.0,sweet,balsamic
+16831,Phenethyl anthranilate,Nc1ccccc1C(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16836,Isopropyl cinnamate,CC(C)OC(=O)C=Cc1ccccc1,37.0,balsam,balsamic
+16837,Butyl cinnamate,CCCCOC(=O)C=Cc1ccccc1,44.0,sweet,balsamic
+16838,Isobutyl cinnamate,CC(C)COC(=O)C=Cc1ccccc1,44.0,sweet,balsamic
+16842,Cinnamyl phenylacetate,O=C(Cc1ccccc1)OCC=Cc1ccccc1,37.0,balsam,balsamic
+16844,4-Methylphenyl 3-methylbutanoate,Cc1ccc(OC(=O)CC(C)C)cc1,44.0,sweet,balsamic
+16846,4-Methylphenyl dodecanoate,CCCCCCCCCCCC(=O)Oc1ccc(C)cc1,44.0,sweet,balsamic
+16847,"[2,2-bis(2-methylpropoxy)ethyl]benzene",CC(C)COC(Cc1ccccc1)OCC(C)C,44.0,sweet,balsamic
+16848,Octyl phenylacetate,CCCCCCCCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+16849,Hexyl phenylacetate,CCCCCCOC(=O)Cc1ccccc1,44.0,sweet,balsamic
+16853,1-Phenylethyl butyrate,CCCC(=O)OC(C)c1ccccc1,44.0,sweet,balsamic
+16854,2-Phenylethyl hexanoate,CCCCCC(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16855,2-Phenylethyl octanoate,CCCCCCCC(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16856,2-Phenylethyl 2-methylbutanoate,CCC(C)C(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16857,2-Phenylethyl 3-methyl-2-butenoate,CC(C)=CC(=O)OCCc1ccccc1,44.0,sweet,balsamic
+16860,2-Phenylethyl 2-furancarboxylate,O=C(OCCc1ccccc1)c1ccco1,42.0,honey,balsamic
+16861,Propyl 2-furoate,CCCOC(=O)c1ccco1,44.0,sweet,balsamic
+16862,Hexyl 2-furoate,CCCCCCOC(=O)c1ccco1,44.0,sweet,balsamic
+16864,Furfuryl pentanoate,CCCCC(=O)OCc1ccco1,44.0,sweet,balsamic
+16865,2-Furanylmethyl propanoate,CCC(=O)OCc1ccco1,44.0,sweet,balsamic
+16867,Furfuryl octanoate,CCCCCCCC(=O)OCc1ccco1,44.0,sweet,balsamic
+16868,S-(2-Furanylmethyl) methanethioate,O=CSCc1ccco1,38.0,butterscotch,balsamic
+16870,Propyl 2-furanacrylate,CCCOC(=O)C=Cc1ccco1,44.0,sweet,balsamic
+16871,Isobutyl 2-furanpropionate,CC(C)COC(=O)CCc1ccco1,44.0,sweet,balsamic
+16872,Isoamyl 2-furanpropionate,CC(C)CCOC(=O)CCc1ccco1,44.0,sweet,balsamic
+16873,3-Methylbutyl 2-furanbutanoate,CC(C)CCOC(=O)CCCc1ccco1,44.0,sweet,balsamic
+16880,5-Dodecanolide,CCCCCCCC1CCCC(=O)O1,44.0,sweet,balsamic
+16912,3-Acetylmercaptohexyl acetate,CCCC(CCOC(C)=O)SC(C)=O,44.0,sweet,balsamic
+16957,D6-Ambrettolide,O=C1CCCCC=CCCCCCCCCCO1,44.0,sweet,balsamic
+16963,Vetiverol,CC1=CC(O)CC(C)C12CCC(=C(C)C)C2,44.0,sweet,balsamic
+16988,Vetiveryl acetate,CC(=O)OC1C=C(C)C2CC(=C(C)C)CC2C(C)C1,44.0,sweet,balsamic
+17007,Hexyl 2-methylpropanoate,CCCCCCOC(=O)C(C)C,44.0,sweet,balsamic
+17244,beta-Ionyl acetate,CC(=O)OC(C)C=CC1=C(C)CCCC1(C)C,44.0,sweet,balsamic
+17253,2-Propenyl 3-methylbutanoate,C=CCOC(=O)CC(C)C,44.0,sweet,balsamic
+17257,2-Methylpropyl 3-methylbutanoate,CC(C)COC(=O)CC(C)C,44.0,sweet,balsamic
+17264,Carvyl propionate,C=C(C)C1CC=C(C)C(OC(=O)CC)C1,44.0,sweet,balsamic
+17267,alpha-Terpinyl cinnamate,CC1=CCC(C(C)(C)OC(=O)C=Cc2ccccc2)CC1,44.0,sweet,balsamic
+17274,delta-Tetradecalactone,CCCCCCCCCC1CCCC(=O)O1,44.0,sweet,balsamic
+17287,"(3E,6Z)-Nonadien-1-yl acetate",CCC=CCC=CCCOC(C)=O,44.0,sweet,balsamic
+17393,beta-Guaiene,CC(C)=C1CCC(C)C2=C(C1)C(C)CC2,44.0,sweet,balsamic
+17407,"7-Methyl-3-methylene-1,6-octadiene",C=CC(=C)CCC=C(C)C,37.0,balsam,balsamic
+17422,alpha-Methyl-2-furanacrolein,CC(C=O)=Cc1ccco1,41.0,cinnamon,balsamic
+17431,Ocimen quintoxide,CC=C(C)C1CCC(C)(C)O1,44.0,sweet,balsamic
+17479,Isopropyl 2-methylpropanoate,CC(C)OC(=O)C(C)C,44.0,sweet,balsamic
+17546,Bornyl valerate,CCCCC(=O)OC1CC2CCC1(C)C2(C)C,45.0,vanilla,balsamic
+17557,Geranyl acetoacetate,CC(=O)CC(=O)OCC=C(C)CCC=C(C)C,44.0,sweet,balsamic
+17558,Geranyl phenylacetate,CC(C)=CCCC(C)=CCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+17561,Geranyl 2-methylpropanoate,CC(C)=CCCC(C)=CCOC(=O)C(C)C,44.0,sweet,balsamic
+17586,cis-3-Hexenyl phenylacetate,CCC=CCCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+17698,2-Ethoxy-4-(methoxymethyl)phenol,CCOc1cc(COC)ccc1O,44.0,sweet,balsamic
+17699,2-Ethyl-4-(2-furanyl)-2-propenal,CCC(C=O)=Cc1ccco1,41.0,cinnamon,balsamic
+18002,Amyl salicylate,CCCCCOC(=O)c1ccccc1O,44.0,sweet,balsamic
+18003,Amyl phenylacetate,CCCCCOC(=O)Cc1ccccc1,37.0,balsam,balsamic
+18012,Geranyl butyrate,CCCC(=O)OCC=C(C)CCC=C(C)C,44.0,sweet,balsamic
+18089,"1,1-Dihexyloxyethane",CCCCCCOC(C)OCCCCCC,44.0,sweet,balsamic
+18145,3-Methylbutyl octanoate,CCCCCCCC(=O)OCCC(C)C,44.0,sweet,balsamic
+18148,"4,7-Megastigmadien-9-ol",CC1=CCCC(C)(C)C1C=CC(C)O,44.0,sweet,balsamic
+18358,2-Methyl-2-(methyldithio)propanal,CSSC(C)(C)C=O,40.0,chocolate,balsamic
+18365,7-Hexyl-2-oxepanone,CCCCCCC1CCCCC(=O)O1,44.0,sweet,balsamic
+18378,3-Methylbutyl decanoate,CCCCCCCCCC(=O)OCCC(C)C,44.0,sweet,balsamic
+18444,Citronellyl isovalerate,CC(C)=CCCC(C)CCOC(=O)CC(C)C,42.0,honey,balsamic
+18447,Citronellyl cinnamate,CC(C)=CCCC(C)CCOC(=O)C=Cc1ccccc1,44.0,sweet,balsamic
+18455,Ethyl tiglate,CC=C(C)C(=O)OCC,44.0,sweet,balsamic
+18462,Dodecyl acetate,CCCCCCCCCCCCOC(C)=O,44.0,sweet,balsamic
+18755,Butyl 2-methylbutanoate,CCCCOC(=O)C(C)CC,40.0,chocolate,balsamic
+18756,Isopropyl 2-methylbutanoate,CCC(C)C(=O)OC(C)C,44.0,sweet,balsamic
+18757,2-Methylbutyl 2-methylbutanoate,CCC(C)COC(=O)C(C)CC,44.0,sweet,balsamic
+18758,1-Methylbutyl butanoate,CCCC(=O)OC(C)CCC,44.0,sweet,balsamic
+18767,3-Mercapto-3-methyl-1-butyl acetate,CC(=O)OCCC(C)(C)S,44.0,sweet,balsamic
+19211,Ethyl crotonate,CC=CC(=O)OCC,44.0,sweet,balsamic
+19253,Propyl butyrate,CCCOC(=O)CCC,44.0,sweet,balsamic
+19254,Isopropyl butyrate,CCCC(=O)OC(C)C,44.0,sweet,balsamic
+19255,Butyl butyrate,CCCCOC(=O)CCC,44.0,sweet,balsamic
+19265,(S)-Nerolidyl acetate,C=CC(C)(CCC=C(C)CCC=C(C)C)OC(C)=O,44.0,sweet,balsamic
+19305,"2-Hexyl-1,3-dioxolane-4-methanol",CCCCCCC1OCC(CO)O1,44.0,sweet,balsamic
+19352,1-Acetylcyclohexyl acetate,CC(=O)OC1(C(C)=O)CCCCC1,44.0,sweet,balsamic
+19458,1-(2-Furanyl)-1-pentanone,CCCCC(=O)c1ccco1,44.0,sweet,balsamic
+19477,"2,4-Dimethyl-2-pentenoic acid",CC(=CC(C)C)C(=O)O,42.0,honey,balsamic
+19502,"2-Benzyl-4,5-dimethyl-1,3-dioxolane",CC1OC(Cc2ccccc2)OC1C,44.0,sweet,balsamic
+19688,"2-Acetyl-3,5-dimethylpyrazine",CC(=O)c1ncc(C)nc1C,39.0,caramel,balsamic
+19870,3-Methylbutyl 2-methylbutanoate,CCC(C)C(=O)OCCC(C)C,44.0,sweet,balsamic
+19871,Hexyl 2-methyl-3-pentenoate,CC=CC(C)C(=O)OCCCCCC,44.0,sweet,balsamic
+19881,Butyl levulinate,CCCCOC(=O)CCC(C)=O,39.0,caramel,balsamic
+19889,Heptyl 2-methylpropanoate,CCCCCCCOC(=O)C(C)C,44.0,sweet,balsamic
+19890,Didodecyl thiobispropanoate,CCCCCCCCCCCCOC(=O)CCSCCC(=O)OCCCCCCCCCCCC,44.0,sweet,balsamic
+19914,Ethyl octanoate,CCCCCCCC(=O)OCC,44.0,sweet,balsamic
+19925,Allyl 3-cyclohexylpropionate,C=CCOC(=O)CCC1CCCCC1,44.0,sweet,balsamic
+19927,2-Propenyl heptanoate,C=CCOC(=O)CCCCCC,44.0,sweet,balsamic
+19928,Ethyl hexanoate,CCCCCC(=O)OCC,44.0,sweet,balsamic
+19929,2-Propenyl hexanoate,C=CCOC(=O)CCCCC,44.0,sweet,balsamic
+19933,cis-3-Hexenyl formate,CCC=CCCOC=O,44.0,sweet,balsamic
+19937,2-Phenoxyethyl isobutyrate,CC(C)C(=O)OCCOc1ccccc1,44.0,sweet,balsamic
+19948,(-)-Isopulegol acetate,C=C(C)C1CCC(C)CC1OC(C)=O,44.0,sweet,balsamic
+19962,2-Pentylthiophene,CCCCCc1cccs1,44.0,sweet,balsamic
+19975,Butyl isobutyrate,CCCCOC(=O)C(C)C,44.0,sweet,balsamic
+19977,Propyl formate,CCCOC=O,44.0,sweet,balsamic
+19991,Nonyl acetate,CCCCCCCCCOC(C)=O,44.0,sweet,balsamic
+19993,Ethyl 3-oxo-3-phenylpropanoate,CCOC(=O)CC(=O)c1ccccc1,44.0,sweet,balsamic
+19997,2-Butylfuran,CCCCc1ccco1,44.0,sweet,balsamic
+19998,alpha-Terpinyl isovalerate,CC1=CCC(C(C)(C)OC(=O)CC(C)C)CC1,44.0,sweet,balsamic
+20001,Ethyl aconitate,CCOC(=O)C=C(CC(=O)O)C(=O)O,44.0,sweet,balsamic
+20014,Benzyl cinnamate,O=C(C=Cc1ccccc1)OCc1ccccc1,40.0,chocolate,balsamic
+20015,1-Phenylethyl propanoate,CCC(=O)OC(C)c1ccccc1,44.0,sweet,balsamic
+20022,Octyl benzoate,CCCCCCCCOC(=O)c1ccccc1,37.0,balsam,balsamic
+20024,Butyl pentanoate,CCCCOC(=O)CCCC,44.0,sweet,balsamic
+20026,Ethyl pentanoate,CCCCC(=O)OCC,44.0,sweet,balsamic
+20058,Pentyl benzoate,CCCCCOC(=O)c1ccccc1,37.0,balsam,balsamic
+20131,Isopropyl tetradecanoate,CCCCCCCCCCCCCC(=O)OC(C)C,41.0,cinnamon,balsamic
+20150,Ethyl 3-phenylpropanoate,CCOC(=O)CCc1ccccc1,42.0,honey,balsamic
+20164,Ethyl 2-benzylacetoacetate,CCOC(=O)C(Cc1ccccc1)C(C)=O,37.0,balsam,balsamic
+20165,Propyl phenylacetate,CCCOC(=O)Cc1ccccc1,44.0,sweet,balsamic
+20166,Isopropyl phenylacetate,CC(C)OC(=O)Cc1ccccc1,44.0,sweet,balsamic
+20167,Butyl phenylacetate,CCCCOC(=O)Cc1ccccc1,42.0,honey,balsamic
+20171,Hexyl benzoate,CCCCCCOC(=O)c1ccccc1,37.0,balsam,balsamic
+20173,Ethyl levulinate,CCOC(=O)CCC(C)=O,44.0,sweet,balsamic
+20203,2-(Ethoxymethyl)furan,CCOCc1ccco1,44.0,sweet,balsamic
+20205,Benzyl acetoacetate,CC(=O)CC(=O)OCc1ccccc1,44.0,sweet,balsamic
+20206,Butyl acetoacetate,CCCCOC(=O)CC(C)=O,44.0,sweet,balsamic
+20208,2-(1-Methylpropyl)cyclohexanone,CCC(C)C1CCCCC1=O,45.0,vanilla,balsamic
+20209,2-(Ethoxymethyl)phenol,CCOCc1ccccc1O,44.0,sweet,balsamic
+20219,Ethylene brassylate,O=C1CCCCCCCCCCCC(=O)OCCO1,44.0,sweet,balsamic
+20220,4-Methylbenzyl alcohol acetate,CC(=O)OCc1ccc(C)cc1,44.0,sweet,balsamic
+20366,Cinnamyl formate,O=COCC=Cc1ccccc1,37.0,balsam,balsamic
+20373,2-Methylpropyl benzoate,CC(C)COC(=O)c1ccccc1,44.0,sweet,balsamic
+20378,2-Ethylfuran,CCc1ccco1,44.0,sweet,balsamic
+20382,Allyl butyrate,C=CCOC(=O)CCC,44.0,sweet,balsamic
+20383,Allyl benzoate,C=CCOC(=O)c1ccccc1,44.0,sweet,balsamic
+20387,2-Propenyl octanoate,C=CCOC(=O)CCCCCCC,44.0,sweet,balsamic
+20388,Furaneol,Cc1oc(C)c(O)c1O,39.0,caramel,balsamic
+20389,Allyl cyclohexylacetate,C=CCOC(=O)CC1CCCCC1,44.0,sweet,balsamic
+20553,Ethyl lactate,CCOC(=O)C(C)O,38.0,butterscotch,balsamic
+20624,2-Ethoxy-5-(1-propenyl)phenol,CC=Cc1ccc(OCC)c(O)c1,44.0,sweet,balsamic
+20799,gamma-Eudesmol,CC1=C2CC(C(C)(C)O)CCC2(C)CCC1,44.0,sweet,balsamic
+20882,beta-Cyclocitral,CC1=C(C=O)C(C)(C)CCC1,44.0,sweet,balsamic
+21100,Methoxyeugenol,C=CCc1cc(OC)c(O)c(OC)c1,44.0,sweet,balsamic
+21126,Allyl cinnamate,C=CCOC(=O)C=Cc1ccccc1,37.0,balsam,balsamic
+21242,Cinnamyl propionate,CCC(=O)OCC=Cc1ccccc1,44.0,sweet,balsamic
+21244,Cinnamyl isobutyrate,CC(C)C(=O)OCC=Cc1ccccc1,44.0,sweet,balsamic
+21245,Cinnamyl isovalerate,CC(C)CC(=O)OCC=Cc1ccccc1,44.0,sweet,balsamic
+21246,Cinnamyl anthranilate,Nc1ccccc1C(=O)OCC=Cc1ccccc1,37.0,balsam,balsamic
+21412,"[(3,7-Dimethyl-6-octenyl)oxy]acetaldehyde",CC(C)=CCCC(C)CCOCC=O,44.0,sweet,balsamic
+21436,Dihydrocarveol acetate,C=C(C)C1CCC(C)C(OC(C)=O)C1,44.0,sweet,balsamic
+21453,"4-(3,4-Methylenedioxyphenyl)-2-butanone",CC(=O)CCc1ccc2c(c1)OCO2,44.0,sweet,balsamic
+21469,Dihydrogeranylacetone,CC(=O)CCCC(C)CCC=C(C)C,44.0,sweet,balsamic
+21562,p-Tolyl phenylacetate,Cc1ccc(OC(=O)Cc2ccccc2)cc1,42.0,honey,balsamic
+21569,Isopropylpyrazine,CC(C)c1cnccn1,42.0,honey,balsamic
+21922,"(2,2-Diethoxyethyl)benzene",CCOC(Cc1ccccc1)OCC,44.0,sweet,balsamic
+21924,Phenyl butyrate,CCCC(=O)Oc1ccccc1,44.0,sweet,balsamic
+21933,Propyl levulinate,CCCOC(=O)CCC(C)=O,44.0,sweet,balsamic
+21935,Chavicol glucoside,C=CCc1ccc(OC2OC(CO)C(O)C(O)C2O)cc1,44.0,sweet,balsamic
+22094,Vanillylmandelic acid,COc1cc(C(=O)C(O)O)ccc1O,44.0,sweet,balsamic
+23795,Homovanillin,COc1cc(CC=O)ccc1O,45.0,vanilla,balsamic
+29795,3-pentanol,CCC(O)CC,44.0,sweet,balsamic
+29822,"2-acetyl-1,4,5,6-tetrahydropyridine",CC(=O)C1=NCCCC1,39.0,caramel,balsamic
+29825,ethyl 4-hydroxybutanoate,CCOC(=O)CCCO,39.0,caramel,balsamic
+29835,"1,2,4,5-tetramethylbenzene",Cc1cc(C)c(C)cc1C,44.0,sweet,balsamic
+29849,ethyl-4-hydroxymethyl- 3(2H)-Furanone,CCc1occ(CO)c1O,39.0,caramel,balsamic
+29887,1-ethenyl-4-methoxy-benzene,C=Cc1ccc(OC)cc1,44.0,sweet,balsamic
+29894,"styrene glycol (1-phenyl 1,2-ethanediol)",OCC(O)c1ccccc1,44.0,sweet,balsamic
+29909,cedr-8(15)-en-9-ol,C=C1C(O)CC23CC1C(C)(C)C2CCC3C,44.0,sweet,balsamic
+29923,"1,7,7-trimethylbicyclo[2.2.1]heptan-2-ol benzoate",CC1(C)C2CCC1(C)C(OC(=O)c1ccccc1)C2,37.0,balsam,balsamic
+29934,methyl 4-hydroxy-3-methoxybenzoate,COC(=O)c1ccc(O)c(OC)c1,39.0,caramel,balsamic
+29935,4-hydroxy-3-methoxybenzoic acid ethyl ester,CCOC(=O)c1ccc(O)c(OC)c1,44.0,sweet,balsamic
+30905,coumarin,O=c1ccc2ccccc2o1,44.0,sweet,balsamic
+31263,phenylacetate,O=C(O)Cc1ccccc1,42.0,honey,balsamic
+358,4-Ethylphenol,CCc1ccc(O)cc1,93.0,alcohol,chemical
+707,Glycerol tribenzoate,O=C(OCC(COC(=O)c1ccccc1)OC(=O)c1ccccc1)c1ccccc1,94.0,plastic,chemical
+734,Diisopropyl disulfide,CC(C)SSC(C)C,95.0,sulfurous,chemical
+736,3-Methyl-2-butenoic acid,CC(C)=CC(=O)O,93.0,alcohol,chemical
+803,Phenylmethanethiol,SCc1ccccc1,95.0,sulfurous,chemical
+804,2-Methylbenzenethiol,Cc1ccccc1S,95.0,sulfurous,chemical
+822,"4-Hydroxy-3,5-dimethoxybenzaldehyde",COc1cc(C=O)cc(OC)c1O,94.0,plastic,chemical
+875,2-Naphthalenethiol,Sc1ccc2ccccc2c1,95.0,sulfurous,chemical
+883,S-Methyl benzenecarbothioate,CSC(=O)c1ccccc1,95.0,sulfurous,chemical
+893,Phenol,Oc1ccccc1,94.0,plastic,chemical
+911,2-Thiophenecarboxaldehyde,O=Cc1cccs1,95.0,sulfurous,chemical
+1369,"1,1-Dimethoxyethane",COC(C)OC,93.0,alcohol,chemical
+2022,1-(2-Furanylmethyl)-1H-pyrrole,c1coc(Cn2cccc2)c1,94.0,plastic,chemical
+3177,Methyl pentyl disulfide,CCCCCSSC,95.0,sulfurous,chemical
+3210,S-Methyl thioacetate,CSC(C)=O,95.0,sulfurous,chemical
+3213,S-Methyl propanethioate,CCC(=O)SC,95.0,sulfurous,chemical
+3254,Ethyl formate,CCOC=O,93.0,alcohol,chemical
+3266,Ethyl methyl sulfide,CCSC,95.0,sulfurous,chemical
+3347,(E)-2-Octen-1-ol,CCCCCC=CCO,94.0,plastic,chemical
+3375,4-(Methylthio)-2-butanone,CSCCC(C)=O,95.0,sulfurous,chemical
+3376,Bis(methylthio)methane,CSCSC,95.0,sulfurous,chemical
+3430,Cyclohexylethyl acetate,CC(=O)OCCC1CCCCC1,94.0,plastic,chemical
+3492,Dimethyl disulfide,CSSC,95.0,sulfurous,chemical
+3592,Dimethyl sulfide,CSC,95.0,sulfurous,chemical
+5816,"1,2,4-Trimethylbenzene",Cc1ccc(C)c(C)c1,94.0,plastic,chemical
+5817,"1,3-Dimethylbenzene",Cc1cccc(C)c1,94.0,plastic,chemical
+6726,Dimethyl sulfone,CS(C)(=O)=O,95.0,sulfurous,chemical
+8044,"3,5-Dimethyl-1,2,4-trithiolane",CC1SSC(C)S1,95.0,sulfurous,chemical
+8048,"1,4-Dithiane",C1CSCCS1,95.0,sulfurous,chemical
+8074,3-Hexanol,CCCC(O)CC,93.0,alcohol,chemical
+8120,4-Mercapto-4-methyl-2-pentanone,CC(=O)CC(C)(C)S,95.0,sulfurous,chemical
+8121,2-Mercaptopropanoic acid,CC(S)C(=O)O,95.0,sulfurous,chemical
+8137,3-Methyl-2-butene-1-thiol,CC(C)=CCS,95.0,sulfurous,chemical
+8278,"1,3-Propanedithiol",SCCCS,95.0,sulfurous,chemical
+8282,2-Propanethiol,CC(C)S,95.0,sulfurous,chemical
+8283,2-Propanol,CC(C)O,93.0,alcohol,chemical
+8284,2-Propene-1-thiol,C=CCS,95.0,sulfurous,chemical
+8327,Diethyl sulfide,CCSCC,95.0,sulfurous,chemical
+8380,3-(Methylthio)-1-propanol,CSCCCO,95.0,sulfurous,chemical
+8382,(Methylthio)acetaldehyde,CSCC=O,95.0,sulfurous,chemical
+8502,Diphenyl disulfide,c1ccc(SSc2ccccc2)cc1,95.0,sulfurous,chemical
+8511,Methyl methanethiosulfonate,CSS(C)(=O)=O,95.0,sulfurous,chemical
+8557,Methyl propyl trisulfide,CCCSSSC,95.0,sulfurous,chemical
+8561,Methyl (methylthio)methyl disulfide,CSCSSC,95.0,sulfurous,chemical
+8718,"2,6-Dimethylbenzenethiol",Cc1cccc(C)c1S,95.0,sulfurous,chemical
+8789,3-Methylphenol,Cc1cccc(O)c1,94.0,plastic,chemical
+8794,Dibenzyl ether,c1ccc(COCc2ccccc2)cc1,94.0,plastic,chemical
+9366,Ethanethiol,CCS,95.0,sulfurous,chemical
+9402,Ethyl 5-(methylthio)valerate,CCOC(=O)CCCCSC,95.0,sulfurous,chemical
+9548,2-Heptanethiol,CCCCCC(C)S,95.0,sulfurous,chemical
+9795,"2,3 or 10-Mercaptopinane",CC1(S)CCC2CC1C2(C)C,95.0,sulfurous,chemical
+9798,Methionyl butyrate,CCCC(=O)OCCCSC,95.0,sulfurous,chemical
+9869,2-(Methylthio)ethanol,CSCCO,95.0,sulfurous,chemical
+10495,"1,3-Diphenyl-2-propanone",O=C(Cc1ccccc1)Cc1ccccc1,94.0,plastic,chemical
+10803,Dipropyl trisulfide,CCCSSSCCC,95.0,sulfurous,chemical
+10897,Ethyl methyl disulfide,CCSSC,95.0,sulfurous,chemical
+10900,2-Furanmethanethiol,SCc1ccco1,95.0,sulfurous,chemical
+11046,Butyl propyl disulfide,CCCCSSCCC,95.0,sulfurous,chemical
+11048,Ethyl propyl disulfide,CCCSSCC,95.0,sulfurous,chemical
+11120,2-Methylthiophene,Cc1cccs1,95.0,sulfurous,chemical
+11160,2-(Methylthio)pyrazine,CSc1cnccn1,95.0,sulfurous,chemical
+11776,"1,4-Dithiane-2,5-diol",OC1CSC(O)CS1,95.0,sulfurous,chemical
+12040,S-Propyl thioacetate,CCCSC(C)=O,95.0,sulfurous,chemical
+12086,Propanal,CCC=O,93.0,alcohol,chemical
+12093,Methoxybenzene,COc1ccccc1,93.0,alcohol,chemical
+12213,Ethyl acrylate,C=CC(=O)OCC,94.0,plastic,chemical
+12395,1-Methoxy-4-(2-propenyl)benzene,C=CCc1ccc(OC)cc1,93.0,alcohol,chemical
+12436,"1,1-Dimethoxynonane",CCCCCCCCC(OC)OC,94.0,plastic,chemical
+12461,Dimethyl trisulfide,CSSSC,95.0,sulfurous,chemical
+12747,Ibervirin,CSCCCN=C=S,95.0,sulfurous,chemical
+13456,3-Mercapto-2-methylpentanol,CCC(S)C(C)CO,95.0,sulfurous,chemical
+13475,3-Mercapto-2-pentanone,CCC(S)C(C)=O,95.0,sulfurous,chemical
+13819,3-Mercapto-2-methylpentanal,CCC(S)C(C)C=O,95.0,sulfurous,chemical
+13906,"1-Phenyl-1,2-propanedione",CC(=O)C(=O)c1ccccc1,94.0,plastic,chemical
+14953,Thiogeraniol,CC(C)=CCCC(C)=CCS,95.0,sulfurous,chemical
+14992,Tetrahydro-2-methyl-3-furanthiol,CC1OCCC1S,95.0,sulfurous,chemical
+15027,alpha-Pentylcinnamyl alcohol,CCCCCC(=Cc1ccccc1)CO,93.0,alcohol,chemical
+15036,"2-Methyl-1,3-dithiolane",CC1SCCS1,95.0,sulfurous,chemical
+15052,4-Methoxy-2-methyl-2-butanethiol,COCCC(C)(C)S,95.0,sulfurous,chemical
+15530,2-Methyl-3-(methylthio)furan,CSc1ccoc1C,95.0,sulfurous,chemical
+15973,Terpinolene,CC1=CCC(=C(C)C)CC1,94.0,plastic,chemical
+16161,"2,5-Dihydro-4,5-dimethyl-2-(2-methylpropyl)thiazole",CC1=NC(CC(C)C)SC1C,95.0,sulfurous,chemical
+16172,Pyrazineethanethiol,SCCc1cnccn1,95.0,sulfurous,chemical
+16183,5-Methoxy-2-methylthiazole,COc1cnc(C)s1,95.0,sulfurous,chemical
+16187,Polysorbate 20,CCCCCCCCCCCC(=O)OCCOCC(OCCO)C1OCC(OCCO)C1OCCO,93.0,alcohol,chemical
+16226,Menthyl lactate,CC(=O)C(O)OC1CC(C)CCC1C(C)C,93.0,alcohol,chemical
+16321,3-[(2-Mercapto-1-methylpropyl)thio]-2-butanol,CC(O)C(C)SC(C)C(C)S,95.0,sulfurous,chemical
+16868,S-(2-Furanylmethyl) methanethioate,O=CSCc1ccco1,95.0,sulfurous,chemical
+16869,S-(2-Furanylmethyl) propanethioate,CCC(=O)SCc1ccco1,95.0,sulfurous,chemical
+17407,"7-Methyl-3-methylene-1,6-octadiene",C=CC(=C)CCC=C(C)C,94.0,plastic,chemical
+17635,Methylthiomethyl butyrate,CCCC(=O)OCSC,95.0,sulfurous,chemical
+17730,Triton X 100,CC(C)(C)CC(C)(C)c1ccc(OCCCCCCCCCCO)cc1,93.0,alcohol,chemical
+18361,1-(Methylthio)-1-butene,CCC=CSC,95.0,sulfurous,chemical
+18434,3-Mercaptohexyl hexanoate,CCCCCC(=O)OCCC(S)CCC,95.0,sulfurous,chemical
+18767,3-Mercapto-3-methyl-1-butyl acetate,CC(=O)OCCC(C)(C)S,95.0,sulfurous,chemical
+19078,Allyl thiohexanoate,C=CCSC(=O)CCCCC,95.0,sulfurous,chemical
+19144,Diethyl trisulfide,CCSSSCC,95.0,sulfurous,chemical
+19457,5-Methyl-2-furanmethanethiol,Cc1ccc(CS)o1,95.0,sulfurous,chemical
+19463,1-Hexanethiol,CCCCCCS,95.0,sulfurous,chemical
+19857,3-Mercaptohexanol,CCCC(S)CCO,95.0,sulfurous,chemical
+19904,3-Mercapto-2-butanol,CC(O)C(C)S,95.0,sulfurous,chemical
+19916,"2,5-Dimethyl-3-furanthiol",Cc1cc(S)c(C)o1,95.0,sulfurous,chemical
+19918,2-Methyl-3-(methyldithio)furan,CSSc1ccoc1C,95.0,sulfurous,chemical
+19957,"1,1'-Thiobis-1-propanethiol",CCC(S)SC(S)CC,95.0,sulfurous,chemical
+19965,"2,2,4,4,6,6-Hexamethyl-1,3,5-trithiane",CC1(C)SC(C)(C)SC(C)(C)S1,95.0,sulfurous,chemical
+20080,"1,8-Octanedithiol",SCCCCCCCCS,95.0,sulfurous,chemical
+20381,Benzyl methyl disulfide,CSSCc1ccccc1,95.0,sulfurous,chemical
+20887,4-Mercapto-2-butanone,CC(=O)CCS,95.0,sulfurous,chemical
+21205,2-(Methylthio)phenol,CSc1ccccc1O,95.0,sulfurous,chemical
+21233,Methyl 2-(methylthio)butyrate,CCC(SC)C(=O)OC,95.0,sulfurous,chemical
+21277,2-Pyridinemethanethiol,SCc1ccccn1,95.0,sulfurous,chemical
+21292,2-Ethylbenzenethiol,CCc1ccccc1S,95.0,sulfurous,chemical
+21458,"5-Acetyl-2,4-dimethylthiazole",CC(=O)c1sc(C)nc1C,95.0,sulfurous,chemical
+21554,3-Mercapto-2-butanone,CC(=O)C(C)S,95.0,sulfurous,chemical
+21916,3-Mercaptopropanoic acid,O=C(O)CCS,95.0,sulfurous,chemical
+29796,"(3E,5E)-1,3,5-octatriene",C=CC=CC=CCC,94.0,plastic,chemical
+31207,n-propanol,CCCO,93.0,alcohol,chemical
+358,4-Ethylphenol,CCc1ccc(O)cc1,105.0,medicinal,medicinal
+865,"2,6-Dimethoxy-4-methylphenol",COc1cc(C)cc(OC)c1O,105.0,medicinal,medicinal
+897,Methyl anthranilate,COC(=O)c1ccccc1N,105.0,medicinal,medicinal
+5303,p-Isopropylphenol,CC(C)c1ccc(O)cc1,105.0,medicinal,medicinal
+8074,3-Hexanol,CCCC(O)CC,105.0,medicinal,medicinal
+8730,2-Isopropylphenol,CC(C)c1ccccc1O,105.0,medicinal,medicinal
+8786,2-Methylphenol,Cc1ccccc1O,105.0,medicinal,medicinal
+8789,3-Methylphenol,Cc1cccc(O)c1,105.0,medicinal,medicinal
+8790,4-Methylphenol,Cc1ccc(O)cc1,105.0,medicinal,medicinal
+8863,2-Methoxy-4-methylphenol,COc1cc(C)ccc1O,105.0,medicinal,medicinal
+8879,"2,6-Dimethylphenol",Cc1cccc(C)c1O,105.0,medicinal,medicinal
+9068,D-Camphor,CC12CCC(CC1=O)C2(C)C,105.0,medicinal,medicinal
+10570,2-Propylphenol,CCCc1ccccc1O,105.0,medicinal,medicinal
+10571,4-Propylphenol,CCCc1ccc(O)cc1,105.0,medicinal,medicinal
+10840,1-Methylnaphthalene,Cc1cccc2ccccc12,105.0,medicinal,medicinal
+12376,Chavicol,C=CCc1ccc(O)cc1,105.0,medicinal,medicinal
+13576,Piperitone,CC1=CC(=O)C(C(C)C)CC1,105.0,medicinal,medicinal
+13957,"2,5-Dimethylpyrazine",Cc1cnc(C)cn1,105.0,medicinal,medicinal
+14914,p-Menth-8-en-3-ol,C=C(C)C1CCC(C)CC1O,105.0,medicinal,medicinal
+19444,2-Methyl-3-thiophenethiol,Cc1sccc1S,105.0,medicinal,medicinal
+21436,Dihydrocarveol acetate,C=C(C)C1CCC(C)C(OC(C)=O)C1,105.0,medicinal,medicinal

@@ -1,0 +1,431 @@
+COMPOUND_ID,NAME_FOOD_DB,NEW_SMILES,FLAVOR_ID,NAME_FLAVOR,FLAVOR_GROUP
+499,2-Acetyl-3-ethylpyrazine,CCc1nccnc1C(C)=O,17.0,oily,fatty
+700,Undecanoic acid,CCCCCCCCCCC(=O)O,15.0,creamy,fatty
+701,Ethyl undecanoate,CCCCCCCCCCC(=O)OCC,18.0,fatty,fatty
+744,Methyl 10-undecenoate,C=CCCCCCCCCC(=O)OC,18.0,fatty,fatty
+764,Dimethyl sulfoxide,C[S+](C)[O-],18.0,fatty,fatty
+776,5-Methyl-2(3H)-furanone,Cc1ccc(O)o1,17.0,oily,fatty
+802,Oleyl alcohol,CCCCCCCCC=CCCCCCCCCO,18.0,fatty,fatty
+838,Vanillin,COc1cc(C=O)ccc1O,15.0,creamy,fatty
+839,Vanillin acetate,COc1cc(C=O)ccc1OC(C)=O,15.0,creamy,fatty
+841,Ethyl vanillin,CCOc1cc(C=O)ccc1O,15.0,creamy,fatty
+846,Vanillic acid,COc1cc(C(=O)O)ccc1O,15.0,creamy,fatty
+872,4-Methoxybenzaldehyde,COc1ccc(C=O)cc1,15.0,creamy,fatty
+875,2-Naphthalenethiol,Sc1ccc2ccccc2c1,15.0,creamy,fatty
+930,3-Ethylpyridine,CCc1cccnc1,18.0,fatty,fatty
+965,"1,1-Diethoxy-2-hexene",CCCC=CC(OCC)OCC,18.0,fatty,fatty
+969,Allyl nonanoate,C=CCOC(=O)CCCCCCCC,15.0,creamy,fatty
+1022,Ethyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OCC,15.0,creamy,fatty
+1029,Benzyl salicylate,O=C(OCc1ccccc1)c1ccccc1O,17.0,oily,fatty
+1088,(E)-2-Octenoic acid,CCCCC=CCC(=O)O,19.0,sour,fatty
+1121,Sorbitan oleate,CCCCCCCCC=CCCCCCCCC(=O)OCC(O)C1OCC(O)C1O,18.0,fatty,fatty
+1293,(E)-3-Hexen-1-ol,CCC=CCCO,18.0,fatty,fatty
+1324,3-Methylbutanoic acid,CC(C)CC(=O)O,19.0,sour,fatty
+1931,Succinic acid,O=C(O)CCC(=O)O,19.0,sour,fatty
+2338,Methyl tetradecanoate,CCCCCCCCCCCCCC(=O)OC,18.0,fatty,fatty
+2827,Dihydro-5-(2-octenyl)-2(3H)-furanone,CCCCCC=CCC1CCC(=O)O1,18.0,fatty,fatty
+2917,Undecanal,CCCCCCCCCCC=O,18.0,fatty,fatty
+2937,"(3Z,6Z)-3,6-Nonadien-1-ol",CCC=CCC=CCCO,17.0,oily,fatty
+2941,2-Octenal,CCCCCC=CC=O,18.0,fatty,fatty
+2949,9-Octadecenal,CCCCCCCCC=CCCCCCCCC=O,18.0,fatty,fatty
+2987,Ethyl decanoate,CCCCCCCCCC(=O)OCC,17.0,oily,fatty
+2988,2-Decenal,CCCCCCCC=CC=O,17.0,oily,fatty
+2993,9-Decenoic acid,C=CCCCCCCCC(=O)O,18.0,fatty,fatty
+3011,Dodecanoic acid,CCCCCCCCCCCC(=O)O,18.0,fatty,fatty
+3012,Methyl dodecanoate,CCCCCCCCCCCC(=O)OC,15.0,creamy,fatty
+3025,5-Hydroxy-2-dodecenoic acid lactone,CCCCCCCC1C=CCC(=O)O1,15.0,creamy,fatty
+3051,Methyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OC,17.0,oily,fatty
+3079,Glycerol 1-octadecanoate,CCCCCCCCCCCCCCCCCC(=O)OCC(O)CO,18.0,fatty,fatty
+3091,6-Pentyl-2H-pyran-2-one,CCCCCc1cccc(=O)o1,15.0,creamy,fatty
+3100,Glycerol tributanoate,CCCC(=O)OCC(COC(=O)CCC)OC(=O)CCC,14.0,cheese,fatty
+3140,10-Undecenal,C=CCCCCCCCCC=O,18.0,fatty,fatty
+3173,2-Methyl-4-pentenoic acid,C=CCC(C)C(=O)O,14.0,cheese,fatty
+3194,Tetrahydro-2-furanmethanol,OCC1CCCO1,17.0,oily,fatty
+3197,Tetrahydrofurfuryl propionate,CCC(=O)OCC1CCCO1,17.0,oily,fatty
+3210,S-Methyl thioacetate,CSC(C)=O,14.0,cheese,fatty
+3212,S-Methyl butanethioate,CCCC(=O)SC,14.0,cheese,fatty
+3242,Ethyl 3-oxobutanoate,CCOC(=O)CC(C)=O,18.0,fatty,fatty
+3246,2-Ethylbutanoic acid,CCC(CC)C(=O)O,19.0,sour,fatty
+3256,2-Ethyl-1-hexanol,CCCCC(CC)CO,17.0,oily,fatty
+3266,Ethyl methyl sulfide,CCSC,18.0,fatty,fatty
+3270,Dihydro-3(2H)-thiophenone,O=C1CCSC1,13.0,butter,fatty
+3278,2-Methylpropanoic acid,CC(C)C(=O)O,13.0,butter,fatty
+3281,Phenylmethyl 2-methylpropanoate,CC(C)C(=O)OCc1ccccc1,17.0,oily,fatty
+3286,3-Methylbutanal,CC(C)CC=O,19.0,sour,fatty
+3292,Fumaric acid,O=C(O)C=CC(=O)O,19.0,sour,fatty
+3304,Nonanal,CCCCCCCCC=O,18.0,fatty,fatty
+3307,Nonanoic acid,CCCCCCCCC(=O)O,14.0,cheese,fatty
+3308,1-Nonanol,CCCCCCCCCO,18.0,fatty,fatty
+3312,2-Nonenal,CCCCCCC=CC=O,18.0,fatty,fatty
+3315,2-Nonenoic acid,CCCCCC=CCC(=O)O,18.0,fatty,fatty
+3337,Octanoic acid,CCCCCCCC(=O)O,14.0,cheese,fatty
+3340,Octanal,CCCCCCCC=O,18.0,fatty,fatty
+3371,2-Pentyl-3-phenyl-2-propenal,CCCCCC(C=O)=Cc1ccccc1,17.0,oily,fatty
+3376,Bis(methylthio)methane,CSCSC,14.0,cheese,fatty
+3379,Butanal,CCCC=O,15.0,creamy,fatty
+3383,2-Butanol,CCC(C)O,17.0,oily,fatty
+3391,1-Isothiocyanatobutane,CCCCN=C=S,18.0,fatty,fatty
+3393,gamma-Butyrolactone,O=C1CCCO1,15.0,creamy,fatty
+3407,Cyclohexanecarboxylic acid,O=C(O)C1CCCCC1,14.0,cheese,fatty
+3478,Cyclohexaneacetic acid,O=C(O)CC1CCCCC1,18.0,fatty,fatty
+3480,(Z)-4-Hepten-1-ol,CCC=CCCCO,17.0,oily,fatty
+3483,3-Decanol,CCCCCCCC(O)CC,18.0,fatty,fatty
+3485,2-Decanone,CCCCCCCCC(C)=O,18.0,fatty,fatty
+3492,Dimethyl disulfide,CSSC,18.0,fatty,fatty
+5305,"p-Mentha-1,3-dien-7-al",CC(C)=C1C=CC(C=O)CC1,18.0,fatty,fatty
+6024,2-N-Amylfuran,CCCCCc1ccco1,13.0,butter,fatty
+7641,"6,10,14-Trimethylpentadecan-2-one",CC(=O)CCCC(C)CCCC(C)CCCC(C)C,17.0,oily,fatty
+8049,Heptanal,CCCCCCC=O,18.0,fatty,fatty
+8050,"2,3-Heptanedione",CCCCC(=O)C(C)=O,14.0,cheese,fatty
+8052,Heptanoic acid,CCCCCCC(=O)O,14.0,cheese,fatty
+8059,3-Heptanone,CCCCC(=O)CC,18.0,fatty,fatty
+8060,4-Heptanone,CCCC(=O)CCC,14.0,cheese,fatty
+8062,(Z)-4-Heptenal,CCC=CCCC=O,17.0,oily,fatty
+8069,Hexanal,CCCCCC=O,18.0,fatty,fatty
+8071,"2,3-Hexanedione",CCCC(=O)C(C)=O,13.0,butter,fatty
+8088,Methyl 2E-hexenoate,CCC=CCC(=O)OC,18.0,fatty,fatty
+8108,5-Butyl-delta-valerolactone,CCCCC1CCCC(=O)O1,15.0,creamy,fatty
+8113,3-Hydroxy-2-oxopropanoic acid,O=C(O)C(=O)CO,19.0,sour,fatty
+8136,2-Methylbutanoic acid,CCC(C)C(=O)O,14.0,cheese,fatty
+8157,3-Methyl-2-cyclopenten-1-one,CC1=CC(=O)CC1,18.0,fatty,fatty
+8162,5-Methyl-3-hexen-2-one,CC(=O)C=CC(C)C,14.0,cheese,fatty
+8173,"4-Methyl-2,3-pentanedione",CC(=O)C(=O)C(C)C,15.0,creamy,fatty
+8177,4-Methyl-2-pentenoic acid,CC(C)=CCC(=O)O,18.0,fatty,fatty
+8185,4-Methyl-1-phenyl-2-pentanol,CC(C)CC(O)Cc1ccccc1,15.0,creamy,fatty
+8188,2-Methyl-1-phenyl-2-propanol,CC(C)(O)Cc1ccccc1,17.0,oily,fatty
+8204,2-Methylpentanoic acid,CCCC(C)C(=O)O,19.0,sour,fatty
+8207,4-Methylpentanoic acid,CC(C)CCC(=O)O,14.0,cheese,fatty
+8215,2-Methylheptanoic acid,CCCCCC(C)C(=O)O,14.0,cheese,fatty
+8224,"5-Methyl-2,3-hexanedione",CC(=O)C(=O)CC(C)C,15.0,creamy,fatty
+8225,2-Methylhexanoic acid,CCCCC(C)C(=O)O,14.0,cheese,fatty
+8227,5-Methylhexanoic acid,CC(C)CCCC(=O)O,18.0,fatty,fatty
+8230,"2,3-Pentanedione",CCC(=O)C(C)=O,13.0,butter,fatty
+8236,4-Pentenoic acid,C=CCCC(=O)O,14.0,cheese,fatty
+8241,1-Penten-3-ol,C=CC(O)CC,13.0,butter,fatty
+8246,Phenoxyacetic acid,O=C(O)COc1ccccc1,19.0,sour,fatty
+8256,Benzylideneacetone,CC(=O)C=Cc1ccccc1,13.0,butter,fatty
+8272,3-Phenylpropanoic acid,O=C(O)CCc1ccccc1,18.0,fatty,fatty
+8294,Pyruvic acid,CC(=O)C(=O)O,19.0,sour,fatty
+8295,Ethyl pyruvate,CCOC(=O)C(C)=O,18.0,fatty,fatty
+8350,"(E,E)-2,4-Octadienal",CCC=CC=CCC=O,18.0,fatty,fatty
+8367,2-Ethylbutyl acetate,CCC(CC)COC(C)=O,17.0,oily,fatty
+8373,"1,6-Hexanedithiol",SCCCCCCS,18.0,fatty,fatty
+8381,3-(Methylthio)propyl acetate,CSCCCOC(C)=O,18.0,fatty,fatty
+8394,4-Hexyl-gamma-butyrolactone,CCCCCCC1CCC(=O)O1,17.0,oily,fatty
+8410,Methyl dihydrojasmonate,CCCCCC1C(=O)CCC1CC(=O)OC,17.0,oily,fatty
+8524,Nerylacetone,CC(=O)CCC=C(C)CCC=C(C)C,18.0,fatty,fatty
+8527,"2,3-Undecanedione",CCCCCCCCC(=O)C(C)=O,15.0,creamy,fatty
+8534,2-Ethylpyrazine,CCc1cnccn1,13.0,butter,fatty
+8542,3-(Methylthio)propanal,CSCCC=O,15.0,creamy,fatty
+8549,Methyleugenol,C=CCc1ccc(OC)c(OC)c1,15.0,creamy,fatty
+8550,"4'-tert-Butyl-2',6'-dimethyl-3',5'-dinitroacetophenone",CC(=O)c1c(C)c([N+](=O)[O-])c(C(C)(C)C)c([N+](=O)[O-])c1C,18.0,fatty,fatty
+8711,4-Hydroxy-3-methoxybenzenemethanol,COc1cc(CO)ccc1O,15.0,creamy,fatty
+8725,Cuminaldehyde,CC(C)c1ccc(C=O)cc1,17.0,oily,fatty
+8739,"1,3-Benzenediol",Oc1cccc(O)c1,15.0,creamy,fatty
+8759,alpha-Terpinyl butanoate,CCCC(=O)OC(C)(C)C1CC=C(C)CC1,19.0,sour,fatty
+8775,Butyl dodecanoate,CCCCCCCCCCCC(=O)OCCCC,17.0,oily,fatty
+8865,"3,4-Dimethoxybenzaldehyde",COc1ccc(C=O)cc1OC,15.0,creamy,fatty
+8866,"1,2-Dimethoxybenzene",COc1ccccc1OC,15.0,creamy,fatty
+9189,cis-4-Decenol,CCCCCC=CCCCO,18.0,fatty,fatty
+9272,cis-4-Decenyl acetate,CCCCCC=CCCCOC(C)=O,17.0,oily,fatty
+9296,Dihydroxyacetophenone,O=C(O)C(O)c1ccccc1,18.0,fatty,fatty
+9341,11-Dodecenoic acid,C=CCCCCCCCCCC(=O)O,18.0,fatty,fatty
+9397,Ethyl 3-mercaptobutyrate,CCOC(=O)CC(C)S,19.0,sour,fatty
+9511,Glyceryl 5-hydroxydecanoate,CCCCCC(O)CCCC(=O)OCC(O)CO,17.0,oily,fatty
+9515,Glyceryl monooleate,CCCCCCCCC=CCCCCCCCC(=O)OC(CO)CO,18.0,fatty,fatty
+9545,trans-2-trans-4-Heptadien-1-ol,CCC=CC=CCO,14.0,cheese,fatty
+9552,(+/-)-1-Hepten-3-ol,C=CC(O)CCCC,17.0,oily,fatty
+9553,Hept-trans-2-en-1-yl acetate,CCCCC=CCOC(C)=O,18.0,fatty,fatty
+9561,"2,4-Hexadienyl butyrate",CC=CC=CCOC(=O)CCC,14.0,cheese,fatty
+9605,3-Hydroxy-5-methyl-2-hexanone,CC(=O)C(O)CC(C)C,19.0,sour,fatty
+9644,Isobutyl 10-undecenoate,C=CCCCCCCCCC(=O)OCC(C)C,18.0,fatty,fatty
+9658,Isovaleraldehyde diethyl acetal,CCOC(CC(C)C)OCC,18.0,fatty,fatty
+9659,Isovaleraldehyde glyceryl acetal,CC(C)CC1OCC(CO)O1,18.0,fatty,fatty
+9852,Methyl cis-5-octenoate,CCC=CCCCC(=O)OC,15.0,creamy,fatty
+9943,2-Nonanone propyleneglycol acetal,CCCCCCCC1(C)OCC(C)O1,18.0,fatty,fatty
+10139,Prenyl isobutyrate,CC(C)=CCOC(=O)C(C)C,13.0,butter,fatty
+10377,Terpinyl isobutyrate,CC1=CCC(C(C)(C)OC(=O)C(C)C)CC1,18.0,fatty,fatty
+10504,4'-Methoxyacetophenone,COc1ccc(C(C)=O)cc1,13.0,butter,fatty
+10530,Dehydrozingerone,COc1cc(C=CC(C)=O)ccc1O,15.0,creamy,fatty
+10836,Glycerol tripropanoate,CCC(=O)OCC(COC(=O)CC)OC(=O)CC,17.0,oily,fatty
+10900,2-Furanmethanethiol,SCc1ccco1,17.0,oily,fatty
+10960,"2,3-Dimethylpyrazine",Cc1nccnc1C,13.0,butter,fatty
+11101,(R)-Higenamine,Oc1ccc(CC2NCCc3cc(O)c(O)cc32)cc1,15.0,creamy,fatty
+11162,"5,6,7,8-Tetrahydroquinoxaline",c1cnc2c(n1)CCCC2,14.0,cheese,fatty
+11168,2-Propanoylthiophene,CCC(=O)c1cccs1,15.0,creamy,fatty
+11178,Octyl octanoate,CCCCCCCCOC(=O)CCCCCCC,17.0,oily,fatty
+11179,Ethyl cyclohexanecarboxylate,CCOC(=O)C1CCCCC1,14.0,cheese,fatty
+11218,6-Decanolide,CCCCC1CCCCC(=O)O1,15.0,creamy,fatty
+11409,Phenylmethyl butanoate,CCCC(=O)OCc1ccccc1,13.0,butter,fatty
+11611,"(2E,4Z,7Z)-2,4,7-Tridecatrienal",CCCCCC=CC=CC=CCC=O,18.0,fatty,fatty
+11654,10-Undecen-2-one,C=CCCCCCCCC(C)=O,18.0,fatty,fatty
+11811,Acetoin acetate,CC(=O)OC(C)C(C)=O,15.0,creamy,fatty
+11816,(-)-(Z)-Tetrahydro-6-(2-pentenyl)-2H-pyran-2-one,CCC=CCC1CCCC(=O)O1,15.0,creamy,fatty
+11834,2-Undecanone,CCCCCCCCCC(C)=O,15.0,creamy,fatty
+11901,4-Methoxybenzyl acetate,COc1ccc(COC(C)=O)cc1,15.0,creamy,fatty
+11933,"2,3-Butanedione",CC(=O)C(C)=O,13.0,butter,fatty
+11947,Trimethylamine,CN(C)C,17.0,oily,fatty
+12029,Methyl decanoate,CCCCCCCCCC(=O)OC,17.0,oily,fatty
+12037,Isoprenyl alcohol,C=CC(C)(C)O,17.0,oily,fatty
+12093,Methoxybenzene,COc1ccccc1,13.0,butter,fatty
+12117,2-Nonanol,CCCCCCCC(C)O,15.0,creamy,fatty
+12167,Levoglutamide,NC(=O)CCC(N)C(=O)O,17.0,oily,fatty
+12188,Curcumenol,CC1=CC2(O)OC3(CC2=C(C)C)C(C)CCC13,18.0,fatty,fatty
+12354,1-Decanol,CCCCCCCCCCO,18.0,fatty,fatty
+12413,Octyl butanoate,CCCCCCCCOC(=O)CCC,17.0,oily,fatty
+12415,Octyl 2-methylpropanoate,CCCCCCCCOC(=O)C(C)C,17.0,oily,fatty
+12427,2-Tridecanone,CCCCCCCCCCCC(C)=O,18.0,fatty,fatty
+12437,1-Nonen-3-ol,C=CC(O)CCCCCC,17.0,oily,fatty
+12440,Methyl stearate,CCCCCCCCCCCCCCCCCC(=O)OC,17.0,oily,fatty
+12476,3-Methylcyclopentadecanone,CC1CCCCCCCCCCCCC(=O)C1,18.0,fatty,fatty
+12624,Tetradecanal,CCCCCCCCCCCCCC=O,18.0,fatty,fatty
+12627,Ethyl 10-undecenoate,C=CCCCCCCCCC(=O)OCC,15.0,creamy,fatty
+12720,5-Hydroxymethyl-2-furancarboxaldehyde,O=Cc1ccc(CO)o1,18.0,fatty,fatty
+12816,Methyl 2-propenyl trisulfide,C=CCSSSC,15.0,creamy,fatty
+12847,Benzyl benzoate,O=C(OCc1ccccc1)c1ccccc1,14.0,cheese,fatty
+12862,Ethyl oleate,CCCCCCCCC=CCCCCCCCC(=O)OCC,18.0,fatty,fatty
+12863,"5,6-Dihydro-6-pentyl-2H-pyran-2-one",CCCCCC1C=CCC(=O)O1,15.0,creamy,fatty
+12877,2-Methyl-2-buten-1-ol,CC=C(C)CO,17.0,oily,fatty
+12991,"6,10,14-Trimethyl-5,9,13-pentadecatrien-2-one",CC(=O)CCC=C(C)CCC=C(C)CCC=C(C)C,15.0,creamy,fatty
+13396,Amidosulfonic acid,NS(=O)(=O)O,18.0,fatty,fatty
+13414,"2,4-Nonadien-1-ol",CCCCC=CC=CCO,18.0,fatty,fatty
+13472,2-Pentylpyridine,CCCCCc1ccccn1,18.0,fatty,fatty
+13725,D-Citronellol,CC(C)=CCCC(C)CCO,17.0,oily,fatty
+13890,(Z)-3-Octen-1-ol,CCCCC=CCCO,18.0,fatty,fatty
+13895,"2,4,7-Decatrienoic acid",CCC=CC=CC=CCC(=O)O,18.0,fatty,fatty
+13946,2-Acetylpyridine,CC(=O)c1ccccn1,17.0,oily,fatty
+14103,4-Butyl-gamma-butyrolactone,CCCCC1CCC(=O)O1,15.0,creamy,fatty
+14162,Isopropyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OC(C)C,17.0,oily,fatty
+14408,Valencene,C=C(C)C1CCC2=CCCC(C)C2(C)C1,17.0,oily,fatty
+14610,Citronellic acid,CC(C)=CCCC(C)CC(=O)O,18.0,fatty,fatty
+14736,Pyridine,c1ccncc1,19.0,sour,fatty
+14926,"p-Mentha-1,8-dien-7-ol",C=C(C)C1CC=C(CO)CC1,18.0,fatty,fatty
+15026,3-(5-Methyl-2-furanyl)butanal,Cc1ccc(C(C)CC=O)o1,18.0,fatty,fatty
+15039,"4,4-Dibutyl-gamma-butyrolactone",CCCCC1(CCCC)CCC(=O)O1,17.0,oily,fatty
+15047,2-Heptylfuran,CCCCCCCc1ccco1,18.0,fatty,fatty
+15048,4-Hydroxy-4-methyl-7-decenoic acid gamma-lactone,CCC=CCCC1(C)CCC(=O)O1,17.0,oily,fatty
+15054,"(2E,4E)-Decadien-1-ol",CCCCCC=CC=CCO,18.0,fatty,fatty
+15059,"2-Methoxy-4-(4-methyl-1,3-dioxolan-2-yl)phenol",COc1cc(C2OCC(C)O2)ccc1O,15.0,creamy,fatty
+15064,"2-Ethoxy-4-(4-methyl-1,3-dioxolan-2-yl)phenol",CCOc1cc(C2OCC(C)O2)ccc1O,15.0,creamy,fatty
+15066,alpha-Amylcinnamyl isovalerate,CCCCCC(=Cc1ccccc1)COC(=O)CC(C)C,17.0,oily,fatty
+15067,alpha-Amylcinnamyl formate,CCCCCC(=Cc1ccccc1)COC=O,17.0,oily,fatty
+15069,2-Propenyl 2-ethylbutanoate,C=CCOC(=O)C(CC)CC,17.0,oily,fatty
+15072,Hexyl crotonate,CC=CC(=O)OCCCCCC,17.0,oily,fatty
+15079,Heptyl octanoate,CCCCCCCOC(=O)CCCCCCC,17.0,oily,fatty
+15081,Octyl heptanoate,CCCCCCCCOC(=O)CCCCCC,18.0,fatty,fatty
+15090,Pentyl hexanoate,CCCCCOC(=O)CCCCC,18.0,fatty,fatty
+15091,Acetoin butyrate,CCCC(=O)OC(C)C(C)=O,14.0,cheese,fatty
+15317,Butyl 10-undecenoate,C=CCCCCCCCCC(=O)OCCCC,13.0,butter,fatty
+15514,"2,4-Decadienal",CCCCC=CC=CCC=O,18.0,fatty,fatty
+15517,Pear ester,CCCCC=CC=CCC(=O)OCC,15.0,creamy,fatty
+15530,2-Methyl-3-(methylthio)furan,CSc1ccoc1C,14.0,cheese,fatty
+15547,"3,4-Dihydro-2H-1-benzopyran-2-one",O=C1CCc2ccccc2O1,15.0,creamy,fatty
+15602,(+)-Myrtenyl formate,CC1(C)C2CC=C(COC=O)C1C2,17.0,oily,fatty
+15730,6-Hexyltetrahydro-2H-pyran-2-one,CCCCCCC1CCCC(=O)O1,15.0,creamy,fatty
+15975,gamma-Terpinene,CC1=CCC(C(C)C)=CC1,17.0,oily,fatty
+16116,5-Pentyl-delta-valerolactone,CCCCCC1CCCC(=O)O1,13.0,butter,fatty
+16128,Oleyl acetate,CCCCCCCCC=CCCCCCCCCOC(C)=O,18.0,fatty,fatty
+16139,Butyl butyryllactate,CCCCOC(=O)C(C)OC(=O)CCC,13.0,butter,fatty
+16168,3-Octen-2-ol,CCCCC=CC(C)O,15.0,creamy,fatty
+16202,1-(Methylthio)-2-butanone,CCC(=O)CSC,17.0,oily,fatty
+16204,2-Propenyl cyclohexanehexanoate,C=CCOC(=O)CCCCCC1CCCCC1,18.0,fatty,fatty
+16232,Guaiol acetate,CC(=O)OC(C)(C)C1CCC(C)C2=C(C1)C(C)CC2,18.0,fatty,fatty
+16320,2-Methyl-3-(2-pentenyl)-2-cyclopenten-1-one,CCC=CC=C1CCC(=O)C1C,15.0,creamy,fatty
+16321,3-[(2-Mercapto-1-methylpropyl)thio]-2-butanol,CC(O)C(C)SC(C)C(C)S,18.0,fatty,fatty
+16331,Methyl 9-undecenoate,CC=CCCCCCCCC(=O)OC,18.0,fatty,fatty
+16333,"Propyl 2,4-decadienoate",CCCCC=CC=CCC(=O)OCCC,18.0,fatty,fatty
+16337,Decyl propionate,CCCCCCCCCCOC(=O)CC,18.0,fatty,fatty
+16409,Butyl 2-decenoate,CCCCCCC=CCC(=O)OCCCC,18.0,fatty,fatty
+16412,3-Methylbutyl dodecanoate,CCCCCCCCCCCC(=O)OCCC(C)C,17.0,oily,fatty
+16577,3-Methylbutyl nonanoate,CCCCCCCCC(=O)OCCC(C)C,17.0,oily,fatty
+16580,1-Ethenylhexyl butanoate,C=CC(CCCCC)OC(=O)CCC,13.0,butter,fatty
+16740,Methyl 4-(methylthio)butyrate,COC(=O)CCCSC,14.0,cheese,fatty
+16749,Phenethyl tiglate,CC=C(C)C(=O)OCCc1ccccc1,17.0,oily,fatty
+16753,3-Hydroxynonyl acetate,CCCCCCC(O)CCOC(C)=O,17.0,oily,fatty
+16764,4-(Ethoxymethyl)-2-methoxyphenol,CCOCc1ccc(O)c(OC)c1,15.0,creamy,fatty
+16815,Vanillin isobutyrate,COc1cc(C=O)ccc1OC(=O)C(C)C,15.0,creamy,fatty
+16817,Ethyl vanillin isobutyrate,CCOc1cc(C=O)ccc1OC(=O)C(C)C,15.0,creamy,fatty
+16863,Octyl 2-furoate,CCCCCCCCOC(=O)c1ccco1,17.0,oily,fatty
+16865,2-Furanylmethyl propanoate,CCC(=O)OCc1ccco1,17.0,oily,fatty
+16872,Isoamyl 2-furanpropionate,CC(C)CCOC(=O)CCc1ccco1,19.0,sour,fatty
+16873,3-Methylbutyl 2-furanbutanoate,CC(C)CCOC(=O)CCCc1ccco1,13.0,butter,fatty
+16880,5-Dodecanolide,CCCCCCCC1CCCC(=O)O1,17.0,oily,fatty
+16910,Methyl 2-thiofuroate,CSC(=O)c1ccco1,15.0,creamy,fatty
+16965,2-Heptyl-4-methyl-gamma-butyrolactone,CCCCCCCC1CC(C)OC1=O,15.0,creamy,fatty
+16985,6-(3-Hexenyl)tetrahydro-2H-pyran-2-one,CCC=CCCC1CCCC(=O)O1,15.0,creamy,fatty
+17025,"2-Ethyl-4,5-dimethyloxazole",CCc1nc(C)c(C)o1,15.0,creamy,fatty
+17255,2-Methylbutyl 3-methylbutanoate,CCC(C)COC(=O)CC(C)C,14.0,cheese,fatty
+17274,delta-Tetradecalactone,CCCCCCCCCC1CCCC(=O)O1,15.0,creamy,fatty
+17298,"(2E,6Z)-2,6-Nonadien-1-Yl acetate",CCC=CCCC=CCOC(C)=O,18.0,fatty,fatty
+17570,"7,7-Diethoxy-3-heptene",CCC=CCCC(OCC)OCC,17.0,oily,fatty
+17573,Hexyl 2E-hexenoate,CCC=CCC(=O)OCCCCCC,18.0,fatty,fatty
+17627,2-Propenyl cyclohexanebutanoate,C=CCOC(=O)CCCC1CCCCC1,18.0,fatty,fatty
+18145,3-Methylbutyl octanoate,CCCCCCCC(=O)OCCC(C)C,17.0,oily,fatty
+18367,(E)-2-(2-Octenyl)cyclopentanone,CCCCCC=CCC1CCCC1=O,18.0,fatty,fatty
+18756,Isopropyl 2-methylbutanoate,CCC(C)C(=O)OC(C)C,17.0,oily,fatty
+19222,"(2E,4E)-2,4-Dodecadienal",CCCCCCC=CC=CCC=O,18.0,fatty,fatty
+19426,Cyclopentanethiol,SC1CCCC1,18.0,fatty,fatty
+19463,1-Hexanethiol,CCCCCCS,18.0,fatty,fatty
+19477,"2,4-Dimethyl-2-pentenoic acid",CC(=CC(C)C)C(=O)O,14.0,cheese,fatty
+19503,Butter acids,CC(C)(c1c(Cl)c(Cl)c(O)c(Cl)c1Cl)c1c(Cl)c(Cl)c(O)c(Cl)c1Cl,13.0,butter,fatty
+19504,S-Methyl 3-methylthiobutyrate,CSC(=O)CC(C)C,14.0,cheese,fatty
+19507,3-Oxooctanoic acid glycerides,CCCCCC(=O)CC(=O)O,18.0,fatty,fatty
+19508,3-Oxodecanoic acid glycerides,CCCCCCCC(=O)CC(=O)O,18.0,fatty,fatty
+19509,3-Oxododecanoic acid glycerides,CCCCCCCCCC(=O)CC(=O)O,18.0,fatty,fatty
+19517,1-Decen-3-ol,C=CC(O)CCCCCCC,14.0,cheese,fatty
+19856,"(2E,4E)-2,4-Octadien-1-ol",CCCC=CC=CCO,18.0,fatty,fatty
+19884,Glycerol 1-(5-hydroxydodecanoate),CCCCCCCC(O)CCCC(=O)OCC(O)CO,17.0,oily,fatty
+19905,3-(Methylthio)hexanal,CCCC(CC=O)SC,13.0,butter,fatty
+19929,2-Propenyl hexanoate,C=CCOC(=O)CCCCC,18.0,fatty,fatty
+19942,Isoamyl butyrate,CCCC(=O)OCCC(C)C,16.0,hop_oil,fatty
+19949,"1,1-Diethoxy-3,7-dimethyl-2,6-octadiene",CCOC(C=C(C)CCC=C(C)C)OCC,17.0,oily,fatty
+19962,2-Pentylthiophene,CCCCCc1cccs1,18.0,fatty,fatty
+19978,Butyl lactate,CCCCOC(=O)C(C)O,15.0,creamy,fatty
+19987,Ethyl 2-(methylthio)acetate,CCOC(=O)CSC,18.0,fatty,fatty
+20018,Butyl octadecanoate,CCCCCCCCCCCCCCCCCC(=O)OCCCC,18.0,fatty,fatty
+20131,Isopropyl tetradecanoate,CCCCCCCCCCCCCC(=O)OC(C)C,17.0,oily,fatty
+20362,1-(Methylthio)propane,CCCSC,15.0,creamy,fatty
+20387,2-Propenyl octanoate,C=CCOC(=O)CCCCCCC,13.0,butter,fatty
+20553,Ethyl lactate,CCOC(=O)C(C)O,13.0,butter,fatty
+20885,4-Decenal,CCCCCC=CCCC=O,18.0,fatty,fatty
+21127,Dibutyl decanedioate,CCCCOC(=O)CCCCCCCCC(=O)OCCCC,17.0,oily,fatty
+21276,"2,3-Diethyl-5-methylpyrazine",CCc1ncc(C)nc1CC,18.0,fatty,fatty
+21925,Bis(1-methylethyl) hexanedioate,CC(C)OC(=O)CCCCC(=O)OC(C)C,18.0,fatty,fatty
+21937,Dioctyl hexanedioate,CCCCCCCCOC(=O)CCCCC(=O)OCCCCCCCC,18.0,fatty,fatty
+23151,Stearaldehyde,CCCCCCCCCCCCCCCCCC=O,17.0,oily,fatty
+29795,3-pentanol,CCC(O)CC,17.0,oily,fatty
+29893,butyl octanoate,CCCCCCCC(=O)OCCCC,13.0,butter,fatty
+29916,(2E)-2-dodecen-1-ol,CCCCCCCCCC=CCO,17.0,oily,fatty
+29937,Butanoic anhydride,CCCC(=O)OC(=O)CCC,13.0,butter,fatty
+29938,4-tert-Butylcyclohexyl acetate,CC(=O)OC1CCC(C(C)(C)C)CC1,15.0,creamy,fatty
+31194,n-butanoate,CCCC(=O)O,14.0,cheese,fatty
+708,Dihydroisophorol,CC1CC(O)CC(C)(C)C1,21.0,spicy,spicy
+774,Tiglic acid,CC=C(C)C(=O)O,21.0,spicy,spicy
+776,5-Methyl-2(3H)-furanone,Cc1ccc(O)o1,20.0,coumarin,spicy
+810,3-(4-Methylphenyl)-2-propenal,Cc1ccc(C=CC=O)cc1,21.0,spicy,spicy
+812,"p-Mentha-1,3,5,8-tetraene",C=C(C)c1ccc(C)cc1,21.0,spicy,spicy
+826,2-(4-Methylphenyl)-2-propanol,Cc1ccc(C(C)(C)O)cc1,20.0,coumarin,spicy
+857,2-Methoxy-4-vinylphenol,C=Cc1ccc(O)c(OC)c1,21.0,spicy,spicy
+878,Wine lactone,CC1=CC2OC(=O)C(C)C2CC1,21.0,spicy,spicy
+887,Cinnamyl alcohol,OCC=Cc1ccccc1,21.0,spicy,spicy
+889,Cinnamyl acetate,CC(=O)OCC=Cc1ccccc1,21.0,spicy,spicy
+930,3-Ethylpyridine,CCc1cccnc1,21.0,spicy,spicy
+965,"1,1-Diethoxy-2-hexene",CCCC=CC(OCC)OCC,21.0,spicy,spicy
+1028,Ethyl salicylate,CCOC(=O)c1ccccc1O,21.0,spicy,spicy
+1060,Glycyrrhizin,CC1(C(=O)O)CCC2(C)CCC3(C)C(=C2C1)CC(=O)C1C2(C)CCC(OC4OC(C(=O)O)C(O)C(O)C4OC4OC(C(=O)O)C(O)C(O)C4O)C(C)(C)C2CCC13C,21.0,spicy,spicy
+2728,Isoeugenol,CC=Cc1ccc(O)c(OC)c1,21.0,spicy,spicy
+2743,[6]-Paradol,CCCCCCCC(=O)CCc1ccc(O)c(OC)c1,21.0,spicy,spicy
+2930,"(2E,4E)-Decadienoic isobutylamide",CCCCC=CC=CCC(=O)NCC(C)C,21.0,spicy,spicy
+3266,Ethyl methyl sulfide,CCSC,21.0,spicy,spicy
+3310,3-Nonanone,CCCCCCC(=O)CC,21.0,spicy,spicy
+3343,2-Octanol,CCCCCCC(C)O,21.0,spicy,spicy
+3376,Bis(methylthio)methane,CSCSC,21.0,spicy,spicy
+3379,Butanal,CCCC=O,21.0,spicy,spicy
+3391,1-Isothiocyanatobutane,CCCCN=C=S,21.0,spicy,spicy
+3492,Dimethyl disulfide,CSSC,21.0,spicy,spicy
+4834,Butyl angelate,CC=C(C)C(=O)OCCCC,21.0,spicy,spicy
+5303,p-Isopropylphenol,CC(C)c1ccc(O)cc1,21.0,spicy,spicy
+5305,"p-Mentha-1,3-dien-7-al",CC(C)=C1C=CC(C=O)CC1,21.0,spicy,spicy
+8056,2-Heptanone,CCCCCC(C)=O,21.0,spicy,spicy
+8108,5-Butyl-delta-valerolactone,CCCCC1CCCC(=O)O1,20.0,coumarin,spicy
+8182,2-Methyl-3-phenyl-2-propenal,CC(C=O)=Cc1ccccc1,21.0,spicy,spicy
+8295,Ethyl pyruvate,CCOC(=O)C(C)=O,21.0,spicy,spicy
+8493,Cuminyl alcohol,CC(C)c1ccc(CO)cc1,21.0,spicy,spicy
+8549,Methyleugenol,C=CCc1ccc(OC)c(OC)c1,21.0,spicy,spicy
+8724,4'-Isopropylacetophenone,CC(=O)c1ccc(C(C)C)cc1,21.0,spicy,spicy
+8725,Cuminaldehyde,CC(C)c1ccc(C=O)cc1,21.0,spicy,spicy
+8860,2-Methoxy-4-propylphenol,CCCc1ccc(O)c(OC)c1,21.0,spicy,spicy
+9076,Caprolactam,O=C1CCCCCN1,21.0,spicy,spicy
+9272,cis-4-Decenyl acetate,CCCCCC=CCCCOC(C)=O,21.0,spicy,spicy
+9288,"4,5-Dihydro-2,5-dimethyl-4-oxo-3-furanyl butyrate",CCCC(=O)Oc1c(C)oc(C)c1O,21.0,spicy,spicy
+9292,"(+/-)-cis- and trans-1,2-Dihydroperillaldehyde",C=C(C)C1CCC(C=O)CC1,21.0,spicy,spicy
+9403,N-Ethyl trans-2-cis-6-nonadienamide,CCC=CCC=CCC(=O)NCC,21.0,spicy,spicy
+9552,(+/-)-1-Hepten-3-ol,C=CC(O)CCCC,21.0,spicy,spicy
+9580,Hexyl 3-mercaptobutanoate,CCCCCCOC(=O)CC(C)S,21.0,spicy,spicy
+9611,2-(2-Hydroxyphenyl) cyclopropanecarboxylic acid delta lactone,O=C1Oc2ccccc2C2CC12,20.0,coumarin,spicy
+9638,Isobornyl isobutyrate,CC(C)C(=O)OC1CC2CCC1(C)C2(C)C,21.0,spicy,spicy
+9777,p-Menth-1-ene-9-al,CC1=CCC(C(C)C=O)CC1,21.0,spicy,spicy
+9969,O-Ethyl s-(2-furylmethyl)thiocarbonate,CCOC(=O)SCc1ccco1,21.0,spicy,spicy
+10078,Phthalide,O=C1OCc2ccccc21,20.0,coumarin,spicy
+10158,Pseudoionone,CC(=O)C=CC=C(C)CCC=C(C)C,21.0,spicy,spicy
+10529,Zingerone,COc1cc(CCC(C)=O)ccc1O,21.0,spicy,spicy
+10551,4'-Methylacetophenone,CC(=O)c1ccc(C)cc1,20.0,coumarin,spicy
+10553,4-Methylbiphenyl,Cc1ccc(-c2ccccc2)cc1,21.0,spicy,spicy
+10554,3-(4-Methoxyphenyl)-2-propenal,COc1ccc(C=CC=O)cc1,21.0,spicy,spicy
+10875,1-(4-Methoxyphenyl)-2-propanone,COc1ccc(CC(C)=O)cc1,21.0,spicy,spicy
+10902,1-(2-Furanyl)-2-propanone,CC(=O)Cc1ccco1,21.0,spicy,spicy
+10903,3-(2-Furanyl)-2-propenal,O=CC=Cc1ccco1,21.0,spicy,spicy
+11131,4-(2-Furanyl)-3-buten-2-one,CC(=O)C=Cc1ccco1,21.0,spicy,spicy
+11420,3-Phenylpropyl acetate,CC(=O)OCCCc1ccccc1,21.0,spicy,spicy
+11614,3-Octen-2-one,CCCC=CCC(C)=O,21.0,spicy,spicy
+11675,Safrole,C=CCc1ccc2c(c1)OCO2,21.0,spicy,spicy
+11901,4-Methoxybenzyl acetate,COc1ccc(COC(C)=O)cc1,20.0,coumarin,spicy
+12005,Ethyl cinnamate,CCOC(=O)C=Cc1ccccc1,21.0,spicy,spicy
+12174,Eugenol,C=CCc1ccc(O)c(OC)c1,21.0,spicy,spicy
+12191,3-Phenyl-1-propanol,OCCCc1ccccc1,21.0,spicy,spicy
+12204,4-Ethoxybenzaldehyde,CCOc1ccc(C=O)cc1,21.0,spicy,spicy
+12412,Isoeugenol acetate,CC=Cc1ccc(OC(C)=O)c(OC)c1,21.0,spicy,spicy
+12459,2-Hydroxybenzaldehyde,O=Cc1ccccc1O,21.0,spicy,spicy
+12632,(Z)-Methyl isoeugenol,CC=Cc1ccc(OC)c(OC)c1,21.0,spicy,spicy
+12858,Methyl phenyl sulfide,CSc1ccccc1,21.0,spicy,spicy
+13871,4-Isopropyl-2-methoxy-1-methylbenzene,COc1cc(C(C)C)ccc1C,21.0,spicy,spicy
+13881,2-Acetyl-5-methylfuran,CC(=O)c1ccc(C)o1,20.0,coumarin,spicy
+13901,4-Hexen-3-one,CC=CC(=O)CC,21.0,spicy,spicy
+13903,"(S)-5,6,7,7alpha-Tetrahydro-4,4,7alpha-trimethyl-2(4H)-benzofuranone",CC1(C)CCCC2(C)OC(=O)C=C12,20.0,coumarin,spicy
+13913,Myrtenal,CC1(C)C2CC=C(C=O)C1C2,21.0,spicy,spicy
+14887,Safranal,CC1=C(C=O)C(C)(C)CC=C1,21.0,spicy,spicy
+15003,3-Mercapto-3-methyl-1-butanol,CC(C)(S)CCO,21.0,spicy,spicy
+15022,3-(Hydroxymethyl)-2-heptanone,CCCCC(CO)C(C)=O,21.0,spicy,spicy
+15064,"2-Ethoxy-4-(4-methyl-1,3-dioxolan-2-yl)phenol",CCOc1cc(C2OCC(C)O2)ccc1O,21.0,spicy,spicy
+15068,alpha-Amylcinnamyl acetate,CCCCCC(=Cc1ccccc1)COC(C)=O,21.0,spicy,spicy
+15085,"Benzyl 2,3-dimethyl-2-butenoate",CC(C)=C(C)C(=O)OCc1ccccc1,21.0,spicy,spicy
+15269,3-Phenylpropyl cinnamate,O=C(C=Cc1ccccc1)OCCCc1ccccc1,21.0,spicy,spicy
+15336,Bulnesol,CC1=C2CCC(C)C2CC(C(C)(C)O)CC1,21.0,spicy,spicy
+15530,2-Methyl-3-(methylthio)furan,CSc1ccoc1C,21.0,spicy,spicy
+15547,"3,4-Dihydro-2H-1-benzopyran-2-one",O=C1CCc2ccccc2O1,20.0,coumarin,spicy
+15673,alpha-Caryophyllene alcohol,CC1(C)CC2C(C1)C1(C)CCCC2(C)C1O,21.0,spicy,spicy
+15775,Theaspirane,CC1=CCCC(C)(C)C12CCC(C)O2,21.0,spicy,spicy
+16057,beta-Caryophyllene alcohol,CC12CCCC(O)(C1)C1CC(C)(C)C1CC2,21.0,spicy,spicy
+16144,"2-(Phenylethenyl)-1,3-dioxolane",C(=CC1OCCO1)c1ccccc1,21.0,spicy,spicy
+16147,3-(4-Methoxyphenyl)-2-methyl-2-propenal,COc1ccc(C=C(C)C=O)cc1,21.0,spicy,spicy
+16174,alpha-Citronellol,C=C(C)CCCC(C)CCO,21.0,spicy,spicy
+16177,"p-Mentha-2,4(8)-dien-9,3-olide",CC1=Cc2oc(O)c(C)c2CC1,20.0,coumarin,spicy
+16195,Rhodinyl acetate,C=C(C)CCCC(C)CCOC(C)=O,21.0,spicy,spicy
+16232,Guaiol acetate,CC(=O)OC(C)(C)C1CCC(C)C2=C(C1)C(C)CC2,21.0,spicy,spicy
+16245,Perillyl acetate,C=C(C)C1CC=C(COC(C)=O)CC1,21.0,spicy,spicy
+16296,"2,6-Dimethoxy-4-(1-propenyl)phenol",CC=Cc1cc(OC)c(O)c(OC)c1,21.0,spicy,spicy
+16297,2-Ethoxy-1-methyl-4-(1-methylethyl)benzene,CCOc1cc(C(C)C)ccc1C,21.0,spicy,spicy
+16301,Octahydro-2H-1-benzopyran-2-one,O=C1CCC2CCCCC2O1,20.0,coumarin,spicy
+16320,2-Methyl-3-(2-pentenyl)-2-cyclopenten-1-one,CCC=CC=C1CCC(=O)C1C,21.0,spicy,spicy
+16327,p-Menth-1-en-9-ol acetate,CC(=O)OCC(C)C1CC=C(C)CC1,21.0,spicy,spicy
+16600,"2,5-Dihydro-4,5-dimethyl-2-(1-methylpropyl)thiazole",CCC(C)C1N=C(C)C(C)S1,21.0,spicy,spicy
+16747,1-Ethylhexyl tiglate,CC=C(C)C(=O)OC(CC)CCCCC,21.0,spicy,spicy
+16750,Isobutyl angelate,CC=C(C)C(=O)OCC(C)C,21.0,spicy,spicy
+16764,4-(Ethoxymethyl)-2-methoxyphenol,CCOCc1ccc(O)c(OC)c1,21.0,spicy,spicy
+16837,Butyl cinnamate,CCCCOC(=O)C=Cc1ccccc1,21.0,spicy,spicy
+16842,Cinnamyl phenylacetate,O=C(Cc1ccccc1)OCC=Cc1ccccc1,21.0,spicy,spicy
+16865,2-Furanylmethyl propanoate,CCC(=O)OCc1ccco1,21.0,spicy,spicy
+17393,beta-Guaiene,CC(C)=C1CCC(C)C2=C(C1)C(C)CC2,21.0,spicy,spicy
+17407,"7-Methyl-3-methylene-1,6-octadiene",C=CC(=C)CCC=C(C)C,21.0,spicy,spicy
+17431,Ocimen quintoxide,CC=C(C)C1CCC(C)(C)O1,21.0,spicy,spicy
+17698,2-Ethoxy-4-(methoxymethyl)phenol,CCOc1cc(COC)ccc1O,21.0,spicy,spicy
+17699,2-Ethyl-4-(2-furanyl)-2-propenal,CCC(C=O)=Cc1ccco1,21.0,spicy,spicy
+18690,Bovolide,CCCC=Cc1oc(O)c(C)c1C,21.0,spicy,spicy
+18754,Hexyl 2-methylbutanoate,CCCCCCOC(=O)C(C)CC,21.0,spicy,spicy
+19426,Cyclopentanethiol,SC1CCCC1,21.0,spicy,spicy
+19517,1-Decen-3-ol,C=CC(O)CCCCCCC,21.0,spicy,spicy
+19871,Hexyl 2-methyl-3-pentenoate,CC=CC(C)C(=O)OCCCCCC,21.0,spicy,spicy
+19894,4-Ethyl-2-methoxyphenol,CCc1ccc(O)c(OC)c1,21.0,spicy,spicy
+19987,Ethyl 2-(methylthio)acetate,CCOC(=O)CSC,21.0,spicy,spicy
+19997,2-Butylfuran,CCCCc1ccco1,21.0,spicy,spicy
+20164,Ethyl 2-benzylacetoacetate,CCOC(=O)C(Cc1ccccc1)C(C)=O,21.0,spicy,spicy
+20203,2-(Ethoxymethyl)furan,CCOCc1ccco1,21.0,spicy,spicy
+20624,2-Ethoxy-5-(1-propenyl)phenol,CC=Cc1ccc(OCC)c(O)c1,21.0,spicy,spicy
+21126,Allyl cinnamate,C=CCOC(=O)C=Cc1ccccc1,21.0,spicy,spicy
+21242,Cinnamyl propionate,CCC(=O)OCC=Cc1ccccc1,21.0,spicy,spicy
+21244,Cinnamyl isobutyrate,CC(C)C(=O)OCC=Cc1ccccc1,21.0,spicy,spicy
+21276,"2,3-Diethyl-5-methylpyrazine",CCc1ncc(C)nc1CC,21.0,spicy,spicy
+21459,Benzyl formate,O=COCc1ccccc1,21.0,spicy,spicy
+21865,3-Oxo-alpha-ionol,CC1=C(C=CC(C)O)C(C)(C)CC(=O)C1,21.0,spicy,spicy
+29905,"6beta,7beta,10beta-Cadina-1,4-diene",C12=C3C4C1=C1C2C3C14,21.0,spicy,spicy
+29934,methyl 4-hydroxy-3-methoxybenzoate,COC(=O)c1ccc(O)c(OC)c1,21.0,spicy,spicy

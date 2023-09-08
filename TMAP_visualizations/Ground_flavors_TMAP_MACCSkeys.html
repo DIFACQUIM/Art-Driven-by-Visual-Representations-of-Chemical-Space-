@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA25g0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERAAAAAAAAAREAAAAAAAABEQAAAAAAAAERAAAAAAAAARERERAAAAABEREREAAAAAEREREQAAAAAREAAAAAAAABEQAAAAAAAAEREREQAAAAARERERAAAAABEREREAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAPH/AADx/wAA8f8AAPH/AADwDwAA8A8AAPAPAADx/wAA8f8AAPAPAADwDwAA8A8AAP//AAD//wAA" />
+    <title></title>
+    <script src="https://unpkg.com/lore-engine@1.1.10/dist/lore.min.js"></script>
+    <script src="https://unpkg.com/smiles-drawer@1.2.0/dist/smiles-drawer.min.js"></script>
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" 
+      integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40=" 
+      crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        user-select: none;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      #lore {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      #title {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        opacity: 0.0;
+        transition: opacity 0.5s ease-in;
+        
+          padding-bottom: 20px;
+        
+          font-size: 1.0em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #x-axis {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        opacity: 0.0;
+        transition: opacity 0.5s ease-in;
+        
+          padding-top: 20px;
+        
+          font-size: 0.7em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #y-axis {
+        position: absolute;
+        z-index: 9999;
+        pointer-events: none;
+        text-height: 1;
+        transition: opacity 0.5s ease-in;
+        
+          padding-bottom: 20px;
+        
+          font-size: 0.7em;
+        
+          color: #888888;
+        
+          font-family: 'Open Sans';
+        
+          transform: rotate(-90deg);
+        
+      }
+
+      #tip {
+        position: absolute;
+        z-index: 9999;
+        padding: 5px;
+        font-family: 'Open Sans';
+        background-color: rgba(255, 255, 255, 1.0);
+        border-radius: 2px;
+        border-left: 5px solid #000;
+        pointer-events: none;
+        opacity: 0.0;
+        transition: opacity 0.1s ease-out;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1.0));
+      }
+
+      #tip.show {
+        opacity: 1.0;
+        transition: opacity 0.1s ease-out;
+      }
+
+      #tip-text {
+        position: relative;
+        max-width: 250px;
+        font-size: 0.8em;
+        font-weight: bold;
+        white-space: normal;
+        line-break: normal;
+      }
+
+      #hover-indicator {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      #hover-indicator.show {
+        display: block !important
+      }
+
+      .selected-indicator {
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
+      }
+
+      .selected-indicator .crosshair-x {
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        height: 2px;
+        width: 100%;
+        margin: auto;
+        
+          background-color: #fff;
+        
+      }
+
+      .selected-indicator .crosshair-y {
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: 2px;
+        height: 100%;
+        margin: auto;
+        
+          background-color: #fff;
+        
+      }
+
+      #legend {
+        position: absolute;
+        z-index: 9998;
+        
+          bottom: 10px;
+        
+          right: 10px;
+        
+          padding: 10px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #legend .container {
+        display: flex;
+        flex: auto;
+        align-items: flex-start;
+        
+        flex-direction: column;
+        
+      }
+
+      #legend .legend-section {
+        width: 100%;
+      }
+
+      #legend .legend-section:not(:first-child) {
+        
+      }
+
+      #legend h2 {
+        font-size: 1em;
+        font-weight: 600;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        max-width: 250px;
+        white-space: normal;
+      }
+
+      #legend h3 {
+        font-size: 0.8em;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        max-width: 250px;
+        white-space: normal;
+      }
+
+      #legend select {
+        width: 100%;
+        margin-bottom: 5px;
+        background: transparent;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 0.75em;
+      }
+
+      #legend select option {
+        background: #000;
+      }
+
+      #legend .legend-element, #legend .legend-element-range {
+        position: relative;
+        display: flex;
+        flex: auto;
+        align-items: flex-start;
+        padding-bottom: 2px;
+        padding-top: 2px;
+      }
+
+      #legend .legend-element {
+        align-items: flex-start;
+      }
+
+      #legend .legend-element-range {
+        flex-direction: column;
+      }
+
+      #legend .color-box {
+        
+          width: 15px;
+        
+          height: 15px;
+        
+          border: solid 0px;
+        
+      }
+
+      #legend .color-stripe {
+        
+          width: 15px;
+        
+          height: 1px;
+        
+          border: solid 0px;
+        
+      }
+
+      #legend .legend-label {
+        height: 15px;
+        font-size: 0.7em;
+        padding-left: 5px;
+      }
+
+      #legend .legend-label.max {
+        position: absolute;
+        top: 0px;
+        margin-left: 15px;
+      }
+
+      #legend .legend-label.min {
+        position: absolute;
+        bottom: 2px;
+        margin-left: 15px;
+      }
+
+      #selected {
+        position: absolute;
+        display: none;
+        z-index: 9998;
+        width: 250px;
+        
+          bottom: 10px;
+        
+          left: 10px;
+        
+          padding: 0px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #selected #selected-controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 5px 10px;
+        border-bottom: 1px solid #262626;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+
+      #selected #selected-controls * {
+        display: inline-block;
+      }
+
+      #selected #selected-controls #selected-title {
+        flex-grow: 1;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #aaa;
+      }
+
+      #selected #selected-controls a {
+        margin: 0px 2px;
+        font-size: 1.5em;
+        color: #fff;
+        opacity: 0.75;
+        transition: 0.2s;
+      }
+
+      #selected #selected-controls a:hover {
+        opacity: 1.0;
+      }
+
+      #selected #selected-controls a#selected-remove {
+        position: absolute;
+        right: 10px;
+        top: 42px;
+        color: #e74c3c;
+      }
+
+      #selected #selected-container {
+        padding: 10px;
+        font-size: 0.8em;
+      }
+
+      #selected #selected-container img {
+        margin-left: -10px;
+      }
+
+      #selected #selected-container .label {
+        font-weight: bold;
+        color: #aaa;
+        font-size: 0.7em;
+      }
+
+      #selected #selected-container .label:not(:first-child) {
+        margin-top: 2px;
+      }
+
+      #selected #selected-container .content {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #selected #selected-container .content a {
+        text-decoration: none;
+        color: #3498db;
+      }
+
+      #controls {
+        position: absolute;
+        z-index: 9998;
+        
+          top: 10px;
+        
+          right: 10px;
+        
+          padding: 2px;
+        
+          border: 1px solid #262626;
+        
+          border-radius: 2px;
+        
+          background-color: #111111;
+        
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+        
+          color: #eeeeee;
+        
+          font-family: 'Open Sans';
+        
+      }
+
+      #controls a {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 1.2em;
+        color: #fff;
+        opacity: 0.75;
+        transition: 0.2s;
+      }
+
+      #controls a:hover {
+        opacity: 1.0;
+      }
+
+      #controls #more-controls {
+        display: inline-block;
+      }
+
+      #impress {
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        left: 10px;
+        font-size: 0.7em;
+        color: #eee;
+      }
+
+      #impress a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      #smiles-canvas {
+        position: absolute;
+        z-index: 9999;
+        left: -999px;
+        top: -999px;
+        width: 250px;
+        height: 250px;
+      }
+
+
+
+      #overlay-structure-container {
+        position: absolute;
+        z-index: 9999;
+        top: 50px;
+        left: 275px;
+        right: 100px;
+        bottom: 10px;
+        opacity: .5;
+        pointer-events: none;
+      }
+
+      #overlay-structure {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+
+
+
+
+      .show {
+        opacity: 1.0 !important;
+      }
+
+      .hide {
+        display: none !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #selected {
+          position: absolute;
+          display: none;
+          z-index: 9998;
+          width: 125px;
+          opacity: 0.8;
+          background-filter: blur(10px);
+        }
+
+        #selected img {
+          width: 125px;
+        }
+
+        #tip {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="smiles-canvas" data-bind="smilesCanvas"></canvas>
+    
+    
+    
+    
+
+    <div id="overlay-structure-container" data-binding-id="overlayStructureContainer" class="">
+      <canvas id="overlay-structure" data-binding-id="overlayStructure" width="450" height="687">
+
+      </canvas></div>
+    </div>
+
+    <div id="tip" data-bind="tip">
+      <div id="tip-text" data-bind="tipText"></div>
+    </div>
+    <div id="selected" data-bind="selected">
+      <div id="selected-controls" data-bind="selectedControls">
+        <a id="selected-toggle" data-bind="selectedToggle" href="#">
+          <i class="fas fa-toggle-on"></i>
+        </a>
+        <span>&nbsp;&nbsp;</span>
+        <span id="selected-title" data-bind="selectedTitle"></span>
+        <span>&nbsp;&nbsp;</span>
+        <span id="selected-current" data-bind="selectedCurrent" data-bind="selectedCurrent">0</span><span> / </span><span id="selected-total" data-bind="selectedTotal">0</span>
+        <span>&nbsp;&nbsp;</span>
+        <a id="selected-prev" data-bind="selectedPrev" href="#">
+          <i class="fas fa-angle-left"></i>
+        </a>
+        <span>&nbsp;</span>
+        <a id="selected-next" data-bind="selectedNext" href="#">
+          <i class="fas fa-angle-right"></i>
+        </a>
+        <a id="selected-remove" data-bind="selectedRemove" href="#">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <div id="selected-container" data-bind="selectedContainer">
+      </div>
+    </div>
+    <div id="controls" data-bind="controls">
+      <div id="more-controls" data-bind="moreControls" class="hide">
+        <a id="search" data-bind="search" href="#">
+          <i class="fas fa-search"></i>
+        </a>
+        <a id="download" data-bind="download" href="#">
+          <i class="fas fa-download"></i>
+        </a>
+        <a id="export" data-bind="export" href="#">
+          <i class="fas fa-camera"></i>
+        </a>
+        <a id="largepreview" data-bind="largepreview" href="#">
+          <i class="fas fa-expand"></i>
+        </a>
+      </div>
+      <a id="show-controls" data-bind="showControls" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+    </div>
+    <div id="hover-indicator" data-bind="hoverIndicator"></div>
+    <canvas id="lore"></canvas>
+
+    
+    <script>
+      const data = {
+ESOL_Basic: {
+x: [123.429,170.621,543.27,543.542,671.815,538.909,546.742,492.661,569.309,280.33,493.186,424.911,282.477,425.204,488.993,440.588,574.66,576.045,562.54,563.115,670.313,313.283,328.353,558.111,567.013,501.052,489.469,479.178,514.183,522.681,522.795,340.583,641.538,656.307,657.896,653.324,648.935,643.181,646.494,497.095,555.349,372.154,257.547,562.615,522.468,459.892,520.146,594.096,531.016,610.488,524.268,600.599,721.213,566.605,359.384,604.223,503.589,374.978,322.93,239.684,160.583,173.948,260.912,283.052,287.965,285.678,274.417,283.105,247.758,278.359,281.281,0.0,122.999,547.183,276.777,407.048,261.596,461.67,464.337,278.78,459.869,443.256,466.921,520.093,444.26,357.667,492.533,347.819,257.811,152.754,169.046,185.124,137.477,472.68,483.73,478.984,535.849,482.796,671.76,673.118,513.182,483.247,506.934,670.766,500.796,744.429,503.197,441.521,487.157,505.853,457.558,470.249,470.545,370.664,552.184,555.645,257.95,450.556,272.742,477.396,277.734,424.514,674.487,445.242,280.256,404.895,243.502,280.809,345.098,449.278,388.185,750.0,391.355,265.308,373.654,52.386,573.69,482.136,457.496,266.932,29.485,441.487,502.815,648.452,663.414,654.907,522.876,451.645,434.341,107.47,448.771,437.664,465.667,277.087,581.104,463.879,581.468,539.818,585.023,483.839,69.727,68.06,204.826,468.512,435.138,371.349,427.362,431.233,432.379,55.222,207.922,217.218,203.274,533.25,386.574,500.589,463.044,284.528,495.13,742.606,358.994,298.63,389.374,573.074,507.55,435.236,577.663,739.413,556.504,277.281,280.303,530.07,711.008,233.52,290.089,298.284,235.312,298.591,8.251,575.05,211.211,469.682,384.353,360.132,393.869,461.268,223.141,639.944,487.213,390.467,366.42,367.578,261.74,384.996,397.068,87.675,56.448,254.254,388.617,725.254,391.931,427.196,65.956,249.908,364.63,735.021,369.26,536.71,562.487,502.437,352.182,705.921,546.489,459.655,224.615,309.902,724.227,469.675,322.347,325.722,718.238,559.948,545.568,711.425,703.104,446.755,439.939,574.002,445.194,468.764,499.071,361.46,367.493,455.215,584.983,368.075,287.381,412.909,381.426,239.435,400.531,448.689,296.019,321.211,234.365,382.76,271.768,639.832,288.155,489.427,222.949,462.257,227.583,343.94,334.135,715.196,723.83,449.396,555.422,553.561,282.892,329.479,555.347,342.959,408.739,713.605,290.794,650.22,504.441,572.507,284.284,729.573,592.371,589.79,563.166,375.431,374.959,347.329,418.487,472.814,340.265,414.954,304.871,305.866,281.751,612.691,365.314,352.7,713.886,230.912,226.076,228.898,286.007,276.21,537.084,370.606,533.408,695.392,722.33,469.151,295.015,559.719,316.131,562.534,403.577,339.178,327.974,637.129,392.415,571.96,232.416,296.451,545.917,509.815,505.772,302.18,565.576,417.642,341.916,308.1,364.135,333.548,654.562,638.99,574.103,227.612,303.223,309.086,562.486,614.035,345.202,582.25,288.805,324.411,424.552,346.054,328.773,578.908,291.191,322.109,554.635,332.579,578.025,292.374,318.39,704.761,670.53,332.486,335.907,668.8,428.07,378.305,328.396,324.011,335.698,240.432,333.697,673.848,425.863,355.971,329.937,337.779,343.531,337.433,314.941,220.915,716.525,727.566,686.739,433.993,389.093,347.763,421.817,349.303,350.94,273.117,319.768,448.842,441.003,449.183,737.523,339.703,353.174,348.499,319.481,367.017,55.606,745.562,439.485,380.56,574.592,338.236,399.668,329.479,379.134,221.942,68.58,287.842,223.644,372.04,323.03,220.142,279.555,202.415,205.527,187.482,189.135,187.017,224.783,224.009,55.242,72.189,274.469,386.318,252.17,331.403,268.984,274.496,265.277,302.139,316.8,247.937,373.319,334.589,392.039,386.811,472.738,641.551,375.263,393.855,471.851,75.508,57.554,218.653,185.994,66.843,221.932,220.727,171.065,60.468,70.889,202.505,69.486,53.214,72.868,77.009,62.947,61.142,58.987,68.72,64.013,74.21,59.516,91.715,376.746,254.436,166.922,265.215,554.807,439.812,537.15,322.084,167.797,562.849,516.332,258.356,644.021,552.339,512.862,557.869,548.919,378.554,395.864,402.045,216.59,184.8,218.193,227.985,182.354,186.289,201.793,310.417,56.618,91.668,81.632,216.445,267.987,265.148,274.643,426.641,214.824,211.793,668.068,740.218,220.52,184.995,149.353,215.377,183.236,510.684,492.965,185.835,462.82,508.701,174.151,137.921,507.33,19.693,4.097,51.996,55.056,40.674,105.939,103.315,11.068,106.628,55.209,122.129,214.943,151.841,526.395,607.263,611.148,212.29,213.719,374.666,242.338,188.16,504.755,169.067,469.72,467.29,245.395,287.805,205.174,165.39,176.965,268.405,197.852,160.887,119.267,722.753,515.038,232.928,62.085,406.022,139.565,179.033,130.678,65.243,57.238,55.693,191.705,187.496,128.841],
+y: [125.44,122.367,73.09,77.501,258.488,94.762,83.192,696.051,58.898,28.227,215.323,514.475,38.729,750.0,696.389,725.094,49.5,52.586,65.911,385.477,246.878,217.118,214.101,172.872,177.712,121.979,112.666,103.842,131.757,119.194,116.012,231.139,366.571,397.806,402.045,390.236,378.692,363.13,364.704,709.443,74.08,8.748,89.04,381.55,407.987,85.195,403.948,417.674,106.263,334.631,403.849,422.713,256.926,384.049,503.349,425.688,329.22,493.435,56.158,93.44,124.085,122.112,693.811,676.882,683.597,679.792,690.413,708.958,696.583,698.243,704.85,332.293,466.309,166.52,0.0,319.498,179.672,81.487,86.29,18.827,98.593,636.253,631.045,153.31,709.205,615.78,218.328,545.117,571.082,459.451,457.176,364.429,461.821,624.415,610.214,617.688,158.858,700.878,262.033,274.138,170.307,233.009,186.471,252.134,199.388,414.788,710.639,639.846,630.902,628.738,681.13,532.843,689.533,649.028,164.392,162.472,182.612,659.327,546.351,614.872,10.713,518.21,287.096,397.209,530.638,323.945,462.822,534.081,634.209,397.845,584.44,325.208,365.43,560.496,593.051,498.668,181.013,536.721,526.836,566.092,342.674,522.412,540.934,256.356,276.388,265.699,625.849,695.743,720.622,474.701,696.532,722.654,81.983,4.193,45.802,97.496,41.17,75.688,44.188,697.344,435.674,504.851,493.459,634.146,725.568,644.315,737.774,736.211,740.32,294.675,489.481,485.012,489.577,160.327,378.62,202.581,262.942,512.126,705.903,410.615,25.89,219.892,374.804,404.62,327.982,307.314,182.815,403.579,340.305,216.718,219.098,399.084,267.166,699.784,686.58,667.991,696.896,671.206,338.136,422.545,85.247,95.496,608.433,619.114,354.761,266.071,420.488,332.855,604.387,379.546,575.372,634.957,230.415,240.211,343.606,398.21,497.291,232.44,226.569,246.7,224.477,745.386,501.063,233.531,18.212,394.236,12.06,396.939,390.518,341.598,33.752,284.295,378.885,427.624,502.982,69.591,376.32,315.675,59.847,61.153,259.155,393.437,375.555,270.859,283.033,294.796,301.921,411.924,298.396,324.201,342.256,506.18,500.688,421.536,411.3,18.456,319.159,621.876,606.918,437.179,332.245,285.094,498.699,351.479,442.638,253.986,227.367,336.753,146.292,600.771,507.884,431.22,477.49,41.848,50.377,271.154,372.42,298.392,344.824,352.232,225.941,193.339,451.067,341.997,515.777,348.068,64.073,382.437,344.565,347.044,222.626,382.209,343.848,341.117,482.438,515.884,512.683,336.789,353.691,248.734,337.192,352.48,483.809,487.482,155.573,344.961,265.636,248.229,351.469,495.876,496.612,480.653,50.531,84.625,393.875,636.222,365.163,295.747,366.966,319.443,137.337,481.195,327.925,469.272,333.884,346.004,174.421,346.474,514.046,485.737,481.086,79.859,420.933,331.618,333.01,128.83,470.413,349.251,348.059,482.909,624.023,195.192,333.242,341.879,489.394,493.206,100.282,121.141,477.781,341.994,347.62,499.991,77.201,156.278,372.104,340.274,196.725,502.396,82.099,137.526,446.11,190.668,497.212,78.468,138.323,328.082,319.929,382.888,385.033,316.395,371.318,284.16,384.036,417.447,512.703,464.267,388.421,320.831,376.337,511.657,387.862,342.739,335.919,339.119,450.871,460.198,327.765,326.961,307.864,390.365,315.357,345.358,374.453,341.667,543.648,473.847,330.846,413.173,403.14,416.69,325.789,328.743,546.182,634.309,452.344,622.871,327.108,325.206,394.789,268.681,418.338,322.873,328.418,347.718,584.894,97.202,461.642,513.733,424.298,579.245,453.294,84.898,157.333,109.026,108.795,128.994,119.894,117.718,721.871,726.659,330.502,460.39,312.025,237.48,579.639,644.894,318.48,315.518,320.253,324.07,353.448,585.966,497.318,643.947,216.934,222.7,244.146,245.066,589.585,212.111,240.535,407.657,516.992,72.858,136.244,344.568,712.393,715.306,701.894,346.315,343.37,458.042,477.706,348.246,434.954,458.252,495.453,391.545,369.126,411.494,390.126,405.0,508.151,461.338,497.239,301.818,447.784,308.694,454.76,642.915,623.04,652.966,451.712,618.681,150.866,304.236,249.21,620.887,150.523,618.628,620.386,581.759,584.097,583.888,697.264,700.087,703.359,725.213,714.399,706.142,704.33,661.858,521.823,396.972,401.075,64.28,173.683,175.151,165.524,520.478,83.648,80.712,322.431,327.935,69.556,140.648,125.276,59.616,696.005,542.312,539.294,457.43,522.856,630.765,703.747,465.58,713.135,339.501,333.417,372.911,290.03,345.54,470.482,473.732,336.02,463.703,371.238,462.87,693.447,462.799,626.543,331.138,330.259,405.194,408.759,647.857,433.81,375.0,543.937,460.696,516.095,519.02,589.662,516.989,396.208,701.851,724.749,569.958,385.423,700.717,126.014,250.929,543.21,439.622,308.835,583.789,125.591,720.854,125.248,305.653,313.931,302.737,375.903,368.503,128.295],
+z: [375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0,375.0],
+labels: ['C1CCC(SSC2CCCCC2)CC1','C1SSCSSS1','C=C(C)C1C=CC(C)C(=O)C1','C=C(C)C1CC=C(C)C(O)C1','C=C(C)C1CC=C(CO)CC1','C=C(C)C1CCC(C)(O)CC1','C=C(C)C1CCC(C)CC1O','C=C(C)C1CCC2(C)OC2C1','C=C(C)C1CCC2=CCCC(C)C2(C)C1','C=C(C)CCC(C)=O','C=C(C)CCCC(C)CCOC=O','C=C(C)c1ccc(C)cc1','C=C(CCCCC)C(C)=O','C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCC=CC(O)(CC)CC)CC(O)CC1O','C=C1C=CCC(C)(C)C12CCC(C)O2','C=C1CCC2C(C3C1CCC3(C)O)C2(C)C','C=C1CCC2CC1C2(C)C','C=C1CCC=C(C)CCC2C1CC2(C)C','C=C1CCCC2(C)CCC(C(C)(C)O)CC12','C=C=CC(C)C(=O)OCC','C=CC(=C)CCC=C(C)CCC=C(C)C','C=CC(=O)CCCCC','C=CC(=O)CCCCCC','C=CC(C)(C)C(=O)C=C(C)C','C=CC(C)(C)O','C=CC(C)(CCC=C(C)C)OC(=O)CC(C)C','C=CC(C)(CCC=C(C)C)OC(=O)CCCCC','C=CC(C)(CCC=C(C)C)OC(=O)CCCCCCC','C=CC(C)(CCC=C(C)C)OC=O','C=CC(C)(O)CCC=C(C)C','C=CC(C)=CCC(C)(C)C(=NO)C(C)C','C=CC(CCCCC)OC(=O)CCC','C=CC(CCCCC)OO','C=CC(O)CC','C=CC(O)CC=CCC','C=CC(O)CCC','C=CC(O)CCCC','C=CC(O)CCCCCC','C=CC(O)CCCCCCC','C=CC1(C)CCC(C(=C)C)O1','C=CC1(C)CCC(C(C)(C)O)CC1C(=C)C','C=CC=CC=CCC','C=CC=CC=CCCCCC','C=CCC(C)C(=O)OCC','C=CCC=CCCC(=O)OC','C=CCCC(=O)C=CC1=C(C)CCCC1(C)C','C=CCCC(=O)OC','C=CCCC(=O)OCC','C=CCCC(C)=CCCC(C)(O)C=C','C=CCCCCCCCC(=O)O','C=CCCCCCCCCC(=O)OC','C=CCCCCCCCCC(=O)OCC','C=CCCCCO','C=CCOC(=O)C(C)=CC','C=CCOC(=O)CC1CCCCC1','C=CCOC(=O)CCC','C=CCOC(=O)CCCCCCC','C=CCOC(=O)c1ccccc1N','C=CCSC(=O)CC','C=CCSCCC','C=CCSSC','C=CCSSSCC=C','C=CCc1ccc(O)c(OC)c1','C=CCc1ccc(OC(=O)CC(C)C)c(OC)c1','C=CCc1ccc(OC(=O)c2ccccc2)c(OC)c1','C=CCc1ccc(OC(C)=O)c(OC)c1','C=CCc1ccc(OC)c(OC)c1','C=CCc1ccc(OC)cc1','C=Cc1ccc(O)c(OC)c1','C=Cc1ccc(OC)c(OC)c1','C=Cc1ccccc1OC','C=Cc1ncc(C)nc1C','C=Cc1scnc1C','CC(=O)C=C(C)C','CC(=O)C=Cc1cc(C)cc(C)c1C','CC(=O)CC(=O)OCCC(C)C','CC(=O)CC(C)C','CC(=O)CCC1=C(C)CCCC1(C)C','CC(=O)CCC1C(C)=CCCC1(C)C','CC(=O)CCC=C(C)C','CC(=O)OC(C)(C)C1CCC(C)C2=C(C1)C(C)CC2','CC(=O)OC(C)(C)CCc1ccccc1','CC(=O)OC(C)(C)Cc1ccccc1','CC(=O)OC(C)C=C(C)CCC=C(C)C','CC(=O)OC12CCCC(C)(CCC3C1CC3(C)C)C2','CC(=O)OC1CCCCC1','CC(=O)OCCC(C)CCC=C(C)C','CC(=O)OCCC1CCCCC1','CC(=O)OCc1ccc(C)cc1','CC(=O)c1cc(C)oc1C','CC(=O)c1ccc(C)o1','CC(=O)c1cccn1C','CC(=O)c1sccc1C','CC(C)(Cc1ccccc1)OC=O','CC(C)(O)CCc1ccccc1','CC(C)(O)Cc1ccccc1','CC(C)=CC(=O)O','CC(C)=CC1CC(C)=CCO1','CC(C)=CCCC(C)=CCCC(C)=CCO','CC(C)=CCCC(C)=CCCC(C)CCO','CC(C)=CCCC(C)=CCOC(=O)C(C)C','CC(C)=CCCC(C)=CCOC(=O)CC(C)C','CC(C)=CCCC(C)=CCOC=O','CC(C)=CCCC(C)=CCS','CC(C)=CCCC(C)CC(=O)O','CC(C)=CCO','CC(C)=CCc1occc1C','CC(C)C(=O)OC(C)(C)CCc1ccccc1','CC(C)C(=O)OC(C)(C)c1ccccc1','CC(C)C(=O)OC(C)c1ccccc1','CC(C)C(=O)OC1CC2CCC1(C)C2(C)C','CC(C)C(C=O)c1ccccc1','CC(C)C12CCC(C)(CC1)O2','CC(C)C1CCC2CC(=O)CCC2C1','CC(C)C=CC=O','CC(C)C=O','CC(C)CC(=O)CC(C)C','CC(C)CC(=O)OC1CC2CCC1(C)C2(C)C','CC(C)CC(=O)OCC=Cc1ccccc1','CC(C)CC(O)Cc1ccccc1','CC(C)CC=C(C=O)C(C)C','CC(C)CC=C(C=O)c1ccccc1','CC(C)CCCC(C)CCO','CC(C)CCOC(=O)C(C)C','CC(C)CCOC(=O)C=Cc1ccccc1','CC(C)CCOC(=O)CC(C)C','CC(C)CCOC(=O)CCc1ccco1','CC(C)CCOC(=O)c1ccccc1','CC(C)CCOC(=O)c1ccccc1O','CC(C)CCOC=O','CC(C)CCOCCc1ccccc1','CC(C)CN=C=S','CC(C)COC(=O)CC(C)C','CC(C)COC(=O)c1ccccc1','CC(C)COC(Cc1ccccc1)OCC(C)C','CC(C)Cc1nccs1','CC(C)O','CC(C)c1ccc(C=O)cc1','CC(C)c1ccc(CC=O)cc1','CC(C)c1ccc(CO)cc1','CC(C)c1cnccn1','CC(C=O)Cc1ccc(C(C)C)cc1','CC(C=O)c1ccccc1','CC(CC=O)CCCC(C)(C)O','CC(CCO)CC(C)(C)C','CC(CCO)CCCC(C)(C)O','CC(OC=O)c1ccccc1','CC1(C)C2CCC1(C)C(OC=O)C2','CC1(C)CC2C(C1)C1(C)CCCC2(C)C1O','CC1(C)SC(C)(C)SC(C)(C)S1','CC12CCC(C1)C(C)(C)C2=O','CC12CCCC(O)(C1)C1CC(C)(C)C1CC2','CC1=CC(=O)CC(C)(C)C1','CC1=CC(C)C(C=O)C(C)C1','CC1=CC2C(CCC(C)=CCC1)C2(C)C','CC1=CCC(C(C)(C)OC(=O)C(C)C)CC1','CC1=CCC2(C(C)C)CC12','CC1=CCC2(O)CC1C2(C)C','CC1=CCC2C(C)=CCC(C(C)C)C2C1','CC1=CCCC(C)(C)C12CCC(C)O2','CC1=NC(C)OC1C','CC1=NC(CC(C)C)SC1C','CC1CC(C)(c2ccccc2)CO1','CC1CC(C)(c2ccccc2)OC(C)O1','CC1CC(O)CC(C)(C)C1','CC1CCC(=O)CC1','CC1CCC(C(C)(C)S)C(=O)C1','CC1CCC2(O)C(C)(C)C3CCC2(C)C1C3','CC1CCCC2(C)CCCCC12O','CC1CCc2nccnc21','CC1COC(C(C)c2ccccc2)O1','CC1COC(C)(C)O1','CC1OC(Cc2ccccc2)OC1C','CC=C(C)C(=O)OC(C)C','CC=C(C)C(=O)OCC(C)C','CC=C(C)C(=O)OCCC(C)CCC=C(C)C','CC=C(C)C(=O)OCCC=CCC','CC=C(C)C(=O)OCCc1ccccc1','CC=C(C)C1CCC(C)(C)O1','CC=C(C)CO','CC=CC(=O)CC','CC=CC(=O)CCCC','CC=CC(=O)OCC(C)C','CC=CC(=O)OCCC=CCC','CC=CC(=O)OCCCCCC','CC=CC(C)C(=O)OCCCCCC','CC=CC(C)O','CC=CC=CCO','CC=CC=CCOC(=O)CCC','CC=CCCC=CC=O','CC=CCCC=O','CC=CCCCCCCCC(=O)OC','CC=CCCCO','CC=Cc1ccc(O)c(OC)c1','CC=Cc1ccc(OC(=O)Cc2ccccc2)c(OC)c1','CC=Cc1ccc(OC(C)=O)c(OC)c1','CC=Cc1ccc(OC)c(OC)c1','CC=Cc1ccc(OC=O)c(OC)c1','CC=c1ncc(C)nc1=CC','CCC(=O)CO','CCC(=O)CSC','CCC(=O)OC(C)(C)C1CC=C(C)CC1','CCC(=O)OC(C)c1ccccc1','CCC(=O)OC1CCCCC1','CCC(=O)OCC(C)C','CCC(=O)OCCC(C)CCC=C(C)C','CCC(=O)OCc1ccco1','CCC(C)(O)CC','CCC(C)(O)CCc1ccccc1','CCC(C)C(=O)OC(C)C','CCC(C)C(=O)OCCc1ccccc1','CCC(C)C1CCCCC1=O','CCC(C)C=O','CCC(C)COC(=O)C(C)CC','CCC(C)COC(=O)CC(C)C','CCC(C)c1nccnc1OC','CCC(C)c1nccs1','CCC(C=O)CC','CCC(CC)COC(C)=O','CCC(S)SC(S)CC','CCC(SC)C(=O)OC','CCC1(O)C2(C)CCC(C2)C1(C)C','CCC1N=C(C)C(C)S1','CCC=C(C)C=O','CCC=CC=CCC=O','CCC=CC=CCO','CCC=CC=O','CCC=CCC(=O)OC','CCC=CCC(=O)OCC','CCC=CCC(=O)OCCCCCC','CCC=CCC(C)=O','CCC=CCC=CCCO','CCC=CCC=CCCOC(C)=O','CCC=CCCC(OCC)OCC','CCC=CCCC1(C)CCC(=O)O1','CCC=CCCC=CC=O','CCC=CCCC=CCO','CCC=CCCC=CCOC(C)=O','CCC=CCCC=O','CCC=CCCCCC=O','CCC=CCCCCCO','CCC=CCCCCOC(=O)CC','CCC=CCCCCOC(C)=O','CCC=CCCCO','CCC=CCCO','CCC=CCCOC(=O)C(C)C','CCC=CCCOC(=O)C(C)CC','CCC=CCCOC(=O)C(C)O','CCC=CCCOC(=O)CC(C)C','CCC=CCCOC(=O)CCCC','CCC=CCCOC(=O)CCCCC','CCC=CCCOC(=O)Cc1ccccc1','CCC=CCCOC(=O)c1ccccc1N','CCC=CCCOC(C)OCC','CCC=CCCOC=O','CCC=O','CCCC(=O)CC(=O)OCC','CCCC(=O)OC(C)(C)Cc1ccccc1','CCCC(=O)OC(C)c1ccccc1','CCCC(=O)OCC1CCCO1','CCCC(=O)OCCC(C)C','CCCC(=O)OCCC(C)CCC=C(C)C','CCCC(=O)OCCc1ccccc1','CCCC(=O)OCSC','CCCC(=O)OCc1ccco1','CCCC(C)C(=O)OCC','CCCC(C)C=O','CCCC(C)O','CCCC(CC=O)SC','CCCC(O)Cc1ccccc1','CCCC1CC(C)(OC(C)=O)CCO1','CCCC=CC(OCC)OCC','CCCC=CC1OCC(C)O1','CCCC=CCC(C)=O','CCCC=CCCCCC=O','CCCC=CCCCO','CCCC=CCO','CCCC=CCOC(=O)CC(C)C','CCCC=CCOC(=O)CCC','CCCC=CCOC(=O)CCCC','CCCC=O','CCCCC(=O)CC','CCCCC(=O)OC','CCCCC(=O)OCC','CCCCC(C=O)=Cc1ccccc1','CCCCC(CC)CO','CCCCC=C(C=O)CC','CCCCC=CC(C)O','CCCCC=CC=CCC(=O)OCC','CCCCC=CC=CCC(=O)OCCC','CCCCC=CC=CCC=O','CCCCC=CC=CCO','CCCCC=CCC(=O)O','CCCCC=CCC(C(=O)O)C(C)C','CCCCCC#CC(=O)OC','CCCCCC(=Cc1ccccc1)C(OC)OC','CCCCCC(=Cc1ccccc1)COC=O','CCCCCC(=O)OCC','CCCCCC(=O)OCC(C)C','CCCCCC(=O)OCC=C(C)C','CCCCCC(=O)OCCC','CCCCCC(=O)OCCC(C)C','CCCCCC(=O)OCCCc1ccccc1','CCCCCC(=O)OCCc1ccccc1','CCCCCC(=O)SC','CCCCCC(C)C(=O)O','CCCCCC(CC)OC(=O)CCC','CCCCCC(CC)OC(C)=O','CCCCCC(CO)C(C)=O','CCCCCC1C(=O)CCC1CC(=O)OC','CCCCCC1OC1C=CC=O','CCCCCC1OCC(C)O1','CCCCCC=C(C)C=O','CCCCCC=CC=O','CCCCCC=CCC(=O)OC','CCCCCC=CCC1CCCC1=O','CCCCCC=CCCC(=O)OCC','CCCCCC=CCCO','CCCCCC=CCO','CCCCCC=CCOC(C)=O','CCCCCC=O','CCCCCCC#CC(=O)OC','CCCCCCC#CC(=O)OCC','CCCCCCC(=O)OC','CCCCCCC(=O)OCC(C)C','CCCCCCC(=O)OCCC','CCCCCCC(C)=O','CCCCCCC(C)O','CCCCCCC(C=O)=Cc1ccccc1','CCCCCCC(OC)OC','CCCCCCC1OCC(CO)O1','CCCCCCC=CC=O','CCCCCCC=CCC(=O)OC','CCCCCCC=CCC(=O)OCC','CCCCCCC=CCC(=O)OCCCC','CCCCCCC=O','CCCCCCCC(=O)OC','CCCCCCCC(=O)OCCC(C)C','CCCCCCCC(=O)OCCCCCC','CCCCCCCC(=O)OCCc1ccccc1','CCCCCCCC(=O)Oc1ccc(C)cc1','CCCCCCCC(C)=O','CCCCCCCC(C)O','CCCCCCCC(O)CC','CCCCCCCC(OC)OC','CCCCCCCC1CC(C)OC1=O','CCCCCCCC=CC=O','CCCCCCCC=O','CCCCCCCCC#CC(=O)OC','CCCCCCCCC(=O)O','CCCCCCCCC(=O)OCCCCCC','CCCCCCCCC(OC)OC','CCCCCCCCC=CC=O','CCCCCCCCC=O','CCCCCCCCCC(=O)OCCC(C)C','CCCCCCCCCC(=O)OCCCCCC','CCCCCCCCCC(C)=O','CCCCCCCCCC(OC)OC','CCCCCCCCCC=CC=O','CCCCCCCCCCC=O','CCCCCCCCCCCC(=O)OC','CCCCCCCCCCCC(C)=O','CCCCCCCCCCCC(OC)OC','CCCCCCCCCCCC=CC=O','CCCCCCCCCCCC=O','CCCCCCCCCCCCCO','CCCCCCCCCO','CCCCCCCCCOC(=O)CCCCCCC','CCCCCCCCCOC(C)=O','CCCCCCCCO','CCCCCCCCOC(=O)C(C)C','CCCCCCCCOC(=O)C(C)CC','CCCCCCCCOC(=O)CC','CCCCCCCCOC(=O)CCC','CCCCCCCCOC(=O)Cc1ccccc1','CCCCCCCCOC(=O)c1ccco1','CCCCCCCCOC(C)=O','CCCCCCCO','CCCCCCCOC(=O)C(C)C','CCCCCCCOC(=O)C=Cc1ccccc1','CCCCCCCOC(=O)CCC','CCCCCCCOC(=O)CCCCCC','CCCCCCCOC(=O)CCCCCCC','CCCCCCCOC(C)=O','CCCCCCCOC=O','CCCCCCCc1ccco1','CCCCCCN','CCCCCCN=C=S','CCCCCCO','CCCCCCOC(=O)C(C)C','CCCCCCOC(=O)C(C)CC','CCCCCCOC(=O)CC','CCCCCCOC(=O)CC(C)C','CCCCCCOC(=O)CCC','CCCCCCOC(=O)Cc1ccccc1','CCCCCCOC(=O)c1ccco1','CCCCCCOC(C)=O','CCCCCCOC(C)OCCCCCC','CCCCCCOC(CCCCC)OCCC(C)C','CCCCCCOC(CCCCC)OCCCCCC','CCCCCN=C=S','CCCCCOC(=O)CCCCC','CCCCCOC(=O)c1ccccc1','CCCCCOC(=O)c1ccccc1O','CCCCCOC=O','CCCCCc1cccc(=O)o1','CCCCCc1ccccn1','CCCCN=C=S','CCCCOC(=O)C(C)C','CCCCOC(=O)C(C)CC','CCCCOC(=O)C(C)O','CCCCOC(=O)CC','CCCCOC(=O)CC(C)C','CCCCOC(=O)CCCC','CCCCOC(C)OCCc1ccccc1','CCCCSCCCC','CCCCc1ncsc1C','CCCOC(=O)C=Cc1ccccc1','CCCOC(=O)c1ccco1','CCCOC(C)OCCc1ccccc1','CCCOC=O','CCCSC','CCCSC(C)=O','CCCSSCC','CCCSSCCC','CCCSSSC','CCCSSSCC','CCCSSSCCC','CCCc1ccc(O)c(OC)c1','CCCc1ccc(OC)cc1','CCCc1cnccn1','CCCc1nc(CC)sc1CC','CCOC(=O)C(C)=O','CCOC(=O)C(C)CC','CCOC(=O)C(CC)Cc1ccccc1','CCOC(=O)C1OC1(C)c1ccc(C)cc1','CCOC(=O)CC(=O)OCC','CCOC(=O)CC(C)=O','CCOC(=O)CCC(=O)OCC','CCOC(=O)CCC(C)=O','CCOC(=O)CSC','CCOC(=O)c1ccccc1','CCOC(=O)c1ccccc1N','CCOC(=O)c1ccccc1O','CCOC(C)=O','CCOC(C)OCC','CCOC(C=C(C)CCC=C(C)C)OCC','CCOC(CC(C)CCCC(C)(C)O)OCC','CCOC(Cc1ccccc1)OCC','CCOC=O','CCOCC=C(C)C','CCOc1nccnc1C','CCOc1nccs1','CCSC','CCSSSC','CCc1ccc(C)nc1','CCc1ccc(O)c(OC)c1','CCc1ccc(OC)c(OC)c1','CCc1cccc(O)c1','CCc1ccccn1','CCc1cccnc1','CCc1ccco1','CCc1cnc(CC)s1','CCc1cnccn1','CCc1nc(C)c(C)o1','CCc1nc(C)c(CC)s1','CCc1nc(C)cs1','CCc1ncc(C)nc1CC','CCc1nccnc1C','CCc1nccnc1C(C)=O','CCc1nccnc1CC','CCc1nccnc1OC','CCc1nccs1','CCc1sc(C)nc1C','CNc1ccccc1C(=O)OC','COC(=O)C(O)CC(C)C','COC(=O)C=Cc1ccco1','COC(=O)CC(C)=O','COC(=O)CCC(=O)OC','COC(=O)Cc1ccc(C(C)(C)C)cc1','COC(=O)c1ccccc1','COC(=O)c1ccccc1O','COC(=O)c1ccco1','COC(C)OC','COC(C=C(C)CCC=C(C)C)OC','COC(CC(C)=O)OC','COC(CC(C)CCCC(C)(C)O)OC','COC(Cc1ccccc1)OC','COC(OC)C(C)(C)CC=C(C)C','COC(OC)C(C)c1ccccc1','COC(OC)c1ccccc1','COCCOC(C)OCc1ccccc1','COCCc1ccccc1','COCc1ccccc1','COc1c(C)oc(C)c1O','COc1cc(C(C)C)ccc1C','COc1cc(C)ccc1O','COc1cc(CCC(C)=O)ccc1O','COc1ccc(OC)cc1','COc1ccccc1C','COc1ccccc1OC','COc1ccccc1OC(C)=O','COc1cnc(C)s1','COc1nccnc1C(C)C','COc1nccnc1CC(C)C','CSC','CSC(=O)CC(C)C','CSC(C)(C)CC(C)=O','CSC(C)CC=O','CSCC(C=O)=Cc1ccccc1','CSCCC(C)=O','CSCCC=O','CSCCCCO','CSCCCN=C=S','CSCSC','CSSC','CSSCc1ccccc1','C[S+](C)[O-]','Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1','Cc1ccc(-c2ccccc2)cc1','Cc1ccc(C(C)C=O)cc1','Cc1ccc(C(C)CC=O)o1','Cc1ccc(CC=O)cc1','Cc1ccc(OC(=O)C(C)C)cc1','Cc1ccccc1O','Cc1cccs1','Cc1ccoc1CC1OC1(C)C','Cc1cnc(C(C)C)cn1','Cc1cnc(C)c(C)n1','Cc1cnc(CC(C)C)c(C)n1','Cc1cnc2c(n1)CCC2C','Cc1cnccn1','Cc1csc(C(C)C)n1','Cc1cscn1','Cc1nc(C)c(C)nc1C','Cc1nc(C)c(C)s1','Cc1nccnc1CC(C)C','Cc1ncsc1C','Cc1oc(O)c(O)c1C','Cc1oc2ccccc2c1C','O=C(O)C(O)c1ccccc1','O=C(O)C=C(CC(=O)O)C(=O)O','O=C(O)CC1CCCCC1','O=C(OCC(COC(=O)c1ccccc1)OC(=O)c1ccccc1)c1ccccc1','O=C(OCCc1ccccc1)c1ccco1','O=C1C=CCCC1','O=C1CCCCCCCCCCCC(=O)OCCO1','O=C1CCSC1','O=CC=Cc1ccccc1','O=CC=Cc1ccco1','O=CCCc1ccccc1','O=CCc1ccccc1','O=COCC=Cc1ccccc1','O=COCCc1ccccc1','O=Cc1ccc(CO)o1','O=Cc1ccccc1O','O=c1ccc2ccccc2o1','OCC=Cc1ccccc1','OCc1ccco1','Oc1cccc(O)c1','SC1CCCC1','SCCCCCCCCS','c1ccc(-c2ccccc2)cc1','c1ccc(CCCC2CCCO2)cc1','c1ccc(CCCc2ccccn2)cc1','c1ccc(COCc2ccccc2)cc1','c1ccc(CSSCc2ccccc2)cc1','c1ccc(Oc2ccccc2)cc1','c1ccc(SSc2ccccc2)cc1','c1ccc2ncccc2c1','c1cnc(CC2CCCCC2)cn1','c1cnc2c(n1)CCCC2','c1coc(CSCc2ccco2)c1','c1coc(Cn2cccc2)c1','c1csc(SSc2cccs2)c1'],
+colors: [
+{
+r: [212,212,87,87,144,212,144,144,144,144,144,87,212,144,212,212,144,87,144,144,144,212,212,144,212,87,144,144,144,144,144,212,212,144,212,144,144,250,250,144,144,144,144,144,144,144,144,144,144,144,212,212,144,144,144,144,144,144,144,144,144,144,87,87,87,87,250,250,87,144,144,212,212,212,144,144,144,212,212,212,144,144,144,212,212,212,144,144,144,212,212,212,144,144,144,144,144,144,87,144,144,144,144,144,144,144,144,144,144,144,212,144,144,144,144,144,144,144,144,144,144,144,250,144,212,144,144,144,144,250,144,144,144,212,144,250,212,144,250,87,144,250,144,144,250,144,144,250,212,250,212,212,250,250,144,144,144,212,144,144,250,144,144,144,212,212,144,212,212,212,250,250,212,144,250,144,250,144,144,144,144,212,144,144,144,144,144,250,144,144,144,212,250,87,87,87,87,250,212,212,212,144,144,144,144,144,144,144,212,144,144,212,212,144,250,250,144,144,212,144,250,212,212,144,144,144,144,250,144,144,250,144,144,144,144,144,144,144,144,144,144,144,144,144,250,144,144,144,144,144,144,144,144,250,144,212,144,144,212,250,144,144,212,212,144,144,144,144,144,250,87,250,144,212,144,212,144,144,144,144,250,144,144,144,144,144,144,212,144,144,144,144,212,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,212,144,144,144,144,144,144,144,144,250,144,250,144,144,144,144,144,144,212,250,144,144,212,144,144,144,144,144,144,144,144,144,144,250,144,212,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,212,212,144,144,144,212,144,212,144,250,144,250,250,250,212,212,250,250,144,144,144,144,144,144,144,144,212,144,144,144,144,250,144,144,144,144,144,144,144,144,144,144,144,144,250,212,250,250,144,144,212,212,144,144,144,144,144,212,212,144,144,144,144,144,250,144,144,144,87,87,144,144,250,144,144,144,144,144,212,144,250,250,144,144,144,250,144,144,144,144,144,212,212,250,144,212,87,212,212,144,250,212,212,212,250,144,144,250,212,212,144,212,144,212,212,212,87,144,144,144,144,144,212,144,144,212,144,250,144,250,144,144,144,144,212,144,87,87,250,212,212,87,144,212,144,144,212,250,144,144,212,212,144,212,250,250,144,212,212,250,144,144,144,144,212,144,250,250,212,212,212,144,250,144,212,212,144,144,87,87,144,212,212,144,212,144,212,144,87,144,250,144,144,144,212,144,144,144,212,212,250,212,144,144,144,212,250,144,212,212,250,212,212,144,212],
+g: [165,165,153,153,172,165,172,172,172,172,172,153,165,172,165,165,172,153,172,172,172,165,165,172,165,153,172,172,172,172,172,165,165,172,165,172,172,233,233,172,172,172,172,172,172,172,172,172,172,172,165,165,172,172,172,172,172,172,172,172,172,172,153,153,153,153,233,233,153,172,172,165,165,165,172,172,172,165,165,165,172,172,172,165,165,165,172,172,172,165,165,165,172,172,172,172,172,172,153,172,172,172,172,172,172,172,172,172,172,172,165,172,172,172,172,172,172,172,172,172,172,172,233,172,165,172,172,172,172,233,172,172,172,165,172,233,165,172,233,153,172,233,172,172,233,172,172,233,165,233,165,165,233,233,172,172,172,165,172,172,233,172,172,172,165,165,172,165,165,165,233,233,165,172,233,172,233,172,172,172,172,165,172,172,172,172,172,233,172,172,172,165,233,153,153,153,153,233,165,165,165,172,172,172,172,172,172,172,165,172,172,165,165,172,233,233,172,172,165,172,233,165,165,172,172,172,172,233,172,172,233,172,172,172,172,172,172,172,172,172,172,172,172,172,233,172,172,172,172,172,172,172,172,233,172,165,172,172,165,233,172,172,165,165,172,172,172,172,172,233,153,233,172,165,172,165,172,172,172,172,233,172,172,172,172,172,172,165,172,172,172,172,165,172,172,172,172,172,172,172,172,172,172,172,172,172,172,172,165,172,172,172,172,172,172,172,172,233,172,233,172,172,172,172,172,172,165,233,172,172,165,172,172,172,172,172,172,172,172,172,172,233,172,165,172,172,172,172,172,172,172,172,172,172,172,172,172,172,172,172,165,165,172,172,172,165,172,165,172,233,172,233,233,233,165,165,233,233,172,172,172,172,172,172,172,172,165,172,172,172,172,233,172,172,172,172,172,172,172,172,172,172,172,172,233,165,233,233,172,172,165,165,172,172,172,172,172,165,165,172,172,172,172,172,233,172,172,172,153,153,172,172,233,172,172,172,172,172,165,172,233,233,172,172,172,233,172,172,172,172,172,165,165,233,172,165,153,165,165,172,233,165,165,165,233,172,172,233,165,165,172,165,172,165,165,165,153,172,172,172,172,172,165,172,172,165,172,233,172,233,172,172,172,172,165,172,153,153,233,165,165,153,172,165,172,172,165,233,172,172,165,165,172,165,233,233,172,165,165,233,172,172,172,172,165,172,233,233,165,165,165,172,233,172,165,165,172,172,153,153,172,165,165,172,165,172,165,172,153,172,233,172,172,172,165,172,172,172,165,165,233,165,172,172,172,165,233,172,165,165,233,165,165,172,165],
+b: [114,114,128,128,77,114,77,77,77,77,77,128,114,77,114,114,77,128,77,77,77,114,114,77,114,128,77,77,77,77,77,114,114,77,114,77,77,234,234,77,77,77,77,77,77,77,77,77,77,77,114,114,77,77,77,77,77,77,77,77,77,77,128,128,128,128,234,234,128,77,77,114,114,114,77,77,77,114,114,114,77,77,77,114,114,114,77,77,77,114,114,114,77,77,77,77,77,77,128,77,77,77,77,77,77,77,77,77,77,77,114,77,77,77,77,77,77,77,77,77,77,77,234,77,114,77,77,77,77,234,77,77,77,114,77,234,114,77,234,128,77,234,77,77,234,77,77,234,114,234,114,114,234,234,77,77,77,114,77,77,234,77,77,77,114,114,77,114,114,114,234,234,114,77,234,77,234,77,77,77,77,114,77,77,77,77,77,234,77,77,77,114,234,128,128,128,128,234,114,114,114,77,77,77,77,77,77,77,114,77,77,114,114,77,234,234,77,77,114,77,234,114,114,77,77,77,77,234,77,77,234,77,77,77,77,77,77,77,77,77,77,77,77,77,234,77,77,77,77,77,77,77,77,234,77,114,77,77,114,234,77,77,114,114,77,77,77,77,77,234,128,234,77,114,77,114,77,77,77,77,234,77,77,77,77,77,77,114,77,77,77,77,114,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,114,77,77,77,77,77,77,77,77,234,77,234,77,77,77,77,77,77,114,234,77,77,114,77,77,77,77,77,77,77,77,77,77,234,77,114,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,114,114,77,77,77,114,77,114,77,234,77,234,234,234,114,114,234,234,77,77,77,77,77,77,77,77,114,77,77,77,77,234,77,77,77,77,77,77,77,77,77,77,77,77,234,114,234,234,77,77,114,114,77,77,77,77,77,114,114,77,77,77,77,77,234,77,77,77,128,128,77,77,234,77,77,77,77,77,114,77,234,234,77,77,77,234,77,77,77,77,77,114,114,234,77,114,128,114,114,77,234,114,114,114,234,77,77,234,114,114,77,114,77,114,114,114,128,77,77,77,77,77,114,77,77,114,77,234,77,234,77,77,77,77,114,77,128,128,234,114,114,128,77,114,77,77,114,234,77,77,114,114,77,114,234,234,77,114,114,234,77,77,77,77,114,77,234,234,114,114,114,77,234,77,114,114,77,77,128,128,77,114,114,77,114,77,114,77,128,77,234,77,77,77,114,77,77,77,114,114,234,114,77,77,77,114,234,77,114,114,234,114,114,77,114],
+},
+]},
+};
+
+    </script>
+    
+    <script>
+
+      //status on whether to show or not the background canvas
+      let FullMolinBkg = false;
+
+      let smilesDrawer = new SmilesDrawer.Drawer({
+        width: 250 / window.devicePixelRatio,
+        height: 250 / window.devicePixelRatio,
+        experimental: true
+      });
+
+      class Faerun {
+        constructor() {
+          this.body = document.getElementsByTagName('body')[0];
+
+          this.selectedItems = [];
+          this.selectedIndicators = [];
+          this.selectedCurrent = [];
+          this.scatterMeta = [{"categorical": [false], "fog_intensity": 0.0, "has_legend": true, "interactive": true, "is_range": [false], "label_index": [0], "legend": [[[[0.5647058823529412, 0.6745098039215687, 0.30196078431372547, 1.0], "green"], [[0.8313725490196079, 0.6470588235294118, 0.4470588235294118, 1.0], "earthy"], [[0.3411764705882353, 0.6, 0.5019607843137255, 1.0], "herbaceous"], [[0.9803921568627451, 0.9137254901960784, 0.9176470588235294, 1.0], "earthy-green"], [[0.9803921568627451, 0.9137254901960784, 0.9176470588235294, 1.0], "earthy-herbaceous"], [[0.9803921568627451, 0.9137254901960784, 0.9176470588235294, 1.0], "green-herbaceous"], [[0.9803921568627451, 0.9137254901960784, 0.9176470588235294, 1.0], "earthy-green-herbaceous"]]], "legend_title": ["Data set"], "mapping": {"c": "c", "cs": "cs", "knn": "knn", "labels": "labels", "s": "s", "x": "x", "y": "y", "z": "z"}, "max_c": [7.0], "max_legend_label": ["7.00"], "max_point_size": 100.0, "min_c": [1.0], "min_legend_label": ["1.00"], "name": "ESOL_Basic", "ondblclick": [null], "point_scale": 12, "selected_labels": [null], "series_title": [null], "shader": "sphere", "title_index": [0]}];
+          this.treeMeta = [];
+          this.seriesState = {};
+          this.el = {};
+
+          this.currentPoint = null;
+
+          this.lore = null;
+          this.clearColorHex = '#111111';
+          this.clearColor = null;
+          this.view = 'front';
+          this.antiAliasing = true;
+          this.alphaBlending = false;
+
+          this.treeHelpers = [];
+          this.pointHelpers = [];
+          this.octreeHelpers = [];
+          this.coordinatesHelper = null;
+
+          this.ohIndexToPhName = [];
+          this.ohIndexToPhIndex = [];
+          this.phIndexMap = {};
+          this.ohIndexMap = {};
+
+          this.min = [Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE];
+          this.max = [-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE];
+          this.maxRadius = -Number.MAX_VALUE;
+
+          this.coords = {
+            show: false,
+            grid: false,
+            ticks: true,
+            tickCount: 10,
+            tickLength: 2.0,
+            color: '#888888',
+            box: false,
+            offset: 5.0
+          };
+
+          this.legend = {
+            show: true,
+            title: 'Legend'
+          };
+
+          this.el = Faerun.bindElements();
+
+          this.scatterMeta.forEach(s => {
+            this.seriesState[s.name] = 0;
+          });
+
+          this.clearColor = Lore.Core.Color.fromHex(this.clearColorHex);
+          this.alphaBlending = (this.view === 'free' ? false : true) || this.alphaBlending;
+
+          this.initLore();
+          this.initTreeHelpers();
+          this.initPointHelpers();
+          this.initCoords();
+          this.initAxes();
+          this.initView();
+          this.initEvents();
+          this.renderLegend();
+        }
+
+        initLore() {
+          this.lore = Lore.init('lore', {
+            antialiasing: this.antiAliasing,
+            clearColor: this.clearColorHex,
+            alphaBlending: this.alphaBlending,
+            preserveDrawingBuffer: true
+          });
+        }
+
+        initTreeHelpers() {
+          this.treeMeta.forEach(t => {
+            let th = new Lore.Helpers.TreeHelper(this.lore, t.name, 'tree');
+            th.setXYZHexS(data[t.name].x, data[t.name].y, data[t.name].z, t.color);
+            th.setFog([this.clearColor.components[0], this.clearColor.components[1], 
+                       this.clearColor.components[2], this.clearColor.components[3]],
+                      t.fog_intensity);
+            this.treeHelpers.push(th);
+          });
+        }
+
+        initPointHelpers() {
+          this.scatterMeta.forEach(s => {           
+            let ph = new Lore.Helpers.PointHelper(
+              this.lore, s.name, s.shader, { maxPointSize: s.max_point_size }
+            );
+
+            ph.setXYZRGBS(data[s.name].x, data[s.name].y, data[s.name].z, 
+                          data[s.name]['colors'][0].r, data[s.name]['colors'][0].g, 
+                          data[s.name]['colors'][0].b, data[s.name]['s'] ? data[s.name]['s'][0] : 1.0);
+
+            ph.setPointScale(s.point_scale);
+            ph.setFog([this.clearColor.components[0], this.clearColor.components[1],
+                       this.clearColor.components[2], this.clearColor.components[3]],
+                      s.fog_intensity)
+
+            this.phIndexMap[s.name] = this.pointHelpers.length;
+            this.pointHelpers.push(ph);
+
+            this.min[0] = Faerun.getMin(data[s.name].x, this.min[0]);
+            this.min[1] = Faerun.getMin(data[s.name].y, this.min[1]);
+            this.min[2] = Faerun.getMin(data[s.name].z, this.min[2]);
+            this.max[0] = Faerun.getMax(data[s.name].x, this.max[0]);
+            this.max[1] = Faerun.getMax(data[s.name].y, this.max[1]);
+            this.max[2] = Faerun.getMax(data[s.name].z, this.max[2]);
+            this.maxRadius = ph.getMaxRadius();
+    
+            if (s.interactive && data[s.name].labels) {
+              this.octreeHelpers.push(
+                new Lore.Helpers.OctreeHelper(this.lore, 'Octree_' + s.name, 'tree', ph)
+              );
+
+              this.ohIndexMap[s.name] = this.octreeHelpers.length - 1;
+              this.ohIndexToPhName.push(s.name);
+              this.ohIndexToPhIndex.push(this.phIndexMap[s.name]);
+            }
+          });
+        }
+
+        initCoords() {
+          if (!this.coords.show) return;
+
+          let min = [0, 0, 0];
+          let max = [0, 0, 0];
+
+          for (var i = 0; i < 3; i++) {
+            min[i] = this.min[i] - this.coords.offset;
+            max[i] = this.max[i] + this.coords.offset;
+          }
+
+          this.coordinatesHelper = new Lore.Helpers.CoordinatesHelper(this.lore, 'Coordinates', 'coordinates', {
+            position: new Lore.Math.Vector3f(min[0], min[1], min[2]),
+            axis: {
+              x: {
+                length: max[0] - min[0],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              y: {
+                length: max[1] - min[1],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              z: {
+                length: max[2] - min[2],
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              }
+            },
+            ticks: {
+              enabled: this.coords.ticks,
+              x: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              },
+              y: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              },
+              z: {
+                length: this.coords.tickLength,
+                color: Lore.Core.Color.fromHex(this.coords.color),
+                count: this.coords.tickCount
+              }
+            },
+            box: {
+              enabled: this.coords.box,
+              x: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              y: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              },
+              z: {
+                color: Lore.Core.Color.fromHex(this.coords.color)
+              }
+            }
+          });
+        }
+
+        initAxes() {
+          // Wait for DOM to get ready
+          setTimeout(() => {
+            this.updateTitle(true);
+            this.updateXAxis(true);
+            this.updateYAxis(true);
+          }, 500);
+        }
+
+        initView() {
+          let center = new Lore.Math.Vector3f(
+              (this.max[0] + this.min[0]) / 2.0, 
+              (this.max[1] + this.min[1]) / 2.0, 
+              (this.max[2] + this.min[2]) / 2.0
+            );
+          this.lore.controls.setLookAt(center);
+          this.lore.controls.setRadius(this.maxRadius + 100);
+          this.lore.controls.setView(0.9, -0.5)
+          this.lore.controls.setViewByName(this.view);
+        }
+
+        initEvents() {
+          this.lore.controls.addEventListener('updated', () => {
+            // Update the position / content of the annotations every time
+            // the view changes
+            this.updateTitle();
+            this.updateYAxis();
+            this.updateXAxis();
+            this.updateSelectedIndicators();
+          });
+
+          Lore.Helpers.OctreeHelper.joinHoveredChanged(this.octreeHelpers, e => {
+            let phName = this.ohIndexToPhName[e.source];
+            if (e.e && data[phName].labels) {
+              let fullLabel = data[phName].labels[e.e.index];
+              let labelIndex = this.scatterMeta[this.ohIndexToPhIndex[e.source]]
+                                  .label_index[this.seriesState[phName]];
+              let titleIndex = this.scatterMeta[this.ohIndexToPhIndex[e.source]]
+                                  .title_index[this.seriesState[phName]];
+
+              let rgbColor = this.pointHelpers[e.source].getColor(e.e.index);
+              let hexColor = Lore.Core.Color.rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2]);
+
+              this.currentPoint = {
+                index: e.e.index,
+                fullLabel: fullLabel.split('__'),
+                source: phName,
+                label: fullLabel.split('__')[labelIndex],
+                color: hexColor,
+                labelIndex: labelIndex,
+                titleIndex: titleIndex
+              }
+              
+              if (FullMolinBkg == true) {
+
+                document.getElementById("overlay-structure-container").style.visibility = "visible";
+
+                var overlayStruc_Width = document.getElementById("overlay-structure-container").offsetWidth
+                var overlayStruc_Height = document.getElementById("overlay-structure-container").offsetHeight
+
+                if (overlayStruc_Width > overlayStruc_Height) {overlayStruc_Width = overlayStruc_Height}
+
+                smilesDrawer = new SmilesDrawer.Drawer({
+                  width: overlayStruc_Width / window.devicePixelRatio,
+                  height: overlayStruc_Width / window.devicePixelRatio,
+                  bondThickness: 1.4,
+                  experimental: true
+                });
+
+                this.setTipContent();
+
+
+                smilesDrawer = new SmilesDrawer.Drawer({
+                  width: 250 / window.devicePixelRatio,
+                  height: 250 / window.devicePixelRatio,
+                  bondThickness: 1.4,
+                  experimental: true
+                });
+              } else {
+
+                document.getElementById("overlay-structure-container").style.visibility = "hidden";
+                this.setTipContent__();
+
+                this.el.tip.classList.add('show');
+
+                let pointSize = this.pointHelpers[e.source].getPointSize() / window.devicePixelRatio;
+                let x = e.e.screenPosition[0];
+                let y = e.e.screenPosition[1];
+
+                this.el.hoverIndicator.style.width = pointSize + 'px';
+                this.el.hoverIndicator.style.height = pointSize + 'px';
+                this.el.hoverIndicator.style.left = (x - pointSize / 2.0 - 1) + 'px';
+                this.el.hoverIndicator.style.top = (y - pointSize / 2.0 - 1) + 'px';
+
+                this.el.hoverIndicator.classList.add('show');
+                }
+
+            } else {
+              this.currentPoint = null;
+              this.el.tip.classList.remove('show');
+              this.el.hoverIndicator.classList.remove('show');
+            }
+          });
+
+          Lore.Helpers.OctreeHelper.joinSelectedChanged(this.octreeHelpers, items => {
+            this.selectedItems = items;
+            this.updateSelected();
+          });
+
+          Lore.Helpers.OctreeHelper.joinReselected(this.octreeHelpers, item => {
+            this.updateSelected(
+              this.getSelectedIndex(item[0].source, item[0].item.e.index)
+            );
+          });
+
+          // Event listeners
+          this.el.selectedPrev.addEventListener('click', e => {
+            e.preventDefault();
+            this.updateSelected(this.selectedCurrent - 1);
+            return false;
+          });
+
+          this.el.selectedNext.addEventListener('click', e => {
+            e.preventDefault();
+            this.updateSelected(this.selectedCurrent + 1);
+            return false;
+          });
+
+          this.el.selectedRemove.addEventListener('click', e => {
+            e.preventDefault();
+            let item = this.selectedItems[this.selectedCurrent]
+            this.octreeHelpers[item.source].removeSelected(item.index);
+            return false;
+          });
+
+          document.addEventListener('dblclick', e => {
+            if (this.currentPoint) {
+              var index = this.currentPoint.index;
+              var labels = this.currentPoint.label.split('__');
+              var source = this.currentPoint.source;
+              eval(this.scatterMeta[this.phIndexMap[source]].ondblclick[this.seriesState[source]]);
+            }
+          });
+
+          document.addEventListener('mousemove', e => {
+            if (FullMolinBkg == false) {
+
+              document.getElementById("tip").style.visibility = "visible";
+
+              let x = e.clientX;
+              let y = e.clientY;
+
+              if (x > window.innerWidth - this.el.tip.offsetWidth - 20) {
+                x -= this.el.tip.offsetWidth;
+              } else {
+                x += 10;
+              }
+
+              if (y > window.innerHeight - this.el.tip.offsetHeight - 20) {
+                y -= this.el.tip.offsetHeight;
+              } else {
+                y += 10;
+              }
+
+              if (this.el.tip) {
+                this.el.tip.style.top = y + 'px';
+                this.el.tip.style.left = x + 'px';
+              }
+            } else {
+              
+              document.getElementById("tip").style.visibility = "hidden";
+
+            }
+          });
+
+          this.el.selectedToggle.addEventListener('click', e => {
+            this.el.selectedContainer.classList.toggle('hide');
+            if (this.el.selectedContainer.classList.contains('hide'))
+              this.el.selectedToggle.innerHTML = '<i class="fas fa-toggle-off"></i>';
+            else
+              this.el.selectedToggle.innerHTML = '<i class="fas fa-toggle-on"></i>';
+            
+            e.preventDefault();
+            return false;
+          });
+
+          this.el.showControls.addEventListener('click', e => {
+            this.el.moreControls.classList.toggle('hide');
+            e.preventDefault();
+            return false;
+          });
+
+          this.el.search.addEventListener('click', e => {
+            let searchTerm = prompt('Please enter a search term:', '');
+            const results = this.search(searchTerm);
+
+            for (const [name, indices] of Object.entries(results)) {
+              if (!name in this.ohIndexMap) return;
+              indices.forEach(index => {
+                this.octreeHelpers[this.ohIndexMap[name]].addSelected(index);
+              });
+            }
+            
+            e.preventDefault();
+            return false;
+          });
+
+          window.addEventListener('keydown', e => {
+            if ((e.keyCode == 114) || (e.ctrlKey && e.keyCode == 70)) {
+              this.search();
+              e.preventDefault();
+              return false;
+            }
+          });
+
+          this.el.export.addEventListener('click', e => {
+            e.preventDefault();
+
+            let canvas = document.getElementById('lore');
+            let zoom = this.lore.controls.getZoom();
+
+            canvas.style.width = (canvas.width * 2) + 'px';
+            canvas.style.height = (canvas.height * 2) + 'px';
+            this.lore.controls.setZoom(zoom * 2);
+
+            setTimeout(() => {
+              let blob = this.lore.canvas.toBlob(blob => {
+                let a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.setAttribute('download', 'export.png');
+                a.click();
+                
+                setTimeout(() => {
+                  canvas.style.width = '100%';
+                  canvas.style.height = '100%';
+                  lore.controls.setZoom(zoom);
+                }, 2000);
+              });
+            }, 2000);
+          });
+
+          this.el.download.addEventListener('click', e => {
+            e.preventDefault();
+
+            let text = ''
+            this.selectedItems.forEach(item => {
+              let phIndex = this.ohIndexToPhIndex[item.source];
+              let meta = this.scatterMeta[phIndex];
+              let phName = this.ohIndexToPhName[item.source];
+              let seriesState = this.seriesState[phName];
+
+              let fullLabel = data[phName].labels[item.item.index].split('__');
+
+              let labelIndex = meta.label_index[seriesState];
+              let titleIndex = meta.title_index[seriesState];
+              let selectedLabels = meta.selected_labels[seriesState];
+
+              fullLabel.forEach((l, i) => {
+                text += l + ';'
+              });
+              text = text.slice(0, -1); 
+              text += '\n';
+            });
+
+            var a = document.createElement('a');
+            a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            a.setAttribute('download', 'faerun_list.csv');
+
+            a.style.display = 'none';
+            document.body.appendChild(a);
+
+            a.click();
+
+            document.body.removeChild(a);
+
+            return false;
+          });
+
+          this.el.largepreview.addEventListener('click', e => {
+            
+            //Switch display mode:
+            if (FullMolinBkg == false) {
+              FullMolinBkg = true;
+            } else {
+              FullMolinBkg = false;
+              //HIDE BIG CANVAS IN BACKGROUND:
+              document.getElementById("overlay-structure-container").style.visibility = "hidden";
+            }
+          });
+        }
+
+        setTipContent__() {
+          SmilesDrawer.parse(this.currentPoint.label, tree => {
+            smilesDrawer.draw(tree, 'smiles-canvas', 'light', false);
+            let tipImage = Faerun.createElement('img');
+            tipImage.src = this.el.smilesCanvas.toDataURL();
+            this.el.tipText.innerHTML = '';
+            if (this.currentPoint.titleIndex !== this.currentPoint.labelIndex)
+              this.el.tipText.innerHTML = `${this.currentPoint.fullLabel[this.currentPoint.titleIndex]}<br />`;
+            this.el.tipText.appendChild(tipImage);
+            this.el.tip.style.borderColor = this.currentPoint.color;
+          }, err => { console.log(err); });
+        }
+
+        setTipContent() {
+          SmilesDrawer.parse(this.currentPoint.label, tree => {
+            smilesDrawer.draw(tree, 'overlay-structure', 'dark', false);
+            document.getElementById("tip").style.visibility = "hidden";
+            //let tipImage = Faerun.createElement('img');
+            //tipImage.src = this.el.smilesCanvas.toDataURL();
+            //this.el.tipText.innerHTML = '';
+            //if (this.currentPoint.titleIndex !== this.currentPoint.labelIndex)
+            //  this.el.tipText.innerHTML = `${this.currentPoint.fullLabel[this.currentPoint.titleIndex]}<br />`;
+           // this.el.tipText.appendChild(tipImage);
+            //this.el.tip.style.borderColor = this.currentPoint.color;
+          }, err => { console.log(err); });
+        }
+
+        setSelectedContent(fullLabel, labelIndex, selectedLabels, img) {
+          this.el.selectedContainer.innerHTML = '';
+          if (img)
+            this.el.selectedContainer.appendChild(img);
+
+          fullLabel.forEach((l, i) => {
+            if (i === labelIndex) return;
+            if (selectedLabels && selectedLabels[i]) {
+              this.el.selectedContainer.appendChild(
+                Faerun.createElement('div', { classes: 'label', content: selectedLabels[i] })
+              );
+            }
+            this.el.selectedContainer.appendChild(
+              Faerun.createElement('div', { classes: 'content', content: l })
+            );
+          });
+
+          // Update the indicator
+          this.updateSelectedIndicators();
+        }
+
+        renderLegend() {
+          if (!this.legend.show) return;
+
+          
+          let legend = document.getElementById('legend');
+          
+          if (legend) this.body.removeChild(legend);
+
+          legend = Faerun.createElement('div', { id: 'legend' });
+          this.body.appendChild(legend)
+          
+          if (this.legend.title && this.legend.title !== '')
+            legend.appendChild(Faerun.createElement('h2', { content: 'Legend' }));
+          
+          let container = Faerun.createElement('div', { classes: 'container' });
+          legend.appendChild(container);
+
+          this.scatterMeta.forEach(s => {
+            let index = this.seriesState[s.name];
+            if (s.has_legend) {
+              let legendSection = []
+              if (!s.is_range[index]) {
+                s.legend[index].forEach(v => {
+                  legendSection.push(Faerun.createElement('div', { classes: 'legend-element' }, [
+                    Faerun.createColorBox(v[0]),
+                    Faerun.createElement('div', { classes: 'legend-label', content: v[1] }),
+                  ]))
+                })
+              } else {
+                legendSection.push(Faerun.createElement('div', { classes: 'legend-element-range' }, [
+                  ...Faerun.createColorScale(s.legend[index]),
+                  Faerun.createElement('div', { 
+                    classes: 'legend-label max', 
+                    content: s.max_legend_label[index] 
+                  }),
+                  Faerun.createElement('div', {
+                    classes: 'legend-label min',
+                    content: s.min_legend_label[index] 
+                  })
+                ]))
+              }
+
+              let series = [];
+              for (var i = 0; i < s.series_title.length; i++) {
+                series.push(
+                  Faerun.createElement('option', { 
+                    value: i, 
+                    content: s.series_title[i], 
+                    selected: i === index
+                  })
+                );
+              }
+
+
+              let sectionHeader = Faerun.createElement(
+                'h3', { content: s.legend_title[index] }
+              );
+              sectionHeader.addEventListener('click', e => {
+                this.toggleLegendSection(s.name);
+              });
+
+              let seriesSelector = Faerun.createElement(
+                'select', 
+                { 
+                  id: `select-${s.name}`, 
+                  classes: 'series-selector',
+                  'data-name': s.name,
+                  hidden: s.series_title.length < 2,
+                }, 
+                [ ...series ]
+              );
+              seriesSelector.addEventListener('change', e => {
+                let value = document.getElementById(`select-${s.name}`).value;
+                this.changeSeries(value, s.name);
+              });
+
+
+              container.appendChild(
+                Faerun.createElement(
+                  'div', { id: `legend-${s.name}`, 
+                  classes: 'legend-section', 
+                  'data-name': `${s.name}` },
+                  [ sectionHeader, seriesSelector, ...legendSection ]
+                )
+              );
+            }
+          });
+        }
+
+        toggleLegendSection(name) {
+          let section = document.getElementById('legend-' + name);
+          let geometry = this.pointHelpers[this.phIndexMap[name]].geometry;
+          let isVisible = geometry.isVisible;
+
+          if (isVisible) {
+            geometry.hide();
+            section.style.opacity = 0.5;
+          } else {
+            geometry.show();
+            section.style.opacity = 1.0;
+          }
+        }
+
+        getSelectedIndex(source, index) {
+          let selectedIndex = null;
+          this.selectedItems.forEach((item, i) => {
+            if (item.source == source && item.item.index == index) {
+              selectedIndex = i;
+              return;
+            }
+          });
+          return selectedIndex;
+        }
+
+        updateSelected(current = -1) {
+          let n = this.selectedItems.length
+          // Hide the container if no items are selected
+          if (n === 0) {
+            this.el.selected.style.display = 'none';
+            return;
+          } else {
+            this.el.selected.style.display = 'block';
+          }
+
+          if (current < 0) current = n - 1;
+          if (current >= n) current = 0;
+          this.selectedCurrent = current;
+
+          let item = this.selectedItems[current];
+
+          let phIndex = this.ohIndexToPhIndex[item.source];
+          let meta = this.scatterMeta[phIndex];
+          let phName = this.ohIndexToPhName[item.source];
+          let seriesState = this.seriesState[phName];
+
+          let fullLabel = data[phName].labels[item.item.index].split('__');
+
+          let labelIndex = meta.label_index[seriesState];
+          let titleIndex = meta.title_index[seriesState];
+          let selectedLabels = meta.selected_labels[seriesState];
+
+          SmilesDrawer.parse(fullLabel[labelIndex], tree => {
+            smilesDrawer.draw(tree, 'smiles-canvas', 'dark', false);
+            let img = Faerun.createElement('img');
+            img.src = this.el.smilesCanvas.toDataURL();
+            
+            this.el.selectedCurrent.innerHTML = current + 1;
+            this.el.selectedTotal.innerHTML = n;
+            this.el.selectedTitle.innerHTML = fullLabel[titleIndex];
+
+            this.setSelectedContent(fullLabel, labelIndex, selectedLabels, img);
+          }, err => { console.log(err); });
+
+          // Remove all indicators
+          this.selectedIndicators.forEach(indicator => {
+            indicator.element.parentElement.removeChild(indicator.element);
+          });
+          this.selectedIndicators.length = 0;
+
+          // Add the indicator for this object
+          let indicatorElement = Faerun.createElement(
+            'div', 
+            { classes: 'selected-indicator' },
+            [
+              Faerun.createElement('div', { classes: 'crosshair-x' }),
+              Faerun.createElement('div', { classes: 'crosshair-y' })
+            ]
+          );
+
+          this.body.appendChild(indicatorElement);
+          this.selectedIndicators.push({
+            element: indicatorElement,
+            index: item.item.index,
+            ohIndex: item.source,
+            phIndex: phIndex
+          });
+          this.updateSelectedIndicators();
+        }
+
+        updateSelectedIndicators() {
+          this.selectedIndicators.forEach(indicator => {
+            let pointSize = this.pointHelpers[indicator.phIndex].getPointSize();
+            let screenPosition = this.octreeHelpers[indicator.ohIndex]
+                                     .getScreenPosition(indicator.index);
+            
+            // Make the crosshairs larger than the point
+            pointSize = Faerun.getMax([pointSize / window.devicePixelRatio, 10 / window.devicePixelRatio]);
+            pointSize *= 1.25;
+            let halfPointSize = pointSize / 2.0;
+            indicator.element.style.left = (screenPosition[0] - halfPointSize) + 'px';
+            indicator.element.style.top = (screenPosition[1] - halfPointSize) + 'px';
+            indicator.element.style.width = pointSize + 'px';
+            indicator.element.style.height = pointSize + 'px';
+          });
+        }
+
+        updateTitle(first = false) {
+          if (this.el.title === undefined) return;
+
+          let bb = this.el.title.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            (this.min[0] + this.min[0]) / 2.0, this.min[1], 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.title.style.left = (screenPosition[0] - (bb.width / 2.0)) + 'px';
+          this.el.title.style.top = (screenPosition[1] - bb.height) + 'px';
+
+          if (first) this.el.title.classList.add('show');
+        }
+
+        updateXAxis(first = false) {
+          if (this.el.xAxis === undefined) return;
+          
+          let bb = this.el.xAxis.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            (this.min[0] + this.min[0]) / 2.0, this.min[1], 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.xAxis.style.left = (screenPosition[0] - (bb.width / 2.0)) + 'px';
+          this.el.xAxis.style.top = (screenPosition[1]) + 'px';
+
+          if (first) this.el.xAxis.classList.add('show');
+        }
+
+        updateYAxis(first = false) {
+          if (this.el.yAxis === undefined) return;
+            
+          let bb = this.el.yAxis.getBoundingClientRect();
+          let scenePosition = new Lore.Math.Vector3f(
+            this.min[0], (this.min[1] + this.min[1]) / 2.0, 
+            (this.min[2] + this.min[2]) / 2.0
+          );
+          
+          let screenPosition = this.lore.controls.camera.sceneToScreen(scenePosition, this.lore);
+          
+          this.el.yAxis.style.left = (screenPosition[0] - bb.height) + 'px';
+          this.el.yAxis.style.top = (screenPosition[1] - bb.width / 2.0) + 'px';
+
+          if (first) this.el.yAxis.classList.add('show');
+        }
+
+        changeSeries(value, name) {
+          value = parseInt(value);
+          this.seriesState[name] = value;
+          this.renderLegend();
+
+          this.pointHelpers[this.phIndexMap[name]].setRGBFromArrays(
+            data[name]['colors'][value].r, 
+            data[name]['colors'][value].g, 
+            data[name]['colors'][value].b
+          );
+
+          if (data[name]['s']) {
+            if (data[name]['s'][value]) {
+              this.pointHelpers[this.phIndexMap[name]].setSize(
+                data[name]['s'][value]
+              );
+            } else {
+              this.pointHelpers[this.phIndexMap[name]].setSize(1.0);
+            }
+          }
+        }
+
+        search(term) {
+          let results = {}
+          let re = new RegExp(term, 'i');
+
+          Object.keys(data).forEach(name => {
+            if (!('labels' in data[name])) return;
+            results[name] = []
+            data[name]['labels'].forEach((label, i) => {
+              if (re.test(label))
+                results[name].push(i)
+            });
+          });
+
+          return results;
+        }
+
+        static createColorBox(value) {
+          return Faerun.createElement(
+            'div', 
+            { 
+              classes: 'color-box', 
+              style: `background-color: rgba(${value[0] * 255}, ${value[1] * 255 }, ${value[2] * 255 }, ${value[3] });
+                      border-color: rgba(${value[0] * 255 }, ${value[1] * 255 }, ${value[2] * 255 }, ${value[3] })`
+            }
+          );
+        }
+
+        static createColorScale(values) {
+          let scale = [];
+
+          values.forEach(value => {
+            scale.push(
+              Faerun.createElement(
+                'div', 
+                { 
+                  classes: 'color-stripe', 
+                  style: `background-color: rgba(${value[0][0] * 255}, ${value[0][1] * 255}, ${value[0][2] * 255}, ${value[0][3]});
+                          border-color: rgba(${value[0][0] * 255}, ${value[0][1] * 255}, ${value[0][2] * 255}, ${value[0][3]})`,
+                  alt: value[1]
+                }
+              ),
+            )
+          });
+
+          return scale;
+        }
+        
+        static createElement(tag, values = {}, children = []) {
+          let element = document.createElement(tag);
+
+          for (const key of Object.keys(values)) {
+            if (key === 'classes')
+              element.classList.add(...values[key].split(' '));
+            else if (key === 'content')
+              element.innerHTML = values[key];
+            else if (key === 'hidden') {
+              if (values[key])
+                element.setAttribute('hidden', true);
+            }
+            else if (key === 'selected') {
+              if (values[key])
+                element.setAttribute('selected', true);
+            }
+            else
+              element.setAttribute(key, values[key]);
+          }
+
+          if (children) {
+            if (Array.isArray(children)) {
+              children.forEach(child => {
+                element.appendChild(child);
+              })
+            } else {
+              element.appendChild(children);
+            }
+          }
+
+          return element;
+        }
+
+        static bindElements() {
+          let result = {};
+          document.querySelectorAll('[data-bind]').forEach(e => {
+            result[e.getAttribute('data-bind')] = e;
+          });
+          return result;
+        }
+
+        static getMin(arr, other = Number.MAX_VALUE) {
+          let m = Number.MAX_VALUE;
+          for (var i = 0; i < arr.length; i++)
+              if (arr[i] < m) m = arr[i];
+          
+          if (m < other) return m;
+          return other;
+        }
+
+        static getMax(arr, other = -Number.MAX_VALUE) {
+          let m = -Number.MAX_VALUE;
+          for (var i = 0; i < arr.length; i++)
+              if (arr[i] > m) m = arr[i];
+          
+          if (m > other) return m;
+          return other;
+        }
+      }
+
+      let f = new Faerun();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1025 @@
+COMPOUND_ID,NAME_FOOD_DB,NEW_SMILES,FLAVOR_ID,NAME_FLAVOR,FLAVOR_GROUP
+373,Prenyl acetate,CC(=O)OCC=C(C)C,71.0,banana,fruity
+411,Geranyl 3-methylbutanoate,CC(C)=CCCC(C)=CCOC(=O)CC(C)C,69.0,apple,fruity
+412,Geranyl hexanoate,CCCCCC(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+423,5Z-Octenyl acetate,CCC=CCCCCOC(C)=O,81.0,fruity,fruity
+700,Undecanoic acid,CCCCCCCCCCC(=O)O,75.0,coconut,fruity
+701,Ethyl undecanoate,CCCCCCCCCCC(=O)OCC,75.0,coconut,fruity
+728,Diethyl malonate,CCOC(=O)CC(=O)OCC,69.0,apple,fruity
+739,Methyl sorbate,CC=CC=CC(=O)OC,81.0,fruity,fruity
+751,Triacetin,CC(=O)OCC(COC(C)=O)OC(C)=O,81.0,fruity,fruity
+806,2-Methylbenzaldehyde,Cc1ccccc1C=O,74.0,cherry,fruity
+807,3-Methylbenzaldehyde,Cc1cccc(C=O)c1,81.0,fruity,fruity
+808,4-Methylbenzaldehyde,Cc1ccc(C=O)cc1,81.0,fruity,fruity
+826,2-(4-Methylphenyl)-2-propanol,Cc1ccc(C(C)(C)O)cc1,81.0,fruity,fruity
+872,4-Methoxybenzaldehyde,COc1ccc(C=O)cc1,72.0,berry,fruity
+874,2-Ethoxynaphthalene,CCOc1ccc2ccccc2c1,77.0,grape,fruity
+878,Wine lactone,CC1=CC2OC(=O)C(C)C2CC1,75.0,coconut,fruity
+897,Methyl anthranilate,COC(=O)c1ccccc1N,78.0,grapefruit,fruity
+930,3-Ethylpyridine,CCc1cccnc1,81.0,fruity,fruity
+952,Methyl 2-furoate,COC(=O)c1ccco1,81.0,fruity,fruity
+966,Ethyl (±)-2-methyl-4-pentenoate,C=CCC(C)C(=O)OCC,81.0,fruity,fruity
+968,Pentyl pentanoate,CCCCCOC(=O)CCCC,81.0,fruity,fruity
+969,Allyl nonanoate,C=CCOC(=O)CCCCCCCC,81.0,fruity,fruity
+1022,Ethyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OCC,81.0,fruity,fruity
+1081,Methyl (xi)-3-nonenoate,CCCCCC=CCC(=O)OC,81.0,fruity,fruity
+1267,Hexyl acetate,CCCCCCOC(C)=O,81.0,fruity,fruity
+1325,Methyl 3-methylbutanoate,COC(=O)CC(C)C,69.0,apple,fruity
+1326,Ethyl isovalerate,CCOC(=O)CC(C)C,81.0,fruity,fruity
+1327,Isopentyl isopentanoate,CC(C)CCOC(=O)CC(C)C,80.0,mango,fruity
+1329,(±)-6-Methyl-5-hepten-2-yl acetate,CC(=O)OC(C)CCC=C(C)C,81.0,fruity,fruity
+1358,Butyl propionate,CCCCOC(=O)CC,71.0,banana,fruity
+1363,Isopropyl propionate,CCC(=O)OC(C)C,81.0,fruity,fruity
+1366,Ethyl propionate,CCOC(=O)CC,81.0,fruity,fruity
+1367,Propyl propionate,CCCOC(=O)CC,85.0,pineapple,fruity
+1368,Methyl 3-phenylpropanoate,COC(=O)CCc1ccccc1,81.0,fruity,fruity
+1370,Methyl propionate,CCC(=O)OC,81.0,fruity,fruity
+1371,Benzyl propionate,CCC(=O)OCc1ccccc1,69.0,apple,fruity
+1927,Prenol,CC(C)=CCO,81.0,fruity,fruity
+1929,3-Methyl-3-butenol,C=C(C)CCO,81.0,fruity,fruity
+2022,1-(2-Furanylmethyl)-1H-pyrrole,c1coc(Cn2cccc2)c1,81.0,fruity,fruity
+2288,Linalyl formate,C=CC(C)(CCC=C(C)C)OC=O,81.0,fruity,fruity
+2290,Linalyl isobutyrate,C=CC(C)(CCC=C(C)C)OC(=O)C(C)C,81.0,fruity,fruity
+2291,Linalyl butyrate,C=CC(C)(CCC=C(C)C)OC(=O)CCC,84.0,pear,fruity
+2292,Linalyl isovalerate,C=CC(C)(CCC=C(C)C)OC(=O)CC(C)C,69.0,apple,fruity
+2293,Linalyl hexanoate,C=CC(C)(CCC=C(C)C)OC(=O)CCCCC,81.0,fruity,fruity
+2294,Linalyl caprylate,C=CC(C)(CCC=C(C)C)OC(=O)CCCCCCC,81.0,fruity,fruity
+2712,Maltol,Cc1occc(=O)c1O,79.0,jam,fruity
+2827,Dihydro-5-(2-octenyl)-2(3H)-furanone,CCCCCC=CCC1CCC(=O)O1,81.0,fruity,fruity
+2870,1-(4-Methoxyphenyl)-1-penten-3-one,CCC(=O)C=Cc1ccc(OC)cc1,74.0,cherry,fruity
+2891,1-Tetradecanol,CCCCCCCCCCCCCCO,75.0,coconut,fruity
+2922,Methyl 2-undecynoate,CCCCCCCCC#CC(=O)OC,81.0,fruity,fruity
+2931,2-Hexen-1-ol,CCCC=CCO,81.0,fruity,fruity
+2938,(Z)-6-Nonenal,CCC=CCCCCC=O,73.0,cantaloupe,fruity
+2987,Ethyl decanoate,CCCCCCCCCC(=O)OCC,77.0,grape,fruity
+2992,4-Decenoic acid,CCCCCC=CCCC(=O)O,81.0,fruity,fruity
+2993,9-Decenoic acid,C=CCCCCCCCC(=O)O,81.0,fruity,fruity
+3011,Dodecanoic acid,CCCCCCCCCCCC(=O)O,75.0,coconut,fruity
+3012,Methyl dodecanoate,CCCCCCCCCCCC(=O)OC,75.0,coconut,fruity
+3013,2-Dodecanone,CCCCCCCCCCC(C)=O,81.0,fruity,fruity
+3014,2-Dodecenal,CCCCCCCCCC=CC=O,81.0,fruity,fruity
+3025,5-Hydroxy-2-dodecenoic acid lactone,CCCCCCCC1C=CCC(=O)O1,75.0,coconut,fruity
+3053,2-Hexadecanone,CCCCCCCCCCCCCCC(C)=O,81.0,fruity,fruity
+3091,6-Pentyl-2H-pyran-2-one,CCCCCc1cccc(=O)o1,75.0,coconut,fruity
+3171,"Ethyl (4Z)-4,7-octadienoate",C=CCC=CCCC(=O)OCC,85.0,pineapple,fruity
+3173,2-Methyl-4-pentenoic acid,C=CCC(C)C(=O)O,81.0,fruity,fruity
+3193,"4,5-Dimethyl-delta-valerolactone",CC1CCC(=O)OC1C,81.0,fruity,fruity
+3196,Tetrahydrofurfuryl acetate,CC(=O)OCC1CCCO1,81.0,fruity,fruity
+3197,Tetrahydrofurfuryl propionate,CCC(=O)OCC1CCCO1,81.0,fruity,fruity
+3211,S-Ethyl thioacetate,CCSC(C)=O,81.0,fruity,fruity
+3217,"3,5,5-Trimethyl-2-cyclohexen-1-one",CC1=CC(=O)CC(C)(C)C1,81.0,fruity,fruity
+3218,4-Methyl-2-pentenal,CC(C)C=CC=O,69.0,apple,fruity
+3229,Pentanal,CCCCC=O,81.0,fruity,fruity
+3230,Methyl pentanoate,CCCCC(=O)OC,81.0,fruity,fruity
+3241,Ethyl acetate,CCOC(C)=O,85.0,pineapple,fruity
+3242,Ethyl 3-oxobutanoate,CCOC(=O)CC(C)=O,81.0,fruity,fruity
+3245,2-Ethylbutanal,CCC(C=O)CC,81.0,fruity,fruity
+3246,2-Ethylbutanoic acid,CCC(CC)C(=O)O,72.0,berry,fruity
+3266,Ethyl methyl sulfide,CCSC,81.0,fruity,fruity
+3269,Isopropyl acetate,CC(=O)OC(C)C,81.0,fruity,fruity
+3276,2-Methylpropyl acetate,CC(=O)OCC(C)C,69.0,apple,fruity
+3277,2-Methylpropyl formate,CC(C)COC=O,81.0,fruity,fruity
+3278,2-Methylpropanoic acid,CC(C)C(=O)O,89.0,strawberry,fruity
+3279,Ethyl 2-methylpropanoate,CCOC(=O)C(C)C,89.0,strawberry,fruity
+3280,Methyl isobutyrate,COC(=O)C(C)C,81.0,fruity,fruity
+3281,Phenylmethyl 2-methylpropanoate,CC(C)C(=O)OCc1ccccc1,81.0,fruity,fruity
+3286,3-Methylbutanal,CC(C)CC=O,83.0,peach,fruity
+3304,Nonanal,CCCCCCCCC=O,78.0,grapefruit,fruity
+3306,Methyl nonanoate,CCCCCCCCC(=O)OC,75.0,coconut,fruity
+3310,3-Nonanone,CCCCCCC(=O)CC,81.0,fruity,fruity
+3348,2-Octenyl acetate,CCCCCC=CCOC(C)=O,84.0,pear,fruity
+3349,5Z-Octenol,CCC=CCCCCO,92.0,watermelon,fruity
+3364,Ethyl 3-oxohexanoate,CCCC(=O)CC(=O)OCC,81.0,fruity,fruity
+3368,Benzyl acetate,CC(=O)OCc1ccccc1,69.0,apple,fruity
+3370,Benzyl ethyl ether,CCOCc1ccccc1,81.0,fruity,fruity
+3371,2-Pentyl-3-phenyl-2-propenal,CCCCCC(C=O)=Cc1ccccc1,81.0,fruity,fruity
+3379,Butanal,CCCC=O,69.0,apple,fruity
+3383,2-Butanol,CCC(C)O,70.0,apricot,fruity
+3387,n-Butyl acetate,CCCCOC(C)=O,84.0,pear,fruity
+3389,2-Ethoxybutane,CCOC(C)CC,72.0,berry,fruity
+3391,1-Isothiocyanatobutane,CCCCN=C=S,81.0,fruity,fruity
+3407,Cyclohexanecarboxylic acid,O=C(O)C1CCCCC1,81.0,fruity,fruity
+3408,Methyl cyclohexanecarboxylate,COC(=O)C1CCCCC1,81.0,fruity,fruity
+3417,Cyclohexyl formate,O=COC1CCCCC1,81.0,fruity,fruity
+3418,Cyclohexyl acetate,CC(=O)OC1CCCCC1,81.0,fruity,fruity
+3430,Cyclohexylethyl acetate,CC(=O)OCCC1CCCCC1,88.0,raspberry,fruity
+3481,Ethyl 3-cyclohexylpropionate,CCOC(=O)CCC1CCCCC1,84.0,pear,fruity
+3485,2-Decanone,CCCCCCCCC(C)=O,83.0,peach,fruity
+3492,Dimethyl disulfide,CSSC,81.0,fruity,fruity
+3495,"2,6-Dimethyl-4-heptanone",CC(C)CC(=O)CC(C)C,81.0,fruity,fruity
+4622,3-Methylpentan-3-ol,CCC(C)(O)CC,81.0,fruity,fruity
+4817,3-Methylbutyl angelate,CC=C(C)C(=O)OCCC(C)C,81.0,fruity,fruity
+4833,beta-Cubebene,C=C1CCC23C(C)CCC(C(C)C)C2C13,81.0,fruity,fruity
+4834,Butyl angelate,CC=C(C)C(=O)OCCCC,81.0,fruity,fruity
+8053,Methyl heptanoate,CCCCCCC(=O)OC,72.0,berry,fruity
+8054,1-Heptanol,CCCCCCCO,75.0,coconut,fruity
+8055,Heptyl acetate,CCCCCCCOC(C)=O,84.0,pear,fruity
+8056,2-Heptanone,CCCCCC(C)=O,81.0,fruity,fruity
+8059,3-Heptanone,CCCCC(=O)CC,81.0,fruity,fruity
+8060,4-Heptanone,CCCC(=O)CCC,89.0,strawberry,fruity
+8069,Hexanal,CCCCCC=O,81.0,fruity,fruity
+8071,"2,3-Hexanedione",CCCC(=O)C(C)=O,81.0,fruity,fruity
+8073,1-Hexanol,CCCCCCO,81.0,fruity,fruity
+8088,Methyl 2E-hexenoate,CCC=CCC(=O)OC,81.0,fruity,fruity
+8101,Ethyl (±)-3-hydroxyhexanoate,CCCC(O)CC(=O)OCC,77.0,grape,fruity
+8108,5-Butyl-delta-valerolactone,CCCCC1CCCC(=O)O1,75.0,coconut,fruity
+8119,Dimethyl malonate,COC(=O)CC(=O)OC,81.0,fruity,fruity
+8126,Methyl acetate,COC(C)=O,81.0,fruity,fruity
+8132,Isopentyl alcohol,CC(C)CCO,81.0,fruity,fruity
+8133,Isopentyl acetate,CC(=O)OCCC(C)C,71.0,banana,fruity
+8135,3-Methyl-2-butenal,CC(C)=CC=O,81.0,fruity,fruity
+8136,2-Methylbutanoic acid,CCC(C)C(=O)O,89.0,strawberry,fruity
+8140,"1-Methyl-1,3-cyclohexadiene",CC1=CC=CCC1,81.0,fruity,fruity
+8152,3-Methyl-2-cyclohexen-1-one,CC1=CC(=O)CCC1,74.0,cherry,fruity
+8157,3-Methyl-2-cyclopenten-1-one,CC1=CC(=O)CC1,81.0,fruity,fruity
+8162,5-Methyl-3-hexen-2-one,CC(=O)C=CC(C)C,72.0,berry,fruity
+8173,"4-Methyl-2,3-pentanedione",CC(=O)C(=O)C(C)C,81.0,fruity,fruity
+8175,4-Methyl-2-pentanone,CC(=O)CC(C)C,81.0,fruity,fruity
+8176,2-Methyl-2-pentenoic acid,CC=CC(C)C(=O)O,89.0,strawberry,fruity
+8177,4-Methyl-2-pentenoic acid,CC(C)=CCC(=O)O,81.0,fruity,fruity
+8183,3-Methyl-4-phenyl-3-buten-2-one,CC(=O)C(C)=Cc1ccccc1,81.0,fruity,fruity
+8189,2-Methyl-1-phenyl-2-propanyl acetate,CC(=O)OC(C)(C)Cc1ccccc1,81.0,fruity,fruity
+8201,Ethyl heptanoate,CCCCCCC(=O)OCC,86.0,plum,fruity
+8202,2-Methylpentanal,CCCC(C)C=O,81.0,fruity,fruity
+8205,Ethyl (±)-2-methylpentanoate,CCCC(C)C(=O)OCC,81.0,fruity,fruity
+8209,"6-Methyl-3,5-heptadien-2-one",CC(=O)C=CC=C(C)C,75.0,coconut,fruity
+8224,"5-Methyl-2,3-hexanedione",CC(=O)C(=O)CC(C)C,81.0,fruity,fruity
+8225,2-Methylhexanoic acid,CCCCC(C)C(=O)O,81.0,fruity,fruity
+8227,5-Methylhexanoic acid,CC(C)CCCC(=O)O,81.0,fruity,fruity
+8229,"2,4-Pentadienal",C=CC=CC=O,81.0,fruity,fruity
+8234,2-Pentenal,CCC=CC=O,69.0,apple,fruity
+8237,Ethyl 4-pentenoate,C=CCCC(=O)OCC,81.0,fruity,fruity
+8241,1-Penten-3-ol,C=CC(O)CC,81.0,fruity,fruity
+8242,3-Penten-2-one,CC=CC(C)=O,81.0,fruity,fruity
+8247,Allyl phenoxyacetate,C=CCOC(=O)COc1ccccc1,85.0,pineapple,fruity
+8254,4-Phenyl-3-buten-2-ol,CC(O)C=Cc1ccccc1,81.0,fruity,fruity
+8256,Benzylideneacetone,CC(=O)C=Cc1ccccc1,74.0,cherry,fruity
+8257,Ethyl 4-phenylbutanoate,CCOC(=O)CCCc1ccccc1,81.0,fruity,fruity
+8288,Pentyl propanoate,CCCCCOC(=O)CC,81.0,fruity,fruity
+8295,Ethyl pyruvate,CCOC(=O)C(C)=O,81.0,fruity,fruity
+8297,"1,1-Diethoxyethane",CCOC(C)OCC,90.0,tart,fruity
+8298,Acetaldehyde,CC=O,81.0,fruity,fruity
+8302,Acetone,CC(C)=O,69.0,apple,fruity
+8308,2-Propenal,C=CC=O,74.0,cherry,fruity
+8342,4-Propyl-gamma-butyrolactone,CCCC1CCC(=O)O1,75.0,coconut,fruity
+8350,"(E,E)-2,4-Octadienal",CCC=CC=CCC=O,84.0,pear,fruity
+8355,cis-3-Hexenyl pentanoate,CCC=CCCOC(=O)CCCC,81.0,fruity,fruity
+8367,2-Ethylbutyl acetate,CCC(CC)COC(C)=O,70.0,apricot,fruity
+8394,4-Hexyl-gamma-butyrolactone,CCCCCCC1CCC(=O)O1,83.0,peach,fruity
+8404,Ethyl maltol,CCc1occc(=O)c1O,79.0,jam,fruity
+8535,2-Ethoxy-3-methylpyrazine,CCOc1nccnc1C,85.0,pineapple,fruity
+8540,5-Methyl-2-phenyl-2-hexenal,CC(C)CC=C(C=O)c1ccccc1,81.0,fruity,fruity
+8549,Methyleugenol,C=CCc1ccc(OC)c(OC)c1,70.0,apricot,fruity
+8741,Isopropyl benzoate,CC(C)OC(=O)c1ccccc1,81.0,fruity,fruity
+8742,Butyl benzoate,CCCCOC(=O)c1ccccc1,81.0,fruity,fruity
+8746,Benzyl alcohol,OCc1ccccc1,72.0,berry,fruity
+8747,Butyl 3-methylbutanoate,CCCCOC(=O)CC(C)C,69.0,apple,fruity
+8749,Hexyl 3-methylbutanoate,CCCCCCOC(=O)CC(C)C,81.0,fruity,fruity
+8750,Pentyl 3-methylbutanoate,CCCCCOC(=O)CC(C)C,69.0,apple,fruity
+8751,Isopropyl 3-methylbutanoate,CC(C)CC(=O)OC(C)C,69.0,apple,fruity
+8752,Propyl 3-methylbutanoate,CCCOC(=O)CC(C)C,69.0,apple,fruity
+8756,alpha-Terpinyl formate,CC1=CCC(C(C)(C)OC=O)CC1,81.0,fruity,fruity
+8759,alpha-Terpinyl butanoate,CCCC(=O)OC(C)(C)C1CC=C(C)CC1,81.0,fruity,fruity
+8760,alpha-Terpinyl pentanoate,CCCCC(=O)OC(C)(C)C1CC=C(C)CC1,81.0,fruity,fruity
+8775,Butyl dodecanoate,CCCCCCCCCCCC(=O)OCCCC,81.0,fruity,fruity
+8794,Dibenzyl ether,c1ccc(COCc2ccccc2)cc1,81.0,fruity,fruity
+8865,"3,4-Dimethoxybenzaldehyde",COc1ccc(C=O)cc1OC,74.0,cherry,fruity
+8869,"2,4-Dimethylbenzaldehyde",Cc1ccc(C=O)c(C)c1,74.0,cherry,fruity
+8917,Allyl valerate,C=CCOC(=O)CCCC,85.0,pineapple,fruity
+9182,"cis- and trans-Ethyl 2,4-dimethyl-1,3-dioxolane-2-acetate",CCOC(=O)CC1(C)OCC(C)O1,81.0,fruity,fruity
+9189,cis-4-Decenol,CCCCCC=CCCCO,81.0,fruity,fruity
+9194,Citronellyl anthranilate,CC(C)=CCCC(C)CCOC(=O)c1ccccc1N,81.0,fruity,fruity
+9195,Citronellyl trans-2-methyl-2-butenoate,CC=C(C)C(=O)OCCC(C)CCC=C(C)C,81.0,fruity,fruity
+9277,Dehydronootkatone,C=C(C)C1=CC=C2CC(=O)CC(C)C2(C)C1,81.0,fruity,fruity
+9288,"4,5-Dihydro-2,5-dimethyl-4-oxo-3-furanyl butyrate",CCCC(=O)Oc1c(C)oc(C)c1O,81.0,fruity,fruity
+9289,(+/-)-Dihydrofarnesol,CC(C)=CCCC(C)=CCCC(C)CCO,81.0,fruity,fruity
+9291,Dihydronootkatone,C=C(C)C1CCC2(C)CCC(=O)CC2(C)C1,78.0,grapefruit,fruity
+9304,"1,1-Dimethoxy-trans-2-hexene",CCCC=CC(OC)OC,81.0,fruity,fruity
+9340,(Z)-4-Dodecenal,CCCCCCCCC=CCCC=O,81.0,fruity,fruity
+9342,Dodecyl butyrate,CCCCCCCCCCCCOC(=O)CCC,81.0,fruity,fruity
+9344,Dodecyl propionate,CCCCCCCCCCCCOC(=O)CC,81.0,fruity,fruity
+9366,Ethanethiol,CCS,81.0,fruity,fruity
+9369,(+/-)-Ethyl 3-hydroxy-2-methylbutyrate,C=C1C(=CC=C2CCCC3(C)C2CCC3C(C)CCC=CC(O)(CC)CC)CC(O)CC1O,81.0,fruity,fruity
+9371,(+/-)-Ethyl 3-acetoxy-2-methylbutyrate,CCOC(=O)C(C)C(C)OC(C)=O,81.0,fruity,fruity
+9375,Ethyl 3-(methylthio)butyrate,CCOC(=O)CC(C)SC,81.0,fruity,fruity
+9388,Ethyl 2-ethylhexanoate,CCCCC(CC)C(=O)OCC,81.0,fruity,fruity
+9389,cis-Ethyl 4-heptenoate,CCC=CCCC(=O)OCC,81.0,fruity,fruity
+9391,Ethyl 5-hexenoate,C=CCCCC(=O)OCC,81.0,fruity,fruity
+9392,Ethyl 2-hexenoate,CCC=CCC(=O)OCC,81.0,fruity,fruity
+9395,(+/-)-Ethyl 2-hydroxy-3-methylvalerate,CCOC(=O)C(O)C(C)CC,81.0,fruity,fruity
+9398,(+/-)-Ethyl 3-mercapto-2-methylbutanoate,CCOC(=O)C(C)C(C)S,81.0,fruity,fruity
+9401,Ethyl 4-methylpentanoate,CCOC(=O)CCC(C)C,81.0,fruity,fruity
+9405,Ethyl 3-octenoate,CCCCC=CCC(=O)OCC,81.0,fruity,fruity
+9411,Ethyl trans-2-methyl-2-pentenoate,CC=CC(C)C(=O)OCC,81.0,fruity,fruity
+9412,"2-Ethyl-1,3,3-trimethyl-2-norbornanol",CCC1(O)C2(C)CCC(C2)C1(C)C,72.0,berry,fruity
+9483,Geranyl 2-methylbutyrate,CCC(C)C(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+9484,Geranyl tiglate,CC=C(C)C(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+9511,Glyceryl 5-hydroxydecanoate,CCCCCC(O)CCCC(=O)OCC(O)CO,83.0,peach,fruity
+9545,trans-2-trans-4-Heptadien-1-ol,CCC=CC=CCO,81.0,fruity,fruity
+9553,Hept-trans-2-en-1-yl acetate,CCCCC=CCOC(C)=O,81.0,fruity,fruity
+9557,2-Heptyl butyrate,CCCCCC(CC)OC(=O)CCC,81.0,fruity,fruity
+9561,"2,4-Hexadienyl butyrate",CC=CC=CCOC(=O)CCC,81.0,fruity,fruity
+9571,3-Hexenyl 2-methylbutyrate,CCC=CCCOC(=O)C(C)CC,69.0,apple,fruity
+9572,2-Hexenyl octanoate,CCCC=CCOC(=O)CCCCCCC,84.0,pear,fruity
+9580,Hexyl 3-mercaptobutanoate,CCCCCCOC(=O)CC(C)S,81.0,fruity,fruity
+9582,Hexyl nonanoate,CCCCCCCCC(=O)OCCCCCC,81.0,fruity,fruity
+9643,(+/-)-Isobutyl 3-methylthiobutyrate,CSC(C)CC(=O)OCC(C)C,89.0,strawberry,fruity
+9644,Isobutyl 10-undecenoate,C=CCCCCCCCCC(=O)OCC(C)C,81.0,fruity,fruity
+9656,"(+/-)-[R-(E)]-5-Isopropyl-8-methylnona-6,8-dien-2-one",C=C(C)C=CC(CCC(C)=O)C(C)C,81.0,fruity,fruity
+9658,Isovaleraldehyde diethyl acetal,CCOC(CC(C)C)OCC,81.0,fruity,fruity
+9659,Isovaleraldehyde glyceryl acetal,CC(C)CC1OCC(CO)O1,81.0,fruity,fruity
+9788,Menthyl valerate,CCCCC(=O)OC1CC(C)CCC1C(C)C,81.0,fruity,fruity
+9789,(+/-)-3-Mercapto-1-butyl acetate,CC(=O)OCCC(C)S,81.0,fruity,fruity
+9795,"2,3 or 10-Mercaptopinane",CC1(S)CCC2CC1C2(C)C,78.0,grapefruit,fruity
+9806,Methyl methacrylate,C=C(C)C(=O)OC,81.0,fruity,fruity
+9808,(+/-)-Methyl 5-acetoxyhexanoate,COC(=O)CCCC(C)OC(C)=O,81.0,fruity,fruity
+9819,"Methylbenzyl acetate (mixed o-, m-, p-)",CC(=O)OC(C)c1ccccc1,81.0,fruity,fruity
+9820,3-Methyl-3-butenyl acetate,C=C(C)CCOC(C)=O,81.0,fruity,fruity
+9822,2-Methylbutyl 3-methyl-2-butenoate,CCC(C)COC(=O)C=C(C)C,81.0,fruity,fruity
+9828,"Methyl N,N-dimethylanthranilate",COC(=O)c1ccccc1N(C)C,81.0,fruity,fruity
+9833,Methyl furfuracrylate,COC(=O)C=Cc1ccco1,74.0,cherry,fruity
+9852,Methyl cis-5-octenoate,CCC=CCCCC(=O)OC,75.0,coconut,fruity
+9853,Methyl 2-octenoate,CCCCC=CCC(=O)OC,81.0,fruity,fruity
+9878,12-Methyltridecanal,CC(C)CCCCCCCCCCC=O,81.0,fruity,fruity
+9943,2-Nonanone propyleneglycol acetal,CCCCCCCC1(C)OCC(C)O1,81.0,fruity,fruity
+9965,cis-3-Octenyl propionate,CCCCC=CCCOC(=O)CC,84.0,pear,fruity
+10040,Pent-2-enyl hexanoate,CCC=CCOC(=O)CCCCC,71.0,banana,fruity
+10044,2-Pentyl 2-methylpentanoate,CCCC(C)OC(=O)C(C)CCC,84.0,pear,fruity
+10078,Phthalide,O=C1OCc2ccccc21,75.0,coconut,fruity
+10079,Phytyl acetate,CC(=O)OCC=C(C)CCCC(C)CCCC(C)CCCC(C)C,81.0,fruity,fruity
+10137,Prenyl caproate,CCCCCC(=O)OCC=C(C)C,81.0,fruity,fruity
+10138,Prenyl formate,CC(C)=CCOC=O,81.0,fruity,fruity
+10139,Prenyl isobutyrate,CC(C)=CCOC(=O)C(C)C,81.0,fruity,fruity
+10402,(+/-)-trans- and cis-2-Hexenal propylene glycol acetal,CCCC=CC1OCC(C)O1,81.0,fruity,fruity
+10407,trans-4-Nonenal,CCCCC=CCCC=O,81.0,fruity,fruity
+10417,"2,6,6-Trimethyl-1-cyclohexen-1-acetaldehyde",CC1=C(CC=O)C(C)(C)CCC1,81.0,fruity,fruity
+10418,"4-(2,6,6-Trimethylcyclohex-1-enyl)but-2-en-4-one",CC=CC(=O)C1=C(C)CCCC1(C)C,81.0,fruity,fruity
+10420,"trans- and cis-2,4,8-Trimethyl-3,7-nona-dien-2-ol",CC(C)=CCCC(C)=CC(C)(C)O,81.0,fruity,fruity
+10421,"(+/-)-2,4,8-Trimethyl-7-nonen-2-ol",CC(C)=CCCC(C)CC(C)(C)O,78.0,grapefruit,fruity
+10547,Methyl 2-methoxybenzoate,COC(=O)c1ccccc1OC,81.0,fruity,fruity
+10551,4'-Methylacetophenone,CC(=O)c1ccc(C)cc1,74.0,cherry,fruity
+10554,3-(4-Methoxyphenyl)-2-propenal,COc1ccc(C=CC=O)cc1,74.0,cherry,fruity
+10555,"3,4-Methylenedioxybenzaldehyde",O=Cc1ccc2c(c1)OCO2,75.0,coconut,fruity
+10557,Piperonyl acetate,CC(=O)OCc1ccc2c(c1)OCO2,89.0,strawberry,fruity
+10562,Ethyl phenylacetate,CCOC(=O)Cc1ccccc1,78.0,grapefruit,fruity
+10856,Hexyl formate,CCCCCCOC=O,69.0,apple,fruity
+10875,1-(4-Methoxyphenyl)-2-propanone,COc1ccc(CC(C)=O)cc1,81.0,fruity,fruity
+10903,3-(2-Furanyl)-2-propenal,O=CC=Cc1ccco1,81.0,fruity,fruity
+10906,Ethyl 2-furanpropionate,CCOC(=O)CCc1ccco1,81.0,fruity,fruity
+10955,Furaneol acetate,CC(=O)Oc1c(C)oc(C)c1O,81.0,fruity,fruity
+11101,(R)-Higenamine,Oc1ccc(CC2NCCc3cc(O)c(O)cc32)cc1,81.0,fruity,fruity
+11178,Octyl octanoate,CCCCCCCCOC(=O)CCCCCCC,75.0,coconut,fruity
+11179,Ethyl cyclohexanecarboxylate,CCOC(=O)C1CCCCC1,81.0,fruity,fruity
+11404,Citronellyl formate,CC(C)=CCCC(C)CCOC=O,70.0,apricot,fruity
+11409,Phenylmethyl butanoate,CCCC(=O)OCc1ccccc1,86.0,plum,fruity
+11411,cis-3-Hexenyl hexanoate,CCC=CCCOC(=O)CCCCC,81.0,fruity,fruity
+11611,"(2E,4Z,7Z)-2,4,7-Tridecatrienal",CCCCCC=CC=CC=CCC=O,81.0,fruity,fruity
+11623,2-Methyl-2-octenal,CCCCCC=C(C)C=O,81.0,fruity,fruity
+11634,3-Methyl-2-phenylbutanal,CC(C)C(C=O)c1ccccc1,81.0,fruity,fruity
+11663,Diethyl tartrate,CCOC(=O)C(=O)C(O)C(O)OCC,81.0,fruity,fruity
+11669,Ethyl anthranilate,CCOC(=O)c1ccccc1N,77.0,grape,fruity
+11681,4-(4-Acetoxyphenyl)-2-butanone,CC(=O)CCc1ccc(OC(C)=O)cc1,72.0,berry,fruity
+11685,4-(4-Methoxyphenyl)-2-butanone,COc1ccc(CCC(C)=O)cc1,88.0,raspberry,fruity
+11709,3-Methylbutyl hexanoate,CCCCCC(=O)OCCC(C)C,81.0,fruity,fruity
+11710,Hexyl hexanoate,CCCCCCOC(=O)CCCCC,83.0,peach,fruity
+11711,Hexyl butyrate,CCCCCCOC(=O)CCC,81.0,fruity,fruity
+11797,(R)-3-Octyl acetate,CCCCCC(CC)OC(C)=O,78.0,grapefruit,fruity
+11816,(-)-(Z)-Tetrahydro-6-(2-pentenyl)-2H-pyran-2-one,CCC=CCC1CCCC(=O)O1,83.0,peach,fruity
+11834,2-Undecanone,CCCCCCCCCC(C)=O,81.0,fruity,fruity
+11835,2-Methyl-2-pentenal,CCC=C(C)C=O,81.0,fruity,fruity
+11838,3-Phenylpropanal,O=CCCc1ccccc1,89.0,strawberry,fruity
+11846,4-(4-Hydroxyphenyl)-2-butanone,CC(=O)CCc1ccc(O)cc1,88.0,raspberry,fruity
+11880,Ethyl 2-methylbutyrate,CCOC(=O)C(C)CC,69.0,apple,fruity
+11901,4-Methoxybenzyl acetate,COc1ccc(COC(C)=O)cc1,74.0,cherry,fruity
+11934,3-Methyl-2-butanol,CC(C)C(C)O,81.0,fruity,fruity
+11947,Trimethylamine,CN(C)C,81.0,fruity,fruity
+12003,Cinnamyl cinnamate,O=C(C=Cc1ccccc1)OCC=Cc1ccccc1,72.0,berry,fruity
+12004,Methyl cinnamate,COC(=O)C=Cc1ccccc1,89.0,strawberry,fruity
+12005,Ethyl cinnamate,CCOC(=O)C=Cc1ccccc1,86.0,plum,fruity
+12014,Dimethyl succinate,COC(=O)CCC(=O)OC,81.0,fruity,fruity
+12015,Diethyl succinate,CCOC(=O)CCC(=O)OCC,69.0,apple,fruity
+12029,Methyl decanoate,CCCCCCCCCC(=O)OC,81.0,fruity,fruity
+12085,Ethyl butyrate,CCCC(=O)OCC,69.0,apple,fruity
+12087,Methyl butyrate,CCCC(=O)OC,81.0,fruity,fruity
+12117,2-Nonanol,CCCCCCCC(C)O,81.0,fruity,fruity
+12156,2-Phenylethyl acetate,CC(=O)OCCc1ccccc1,81.0,fruity,fruity
+12200,Ethyl benzoate,CCOC(=O)c1ccccc1,71.0,banana,fruity
+12213,Ethyl acrylate,C=CC(=O)OCC,81.0,fruity,fruity
+12241,Phenylacetaldehyde,O=CCc1ccccc1,78.0,grapefruit,fruity
+12253,3-Methyl-2-oxobutanoic acid,CC(C)C(=O)C(=O)O,81.0,fruity,fruity
+12397,Eugenyl isovalerate,C=CCc1ccc(OC(=O)CC(C)C)c(OC)c1,81.0,fruity,fruity
+12411,Octyl propanoate,CCCCCCCCOC(=O)CC,81.0,fruity,fruity
+12413,Octyl butanoate,CCCCCCCCOC(=O)CCC,81.0,fruity,fruity
+12415,Octyl 2-methylpropanoate,CCCCCCCCOC(=O)C(C)C,81.0,fruity,fruity
+12427,2-Tridecanone,CCCCCCCCCCCC(C)=O,75.0,coconut,fruity
+12449,(±)-Citronellyl acetate,CC(=O)OCCC(C)CCC=C(C)C,81.0,fruity,fruity
+12450,2-Methylpropyl butanoate,CCCC(=O)OCC(C)C,81.0,fruity,fruity
+12451,Pentyl butanoate,CCCCCOC(=O)CCC,71.0,banana,fruity
+12452,3-Methylbutyl formate,CC(C)CCOC=O,86.0,plum,fruity
+12453,3-Methylbutyl propanoate,CCC(=O)OCCC(C)C,81.0,fruity,fruity
+12454,Propyl hexanoate,CCCCCC(=O)OCCC,81.0,fruity,fruity
+12455,2-Methylbutyl acetate,CCC(C)COC(C)=O,71.0,banana,fruity
+12458,Methyl N-methylanthranilate,CNc1ccccc1C(=O)OC,77.0,grape,fruity
+12508,Ethyl 4-methylphenoxyacetate,CCOC(=O)COc1ccc(C)cc1,81.0,fruity,fruity
+12544,Mesifurane,COc1c(C)oc(C)c1O,77.0,grape,fruity
+12549,Ethyl (±)-3-methylpentanoate,CCOC(=O)CC(C)CC,85.0,pineapple,fruity
+12552,Propyl acetate,CCCOC(C)=O,81.0,fruity,fruity
+12554,2-Methylpropyl propanoate,CCC(=O)OCC(C)C,81.0,fruity,fruity
+12556,4-Hydroxybenzyl alcohol,OCc1ccc(O)cc1,81.0,fruity,fruity
+12562,Furfuryl acetate,CC(=O)OCc1ccco1,81.0,fruity,fruity
+12590,Triethyl citrate,CCOC(=O)CC(O)(CC(=O)OCC)C(=O)OCC,81.0,fruity,fruity
+12627,Ethyl 10-undecenoate,C=CCCCCCCCCC(=O)OCC,81.0,fruity,fruity
+12828,Cyclohexyl butanoate,CCCC(=O)OC1CCCCC1,69.0,apple,fruity
+12829,Cyclohexyl 3-methylbutanoate,CC(C)CC(=O)OC1CCCCC1,69.0,apple,fruity
+12847,Benzyl benzoate,O=C(OCc1ccccc1)c1ccccc1,74.0,cherry,fruity
+12863,"5,6-Dihydro-6-pentyl-2H-pyran-2-one",CCCCCC1C=CCC(=O)O1,83.0,peach,fruity
+12867,Exaltolide,O=C1CCCCCCCCCCCCCCO1,81.0,fruity,fruity
+12869,Propyl heptanoate,CCCCCCC(=O)OCCC,81.0,fruity,fruity
+12870,Isobutyl enanthate,CCCCCCC(=O)OCC(C)C,81.0,fruity,fruity
+12871,Heptyl formate,CCCCCCCOC=O,86.0,plum,fruity
+12872,Heptyl butanoate,CCCCCCCOC(=O)CCC,81.0,fruity,fruity
+12879,Acetoxyacetone,CC(=O)COC(C)=O,81.0,fruity,fruity
+12882,2-Phenylpropyl butyrate,CCCC(=O)OCC(C)c1ccccc1,81.0,fruity,fruity
+12883,2-Phenylpropyl isobutyrate,CC(C)C(=O)OCC(C)c1ccccc1,81.0,fruity,fruity
+12885,3-Phenylpropyl 2-methylpropanoate,CC(C)C(=O)OCCCc1ccccc1,81.0,fruity,fruity
+12991,"6,10,14-Trimethyl-5,9,13-pentadecatrien-2-one",CC(=O)CCC=C(C)CCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+13097,2-Hexenyl butanoate,CCCC=CCOC(=O)CCC,81.0,fruity,fruity
+13126,Hexyl propionate,CCCCCCOC(=O)CC,84.0,pear,fruity
+13271,"Methyl (2E,4Z)-decadienoate",CCCCC=CC=CCC(=O)OC,81.0,fruity,fruity
+13315,(E)-5-Nonen-2-one,CCCC=CCCC(C)=O,81.0,fruity,fruity
+13317,3-Nonen-2-one,CCCCC=CCC(C)=O,81.0,fruity,fruity
+13458,"3-Methyl-2,4-nonanedione",CCCCCC(=O)C(C)C(C)=O,81.0,fruity,fruity
+13588,"5,6-Epoxy-7-megastigmen-9-one",CC(=O)C=CC12OC1(C)CCCC2(C)C,81.0,fruity,fruity
+13596,4-Methoxybenzyl propanoate,CCC(=O)OCc1ccc(OC)cc1,81.0,fruity,fruity
+13597,4-Methoxybenzyl butanoate,CCCC(=O)OCc1ccc(OC)cc1,81.0,fruity,fruity
+13599,4-Methoxybenzyl formate,COc1ccc(COC=O)cc1,81.0,fruity,fruity
+13615,3-Methylbutyl phenylacetate,CC(C)CCOC(=O)Cc1ccccc1,80.0,mango,fruity
+13621,2-Phenylethyl propanoate,CCC(=O)OCCc1ccccc1,81.0,fruity,fruity
+13622,2-Phenylethyl butanoate,CCCC(=O)OCCc1ccccc1,89.0,strawberry,fruity
+13623,2-Phenylethyl 2-methylpropanoate,CC(C)C(=O)OCCc1ccccc1,81.0,fruity,fruity
+13624,2-Phenylethyl pentanoate,CCCCC(=O)OCCc1ccccc1,81.0,fruity,fruity
+13625,2-Phenylethyl 3-methylbutanoate,CC(C)CC(=O)OCCc1ccccc1,81.0,fruity,fruity
+13699,Isobutyl anthranilate,CC(C)COC(=O)c1ccccc1N,77.0,grape,fruity
+13703,2-(2-Methylpropoxy)naphthalene,CC(C)COc1ccc2ccccc2c1,89.0,strawberry,fruity
+13764,(-)-Myrtenyl acetate,CC(=O)OCC1=CCC2CC1C2(C)C,81.0,fruity,fruity
+13795,Geraniol,CC(C)=CCCC(C)=CCO,81.0,fruity,fruity
+13856,2-Phenyl-4-pentenal,C=CCC(C=O)c1ccccc1,81.0,fruity,fruity
+13881,2-Acetyl-5-methylfuran,CC(=O)c1ccc(C)o1,75.0,coconut,fruity
+13890,(Z)-3-Octen-1-ol,CCCCC=CCCO,81.0,fruity,fruity
+13899,Methyl hexanoate,CCCCCC(=O)OC,81.0,fruity,fruity
+13913,Myrtenal,CC1(C)C2CC=C(C=O)C1C2,79.0,jam,fruity
+14103,4-Butyl-gamma-butyrolactone,CCCCC1CCC(=O)O1,75.0,coconut,fruity
+14342,alpha-Irone,CC(=O)C=CC1=C(C)CCC(C)C1(C)C,72.0,berry,fruity
+14359,Methyl 2-(methylthio)acetate,COC(=O)CSC,81.0,fruity,fruity
+14408,Valencene,C=C(C)C1CCC2=CCCC(C)C2(C)C1,78.0,grapefruit,fruity
+14426,p-Menth-1-ene-8-thiol,CC1=CCC(C(C)(C)S)CC1,78.0,grapefruit,fruity
+14466,"(±)-trans,trans-delta-Damascone",CC=CC(=O)C1C(C)C=CCC1(C)C,81.0,fruity,fruity
+14519,"(2E,6E)-Farnesol",CC(C)=CCCC(C)=CCCC(C)=CCO,78.0,grapefruit,fruity
+14589,(S)-p-Menth-1-en-4-ol,CC1=CCC(O)(C(C)C)CC1,78.0,grapefruit,fruity
+14664,Benzaldehyde,O=Cc1ccccc1,74.0,cherry,fruity
+14712,(E)-2-Nonen-4-one,CC=CC(=O)CCCCC,81.0,fruity,fruity
+14724,8-Nonen-2-one,C=CCCCCCC(C)=O,81.0,fruity,fruity
+14802,Nootkatone,C=C(C)C1CC=C2CC(=O)CC(C)C2(C)C1,78.0,grapefruit,fruity
+14842,Rhubafuran,CC1CC(C)(c2ccccc2)CO1,78.0,grapefruit,fruity
+14847,Octahydro-6-isopropyl-2(1H)-naphthalenone,CC(C)C1CCC2CC(=O)CCC2C1,78.0,grapefruit,fruity
+14850,Clarycet,CCCC1CC(C)(OC(C)=O)CCO1,81.0,fruity,fruity
+14851,Buccoxime,CC12CCCC(C)(CC1)C2=NO,81.0,fruity,fruity
+14852,Artemisia ketone,C=CC(C)(C)C(=O)C=C(C)C,72.0,berry,fruity
+14853,Labienoxime,C=CC(C)=CCC(C)(C)C(=NO)C(C)C,78.0,grapefruit,fruity
+14949,Neryl acetate,CC(=O)OCC=C(C)CCC=C(C)C,78.0,grapefruit,fruity
+14953,Thiogeraniol,CC(C)=CCCC(C)=CCS,81.0,fruity,fruity
+14988,4-Ethyloctanoic acid,CCCCC(CC)CCC(=O)O,81.0,fruity,fruity
+15019,beta-Sesquiphellandrene,C=C1C=CC(C(C)CCC=C(C)C)CC1,81.0,fruity,fruity
+15022,3-(Hydroxymethyl)-2-heptanone,CCCCC(CO)C(C)=O,81.0,fruity,fruity
+15023,"2,3,4-Trimethyl-3-pentanol",CC(C)C(C)(O)C(C)C,81.0,fruity,fruity
+15026,3-(5-Methyl-2-furanyl)butanal,Cc1ccc(C(C)CC=O)o1,81.0,fruity,fruity
+15028,3-(4-Isopropylphenyl)propanal,CC(C)c1ccc(CCC=O)cc1,81.0,fruity,fruity
+15035,2-(3-Phenylpropyl)tetrahydrofuran,c1ccc(CCCC2CCCO2)cc1,81.0,fruity,fruity
+15039,"4,4-Dibutyl-gamma-butyrolactone",CCCCC1(CCCC)CCC(=O)O1,75.0,coconut,fruity
+15040,4-(4-Methylphenyl)-2-butanone,CC(=O)CCc1ccc(C)cc1,81.0,fruity,fruity
+15045,Tetrahydrofurfuryl butyrate,CCCC(=O)OCC1CCCO1,81.0,fruity,fruity
+15048,4-Hydroxy-4-methyl-7-decenoic acid gamma-lactone,CCC=CCCC1(C)CCC(=O)O1,75.0,coconut,fruity
+15051,3-Mercapto-3-methylbutyl formate,CC(C)(S)CCOC=O,81.0,fruity,fruity
+15056,(-)-alpha-Bisabolol,CC(C)=CCCC(C)(O)C1CC=C(C)CC1,81.0,fruity,fruity
+15066,alpha-Amylcinnamyl isovalerate,CCCCCC(=Cc1ccccc1)COC(=O)CC(C)C,81.0,fruity,fruity
+15068,alpha-Amylcinnamyl acetate,CCCCCC(=Cc1ccccc1)COC(C)=O,81.0,fruity,fruity
+15070,Propyl 2-methylpropanoate,CCCOC(=O)C(C)C,81.0,fruity,fruity
+15071,Dodecyl 2-methylpropanoate,CCCCCCCCCCCCOC(=O)C(C)C,81.0,fruity,fruity
+15073,2-Methylpropyl (2E)-butenoate,CC=CC(=O)OCC(C)C,81.0,fruity,fruity
+15074,cis-3-Hexenyl lactate,CCC=CCCOC(=O)C(C)O,81.0,fruity,fruity
+15077,Hexyl octanoate,CCCCCCCC(=O)OCCCCCC,81.0,fruity,fruity
+15080,Octyl 2-methylbutyrate,CCCCCCCCOC(=O)C(C)CC,81.0,fruity,fruity
+15081,Octyl heptanoate,CCCCCCCCOC(=O)CCCCCC,81.0,fruity,fruity
+15083,Cyclohexyl propionate,CCC(=O)OC1CCCCC1,71.0,banana,fruity
+15085,"Benzyl 2,3-dimethyl-2-butenoate",CC(C)=C(C)C(=O)OCc1ccccc1,81.0,fruity,fruity
+15086,Pentyl heptanoate,CCCCCCC(=O)OCCCCC,81.0,fruity,fruity
+15088,"2-Propenyl 2,4-hexadienoate",C=CCOC(=O)C=CC=CC,81.0,fruity,fruity
+15089,2-Methylpropyl hexanoate,CCCCCC(=O)OCC(C)C,81.0,fruity,fruity
+15090,Pentyl hexanoate,CCCCCOC(=O)CCCCC,85.0,pineapple,fruity
+15091,Acetoin butyrate,CCCC(=O)OC(C)C(C)=O,72.0,berry,fruity
+15092,Methyl DL-Leucate,COC(=O)C(O)CC(C)C,81.0,fruity,fruity
+15095,3-Methylbutyl 2-methylpropanoate,CC(C)CCOC(=O)C(C)C,81.0,fruity,fruity
+15097,2-Methylallyl butyrate,C=C(C)COC(=O)CCC,81.0,fruity,fruity
+15098,Methyl (±)-2-methylpentanoate,CCCC(C)C(=O)OC,81.0,fruity,fruity
+15101,Methyl 4-tert-butylphenylacetate,COC(=O)Cc1ccc(C(C)(C)C)cc1,81.0,fruity,fruity
+15268,1-Phenylpropyl butyrate,CCCC(=O)OC(CC)c1ccccc1,81.0,fruity,fruity
+15269,3-Phenylpropyl cinnamate,O=C(C=Cc1ccccc1)OCCCc1ccccc1,70.0,apricot,fruity
+15271,3-Phenylpropyl isovalerate,CC(C)CC(=O)OCCCc1ccccc1,89.0,strawberry,fruity
+15272,3-Phenylpropyl hexanoate,CCCCCC(=O)OCCCc1ccccc1,81.0,fruity,fruity
+15278,2-Methylpropyl 3-oxobutanoate,CC(=O)CC(=O)OCC(C)C,81.0,fruity,fruity
+15308,Spathulenol,C=C1CCC2C(C3C1CCC3(C)O)C2(C)C,81.0,fruity,fruity
+15313,Allyl 10-undecenotate,C=CCCCCCCCCC(=O)OCC=C,81.0,fruity,fruity
+15317,Butyl 10-undecenoate,C=CCCCCCCCCC(=O)OCCCC,81.0,fruity,fruity
+15484,"3,5,8-Megastigmatrien-7-one",CC=CC(=O)C1=C(C)C=CCC1(C)C,69.0,apple,fruity
+15517,Pear ester,CCCCC=CC=CCC(=O)OCC,84.0,pear,fruity
+15531,2-Methyl-3-furanthiol,Cc1occc1S,75.0,coconut,fruity
+15547,"3,4-Dihydro-2H-1-benzopyran-2-one",O=C1CCc2ccccc2O1,75.0,coconut,fruity
+15730,6-Hexyltetrahydro-2H-pyran-2-one,CCCCCCC1CCCC(=O)O1,83.0,peach,fruity
+15769,Vitispirane,C=C1C=CCC(C)(C)C12CCC(C)O2,81.0,fruity,fruity
+15770,Vomifoliol,CC1=CC(=O)CC(C)(C)C1(O)C=CC(C)O,81.0,fruity,fruity
+15872,2-Propenyl phenylacetate,C=CCOC(=O)Cc1ccccc1,81.0,fruity,fruity
+15873,Butyl anthranilate,CCCCOC(=O)c1ccccc1N,86.0,plum,fruity
+15874,2-Propenyl 2-furancarboxylate,C=CCOC(=O)c1ccco1,81.0,fruity,fruity
+15989,p-Menth-1-en-9-ol,CC1=CCC(C(C)CO)CC1,81.0,fruity,fruity
+16003,"(±)-p-Mentha-1,8-dien-10-yl acetate",C=C(COC(C)=O)C1CC=C(C)CC1,81.0,fruity,fruity
+16011,"4-Acetyl-1,4-dimethyl-1-cyclohexene",CC(=O)C1(C)CC=C(C)CC1,81.0,fruity,fruity
+16116,5-Pentyl-delta-valerolactone,CCCCCC1CCCC(=O)O1,75.0,coconut,fruity
+16131,Piperonyl isobutyrate,CC(C)C(=O)OCc1ccc2c(c1)OCO2,79.0,jam,fruity
+16137,1-Benzyloxy-1-(2-methoxyethoxy)ethane,COCCOC(C)OCc1ccccc1,81.0,fruity,fruity
+16139,Butyl butyryllactate,CCCCOC(=O)C(C)OC(=O)CCC,75.0,coconut,fruity
+16148,"5(6)-Pentyl-1,4-dioxan-2-one",CCCCCC1COC(=O)CO1,81.0,fruity,fruity
+16149,"5(6)-Butyl-1,4-dioxan-2-one",CCCCC1COC(=O)CO1,81.0,fruity,fruity
+16164,"1,2,3-Tris(1-ethoxyethoxy)propane",CCOC(C)OCC(COC(C)OCC)OC(C)OCC,81.0,fruity,fruity
+16165,"1,2-Bis(1-ethoxyethoxy)propane",CCOC(C)OCC(C)OC(C)OCC,81.0,fruity,fruity
+16177,"p-Mentha-2,4(8)-dien-9,3-olide",CC1=Cc2oc(O)c(C)c2CC1,75.0,coconut,fruity
+16184,3-Nonanon-1-yl acetate,CCCCCCC(=O)CCOC(C)=O,81.0,fruity,fruity
+16197,Rhodinyl butyrate,C=C(C)CCCC(C)CCOC(=O)CCC,81.0,fruity,fruity
+16204,2-Propenyl cyclohexanehexanoate,C=CCOC(=O)CCCCCC1CCCCC1,81.0,fruity,fruity
+16207,"Ethyl 2-methyl-3,4-pentadienoate",C=C=CC(C)C(=O)OCC,81.0,fruity,fruity
+16225,Menthyl isovalerate,CC(C)CC(=O)OC1CC(C)CCC1C(C)C,81.0,fruity,fruity
+16239,Methyl citronellate,COC(=O)CC(C)CCC=C(C)C,81.0,fruity,fruity
+16240,Citronellyl propionate,CCC(=O)OCCC(C)CCC=C(C)C,81.0,fruity,fruity
+16241,Citronellyl butyrate,CCCC(=O)OCCC(C)CCC=C(C)C,81.0,fruity,fruity
+16242,Citronellyl isobutyrate,CC(C)=CCCC(C)CCOC(=O)C(C)C,81.0,fruity,fruity
+16299,Maltol propionate,CCC(=O)Oc1c(C)occc1=O,89.0,strawberry,fruity
+16320,2-Methyl-3-(2-pentenyl)-2-cyclopenten-1-one,CCC=CC=C1CCC(=O)C1C,81.0,fruity,fruity
+16327,p-Menth-1-en-9-ol acetate,CC(=O)OCC(C)C1CC=C(C)CC1,81.0,fruity,fruity
+16333,"Propyl 2,4-decadienoate",CCCCC=CC=CCC(=O)OCCC,84.0,pear,fruity
+16337,Decyl propionate,CCCCCCCCCCOC(=O)CC,81.0,fruity,fruity
+16338,Decyl butanoate,CCCCCCCCCCOC(=O)CCC,81.0,fruity,fruity
+16358,Ethyl 2-decenoate,CCCCCCC=CCC(=O)OCC,69.0,apple,fruity
+16412,3-Methylbutyl dodecanoate,CCCCCCCCCCCC(=O)OCCC(C)C,83.0,peach,fruity
+16433,8-Mercapto-p-menthan-3-one,CC1CCC(C(C)(C)S)C(=O)C1,81.0,fruity,fruity
+16449,4-Acetoxy-2-hexyltetrahydrofuran,CCCCCCC1CC(OC(C)=O)CO1,81.0,fruity,fruity
+16572,Ethyl methyl-p-tolylglycidate,CCOC(=O)C1OC1(C)c1ccc(C)cc1,81.0,fruity,fruity
+16577,3-Methylbutyl nonanoate,CCCCCCCCC(=O)OCCC(C)C,81.0,fruity,fruity
+16580,1-Ethenylhexyl butanoate,C=CC(CCCCC)OC(=O)CCC,81.0,fruity,fruity
+16740,Methyl 4-(methylthio)butyrate,COC(=O)CCCSC,81.0,fruity,fruity
+16742,4-Methyl-4-(methylthio)-2-pentanone,CSC(C)(C)CC(C)=O,81.0,fruity,fruity
+16744,1-Methyl-1-phenylethyl isobutyrate,CC(C)C(=O)OC(C)(C)c1ccccc1,81.0,fruity,fruity
+16746,Allyl tiglate,C=CCOC(=O)C(C)=CC,72.0,berry,fruity
+16754,3-Methyl-alpha-ionyl acetate,CC(=O)OC(C)C(C)=CC1C(C)=CCCC1(C)C,81.0,fruity,fruity
+16763,2-Methyl-4-phenyl-2-butyl 2-methylpropanoate,CC(C)C(=O)OC(C)(C)CCc1ccccc1,81.0,fruity,fruity
+16765,4-(Butoxymethyl)-2-methoxyphenol,CCCCOCc1ccc(O)c(OC)c1,81.0,fruity,fruity
+16814,2-Methylphenyl 2-methylpropanoate,Cc1ccccc1OC(=O)C(C)C,72.0,berry,fruity
+16815,Vanillin isobutyrate,COc1cc(C=O)ccc1OC(=O)C(C)C,81.0,fruity,fruity
+16828,Allyl anthranilate,C=CCOC(=O)c1ccccc1N,77.0,grape,fruity
+16829,cis-3-Hexenyl anthranilate,CCC=CCCOC(=O)c1ccccc1N,81.0,fruity,fruity
+16831,Phenethyl anthranilate,Nc1ccccc1C(=O)OCCc1ccccc1,77.0,grape,fruity
+16832,Isobutyl N-methylanthranilate,CNc1ccccc1C(=O)OCC(C)C,81.0,fruity,fruity
+16833,Ethyl N-ethylanthranilate,CCNc1ccccc1C(=O)OCC,81.0,fruity,fruity
+16836,Isopropyl cinnamate,CC(C)OC(=O)C=Cc1ccccc1,81.0,fruity,fruity
+16837,Butyl cinnamate,CCCCOC(=O)C=Cc1ccccc1,81.0,fruity,fruity
+16838,Isobutyl cinnamate,CC(C)COC(=O)C=Cc1ccccc1,81.0,fruity,fruity
+16841,Cyclohexyl cinnamate,O=C(C=Cc1ccccc1)OC1CCCCC1,81.0,fruity,fruity
+16843,p-Tolyl isobutyrate,Cc1ccc(OC(=O)C(C)C)cc1,81.0,fruity,fruity
+16849,Hexyl phenylacetate,CCCCCCOC(=O)Cc1ccccc1,81.0,fruity,fruity
+16852,1-Phenylethyl isobutyrate,CC(C)C(=O)OC(C)c1ccccc1,81.0,fruity,fruity
+16853,1-Phenylethyl butyrate,CCCC(=O)OC(C)c1ccccc1,81.0,fruity,fruity
+16854,2-Phenylethyl hexanoate,CCCCCC(=O)OCCc1ccccc1,71.0,banana,fruity
+16855,2-Phenylethyl octanoate,CCCCCCCC(=O)OCCc1ccccc1,81.0,fruity,fruity
+16862,Hexyl 2-furoate,CCCCCCOC(=O)c1ccco1,84.0,pear,fruity
+16864,Furfuryl pentanoate,CCCCC(=O)OCc1ccco1,81.0,fruity,fruity
+16865,2-Furanylmethyl propanoate,CCC(=O)OCc1ccco1,81.0,fruity,fruity
+16866,2-Furanylmethyl butanoate,CCCC(=O)OCc1ccco1,77.0,grape,fruity
+16867,Furfuryl octanoate,CCCCCCCC(=O)OCc1ccco1,81.0,fruity,fruity
+16868,S-(2-Furanylmethyl) methanethioate,O=CSCc1ccco1,91.0,tropica,fruity
+16870,Propyl 2-furanacrylate,CCCOC(=O)C=Cc1ccco1,81.0,fruity,fruity
+16871,Isobutyl 2-furanpropionate,CC(C)COC(=O)CCc1ccco1,81.0,fruity,fruity
+16872,Isoamyl 2-furanpropionate,CC(C)CCOC(=O)CCc1ccco1,81.0,fruity,fruity
+16873,3-Methylbutyl 2-furanbutanoate,CC(C)CCOC(=O)CCCc1ccco1,81.0,fruity,fruity
+16880,5-Dodecanolide,CCCCCCCC1CCCC(=O)O1,83.0,peach,fruity
+16912,3-Acetylmercaptohexyl acetate,CCCC(CCOC(C)=O)SC(C)=O,81.0,fruity,fruity
+16957,D6-Ambrettolide,O=C1CCCCC=CCCCCCCCCCO1,81.0,fruity,fruity
+16966,2-Propenyl cyclohexanepentanoate,C=CCOC(=O)CCCCC1CCCCC1,81.0,fruity,fruity
+16985,6-(3-Hexenyl)tetrahydro-2H-pyran-2-one,CCC=CCCC1CCCC(=O)O1,81.0,fruity,fruity
+17007,Hexyl 2-methylpropanoate,CCCCCCOC(=O)C(C)C,81.0,fruity,fruity
+17232,Ethyl 2-phenyl-3-furancarboxylate,CCOC(=O)c1ccoc1-c1ccccc1,74.0,cherry,fruity
+17243,Dihydro-alpha-ionone,CC(=O)CCC1C(C)=CCCC1(C)C,88.0,raspberry,fruity
+17244,beta-Ionyl acetate,CC(=O)OC(C)C=CC1=C(C)CCCC1(C)C,72.0,berry,fruity
+17251,Nonyl isovalerate,CCCCCCCCCOC(=O)CC(C)C,81.0,fruity,fruity
+17253,2-Propenyl 3-methylbutanoate,C=CCOC(=O)CC(C)C,69.0,apple,fruity
+17255,2-Methylbutyl 3-methylbutanoate,CCC(C)COC(=O)CC(C)C,81.0,fruity,fruity
+17257,2-Methylpropyl 3-methylbutanoate,CC(C)COC(=O)CC(C)C,81.0,fruity,fruity
+17264,Carvyl propionate,C=C(C)C1CC=C(C)C(OC(=O)CC)C1,81.0,fruity,fruity
+17269,alpha-Terpinyl anthranilate,CC1=CCC(C(C)(C)OC(=O)c2ccccc2N)CC1,81.0,fruity,fruity
+17270,1-Ethoxy-3-methyl-2-butene,CCOCC=C(C)C,81.0,fruity,fruity
+17287,"(3E,6Z)-Nonadien-1-yl acetate",CCC=CCC=CCCOC(C)=O,81.0,fruity,fruity
+17300,2-Octenyl butyrate,CCCCCC=CCOC(=O)CCC,81.0,fruity,fruity
+17479,Isopropyl 2-methylpropanoate,CC(C)OC(=O)C(C)C,85.0,pineapple,fruity
+17546,Bornyl valerate,CCCCC(=O)OC1CC2CCC1(C)C2(C)C,72.0,berry,fruity
+17557,Geranyl acetoacetate,CC(=O)CC(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+17561,Geranyl 2-methylpropanoate,CC(C)=CCCC(C)=CCOC(=O)C(C)C,81.0,fruity,fruity
+17573,Hexyl 2E-hexenoate,CCC=CCC(=O)OCCCCCC,81.0,fruity,fruity
+17578,2-Hexenyl valerate,CCCC=CCOC(=O)CCCC,81.0,fruity,fruity
+17579,2-Hexenyl isovalerate,CCCC=CCOC(=O)CC(C)C,69.0,apple,fruity
+17583,cis-3-Hexenyl 3-methylbutanoate,CCC=CCCOC(=O)CC(C)C,69.0,apple,fruity
+17584,cis-3-Hexenyl tiglate,CC=C(C)C(=O)OCCC=CCC,71.0,banana,fruity
+17627,2-Propenyl cyclohexanebutanoate,C=CCOC(=O)CCCC1CCCCC1,81.0,fruity,fruity
+17635,Methylthiomethyl butyrate,CCCC(=O)OCSC,81.0,fruity,fruity
+17641,Isoamyl pyruvate,CC(=O)C(=O)OCCC(C)C,81.0,fruity,fruity
+18001,Octyl formate,CCCCCCCCOC=O,81.0,fruity,fruity
+18011,Geranyl propionate,CCC(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+18012,Geranyl butyrate,CCCC(=O)OCC=C(C)CCC=C(C)C,69.0,apple,fruity
+18145,3-Methylbutyl octanoate,CCCCCCCC(=O)OCCC(C)C,75.0,coconut,fruity
+18362,"3,6-Dimethyl-2(3H)-benzofuranone",Cc1ccc2c(C)c(O)oc2c1,75.0,coconut,fruity
+18365,7-Hexyl-2-oxepanone,CCCCCCC1CCCCC(=O)O1,83.0,peach,fruity
+18366,Ethyl 2-(methyldithio)propionate,CCOC(=O)C(C)SSC,81.0,fruity,fruity
+18367,(E)-2-(2-Octenyl)cyclopentanone,CCCCCC=CCC1CCCC1=O,81.0,fruity,fruity
+18377,5Z-Octenyl propanoate,CCC=CCCCCOC(=O)CC,69.0,apple,fruity
+18378,3-Methylbutyl decanoate,CCCCCCCCCC(=O)OCCC(C)C,71.0,banana,fruity
+18434,3-Mercaptohexyl hexanoate,CCCCCC(=O)OCCC(S)CCC,81.0,fruity,fruity
+18444,Citronellyl isovalerate,CC(C)=CCCC(C)CCOC(=O)CC(C)C,69.0,apple,fruity
+18448,Citronellyl hexanoate,CCCCCC(=O)OCCC(C)CCC=C(C)C,81.0,fruity,fruity
+18455,Ethyl tiglate,CC=C(C)C(=O)OCC,88.0,raspberry,fruity
+18606,Pentyl acetate,CCCCCOC(C)=O,71.0,banana,fruity
+18754,Hexyl 2-methylbutanoate,CCCCCCOC(=O)C(C)CC,89.0,strawberry,fruity
+18755,Butyl 2-methylbutanoate,CCCCOC(=O)C(C)CC,81.0,fruity,fruity
+18756,Isopropyl 2-methylbutanoate,CCC(C)C(=O)OC(C)C,81.0,fruity,fruity
+18757,2-Methylbutyl 2-methylbutanoate,CCC(C)COC(=O)C(C)CC,81.0,fruity,fruity
+18758,1-Methylbutyl butanoate,CCCC(=O)OC(C)CCC,81.0,fruity,fruity
+18759,Ethyl 4-decenoate,CCCCCC=CCCC(=O)OCC,81.0,fruity,fruity
+18767,3-Mercapto-3-methyl-1-butyl acetate,CC(=O)OCCC(C)(C)S,81.0,fruity,fruity
+19069,7-Methyl-3-octen-2-one,CC(=O)C=CCCC(C)C,81.0,fruity,fruity
+19076,S-Methyl hexanethioate,CCCCCC(=O)SC,81.0,fruity,fruity
+19078,Allyl thiohexanoate,C=CCSC(=O)CCCCC,81.0,fruity,fruity
+19222,"(2E,4E)-2,4-Dodecadienal",CCCCCCC=CC=CCC=O,78.0,grapefruit,fruity
+19253,Propyl butyrate,CCCOC(=O)CCC,85.0,pineapple,fruity
+19254,Isopropyl butyrate,CCCC(=O)OC(C)C,81.0,fruity,fruity
+19255,Butyl butyrate,CCCCOC(=O)CCC,69.0,apple,fruity
+19352,1-Acetylcyclohexyl acetate,CC(=O)OC1(C(C)=O)CCCCC1,81.0,fruity,fruity
+19425,(Z)-5-Octenal,CCC=CCCCC=O,81.0,fruity,fruity
+19426,Cyclopentanethiol,SC1CCCC1,81.0,fruity,fruity
+19451,Methyl 4Z-octenoate,CCCC=CCCC(=O)OC,85.0,pineapple,fruity
+19452,Ethyl 4Z-octenoate,CCCC=CCCC(=O)OCC,85.0,pineapple,fruity
+19460,"4,4alpha,5,6-Tetrahydro-7-methyl-2(3H)-naphthalenone",CC1=CC2=C(CCC(=O)C2)CC1,75.0,coconut,fruity
+19477,"2,4-Dimethyl-2-pentenoic acid",CC(=CC(C)C)C(=O)O,81.0,fruity,fruity
+19517,1-Decen-3-ol,C=CC(O)CCCCCCC,81.0,fruity,fruity
+19539,2-Naphthyl anthranilate,Nc1ccccc1C(=O)Oc1ccc2ccccc2c1,77.0,grape,fruity
+19540,Furfuryl isovalerate,CC(C)CC(=O)OCc1ccco1,72.0,berry,fruity
+19783,"2,5-Diethyl-4-propylthiazole",CCCc1nc(CC)sc1CC,81.0,fruity,fruity
+19857,3-Mercaptohexanol,CCCC(S)CCO,81.0,fruity,fruity
+19870,3-Methylbutyl 2-methylbutanoate,CCC(C)C(=O)OCCC(C)C,81.0,fruity,fruity
+19871,Hexyl 2-methyl-3-pentenoate,CC=CC(C)C(=O)OCCCCCC,81.0,fruity,fruity
+19881,Butyl levulinate,CCCCOC(=O)CCC(C)=O,81.0,fruity,fruity
+19882,Decyl acetate,CCCCCCCCCCOC(C)=O,85.0,pineapple,fruity
+19884,Glycerol 1-(5-hydroxydodecanoate),CCCCCCCC(O)CCCC(=O)OCC(O)CO,83.0,peach,fruity
+19889,Heptyl 2-methylpropanoate,CCCCCCCOC(=O)C(C)C,77.0,grape,fruity
+19912,Ethyl nonanoate,CCCCCCCCC(=O)OCC,81.0,fruity,fruity
+19914,Ethyl octanoate,CCCCCCCC(=O)OCC,70.0,apricot,fruity
+19925,Allyl 3-cyclohexylpropionate,C=CCOC(=O)CCC1CCCCC1,85.0,pineapple,fruity
+19927,2-Propenyl heptanoate,C=CCOC(=O)CCCCCC,70.0,apricot,fruity
+19928,Ethyl hexanoate,CCCCCC(=O)OCC,81.0,fruity,fruity
+19929,2-Propenyl hexanoate,C=CCOC(=O)CCCCC,85.0,pineapple,fruity
+19930,Butyl hexanoate,CCCCCC(=O)OCCCC,81.0,fruity,fruity
+19932,cis-3-Hexenyl isobutyrate,CCC=CCCOC(=O)C(C)C,81.0,fruity,fruity
+19937,2-Phenoxyethyl isobutyrate,CC(C)C(=O)OCCOc1ccccc1,81.0,fruity,fruity
+19942,Isoamyl butyrate,CCCC(=O)OCCC(C)C,82.0,papaya,fruity
+19947,2-Methyl-1-phenyl-2-propanyl butyrate,CCCC(=O)OC(C)(C)Cc1ccccc1,81.0,fruity,fruity
+19962,2-Pentylthiophene,CCCCCc1cccs1,81.0,fruity,fruity
+19975,Butyl isobutyrate,CCCCOC(=O)C(C)C,69.0,apple,fruity
+19976,Isobutyl isobutyrate,CC(C)COC(=O)C(C)C,85.0,pineapple,fruity
+19977,Propyl formate,CCCOC=O,81.0,fruity,fruity
+19978,Butyl lactate,CCCCOC(=O)C(C)O,81.0,fruity,fruity
+19987,Ethyl 2-(methylthio)acetate,CCOC(=O)CSC,70.0,apricot,fruity
+19991,Nonyl acetate,CCCCCCCCCOC(C)=O,81.0,fruity,fruity
+19993,Ethyl 3-oxo-3-phenylpropanoate,CCOC(=O)CC(=O)c1ccccc1,81.0,fruity,fruity
+19997,2-Butylfuran,CCCCc1ccco1,81.0,fruity,fruity
+20001,Ethyl aconitate,CCOC(=O)C=C(CC(=O)O)C(=O)O,81.0,fruity,fruity
+20008,Geranyl valerate,CCCCC(=O)OCC=C(C)CCC=C(C)C,81.0,fruity,fruity
+20009,Neryl formate,CC(C)=CCCC(C)=CCOC=O,81.0,fruity,fruity
+20013,"Methyl (4E)-4,7-octadienoate",C=CCC=CCCC(=O)OC,81.0,fruity,fruity
+20014,Benzyl cinnamate,O=C(C=Cc1ccccc1)OCc1ccccc1,70.0,apricot,fruity
+20022,Octyl benzoate,CCCCCCCCOC(=O)c1ccccc1,81.0,fruity,fruity
+20024,Butyl pentanoate,CCCCOC(=O)CCCC,69.0,apple,fruity
+20025,Propyl pentanoate,CCCCC(=O)OCCC,81.0,fruity,fruity
+20026,Ethyl pentanoate,CCCCC(=O)OCC,81.0,fruity,fruity
+20057,Pentyl formate,CCCCCOC=O,81.0,fruity,fruity
+20094,"1,2-Dimethoxy-4-vinylbenzene",C=Cc1ccc(OC)c(OC)c1,81.0,fruity,fruity
+20150,Ethyl 3-phenylpropanoate,CCOC(=O)CCc1ccccc1,81.0,fruity,fruity
+20152,Ethyl 3-(methylthio)propanoate,CCOC(=O)CCSC,85.0,pineapple,fruity
+20164,Ethyl 2-benzylacetoacetate,CCOC(=O)C(Cc1ccccc1)C(C)=O,81.0,fruity,fruity
+20165,Propyl phenylacetate,CCCOC(=O)Cc1ccccc1,70.0,apricot,fruity
+20169,Diethyl decanedioate,CCOC(=O)CCCCCCCCC(=O)OCC,87.0,quince,fruity
+20170,Isopropyl hexanoate,CCCCCC(=O)OC(C)C,81.0,fruity,fruity
+20172,"1,1-Dimethoxyheptane",CCCCCCC(OC)OC,81.0,fruity,fruity
+20173,Ethyl levulinate,CCOC(=O)CCC(C)=O,81.0,fruity,fruity
+20205,Benzyl acetoacetate,CC(=O)CC(=O)OCc1ccccc1,81.0,fruity,fruity
+20206,Butyl acetoacetate,CCCCOC(=O)CC(C)=O,81.0,fruity,fruity
+20220,4-Methylbenzyl alcohol acetate,CC(=O)OCc1ccc(C)cc1,81.0,fruity,fruity
+20304,3-Methylbutyl pentanoate,CCCCC(=O)OCCC(C)C,69.0,apple,fruity
+20361,Butyl formate,CCCCOC=O,86.0,plum,fruity
+20366,Cinnamyl formate,O=COCC=Cc1ccccc1,81.0,fruity,fruity
+20371,(Z)-6-Nonen-1-ol,CCC=CCCCCCO,73.0,cantaloupe,fruity
+20373,2-Methylpropyl benzoate,CC(C)COC(=O)c1ccccc1,81.0,fruity,fruity
+20382,Allyl butyrate,C=CCOC(=O)CCC,70.0,apricot,fruity
+20383,Allyl benzoate,C=CCOC(=O)c1ccccc1,74.0,cherry,fruity
+20387,2-Propenyl octanoate,C=CCOC(=O)CCCCCCC,71.0,banana,fruity
+20388,Furaneol,Cc1oc(C)c(O)c1O,77.0,grape,fruity
+20389,Allyl cyclohexylacetate,C=CCOC(=O)CC1CCCCC1,81.0,fruity,fruity
+20553,Ethyl lactate,CCOC(=O)C(C)O,90.0,tart,fruity
+20882,beta-Cyclocitral,CC1=C(C=O)C(C)(C)CCC1,81.0,fruity,fruity
+21126,Allyl cinnamate,C=CCOC(=O)C=Cc1ccccc1,83.0,peach,fruity
+21127,Dibutyl decanedioate,CCCCOC(=O)CCCCCCCCC(=O)OCCCC,81.0,fruity,fruity
+21233,Methyl 2-(methylthio)butyrate,CCC(SC)C(=O)OC,81.0,fruity,fruity
+21242,Cinnamyl propionate,CCC(=O)OCC=Cc1ccccc1,81.0,fruity,fruity
+21243,Cinnamyl butyrate,CCCC(=O)OCC=Cc1ccccc1,81.0,fruity,fruity
+21244,Cinnamyl isobutyrate,CC(C)C(=O)OCC=Cc1ccccc1,81.0,fruity,fruity
+21245,Cinnamyl isovalerate,CC(C)CC(=O)OCC=Cc1ccccc1,74.0,cherry,fruity
+21246,Cinnamyl anthranilate,Nc1ccccc1C(=O)OCC=Cc1ccccc1,81.0,fruity,fruity
+21254,(Dimethoxymethyl)benzene,COC(OC)c1ccccc1,81.0,fruity,fruity
+21276,"2,3-Diethyl-5-methylpyrazine",CCc1ncc(C)nc1CC,81.0,fruity,fruity
+21353,Dihydro-2-methyl-3(2H)-thiophenone,CC1SCCC1=O,81.0,fruity,fruity
+21410,Dicyclohexyl disulfide,C1CCC(SSC2CCCCC2)CC1,72.0,berry,fruity
+21453,"4-(3,4-Methylenedioxyphenyl)-2-butanone",CC(=O)CCc1ccc2c(c1)OCO2,88.0,raspberry,fruity
+21454,3-Benzyl-4-heptanone,CCCC(=O)C(CC)Cc1ccccc1,81.0,fruity,fruity
+21459,Benzyl formate,O=COCc1ccccc1,70.0,apricot,fruity
+21556,Butyl heptanoate,CCCCCCC(=O)OCCCC,69.0,apple,fruity
+21911,Ethyl (±)-3-hydroxyoctanoate,CCCCCC(O)CC(=O)OCC,81.0,fruity,fruity
+21917,Propyleneglycol diacetate,CC(=O)OCC(C)OC(C)=O,81.0,fruity,fruity
+22100,Methylacetoacetic acid,COC(=O)CC(C)=O,81.0,fruity,fruity
+29824,benzylmethyl ether,COCc1ccccc1,81.0,fruity,fruity
+29850,pentyl 2-methylbutyrate,CCCCCOC(=O)C(C)CC,69.0,apple,fruity
+29879,2-methyl chinoxaline,Cc1cnc2ccccc2n1,81.0,fruity,fruity
+29889,heptyl 2-methylbutyrate,CCCCCCCOC(=O)C(C)CC,69.0,apple,fruity
+29904,linalyl pentanoate,C=CC(C)(CCC=C(C)C)OC(=O)CCCC,81.0,fruity,fruity
+29905,"6beta,7beta,10beta-Cadina-1,4-diene",C12=C3C4C1=C1C2C3C14,81.0,fruity,fruity
+29944,Diethyl maleate,CCOC(=O)C=CC(=O)OCC,71.0,banana,fruity
+29946,Ethyl 2-furoate,CCOC(=O)c1ccco1,86.0,plum,fruity
+31067,hexan-3-one,CCCC(=O)CC,77.0,grape,fruity
+373,Prenyl acetate,CC(=O)OCC=C(C)C,30.0,lavender,floral
+411,Geranyl 3-methylbutanoate,CC(C)=CCCC(C)=CCOC(=O)CC(C)C,34.0,rose,floral
+412,Geranyl hexanoate,CCCCCC(=O)OCC=C(C)CCC=C(C)C,34.0,rose,floral
+477,"1-(3,4-Dimethoxyphenyl)ethanone",COc1ccc(C(C)=O)cc1OC,33.0,floral,floral
+744,Methyl 10-undecenoate,C=CCCCCCCCCC(=O)OC,34.0,rose,floral
+826,2-(4-Methylphenyl)-2-propanol,Cc1ccc(C(C)(C)O)cc1,33.0,floral,floral
+872,4-Methoxybenzaldehyde,COc1ccc(C=O)cc1,26.0,hawthorne,floral
+874,2-Ethoxynaphthalene,CCOc1ccc2ccccc2c1,33.0,floral,floral
+887,Cinnamyl alcohol,OCC=Cc1ccccc1,27.0,hyacinth,floral
+889,Cinnamyl acetate,CC(=O)OCC=Cc1ccccc1,33.0,floral,floral
+898,"1-(2,6,6-Trimethyl-2-cyclohexen-1-yl)-1,6-heptadien-3-one",C=CCCC(=O)C=CC1=C(C)CCCC1(C)C,33.0,floral,floral
+930,3-Ethylpyridine,CCc1cccnc1,33.0,floral,floral
+1028,Ethyl salicylate,CCOC(=O)c1ccccc1O,33.0,floral,floral
+1344,Hydroxycitronellol,CC(CCO)CCCC(C)(C)O,33.0,floral,floral
+1358,Butyl propionate,CCCCOC(=O)CC,34.0,rose,floral
+1368,Methyl 3-phenylpropanoate,COC(=O)CCc1ccccc1,33.0,floral,floral
+1371,Benzyl propionate,CCC(=O)OCc1ccccc1,29.0,jasmine,floral
+1424,Methyl epijasmonate,CCC=CCC1C(=O)CCC1CC(=O)OC,29.0,jasmine,floral
+1462,cis-beta-Ocimene,C=CC(C)=CCC=C(C)C,33.0,floral,floral
+1659,(R)-Linden ether,CC1=CC2OCC(C)=C2CC1,33.0,floral,floral
+1927,Prenol,CC(C)=CCO,30.0,lavender,floral
+2288,Linalyl formate,C=CC(C)(CCC=C(C)C)OC=O,34.0,rose,floral
+2289,Linalyl propionate,C=CC(C)(CCC=C(C)C)OC(=O)CC,31.0,lily,floral
+2290,Linalyl isobutyrate,C=CC(C)(CCC=C(C)C)OC(=O)C(C)C,30.0,lavender,floral
+2292,Linalyl isovalerate,C=CC(C)(CCC=C(C)C)OC(=O)CC(C)C,30.0,lavender,floral
+2295,Linalyl benzoate,C=CC(C)(CCC=C(C)C)OC(=O)c1ccccc1,24.0,gardenia,floral
+2297,Linalyl anthranilate,C=CC(C)(CCC=C(C)C)OC(=O)c1ccccc1N,22.0,blossom,floral
+2728,Isoeugenol,CC=Cc1ccc(O)c(OC)c1,23.0,carnation,floral
+2917,Undecanal,CCCCCCCCCCC=O,33.0,floral,floral
+2918,1-Undecanol,CCCCCCCCCCCO,34.0,rose,floral
+2922,Methyl 2-undecynoate,CCCCCCCCC#CC(=O)OC,33.0,floral,floral
+2988,2-Decenal,CCCCCCCC=CC=O,34.0,rose,floral
+3009,10-Undecen-1-ol,C=CCCCCCCCCCO,33.0,floral,floral
+3010,10-Undecenyl acetate,C=CCCCCCCCCCOC(C)=O,34.0,rose,floral
+3013,2-Dodecanone,CCCCCCCCCCC(C)=O,33.0,floral,floral
+3052,Cetyl alcohol,CCCCCCCCCCCCCCCCO,33.0,floral,floral
+3140,10-Undecenal,C=CCCCCCCCCC=O,34.0,rose,floral
+3197,Tetrahydrofurfuryl propionate,CCC(=O)OCC1CCCO1,35.0,violet,floral
+3215,"3,5,5-Trimethyl-1-hexanol",CC(CCO)CC(C)(C)C,33.0,floral,floral
+3254,Ethyl formate,CCOC=O,34.0,rose,floral
+3256,2-Ethyl-1-hexanol,CCCCC(CC)CO,34.0,rose,floral
+3266,Ethyl methyl sulfide,CCSC,33.0,floral,floral
+3272,2-Methylpropanal,CC(C)C=O,33.0,floral,floral
+3280,Methyl isobutyrate,COC(=O)C(C)C,33.0,floral,floral
+3281,Phenylmethyl 2-methylpropanoate,CC(C)C(=O)OCc1ccccc1,29.0,jasmine,floral
+3304,Nonanal,CCCCCCCCC=O,34.0,rose,floral
+3308,1-Nonanol,CCCCCCCCCO,33.0,floral,floral
+3318,Methyl octynecarboxylate,CCCCCCC#CC(=O)OC,35.0,violet,floral
+3355,Methyl 2-octynoate,CCCCCC#CC(=O)OC,35.0,violet,floral
+3368,Benzyl acetate,CC(=O)OCc1ccccc1,29.0,jasmine,floral
+3369,Benzyl butyl ether,CCCCOCc1ccccc1,33.0,floral,floral
+3371,2-Pentyl-3-phenyl-2-propenal,CCCCCC(C=O)=Cc1ccccc1,33.0,floral,floral
+3379,Butanal,CCCC=O,33.0,floral,floral
+3389,2-Ethoxybutane,CCOC(C)CC,33.0,floral,floral
+3391,1-Isothiocyanatobutane,CCCCN=C=S,33.0,floral,floral
+3430,Cyclohexylethyl acetate,CC(=O)OCCC1CCCCC1,34.0,rose,floral
+3478,Cyclohexaneacetic acid,O=C(O)CC1CCCCC1,29.0,jasmine,floral
+3483,3-Decanol,CCCCCCCC(O)CC,33.0,floral,floral
+3485,2-Decanone,CCCCCCCCC(C)=O,33.0,floral,floral
+3492,Dimethyl disulfide,CSSC,33.0,floral,floral
+4817,3-Methylbutyl angelate,CC=C(C)C(=O)OCCC(C)C,33.0,floral,floral
+4834,Butyl angelate,CC=C(C)C(=O)OCCCC,34.0,rose,floral
+5806,Longifolene,C=C1C2CCC3C2C(C)(C)CCCC13C,34.0,rose,floral
+5820,"1,2-Dimethylbenzene",Cc1ccccc1C,25.0,geranium,floral
+8053,Methyl heptanoate,CCCCCCC(=O)OC,33.0,floral,floral
+8054,1-Heptanol,CCCCCCCO,35.0,violet,floral
+8185,4-Methyl-1-phenyl-2-pentanol,CC(C)CC(O)Cc1ccccc1,33.0,floral,floral
+8188,2-Methyl-1-phenyl-2-propanol,CC(C)(O)Cc1ccccc1,33.0,floral,floral
+8189,2-Methyl-1-phenyl-2-propanyl acetate,CC(=O)OC(C)(C)Cc1ccccc1,33.0,floral,floral
+8254,4-Phenyl-3-buten-2-ol,CC(O)C=Cc1ccccc1,33.0,floral,floral
+8256,Benzylideneacetone,CC(=O)C=Cc1ccccc1,33.0,floral,floral
+8263,5-Phenyl-1-pentanol,OCCCCCc1ccccc1,23.0,carnation,floral
+8266,2-Phenylpropanal,CC(C=O)c1ccccc1,27.0,hyacinth,floral
+8268,1-Phenyl-1-propanol,CCC(O)c1ccccc1,33.0,floral,floral
+8272,3-Phenylpropanoic acid,O=C(O)CCc1ccccc1,34.0,rose,floral
+8295,Ethyl pyruvate,CCOC(=O)C(C)=O,33.0,floral,floral
+8321,Dibutyl sulfide,CCCCSCCCC,34.0,rose,floral
+8405,2-Hexyl-3-phenyl-2-propenal,CCCCCCC(C=O)=Cc1ccccc1,33.0,floral,floral
+8406,delta-Methylionone,CC(=O)C(C)=CC1=C(C)CCCC1(C)C,33.0,floral,floral
+8409,"7-Hydroxy-3,7-dimethyloctanal",CC(CC=O)CCCC(C)(C)O,31.0,lily,floral
+8410,Methyl dihydrojasmonate,CCCCCC1C(=O)CCC1CC(=O)OC,33.0,floral,floral
+8549,Methyleugenol,C=CCc1ccc(OC)c(OC)c1,23.0,carnation,floral
+8551,2-Methyl-4-phenyl-2-butanol,CC(C)(O)CCc1ccccc1,34.0,rose,floral
+8741,Isopropyl benzoate,CC(C)OC(=O)c1ccccc1,33.0,floral,floral
+8746,Benzyl alcohol,OCc1ccccc1,33.0,floral,floral
+8756,alpha-Terpinyl formate,CC1=CCC(C(C)(C)OC=O)CC1,33.0,floral,floral
+8758,alpha-Terpinyl propanoate,CCC(=O)OC(C)(C)C1CC=C(C)CC1,25.0,geranium,floral
+8760,alpha-Terpinyl pentanoate,CCCCC(=O)OC(C)(C)C1CC=C(C)CC1,33.0,floral,floral
+8788,1-Methoxy-2-methylbenzene,COc1ccccc1C,33.0,floral,floral
+8794,Dibenzyl ether,c1ccc(COCc2ccccc2)cc1,34.0,rose,floral
+8863,2-Methoxy-4-methylphenol,COc1cc(C)ccc1O,23.0,carnation,floral
+8867,"2',4'-Dimethylacetophenone",CC(=O)c1ccc(C)cc1C,33.0,floral,floral
+9194,Citronellyl anthranilate,CC(C)=CCCC(C)CCOC(=O)c1ccccc1N,34.0,rose,floral
+9195,Citronellyl trans-2-methyl-2-butenoate,CC=C(C)C(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+9272,cis-4-Decenyl acetate,CCCCCC=CCCCOC(C)=O,33.0,floral,floral
+9289,(+/-)-Dihydrofarnesol,CC(C)=CCCC(C)=CCCC(C)CCO,33.0,floral,floral
+9483,Geranyl 2-methylbutyrate,CCC(C)C(=O)OCC=C(C)CCC=C(C)C,34.0,rose,floral
+9484,Geranyl tiglate,CC=C(C)C(=O)OCC=C(C)CCC=C(C)C,25.0,geranium,floral
+9819,"Methylbenzyl acetate (mixed o-, m-, p-)",CC(=O)OC(C)c1ccccc1,33.0,floral,floral
+9822,2-Methylbutyl 3-methyl-2-butenoate,CCC(C)COC(=O)C=C(C)C,33.0,floral,floral
+9943,2-Nonanone propyleneglycol acetal,CCCCCCCC1(C)OCC(C)O1,33.0,floral,floral
+9969,O-Ethyl s-(2-furylmethyl)thiocarbonate,CCOC(=O)SCc1ccco1,33.0,floral,floral
+10077,2-Phenylpropionaldehyde dimethyl acetal,COC(OC)C(C)c1ccccc1,33.0,floral,floral
+10158,Pseudoionone,CC(=O)C=CC=C(C)CCC=C(C)C,33.0,floral,floral
+10232,Santalyl acetate,C=C1C2CCC(C2)C1(C)CCC=C(C)COC(C)=O,33.0,floral,floral
+10233,Santalyl phenylacetate,C=C1C2CCC(C2)C1(C)CCC=C(C)COC(=O)Cc1ccccc1,33.0,floral,floral
+10377,Terpinyl isobutyrate,CC1=CCC(C(C)(C)OC(=O)C(C)C)CC1,33.0,floral,floral
+10418,"4-(2,6,6-Trimethylcyclohex-1-enyl)but-2-en-4-one",CC=CC(=O)C1=C(C)CCCC1(C)C,33.0,floral,floral
+10421,"(+/-)-2,4,8-Trimethyl-7-nonen-2-ol",CC(C)=CCCC(C)CC(C)(C)O,33.0,floral,floral
+10502,2'-Hydroxyacetophenone,CC(=O)c1ccccc1O,26.0,hawthorne,floral
+10531,2'-Hydroxy-5'-methylacetophenone,CC(=O)c1cc(C)ccc1O,33.0,floral,floral
+10547,Methyl 2-methoxybenzoate,COC(=O)c1ccccc1OC,27.0,hyacinth,floral
+10551,4'-Methylacetophenone,CC(=O)c1ccc(C)cc1,26.0,hawthorne,floral
+10553,4-Methylbiphenyl,Cc1ccc(-c2ccccc2)cc1,33.0,floral,floral
+10554,3-(4-Methoxyphenyl)-2-propenal,COc1ccc(C=CC=O)cc1,33.0,floral,floral
+10555,"3,4-Methylenedioxybenzaldehyde",O=Cc1ccc2c(c1)OCO2,35.0,violet,floral
+10557,Piperonyl acetate,CC(=O)OCc1ccc2c(c1)OCO2,33.0,floral,floral
+10558,"1,1-Dimethoxy-2-phenylethane",COC(Cc1ccccc1)OC,27.0,hyacinth,floral
+10561,Methyl phenylacetate,COC(=O)Cc1ccccc1,33.0,floral,floral
+10562,Ethyl phenylacetate,CCOC(=O)Cc1ccccc1,33.0,floral,floral
+10563,1-Phenylethanol,CC(O)c1ccccc1,27.0,hyacinth,floral
+10566,(2-Methoxyethyl)benzene,COCCc1ccccc1,33.0,floral,floral
+11275,Phenylmethyl benzeneacetate,O=C(Cc1ccccc1)OCc1ccccc1,33.0,floral,floral
+11404,Citronellyl formate,CC(C)=CCCC(C)CCOC=O,34.0,rose,floral
+11409,Phenylmethyl butanoate,CCCC(=O)OCc1ccccc1,29.0,jasmine,floral
+11415,2-(4-Methylphenyl)propanal,Cc1ccc(C(C)C=O)cc1,33.0,floral,floral
+11523,Geranyl benzoate,CC(C)=CCCC(C)=CCOC(=O)c1ccccc1,34.0,rose,floral
+11669,Ethyl anthranilate,CCOC(=O)c1ccccc1N,22.0,blossom,floral
+11675,Safrole,C=CCc1ccc2c(c1)OCO2,33.0,floral,floral
+11685,4-(4-Methoxyphenyl)-2-butanone,COc1ccc(CCC(C)=O)cc1,34.0,rose,floral
+11797,(R)-3-Octyl acetate,CCCCCC(CC)OC(C)=O,34.0,rose,floral
+11834,2-Undecanone,CCCCCCCCCC(C)=O,28.0,iris,floral
+11838,3-Phenylpropanal,O=CCCc1ccccc1,27.0,hyacinth,floral
+11846,4-(4-Hydroxyphenyl)-2-butanone,CC(=O)CCc1ccc(O)cc1,33.0,floral,floral
+11950,Ethyl dodecanoate,CCCCCCCCCCCC(=O)OCC,33.0,floral,floral
+12003,Cinnamyl cinnamate,O=C(C=Cc1ccccc1)OCC=Cc1ccccc1,23.0,carnation,floral
+12011,Indole,c1ccc2[nH]ccc2c1,29.0,jasmine,floral
+12014,Dimethyl succinate,COC(=O)CCC(=O)OC,33.0,floral,floral
+12029,Methyl decanoate,CCCCCCCCCC(=O)OC,33.0,floral,floral
+12109,Acetophenone,CC(=O)c1ccccc1,26.0,hawthorne,floral
+12140,Lauric aldehyde,CCCCCCCCCCCC=O,31.0,lily,floral
+12155,2-Phenylethanol,OCCc1ccccc1,34.0,rose,floral
+12156,2-Phenylethyl acetate,CC(=O)OCCc1ccccc1,34.0,rose,floral
+12191,3-Phenyl-1-propanol,OCCCc1ccccc1,27.0,hyacinth,floral
+12201,Methyl benzoate,COC(=O)c1ccccc1,33.0,floral,floral
+12204,4-Ethoxybenzaldehyde,CCOc1ccc(C=O)cc1,33.0,floral,floral
+12241,Phenylacetaldehyde,O=CCc1ccccc1,26.0,hawthorne,floral
+12354,1-Decanol,CCCCCCCCCCO,34.0,rose,floral
+12396,Aceteugenol,C=CCc1ccc(OC(C)=O)c(OC)c1,33.0,floral,floral
+12408,Nonyl octanoate,CCCCCCCCCOC(=O)CCCCCCC,34.0,rose,floral
+12411,Octyl propanoate,CCCCCCCCOC(=O)CC,33.0,floral,floral
+12418,Octyl 3-methylbutanoate,CCCCCCCCOC(=O)CC(C)C,33.0,floral,floral
+12436,"1,1-Dimethoxynonane",CCCCCCCCC(OC)OC,33.0,floral,floral
+12438,Ethyl tetradecanoate,CCCCCCCCCCCCCC(=O)OCC,35.0,violet,floral
+12449,(±)-Citronellyl acetate,CC(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+12458,Methyl N-methylanthranilate,CNc1ccccc1C(=O)OC,22.0,blossom,floral
+12557,4-Methoxybenzyl alcohol,COc1ccc(CO)cc1,27.0,hyacinth,floral
+12586,1-Octanol,CCCCCCCCO,34.0,rose,floral
+12647,Piperidine,C1CCNCC1,33.0,floral,floral
+12758,1-(4-Methylphenyl)ethanol,Cc1ccc(C(C)O)cc1,33.0,floral,floral
+12771,Decanal,CCCCCCCCCC=O,33.0,floral,floral
+12841,Biphenyl,c1ccc(-c2ccccc2)cc1,25.0,geranium,floral
+12856,Diphenyl ether,c1ccc(Oc2ccccc2)cc1,25.0,geranium,floral
+12871,Heptyl formate,CCCCCCCOC=O,33.0,floral,floral
+12872,Heptyl butanoate,CCCCCCCOC(=O)CCC,33.0,floral,floral
+12883,2-Phenylpropyl isobutyrate,CC(C)C(=O)OCC(C)c1ccccc1,33.0,floral,floral
+12884,3-Phenylpropyl formate,O=COCCCc1ccccc1,33.0,floral,floral
+12991,"6,10,14-Trimethyl-5,9,13-pentadecatrien-2-one",CC(=O)CCC=C(C)CCC=C(C)CCC=C(C)C,33.0,floral,floral
+13071,3-Acetoxy-3-methyl-1-phenylbutane,CC(=O)OC(C)(C)CCc1ccccc1,34.0,rose,floral
+13072,"8,8-Diethoxy-2,6-dimethyl-2-octanol",CCOC(CC(C)CCCC(C)(C)O)OCC,33.0,floral,floral
+13417,9-Decenal,C=CCCCCCCCC=O,34.0,rose,floral
+13425,2-Undecen-1-ol,CCCCCCCCC=CCO,33.0,floral,floral
+13581,gamma-Ionone,CC(=O)C=CC1=C(C)CCCC1(C)C,33.0,floral,floral
+13588,"5,6-Epoxy-7-megastigmen-9-one",CC(=O)C=CC12OC1(C)CCCC2(C)C,35.0,violet,floral
+13597,4-Methoxybenzyl butanoate,CCCC(=O)OCc1ccc(OC)cc1,33.0,floral,floral
+13599,4-Methoxybenzyl formate,COc1ccc(COC=O)cc1,33.0,floral,floral
+13615,3-Methylbutyl phenylacetate,CC(C)CCOC(=O)Cc1ccccc1,29.0,jasmine,floral
+13616,Phenethyl phenylacetate,O=C(Cc1ccccc1)OCCc1ccccc1,27.0,hyacinth,floral
+13617,2-Methylpropyl phenylacetate,CC(C)COC(=O)Cc1ccccc1,33.0,floral,floral
+13621,2-Phenylethyl propanoate,CCC(=O)OCCc1ccccc1,33.0,floral,floral
+13622,2-Phenylethyl butanoate,CCCC(=O)OCCc1ccccc1,33.0,floral,floral
+13623,2-Phenylethyl 2-methylpropanoate,CC(C)C(=O)OCCc1ccccc1,33.0,floral,floral
+13624,2-Phenylethyl pentanoate,CCCCC(=O)OCCc1ccccc1,34.0,rose,floral
+13625,2-Phenylethyl 3-methylbutanoate,CC(C)CC(=O)OCCc1ccccc1,33.0,floral,floral
+13626,2-Phenylethyl 3-phenyl-2-propenoate,O=C(C=Cc1ccccc1)OCCc1ccccc1,34.0,rose,floral
+13627,Phenethyl salicylate,O=C(OCCc1ccccc1)c1ccccc1O,23.0,carnation,floral
+13699,Isobutyl anthranilate,CC(C)COC(=O)c1ccccc1N,33.0,floral,floral
+13703,2-(2-Methylpropoxy)naphthalene,CC(C)COc1ccc2ccccc2c1,22.0,blossom,floral
+13725,D-Citronellol,CC(C)=CCCC(C)CCO,34.0,rose,floral
+13795,Geraniol,CC(C)=CCCC(C)=CCO,34.0,rose,floral
+13856,2-Phenyl-4-pentenal,C=CCC(C=O)c1ccccc1,33.0,floral,floral
+14041,"Linalool 3,7-oxide",C=CC1(C)CCC(O)C(C)(C)O1,33.0,floral,floral
+14342,alpha-Irone,CC(=O)C=CC1=C(C)CCC(C)C1(C)C,33.0,floral,floral
+14360,Guaiol,CC1CCC(C(C)(C)O)CC2=C1CCC2C,34.0,rose,floral
+14419,alpha-Terpineol,CC1=CCC(C(C)(C)O)CC1,33.0,floral,floral
+14466,"(±)-trans,trans-delta-Damascone",CC=CC(=O)C1C(C)C=CCC1(C)C,34.0,rose,floral
+14475,"(2E,7R,11R)-2-Phyten-1-ol",CC(=CCO)CCCC(C)CCCC(C)CCCC(C)C,33.0,floral,floral
+14518,Farnesal,CC(C)=CCCC(C)=CCCC(C)=CC=O,33.0,floral,floral
+14519,"(2E,6E)-Farnesol",CC(C)=CCCC(C)=CCCC(C)=CCO,33.0,floral,floral
+14610,Citronellic acid,CC(C)=CCCC(C)CC(=O)O,33.0,floral,floral
+14802,Nootkatone,C=C(C)C1CC=C2CC(=O)CC(C)C2(C)C1,24.0,gardenia,floral
+14846,"2,4,6-Trimethyl-4-phenyl-1,3-dioxane",CC1CC(C)(c2ccccc2)OC(C)O1,24.0,gardenia,floral
+14847,Octahydro-6-isopropyl-2(1H)-naphthalenone,CC(C)C1CCC2CC(=O)CCC2C1,24.0,gardenia,floral
+14850,Clarycet,CCCC1CC(C)(OC(C)=O)CCO1,33.0,floral,floral
+14856,"6,6-Dimethoxy-2,5,5-trimethyl-2-hexene",COC(OC)C(C)(C)CC=C(C)C,35.0,violet,floral
+14943,Linalool,C=CC(C)(O)CCC=C(C)C,30.0,lavender,floral
+14949,Neryl acetate,CC(=O)OCC=C(C)CCC=C(C)C,22.0,blossom,floral
+14954,Myrcenol,C=CC(=C)CCCC(C)(C)O,33.0,floral,floral
+14955,7-Acetoxy-7-methyl-3-methylene-1-octene,C=CC(=C)CCCC(C)(C)OC(C)=O,30.0,lavender,floral
+14988,4-Ethyloctanoic acid,CCCCC(CC)CCC(=O)O,33.0,floral,floral
+15026,3-(5-Methyl-2-furanyl)butanal,Cc1ccc(C(C)CC=O)o1,33.0,floral,floral
+15027,alpha-Pentylcinnamyl alcohol,CCCCCC(=Cc1ccccc1)CO,29.0,jasmine,floral
+15028,3-(4-Isopropylphenyl)propanal,CC(C)c1ccc(CCC=O)cc1,33.0,floral,floral
+15029,"4-(2,6,6-Trimethyl-1-cyclohexenyl)-2-butanol",CC1=C(CCC(C)O)C(C)(C)CCC1,33.0,floral,floral
+15038,2-[(Isopropylthio)methyl]furan,CC(C)SCc1ccco1,33.0,floral,floral
+15040,4-(4-Methylphenyl)-2-butanone,CC(=O)CCc1ccc(C)cc1,33.0,floral,floral
+15068,alpha-Amylcinnamyl acetate,CCCCCC(=Cc1ccccc1)COC(C)=O,33.0,floral,floral
+15074,cis-3-Hexenyl lactate,CCC=CCCOC(=O)C(C)O,35.0,violet,floral
+15076,Ethyl octynecarboxylate,CCCCCCC#CC(=O)OCC,35.0,violet,floral
+15082,[2-(Dimethoxymethyl)-1-heptenyl]benzene,CCCCCC(=Cc1ccccc1)C(OC)OC,31.0,lily,floral
+15096,"alpha,alpha-Dimethylphenethyl formate",CC(C)(Cc1ccccc1)OC=O,31.0,lily,floral
+15101,Methyl 4-tert-butylphenylacetate,COC(=O)Cc1ccc(C(C)(C)C)cc1,27.0,hyacinth,floral
+15267,Methyl 4-phenylbutanoate,COC(=O)CCCc1ccccc1,33.0,floral,floral
+15268,1-Phenylpropyl butyrate,CCCC(=O)OC(CC)c1ccccc1,33.0,floral,floral
+15270,3-Phenylpropyl propanoate,CCC(=O)OCCCc1ccccc1,33.0,floral,floral
+15317,Butyl 10-undecenoate,C=CCCCCCCCCC(=O)OCCCC,33.0,floral,floral
+15323,Isobutyl salicylate,CC(C)COC(=O)c1ccccc1O,33.0,floral,floral
+15484,"3,5,8-Megastigmatrien-7-one",CC=CC(=O)C1=C(C)C=CCC1(C)C,34.0,rose,floral
+15571,Globulol,CC1CCC2C1C1C(CCC2(C)O)C1(C)C,33.0,floral,floral
+15769,Vitispirane,C=C1C=CCC(C)(C)C12CCC(C)O2,33.0,floral,floral
+15772,beta-Ionol,CC1=C(C=CC(C)O)C(C)(C)CCC1,33.0,floral,floral
+15776,Acetal R,CCCOC(C)OCCc1ccccc1,27.0,hyacinth,floral
+15873,Butyl anthranilate,CCCCOC(=O)c1ccccc1N,33.0,floral,floral
+16141,"4-(2,6,6-Trimethyl-1,3-cyclohexadien-1-yl)-2-butanone",CC(=O)CCC1=C(C)C=CCC1(C)C,33.0,floral,floral
+16147,3-(4-Methoxyphenyl)-2-methyl-2-propenal,COc1ccc(C=C(C)C=O)cc1,33.0,floral,floral
+16163,2-Isopropyl-5-methyl-2-hexenal,CC(C)CC=C(C=O)C(C)C,30.0,lavender,floral
+16174,alpha-Citronellol,C=C(C)CCCC(C)CCO,33.0,floral,floral
+16184,3-Nonanon-1-yl acetate,CCCCCCC(=O)CCOC(C)=O,33.0,floral,floral
+16194,Rhodinyl formate,C=C(C)CCCC(C)CCOC=O,33.0,floral,floral
+16195,Rhodinyl acetate,C=C(C)CCCC(C)CCOC(C)=O,25.0,geranium,floral
+16196,Rhodinyl propionate,C=C(C)CCCC(C)CCOC(=O)CC,34.0,rose,floral
+16197,Rhodinyl butyrate,C=C(C)CCCC(C)CCOC(=O)CCC,25.0,geranium,floral
+16200,Rhodinyl phenylacetate,C=C(C)CCCC(C)CCOC(=O)Cc1ccccc1,33.0,floral,floral
+16203,Ethyl (±)-2-ethyl-3-phenylpropanoate,CCOC(=O)C(CC)Cc1ccccc1,33.0,floral,floral
+16230,Linalyl phenylacetate,C=CC(C)(CCC=C(C)C)OC(=O)Cc1ccccc1,34.0,rose,floral
+16232,Guaiol acetate,CC(=O)OC(C)(C)C1CCC(C)C2=C(C1)C(C)CC2,34.0,rose,floral
+16239,Methyl citronellate,COC(=O)CC(C)CCC=C(C)C,25.0,geranium,floral
+16240,Citronellyl propionate,CCC(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+16241,Citronellyl butyrate,CCCC(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+16242,Citronellyl isobutyrate,CC(C)=CCCC(C)CCOC(=O)C(C)C,34.0,rose,floral
+16243,Citronellyl pentanoate,CCCCC(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+16244,Citronellyl alpha-toluate,CC(C)=CCCC(C)CCOC(=O)Cc1ccccc1,34.0,rose,floral
+16303,Isoeugenol phenylacetate,CC=Cc1ccc(OC(=O)Cc2ccccc2)c(OC)c1,33.0,floral,floral
+16307,4-Methyl-2-phenyl-2-pentenal,CC(C)C=C(C=O)c1ccccc1,34.0,rose,floral
+16318,2-Butyl-3-phenyl-2-propen-1-al,CCCCC(C=O)=Cc1ccccc1,33.0,floral,floral
+16320,2-Methyl-3-(2-pentenyl)-2-cyclopenten-1-one,CCC=CC=C1CCC(=O)C1C,33.0,floral,floral
+16331,Methyl 9-undecenoate,CC=CCCCCCCCC(=O)OC,34.0,rose,floral
+16335,5-Hexyldihydro-4-methyl-2(3H)-furanone,CCCCCCC1OC(=O)CC1C,33.0,floral,floral
+16449,4-Acetoxy-2-hexyltetrahydrofuran,CCCCCCC1CC(OC(C)=O)CO1,33.0,floral,floral
+16572,Ethyl methyl-p-tolylglycidate,CCOC(=O)C1OC1(C)c1ccc(C)cc1,33.0,floral,floral
+16577,3-Methylbutyl nonanoate,CCCCCCCCC(=O)OCCC(C)C,33.0,floral,floral
+16749,Phenethyl tiglate,CC=C(C)C(=O)OCCc1ccccc1,34.0,rose,floral
+16753,3-Hydroxynonyl acetate,CCCCCCC(O)CCOC(C)=O,33.0,floral,floral
+16754,3-Methyl-alpha-ionyl acetate,CC(=O)OC(C)C(C)=CC1C(C)=CCCC1(C)C,35.0,violet,floral
+16763,2-Methyl-4-phenyl-2-butyl 2-methylpropanoate,CC(C)C(=O)OC(C)(C)CCc1ccccc1,33.0,floral,floral
+16813,Guaicyl phenylacetate,COc1ccccc1OC(=O)Cc1ccccc1,33.0,floral,floral
+16828,Allyl anthranilate,C=CCOC(=O)c1ccccc1N,33.0,floral,floral
+16830,Cyclohexyl anthranilate,Nc1ccccc1C(=O)OC1CCCCC1,22.0,blossom,floral
+16831,Phenethyl anthranilate,Nc1ccccc1C(=O)OCCc1ccccc1,28.0,iris,floral
+16839,Isoamyl cinnamate,CC(C)CCOC(=O)C=Cc1ccccc1,33.0,floral,floral
+16840,Heptyl cinnamate,CCCCCCCOC(=O)C=Cc1ccccc1,27.0,hyacinth,floral
+16843,p-Tolyl isobutyrate,Cc1ccc(OC(=O)C(C)C)cc1,33.0,floral,floral
+16846,4-Methylphenyl dodecanoate,CCCCCCCCCCCC(=O)Oc1ccc(C)cc1,33.0,floral,floral
+16847,"[2,2-bis(2-methylpropoxy)ethyl]benzene",CC(C)COC(Cc1ccccc1)OCC(C)C,33.0,floral,floral
+16849,Hexyl phenylacetate,CCCCCCOC(=O)Cc1ccccc1,34.0,rose,floral
+16851,1-Phenylethyl formate,CC(OC=O)c1ccccc1,33.0,floral,floral
+16853,1-Phenylethyl butyrate,CCCC(=O)OC(C)c1ccccc1,33.0,floral,floral
+16854,2-Phenylethyl hexanoate,CCCCCC(=O)OCCc1ccccc1,33.0,floral,floral
+16856,2-Phenylethyl 2-methylbutanoate,CCC(C)C(=O)OCCc1ccccc1,33.0,floral,floral
+16860,2-Phenylethyl 2-furancarboxylate,O=C(OCCc1ccccc1)c1ccco1,34.0,rose,floral
+16862,Hexyl 2-furoate,CCCCCCOC(=O)c1ccco1,33.0,floral,floral
+16871,Isobutyl 2-furanpropionate,CC(C)COC(=O)CCc1ccco1,33.0,floral,floral
+16872,Isoamyl 2-furanpropionate,CC(C)CCOC(=O)CCc1ccco1,33.0,floral,floral
+16958,Dihydrocitronellal,CCC(C)CCCC(C)C=O,34.0,rose,floral
+16959,9-Undecenal,CC=CCCCCCCCC=O,33.0,floral,floral
+17243,Dihydro-alpha-ionone,CC(=O)CCC1C(C)=CCCC1(C)C,35.0,violet,floral
+17244,beta-Ionyl acetate,CC(=O)OC(C)C=CC1=C(C)CCCC1(C)C,35.0,violet,floral
+17269,alpha-Terpinyl anthranilate,CC1=CCC(C(C)(C)OC(=O)c2ccccc2N)CC1,31.0,lily,floral
+17549,Isobornyl propionate,CCC(=O)OC1CC2CCC1(C)C2(C)C,30.0,lavender,floral
+17561,Geranyl 2-methylpropanoate,CC(C)=CCCC(C)=CCOC(=O)C(C)C,33.0,floral,floral
+17586,cis-3-Hexenyl phenylacetate,CCC=CCCOC(=O)Cc1ccccc1,34.0,rose,floral
+17698,2-Ethoxy-4-(methoxymethyl)phenol,CCOc1cc(COC)ccc1O,23.0,carnation,floral
+18001,Octyl formate,CCCCCCCCOC=O,34.0,rose,floral
+18002,Amyl salicylate,CCCCCOC(=O)c1ccccc1O,33.0,floral,floral
+18011,Geranyl propionate,CCC(=O)OCC=C(C)CCC=C(C)C,33.0,floral,floral
+18012,Geranyl butyrate,CCCC(=O)OCC=C(C)CCC=C(C)C,34.0,rose,floral
+18148,"4,7-Megastigmadien-9-ol",CC1=CCCC(C)(C)C1C=CC(C)O,33.0,floral,floral
+18209,(Z)-1-(1-Ethoxyethoxy)-3-hexene,CCC=CCCOC(C)OCC,35.0,violet,floral
+18444,Citronellyl isovalerate,CC(C)=CCCC(C)CCOC(=O)CC(C)C,34.0,rose,floral
+18448,Citronellyl hexanoate,CCCCCC(=O)OCCC(C)CCC=C(C)C,34.0,rose,floral
+18455,Ethyl tiglate,CC=C(C)C(=O)OCC,33.0,floral,floral
+19069,7-Methyl-3-octen-2-one,CC(=O)C=CCCC(C)C,33.0,floral,floral
+19247,3-(4-Isopropylphenyl)-2-methylpropanal,CC(C=O)Cc1ccc(C(C)C)cc1,33.0,floral,floral
+19352,1-Acetylcyclohexyl acetate,CC(=O)OC1(C(C)=O)CCCCC1,33.0,floral,floral
+19426,Cyclopentanethiol,SC1CCCC1,33.0,floral,floral
+19502,"2-Benzyl-4,5-dimethyl-1,3-dioxolane",CC1OC(Cc2ccccc2)OC1C,33.0,floral,floral
+19517,1-Decen-3-ol,C=CC(O)CCCCCCC,33.0,floral,floral
+19539,2-Naphthyl anthranilate,Nc1ccccc1C(=O)Oc1ccc2ccccc2c1,33.0,floral,floral
+19882,Decyl acetate,CCCCCCCCCCOC(C)=O,34.0,rose,floral
+19889,Heptyl 2-methylpropanoate,CCCCCCCOC(=O)C(C)C,33.0,floral,floral
+19912,Ethyl nonanoate,CCCCCCCCC(=O)OCC,34.0,rose,floral
+19937,2-Phenoxyethyl isobutyrate,CC(C)C(=O)OCCOc1ccccc1,34.0,rose,floral
+19938,"8,8-Dimethoxy-2,6-dimethyl-2-octanol",COC(CC(C)CCCC(C)(C)O)OC,31.0,lily,floral
+19946,Isoamyl salicylate,CC(C)CCOC(=O)c1ccccc1O,33.0,floral,floral
+19947,2-Methyl-1-phenyl-2-propanyl butyrate,CCCC(=O)OC(C)(C)Cc1ccccc1,33.0,floral,floral
+19987,Ethyl 2-(methylthio)acetate,CCOC(=O)CSC,33.0,floral,floral
+19991,Nonyl acetate,CCCCCCCCCOC(C)=O,24.0,gardenia,floral
+19992,"1,1-Dimethoxyoctane",CCCCCCCC(OC)OC,33.0,floral,floral
+20008,Geranyl valerate,CCCCC(=O)OCC=C(C)CCC=C(C)C,34.0,rose,floral
+20009,Neryl formate,CC(C)=CCCC(C)=CCOC=O,34.0,rose,floral
+20014,Benzyl cinnamate,O=C(C=Cc1ccccc1)OCc1ccccc1,33.0,floral,floral
+20015,1-Phenylethyl propanoate,CCC(=O)OC(C)c1ccccc1,33.0,floral,floral
+20058,Pentyl benzoate,CCCCCOC(=O)c1ccccc1,33.0,floral,floral
+20094,"1,2-Dimethoxy-4-vinylbenzene",C=Cc1ccc(OC)c(OC)c1,33.0,floral,floral
+20097,"1,1-Dimethoxy-3,7-dimethyl-2,6-octadiene",COC(C=C(C)CCC=C(C)C)OC,33.0,floral,floral
+20150,Ethyl 3-phenylpropanoate,CCOC(=O)CCc1ccccc1,27.0,hyacinth,floral
+20164,Ethyl 2-benzylacetoacetate,CCOC(=O)C(Cc1ccccc1)C(C)=O,29.0,jasmine,floral
+20165,Propyl phenylacetate,CCCOC(=O)Cc1ccccc1,33.0,floral,floral
+20167,Butyl phenylacetate,CCCCOC(=O)Cc1ccccc1,34.0,rose,floral
+20168,2-Phenylethyl formate,O=COCCc1ccccc1,34.0,rose,floral
+20173,Ethyl levulinate,CCOC(=O)CCC(C)=O,33.0,floral,floral
+20205,Benzyl acetoacetate,CC(=O)CC(=O)OCc1ccccc1,33.0,floral,floral
+20219,Ethylene brassylate,O=C1CCCCCCCCCCCC(=O)OCCO1,33.0,floral,floral
+20220,4-Methylbenzyl alcohol acetate,CC(=O)OCc1ccc(C)cc1,33.0,floral,floral
+20366,Cinnamyl formate,O=COCC=Cc1ccccc1,33.0,floral,floral
+20383,Allyl benzoate,C=CCOC(=O)c1ccccc1,33.0,floral,floral
+21254,(Dimethoxymethyl)benzene,COC(OC)c1ccccc1,33.0,floral,floral
+21276,"2,3-Diethyl-5-methylpyrazine",CCc1ncc(C)nc1CC,33.0,floral,floral
+21412,"[(3,7-Dimethyl-6-octenyl)oxy]acetaldehyde",CC(C)=CCCC(C)CCOCC=O,33.0,floral,floral
+21436,Dihydrocarveol acetate,C=C(C)C1CCC(C)C(OC(C)=O)C1,33.0,floral,floral
+21459,Benzyl formate,O=COCc1ccccc1,33.0,floral,floral
+21469,Dihydrogeranylacetone,CC(=O)CCCC(C)CCC=C(C)C,33.0,floral,floral
+21483,2-Acetyl-3-methylthiophene,CC(=O)c1sccc1C,33.0,floral,floral
+21556,Butyl heptanoate,CCCCCCC(=O)OCCCC,32.0,marigold,floral
+21562,p-Tolyl phenylacetate,Cc1ccc(OC(=O)Cc2ccccc2)cc1,34.0,rose,floral
+21911,Ethyl (±)-3-hydroxyoctanoate,CCCCCC(O)CC(=O)OCC,33.0,floral,floral
+21921,4-Methylbenzyl alcohol,Cc1ccc(CO)cc1,33.0,floral,floral
+21924,Phenyl butyrate,CCCC(=O)Oc1ccccc1,33.0,floral,floral
+21932,Phenethyl isoamyl ether,CC(C)CCOCCc1ccccc1,27.0,hyacinth,floral
+21994,(±)-trans-Nerolidol,C=CCCC(C)=CCCC(C)(O)C=C,33.0,floral,floral
+23795,Homovanillin,COc1cc(CC=O)ccc1O,33.0,floral,floral
+29814,"(Z)-1,5-octadien-3-one",C=CC(=O)C=CCCC,25.0,geranium,floral
+29824,benzylmethyl ether,COCc1ccccc1,33.0,floral,floral
+29833,"6,10-dihydromyrcenol",C=CC(C)CCCC,33.0,floral,floral
+29876,cis-Isogeraniol,CC(C)=CCC=C(C)CCO,34.0,rose,floral
+29904,linalyl pentanoate,C=CC(C)(CCC=C(C)C)OC(=O)CCCC,30.0,lavender,floral
