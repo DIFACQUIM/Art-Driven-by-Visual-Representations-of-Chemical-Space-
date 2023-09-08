@@ -17,7 +17,7 @@ These can be automatly genetared using Google Colab.
 
 ## TMAPs visualization 
 
-These can be dowloand from folder: "TMAP_visualizations" and open on local PC, or can be automatly generated using 
+Display TMAP visualizations by clicking at links from folder: "TMAP_visualizations" or can be automatly generated using 
 Jupyter-notebook on local PC.
 
 **Intructions**
