@@ -1,4 +1,4 @@
-## Display TMAP visualizations by clicking a links
+## Display TMAP visualizations by clicking at links
 01_Ground_flavors_TMAP_MACCSkeys: 
 https://rawcdn.githack.com/DIFACQUIM/Art-Driven-by-Visual-Representations-of-Chemical-Space-/cdc99a658a676dcc7af5c15efdbdb8fc27a963e4/TMAP_visualizations/Ground_flavors_TMAP_MACCSkeys.html
 02_Natural_remedies_TMAP_MACCSkeys:
