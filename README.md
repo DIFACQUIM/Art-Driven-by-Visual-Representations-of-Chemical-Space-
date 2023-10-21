@@ -1,4 +1,6 @@
-# Art Driven by Visual Representations of Chemical-Space
+# Art Driven by Visual Representations of Chemical Space
+
+Science and art have been connected for centuries. With the development of new computational methods, new scientific disciplines have emerged, such as computational chemistry, and related fields, such as cheminformatics. Chemoinformatics is grounded on the chemical space concept: a multi-descriptor space in which chemical structures are described. In several practical applications, visual representations of the chemical space of compound datasets are low-dimensional plots helpful in identifying patterns. However, the authors propose that the plots can also be used as artistic expressions. This manuscript introduces an approach to merging art with chemoinformatics through visual and artistic representations of chemical space. As case studies, we portray the chemical space of food chemicals and other compounds to generate visually appealing graphs with twofold benefits: sharing chemical knowledge and developing pieces of art driven by chemoinformatics. The art driven by chemical space visualization will help increase the application of chemistry and art and contribute to general education and dissemination of chemoinformatics and chemistry through artistic expressions.
 
 ## PCA and t-SNE visualization 
 
