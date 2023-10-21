@@ -4,6 +4,8 @@ Science and art have been connected for centuries. With the development of new c
 
 We invite you to read our [article](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00770-4) and visit our [online gallery](https://www.difacquim.com/chemical-art-gallery/).
 
+<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png</span><span>)</span>
+
 ## PCA and t-SNE visualization 
 
 These can be automatly genetared using Google Colab.
