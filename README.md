@@ -66,7 +66,8 @@ https://www.anaconda.com/download
 # Reference
 Please, cite our manuscript:
 
-Gaytán-Hernández, D., Chávez-Hernández, A.L., López-López, E. et al. Art driven by visual representations of chemical space. J Cheminform 15, 100 (2023). [https://doi.org/10.1186/s13321-023-00770-4](https://doi.org/10.1186/s13321-023-00770-4)
+Gaytán-Hernández, D., Chávez-Hernández, A.L., López-López, E., Miranda-Salas, J., Saldívar-González, F. I.& Medina-Franco, J. L.
+Art driven by visual representations of chemical space. J Cheminform 15, 100 (2023). [https://doi.org/10.1186/s13321-023-00770-4](https://doi.org/10.1186/s13321-023-00770-4)
    
 
 
